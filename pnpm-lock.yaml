@@ -200,6 +200,19 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
 
+  examples/vanilla:
+    dependencies:
+      '@skylive/lienzo-core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@skylive/lienzo-editor':
+        specifier: workspace:*
+        version: link:../../packages/editor
+    devDependencies:
+      '@playwright/test':
+        specifier: 1.63.0
+        version: 1.63.0
+
   packages/core:
     dependencies:
       zod:

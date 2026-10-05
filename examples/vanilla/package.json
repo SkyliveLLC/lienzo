@@ -1,0 +1,17 @@
+{
+  "name": "lienzo-example-vanilla",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.ts",
+    "typecheck": "tsc --noEmit",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "@skylive/lienzo-core": "workspace:*",
+    "@skylive/lienzo-editor": "workspace:*"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
+  }
+}
