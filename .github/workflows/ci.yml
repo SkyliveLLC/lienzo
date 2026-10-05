@@ -39,7 +39,8 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          extensions: mbstring
+          extensions: mbstring, dom, gd, pdo_sqlite
           coverage: none
       - run: composer install --no-interaction --no-progress
+      - run: vendor/bin/pint --test
       - run: composer test

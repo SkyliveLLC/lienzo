@@ -267,6 +267,7 @@ final class Renderer
         $gradient = $type === 'gradient' && ($gradient['from'] ?? '') !== '' && ($gradient['to'] ?? '') !== '' ? $gradient : null;
         $vars = [['fh', Html::num($section['height']['desktop'])], ['fmh', Html::num($section['height']['mobile'])]];
 
+        // An image background keeps its old color only as editor state; a deleted image leaves the section bare.
         if ($gradient !== null) {
             $vars[] = ['sg1', Style::color($gradient['from'])];
             $vars[] = ['sg2', Style::color($gradient['to'])];
@@ -274,7 +275,6 @@ final class Renderer
             if (($gradient['angle'] ?? null) !== null) {
                 $vars[] = ['sga', Html::num($gradient['angle'])];
             }
-        // An image background keeps its old color only as editor state; a deleted image leaves the section bare.
         } elseif (! ($type === 'image' && ($background['image'] ?? '') !== '') && ($background['color'] ?? '') !== '') {
             $vars[] = ['sbg', Style::color($background['color'])];
         }
