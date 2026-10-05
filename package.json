@@ -8,7 +8,8 @@
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck && tsc -p scripts",
     "parity": "node scripts/parity/run.ts",
-    "golden": "pnpm --filter @skylive/lienzo-core golden"
+    "golden": "pnpm --filter @skylive/lienzo-core golden",
+    "sync:php": "node scripts/sync-php-assets.ts"
   },
   "devDependencies": {
     "@types/node": "^24.19.1",

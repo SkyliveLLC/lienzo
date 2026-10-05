@@ -5,7 +5,12 @@
     "allowImportingTsExtensions": true,
     "erasableSyntaxOnly": true,
     "resolveJsonModule": true,
-    "types": ["node"]
+    "types": [
+      "node"
+    ]
   },
-  "include": ["parity"]
+  "include": [
+    "parity",
+    "sync-php-assets.ts"
+  ]
 }

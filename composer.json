@@ -1,0 +1,34 @@
+{
+    "name": "skylive/lienzo",
+    "description": "Landing page builder: document schema and a native PHP renderer.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.3",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Skylive\\Lienzo\\": "packages/laravel/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Skylive\\Lienzo\\Tests\\": "packages/laravel/tests/"
+        }
+    },
+    "scripts": {
+        "test": "pest --test-directory=packages/laravel/tests"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require-dev": {
+        "pestphp/pest": "^4.0 || ^5.0"
+    }
+}

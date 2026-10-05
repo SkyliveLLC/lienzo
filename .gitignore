@@ -8,3 +8,4 @@ todo.md
 composer.lock
 design/
 scripts/parity/out
+!packages/laravel/dist
