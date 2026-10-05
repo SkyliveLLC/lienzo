@@ -7,24 +7,35 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
     },
-    "./schema.json": "./dist/schema.json"
+    "./protocol": {
+      "types": "./dist/protocol.d.mts",
+      "import": "./dist/protocol.mjs"
+    },
+    "./schema.json": "./dist/schema.json",
+    "./data.json": "./dist/data.json",
+    "./lienzo.css": "./dist/lienzo.css",
+    "./runtime.js": "./dist/runtime.js"
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsdown",
+    "build": "tsdown && node scripts/assets.ts",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "golden": "node scripts/golden.ts",
+    "runtime": "node scripts/runtime.ts",
+    "render-inputs": "node scripts/render-inputs.ts"
   },
   "dependencies": {
     "zod": "^4.6.5"
   },
   "devDependencies": {
     "@types/node": "^24.19.1",
+    "playwright": "1.63.0",
     "tsdown": "^0.23.0"
   }
 }
