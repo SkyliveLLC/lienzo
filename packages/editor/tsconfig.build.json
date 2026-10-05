@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist/types",
+    "rootDir": "src",
+    "resolveJsonModule": true,
+    "types": [
+      "vite/client"
+    ],
+    "paths": {
+      "@skylive/lienzo-core/data.json": [
+        "./src/core-data.d.ts"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ]
+}

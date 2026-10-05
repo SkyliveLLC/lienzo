@@ -1,0 +1,51 @@
+{
+  "name": "@skylive/lienzo-editor",
+  "version": "0.0.0",
+  "description": "Visual editor for Lienzo landing pages. A Vue 3 component and a <lienzo-editor> custom element that talk to any backend over the Lienzo protocol.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "./dist/element.js",
+    "./dist/standalone/*",
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./element": {
+      "types": "./dist/types/element.d.ts",
+      "import": "./dist/element.js"
+    },
+    "./standalone": "./dist/standalone/lienzo-editor.js",
+    "./standalone.css": "./dist/standalone/lienzo-editor.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vite build --mode standalone && vue-tsc -p tsconfig.build.json",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "playwright test"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "@lucide/vue": "^1.52.0",
+    "@skylive/lienzo-core": "workspace:*"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "^24.19.1",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3",
+    "vue": "^3.5.43",
+    "vue-tsc": "^3.3.12"
+  }
+}

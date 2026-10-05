@@ -1,0 +1,30 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    "paths": {
+      "@skylive/lienzo-core": [
+        "../core/src/index.ts"
+      ],
+      "@skylive/lienzo-core/protocol": [
+        "../core/src/protocol.ts"
+      ],
+      "@skylive/lienzo-core/data.json": [
+        "./src/core-data.d.ts"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "dev",
+    "test",
+    "e2e",
+    "*.config.ts"
+  ]
+}
