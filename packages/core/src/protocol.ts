@@ -4,7 +4,7 @@
  * editor. Laravel implements it first; other backends implement the same table.
  */
 import type { Catalog } from './catalog.ts';
-import type { Document, Issue, Seo, SiteSettings, Theme } from './document.ts';
+import type { Document, FieldValue, Issue, Seo, SiteSettings, Theme } from './document.ts';
 
 export type Asset = {
     id: number;
@@ -29,8 +29,14 @@ export type PageState = PageSummary & {
     versions: PageVersion[];
 };
 
+/** Values of the catalog's `siteFields`, by field key. */
+export type SiteMeta = Record<string, FieldValue>;
+
 export type Workspace = {
     site: SiteSettings;
+    meta: SiteMeta;
+    /** Public URL of the site root, for "view site" links and page address previews. Null when not served yet. */
+    publicUrl: string | null;
     pages: PageSummary[];
     catalog: Catalog;
     assets: Asset[];
@@ -43,6 +49,7 @@ export type SiteUpdate = {
     locale?: string;
     favicon?: string | null;
     og_image?: string | null;
+    meta?: SiteMeta;
 };
 
 export type Submission = { id: number; page: string; source: string; fields: Record<string, string>; createdAt: string };

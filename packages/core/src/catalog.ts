@@ -31,6 +31,15 @@ export type ElementSpec = {
 /** An action type the app registers; `RenderHost.action` turns it into an href. */
 export type ActionSpec = { type: string; label: Localized; value: Field | null };
 
-export type Catalog = { elements: ElementSpec[]; actions: ActionSpec[] };
+export type Catalog = {
+    elements: ElementSpec[];
+    actions: ActionSpec[];
+    /**
+     * App-specific site data (an address, opening hours, an analytics id).
+     * Values live in the site's `meta` object, keyed by field key; the editor
+     * renders one control per field in its site settings.
+     */
+    siteFields?: Field[];
+};
 
 export const emptyCatalog: Catalog = { elements: [], actions: [] };
