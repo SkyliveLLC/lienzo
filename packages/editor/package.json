@@ -1,8 +1,24 @@
 {
   "name": "@skylive/lienzo-editor",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Visual editor for Lienzo landing pages. A Vue 3 component and a <lienzo-editor> custom element that talk to any backend over the Lienzo protocol.",
+  "keywords": [
+    "landing-page",
+    "page-builder",
+    "visual-editor",
+    "vue",
+    "custom-element",
+    "lienzo"
+  ],
+  "homepage": "https://github.com/SkyliveLLC/lienzo/tree/main/packages/editor#readme",
+  "bugs": "https://github.com/SkyliveLLC/lienzo/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkyliveLLC/lienzo.git",
+    "directory": "packages/editor"
+  },
   "license": "MIT",
+  "author": "Skylive LLC",
   "type": "module",
   "sideEffects": [
     "./dist/element.js",
@@ -22,14 +38,16 @@
     "./standalone.css": "./dist/standalone/lienzo-editor.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "THIRD_PARTY_NOTICES.md"
   ],
   "scripts": {
     "dev": "vite",
     "build": "vite build && vite build --mode standalone && vue-tsc -p tsconfig.build.json",
     "typecheck": "vue-tsc --noEmit",
     "test": "vitest run",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "prepack": "node ../../scripts/copy-notices.ts"
   },
   "peerDependencies": {
     "vue": "^3.5.0"
@@ -47,5 +65,9 @@
     "vitest": "^5.0.3",
     "vue": "^3.5.43",
     "vue-tsc": "^3.3.12"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }

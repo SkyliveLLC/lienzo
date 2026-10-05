@@ -11,6 +11,7 @@
   },
   "include": [
     "parity",
-    "sync-php-assets.ts"
+    "sync-php-assets.ts",
+    "copy-notices.ts"
   ]
 }

@@ -11,3 +11,5 @@ scripts/parity/out
 !packages/laravel/dist
 playwright-report
 test-results
+/packages/*/LICENSE
+/packages/*/THIRD_PARTY_NOTICES.md

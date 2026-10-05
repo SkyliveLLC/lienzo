@@ -1,8 +1,23 @@
 {
   "name": "@skylive/lienzo-core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Document schema and renderer for Lienzo landing pages. No framework required.",
+  "keywords": [
+    "landing-page",
+    "page-builder",
+    "renderer",
+    "cms",
+    "lienzo"
+  ],
+  "homepage": "https://github.com/SkyliveLLC/lienzo/tree/main/packages/core#readme",
+  "bugs": "https://github.com/SkyliveLLC/lienzo/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkyliveLLC/lienzo.git",
+    "directory": "packages/core"
+  },
   "license": "MIT",
+  "author": "Skylive LLC",
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -20,7 +35,8 @@
     "./runtime.js": "./dist/runtime.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "THIRD_PARTY_NOTICES.md"
   ],
   "scripts": {
     "build": "tsdown && node scripts/assets.ts",
@@ -28,7 +44,8 @@
     "typecheck": "tsc --noEmit",
     "golden": "node scripts/golden.ts && node scripts/parse-golden.ts",
     "runtime": "node scripts/runtime.ts",
-    "render-inputs": "node scripts/render-inputs.ts"
+    "render-inputs": "node scripts/render-inputs.ts",
+    "prepack": "node ../../scripts/copy-notices.ts"
   },
   "dependencies": {
     "zod": "^4.6.5"
@@ -37,5 +54,9 @@
     "@types/node": "^24.19.1",
     "playwright": "1.63.0",
     "tsdown": "^0.23.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }

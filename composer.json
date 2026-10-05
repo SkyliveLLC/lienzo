@@ -1,8 +1,27 @@
 {
     "name": "skylive/lienzo",
-    "description": "Landing page builder for Laravel: a visual editor, a document schema and a native PHP renderer.",
+    "description": "Landing page builder for Laravel: a visual editor, a validated document format and a native PHP renderer. No Node at runtime.",
+    "keywords": [
+        "laravel",
+        "landing-page",
+        "page-builder",
+        "visual-editor",
+        "cms",
+        "lienzo"
+    ],
+    "homepage": "https://github.com/SkyliveLLC/lienzo",
     "type": "library",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Skylive LLC",
+            "homepage": "https://github.com/SkyliveLLC"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/SkyliveLLC/lienzo/issues",
+        "source": "https://github.com/SkyliveLLC/lienzo"
+    },
     "require": {
         "php": "^8.3",
         "ext-dom": "*",
