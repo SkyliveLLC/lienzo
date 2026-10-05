@@ -310,6 +310,16 @@ export function fieldsSchema(fields: readonly Field[]) {
     return object(Object.fromEntries(fields.map((field) => [field.key, field.kind === 'text' ? fieldSchema(field).nullish() : optional(fieldSchema(field))])));
 }
 
+/**
+ * Values of app-declared fields, checked the way `parseDocument` checks app
+ * element props: a site's `meta` against `catalog.siteFields`, or one app
+ * element's props for a preview. Keys no field declares are dropped.
+ */
+export function parseFields(fields: readonly Field[], input: unknown): Record<string, FieldValue | undefined> {
+    // Without a prototype, a field named like an Object member (`constructor`) reads as missing when it is.
+    return check(fieldsSchema(fields), isRecord(input) ? Object.assign(Object.create(null), input) : input, []);
+}
+
 function fieldSchema(field: Field) {
     switch (field.kind) {
         case 'text':
@@ -415,6 +425,11 @@ const seoSchema = object({
     description: z.string().max(300).nullish(),
 });
 export type Seo = z.output<typeof seoSchema>;
+
+/** A page's SEO tags, the same shape as the site's. */
+export function parseSeo(input: unknown): Seo {
+    return check(seoSchema, input, []);
+}
 
 export const siteSettingsSchema = object({
     name: z.string().min(1).max(120),

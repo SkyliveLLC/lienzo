@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { DocumentError, emptyCatalog, parseDocument, parseSiteSettings, parseTheme } from '../src/index.ts';
+import { DocumentError, emptyCatalog, parseDocument, parseFields, parseSeo, parseSiteSettings, parseTheme, type Field } from '../src/index.ts';
 import { documentNames, fixtureCatalog, storedDocument } from './fixtures.ts';
 
 const element = (overrides: Record<string, unknown> = {}) => ({
@@ -154,5 +154,40 @@ describe('parseTheme', () => {
 
     it('defaults the site locale to English', () => {
         expect(parseSiteSettings({ name: 'Demo' })).toMatchObject({ name: 'Demo', locale: 'en', seo: {}, favicon: null });
+    });
+});
+
+describe('parseFields', () => {
+    const fields: Field[] = [
+        { kind: 'text', key: 'phone', label: { en: 'Phone' }, max: 20 },
+        { kind: 'toggle', key: 'chat', label: { en: 'Chat' }, default: false },
+    ];
+    const issues = (input: unknown) => {
+        try {
+            parseFields(fields, input);
+        } catch (error) {
+            if (error instanceof DocumentError) {
+                return error.issues.map((issue) => `${issue.path}:${issue.code}`);
+            }
+            throw error;
+        }
+
+        return [];
+    };
+
+    it('keeps the declared values and drops keys no field declares', () => {
+        expect(parseFields(fields, { phone: '+1 555 0100', chat: true, admin: true })).toEqual({ phone: '+1 555 0100', chat: true });
+    });
+
+    it('reports each value that breaks its field, by key', () => {
+        expect(issues({ phone: 'x'.repeat(21), chat: 'yes' })).toEqual(['phone:size', 'chat:type']);
+        expect(issues('phone')).toEqual([':type']);
+    });
+});
+
+describe('parseSeo', () => {
+    it('accepts page tags and rejects oversized ones', () => {
+        expect(parseSeo({ title: 'Home', description: null })).toEqual({ title: 'Home', description: null });
+        expect(() => parseSeo({ description: 'x'.repeat(301) })).toThrow(DocumentError);
     });
 });

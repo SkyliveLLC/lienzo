@@ -2,6 +2,8 @@ export {
     CORE_ACTION_TYPES,
     DocumentError,
     parseDocument,
+    parseFields,
+    parseSeo,
     parseSiteSettings,
     parseTheme,
 } from './document.ts';
