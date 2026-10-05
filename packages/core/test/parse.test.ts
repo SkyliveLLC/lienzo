@@ -88,6 +88,21 @@ describe('parseDocument', () => {
 
         expect(issuesOf(page(element({ z: 'top' })))).toEqual(['sections.0.elements.0.z:type']);
         expect(issuesOf(page(withoutZ))).toEqual(['sections.0.elements.0.z:required']);
+        expect(issuesOf({ sections: [{ ...page().sections[0], background: {} }] })).toEqual(['sections.0.background.type:required']);
+    });
+
+    it('reports a wrong type once, without the size of the wrong value', () => {
+        expect(issuesOf({ sections: '' })).toEqual(['sections:type']);
+    });
+
+    it('upgrades a legacy modal whose id is not a string without crashing', () => {
+        expect(issuesOf({ ...page(), modals: [{ id: { toString: 0 }, text: 'Hi' }] })).toEqual(['modals.0.id:type']);
+    });
+
+    it('reads an app field named like an Object member as missing when it is', () => {
+        const catalog = { elements: [{ ...fixtureCatalog.elements[0]!, type: 'proto', fields: [{ kind: 'toggle' as const, key: 'constructor', label: { en: 'C' }, default: false }] }], actions: [] };
+
+        expect(parseDocument(page(element({ type: 'proto', props: {} })), catalog).sections[0]?.elements[0]?.props).toEqual({});
     });
 });
 

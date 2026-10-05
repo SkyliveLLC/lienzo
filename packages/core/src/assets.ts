@@ -45,6 +45,7 @@ export function assets(): Record<'lienzo.css' | 'runtime.js' | 'schema.json' | '
             + 'In a node marked x-blank-as-null, a blank string (only whitespace) means null. '
             + 'An empty JSON array where an object is expected means an empty object, and an empty object where an array is expected means an empty array. '
             + 'minLength and maxLength count Unicode code points, as JSON Schema specifies. '
+            + 'A __proto__ key is dropped, since a JavaScript object cannot keep it. '
             + 'Element props are checked by type: CoreProps for core types, the app field list for catalog types (built from Image and Action), and only a size limit (UTF-8 bytes of their JSON) otherwise.',
         ...document,
         $defs: {

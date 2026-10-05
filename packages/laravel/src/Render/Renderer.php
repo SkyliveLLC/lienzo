@@ -84,8 +84,8 @@ final class Renderer
         $site = $this->site;
         $title = self::filled($this->page->seo['title'] ?? null) ?? self::filled($site->seo['title'] ?? null) ?? $site->name;
         $description = self::filled($this->page->seo['description'] ?? null) ?? self::filled($site->seo['description'] ?? null);
-        $share = $this->resolveMedia($site->ogImage)?->url;
-        $favicon = $this->resolveMedia($site->favicon)?->url;
+        $share = self::filledUrl($this->resolveMedia($site->ogImage));
+        $favicon = self::filledUrl($this->resolveMedia($site->favicon));
         $fonts = implode('&', array_map(
             fn (string $font): string => 'family='.str_replace(' ', '+', $font).':wght@300;400;500;600;700;800',
             array_values(array_unique([$site->theme['heading_font'], $site->theme['body_font']])),
@@ -134,6 +134,11 @@ final class Renderer
     private static function filled(?string $value): ?string
     {
         return $value !== null && Js::trim($value) !== '' ? $value : null;
+    }
+
+    private static function filledUrl(?MediaFile $file): ?string
+    {
+        return ($file->url ?? '') === '' ? null : $file->url;
     }
 
     private function resolveMedia(?string $src): ?MediaFile

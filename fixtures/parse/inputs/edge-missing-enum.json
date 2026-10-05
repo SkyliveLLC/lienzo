@@ -1,0 +1,15 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "s1",
+        "height": {
+          "desktop": 400,
+          "mobile": 400
+        },
+        "background": {},
+        "elements": []
+      }
+    ]
+  }
+}

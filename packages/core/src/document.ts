@@ -284,7 +284,8 @@ function parseProps(
         const fields = appFields.get(element.type);
 
         if (fields) {
-            return { ...element, props: check(fieldsSchema(fields), element.props, propsPath) };
+            // Without a prototype, a field named like an Object member (`constructor`) reads as missing when it is.
+            return { ...element, props: check(fieldsSchema(fields), Object.assign(Object.create(null), element.props), propsPath) };
         }
 
         if (utf8.encode(JSON.stringify(element.props)).length > OPAQUE_PROPS_MAX_BYTES) {
@@ -355,7 +356,8 @@ function upgradeLegacyModals(input: unknown): unknown {
                 width: modal.width ?? 520,
                 height: modal.height ?? { desktop: 320, mobile: 420 },
                 background: modal.background ?? { type: 'color', color: 'background' },
-                elements: modal.elements ?? legacyText(String(modalId), modal.text),
+                // A modal id that is not a string fails the schema whatever its text element is called.
+                elements: modal.elements ?? legacyText(typeof modalId === 'string' ? modalId : 'modal', modal.text),
             };
         }),
     };
@@ -473,17 +475,25 @@ function check<S extends z.ZodType>(schema: S, input: unknown, path: (string | n
         return result.data;
     }
 
-    throw new DocumentError(result.error.issues.map((issue) => ({
+    const issues = result.error.issues.map((issue) => ({
         path: [...path, ...issue.path].join('.'),
         code: issueCode(issue),
         message: issue.message,
-    })));
+    }));
+    // zod still measures the length of a value of the wrong type (a string where a list belongs); that size issue is noise.
+    const mistyped = new Set(issues.filter((issue) => issue.code === 'type').map((issue) => issue.path));
+
+    throw new DocumentError(issues.filter((issue) => issue.code !== 'size' || !mistyped.has(issue.path)));
 }
 
 function issueCode(issue: z.core.$ZodIssue): Issue['code'] {
+    if (issue.input === undefined) {
+        return 'required';
+    }
+
     switch (issue.code) {
         case 'invalid_type':
-            return issue.input === undefined ? 'required' : 'type';
+            return 'type';
         case 'too_big':
         case 'too_small':
             return issue.origin === 'array' || issue.origin === 'string' ? 'size' : 'range';

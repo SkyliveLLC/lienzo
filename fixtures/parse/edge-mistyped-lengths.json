@@ -1,0 +1,12 @@
+{
+  "document": {
+    "issues": [
+      "sections:type"
+    ]
+  },
+  "site": {
+    "issues": [
+      "name:type"
+    ]
+  }
+}

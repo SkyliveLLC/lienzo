@@ -666,7 +666,7 @@
         "title": "Fallback title",
         "description": "Desc & \"quotes\""
       },
-      "favicon": "https://demo.test/favicon.png",
+      "favicon": "media:5",
       "og_image": "media:4"
     }
   }

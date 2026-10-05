@@ -93,10 +93,9 @@ final readonly class ParsedDocument
         };
 
         if ($schema === null) {
-            $json = json_encode($element['props'], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_LINE_TERMINATORS);
             $max = Assets::data()['opaquePropsMaxBytes'];
 
-            if (strlen((string) $json) > $max) {
+            if (strlen(Js::stringify($element['props'])) > $max) {
                 $issues[] = new Issue(implode('.', $propsPath), IssueCode::Size, "Too big: at most {$max} bytes");
             }
 

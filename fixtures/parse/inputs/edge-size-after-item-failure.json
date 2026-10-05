@@ -1,0 +1,53 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "s1",
+        "height": {
+          "desktop": 400,
+          "mobile": 400
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": []
+      }
+    ],
+    "modals": [
+      {
+        "width": "x"
+      },
+      {
+        "id": "m0"
+      },
+      {
+        "id": "m1"
+      },
+      {
+        "id": "m2"
+      },
+      {
+        "id": "m3"
+      },
+      {
+        "id": "m4"
+      },
+      {
+        "id": "m5"
+      },
+      {
+        "id": "m6"
+      },
+      {
+        "id": "m7"
+      },
+      {
+        "id": "m8"
+      },
+      {
+        "id": "m9"
+      }
+    ]
+  }
+}

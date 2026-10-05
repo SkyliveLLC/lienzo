@@ -12,7 +12,7 @@ use Skylive\Lienzo\Support\Js;
  * runs: unknown keys are dropped, `x-blank-as-null` turns a blank string into
  * null, and issues come out in the same order with the same codes. A failed
  * type or enum aborts its value; a failed length, range or pattern does not,
- * which decides how unions and array size checks report (as zod does).
+ * which decides how unions report (as zod does).
  *
  * A PHP array is a JSON array when it is a list and an object otherwise. `[]`
  * is both, which is the empty-container rule the schema states.
@@ -160,7 +160,8 @@ final class Schema
 
         if (is_array($extra)) {
             foreach ($value as $key => $item) {
-                if (! array_key_exists($key, $properties)) {
+                // A JavaScript object cannot keep an own `__proto__` key, so core drops it.
+                if (! array_key_exists($key, $properties) && $key !== '__proto__') {
                     [$checked[$key], $childFailures] = self::walk($extra, $item, [...$path, $key]);
                     array_push($failures, ...$childFailures);
                 }
@@ -189,17 +190,15 @@ final class Schema
             array_push($failures, ...$itemFailures);
         }
 
-        // Like zod, size checks run only when no item failed outright.
-        if (! self::aborted($failures)) {
-            $count = count($value);
+        // Like zod, size checks run even when an item failed outright.
+        $count = count($value);
 
-            if ($count < ($node['minItems'] ?? 0)) {
-                $failures[] = [new Issue(self::path($path), IssueCode::Size, "Too small: at least {$node['minItems']} items"), false];
-            }
+        if ($count < ($node['minItems'] ?? 0)) {
+            $failures[] = [new Issue(self::path($path), IssueCode::Size, "Too small: at least {$node['minItems']} items"), false];
+        }
 
-            if (isset($node['maxItems']) && $count > $node['maxItems']) {
-                $failures[] = [new Issue(self::path($path), IssueCode::Size, "Too big: at most {$node['maxItems']} items"), false];
-            }
+        if (isset($node['maxItems']) && $count > $node['maxItems']) {
+            $failures[] = [new Issue(self::path($path), IssueCode::Size, "Too big: at most {$node['maxItems']} items"), false];
         }
 
         return [$checked, $failures];
