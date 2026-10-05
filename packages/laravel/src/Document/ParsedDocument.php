@@ -93,11 +93,15 @@ final readonly class ParsedDocument
         };
 
         if ($schema === null) {
+            $json = Js::stringify($element['props']);
             $max = Assets::data()['opaquePropsMaxBytes'];
 
-            if (strlen(Js::stringify($element['props'])) > $max) {
+            if (strlen($json) > $max) {
                 $issues[] = new Issue(implode('.', $propsPath), IssueCode::Size, "Too big: at most {$max} bytes");
             }
+
+            // Kept as core stores them: a number JSON cannot hold (1e400) becomes null.
+            $element['props'] = json_decode($json, true);
 
             return $element;
         }

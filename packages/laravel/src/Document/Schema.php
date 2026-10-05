@@ -10,7 +10,13 @@ use Skylive\Lienzo\Support\Js;
 /**
  * Walks the JSON Schema subset in `dist/schema.json` the way core's zod parse
  * runs: unknown keys are dropped, `x-blank-as-null` turns a blank string into
- * null, and issues come out in the same order with the same codes. A failed
+ * null, and issues come out in the same order with the same codes.
+ *
+ * Each failure carries zod's `continue` flag, which decides what else is
+ * reported: true for a failed length, range or pattern (checking goes on),
+ * null for a wrong type or enum (the value is aborted), false for a float
+ * where an integer belongs (aborted explicitly, which also stops the size
+ * check of an enclosing array). A failed
  * type or enum aborts its value; a failed length, range or pattern does not,
  * which decides how unions report (as zod does).
  *
@@ -49,7 +55,7 @@ final class Schema
     /**
      * @param  array<string, mixed>  $node
      * @param  list<string|int>  $path
-     * @return array{0: mixed, 1: list<array{0: Issue, 1: bool}>} the value and its failures, each with whether it aborts
+     * @return array{0: mixed, 1: list<array{0: Issue, 1: ?bool}>} the value and its failures, each with zod's `continue` flag
      */
     private static function walk(array $node, mixed $value, array $path): array
     {
@@ -100,7 +106,7 @@ final class Schema
      *
      * @param  list<array<string, mixed>>  $branches
      * @param  list<string|int>  $path
-     * @return array{0: mixed, 1: list<array{0: Issue, 1: bool}>}
+     * @return array{0: mixed, 1: list<array{0: Issue, 1: ?bool}>}
      */
     private static function anyOf(array $branches, mixed $value, array $path): array
     {
@@ -130,7 +136,7 @@ final class Schema
     /**
      * @param  array<string, mixed>  $node
      * @param  list<string|int>  $path
-     * @return array{0: mixed, 1: list<array{0: Issue, 1: bool}>}
+     * @return array{0: mixed, 1: list<array{0: Issue, 1: ?bool}>}
      */
     private static function object(array $node, mixed $value, array $path): array
     {
@@ -146,7 +152,7 @@ final class Schema
         foreach ($properties as $key => $child) {
             if (! array_key_exists($key, $value)) {
                 if (in_array($key, $required, true)) {
-                    $failures[] = [new Issue(self::path([...$path, $key]), IssueCode::Required, 'Required'), true];
+                    $failures[] = [new Issue(self::path([...$path, $key]), IssueCode::Required, 'Required'), null];
                 }
 
                 continue;
@@ -174,7 +180,7 @@ final class Schema
     /**
      * @param  array<string, mixed>  $node
      * @param  list<string|int>  $path
-     * @return array{0: mixed, 1: list<array{0: Issue, 1: bool}>}
+     * @return array{0: mixed, 1: list<array{0: Issue, 1: ?bool}>}
      */
     private static function list(array $node, mixed $value, array $path): array
     {
@@ -190,15 +196,18 @@ final class Schema
             array_push($failures, ...$itemFailures);
         }
 
-        // Like zod, size checks run even when an item failed outright.
+        if (in_array(false, array_column($failures, 1), true)) {
+            return [$checked, $failures];
+        }
+
         $count = count($value);
 
         if ($count < ($node['minItems'] ?? 0)) {
-            $failures[] = [new Issue(self::path($path), IssueCode::Size, "Too small: at least {$node['minItems']} items"), false];
+            $failures[] = [new Issue(self::path($path), IssueCode::Size, "Too small: at least {$node['minItems']} items"), true];
         }
 
         if (isset($node['maxItems']) && $count > $node['maxItems']) {
-            $failures[] = [new Issue(self::path($path), IssueCode::Size, "Too big: at most {$node['maxItems']} items"), false];
+            $failures[] = [new Issue(self::path($path), IssueCode::Size, "Too big: at most {$node['maxItems']} items"), true];
         }
 
         return [$checked, $failures];
@@ -207,7 +216,7 @@ final class Schema
     /**
      * @param  array<string, mixed>  $node
      * @param  list<string|int>  $path
-     * @return array{0: mixed, 1: list<array{0: Issue, 1: bool}>}
+     * @return array{0: mixed, 1: list<array{0: Issue, 1: ?bool}>}
      */
     private static function string(array $node, mixed $value, array $path): array
     {
@@ -227,7 +236,7 @@ final class Schema
             };
 
             if ($failure !== null) {
-                $failures[] = [$failure, false];
+                $failures[] = [$failure, true];
             }
         }
 
@@ -239,7 +248,7 @@ final class Schema
      *
      * @param  array<string, mixed>  $node
      * @param  list<string|int>  $path
-     * @return array{0: mixed, 1: list<array{0: Issue, 1: bool}>}
+     * @return array{0: mixed, 1: list<array{0: Issue, 1: ?bool}>}
      */
     private static function number(array $node, mixed $value, array $path): array
     {
@@ -252,22 +261,22 @@ final class Schema
 
         if ($node['type'] === 'integer') {
             if (is_float($value) && floor($value) !== $value) {
-                return self::fail($value, $path, IssueCode::Type, 'Expected integer');
+                return [$value, [[new Issue($where, IssueCode::Type, 'Expected integer'), false]]];
             }
 
             if (abs($value) > self::MAX_SAFE_INTEGER) {
-                $failures[] = [new Issue($where, IssueCode::Range, 'Outside the safe integer range'), false];
+                $failures[] = [new Issue($where, IssueCode::Range, 'Outside the safe integer range'), true];
             } else {
                 $value = (int) $value;
             }
         }
 
         if (isset($node['minimum']) && $value < $node['minimum']) {
-            $failures[] = [new Issue($where, IssueCode::Range, "Too small: at least {$node['minimum']}"), false];
+            $failures[] = [new Issue($where, IssueCode::Range, "Too small: at least {$node['minimum']}"), true];
         }
 
         if (isset($node['maximum']) && $value > $node['maximum']) {
-            $failures[] = [new Issue($where, IssueCode::Range, "Too big: at most {$node['maximum']}"), false];
+            $failures[] = [new Issue($where, IssueCode::Range, "Too big: at most {$node['maximum']}"), true];
         }
 
         return [$value, $failures];
@@ -289,19 +298,19 @@ final class Schema
         return $isNumber($option) && $isNumber($value) ? $option == $value : $option === $value;
     }
 
-    /** @param list<array{0: Issue, 1: bool}> $failures */
+    /** @param list<array{0: Issue, 1: ?bool}> $failures */
     private static function aborted(array $failures): bool
     {
-        return in_array(true, array_column($failures, 1), true);
+        return array_filter(array_column($failures, 1), fn (?bool $continue): bool => $continue !== true) !== [];
     }
 
     /**
      * @param  list<string|int>  $path
-     * @return array{0: mixed, 1: list<array{0: Issue, 1: bool}>}
+     * @return array{0: mixed, 1: list<array{0: Issue, 1: ?bool}>}
      */
     private static function fail(mixed $value, array $path, IssueCode $code, string $message): array
     {
-        return [$value, [[new Issue(self::path($path), $code, $message), true]]];
+        return [$value, [[new Issue(self::path($path), $code, $message), null]]];
     }
 
     /** @param list<string|int> $path */
