@@ -1,0 +1,9 @@
+.lz-page{--primary:#2563eb;--secondary:#0f172a;--background:#ffffff;--surface:#f8fafc;--text:#0f172a;--muted:#64748b;--radius:12px;--max-width:1200px;--ref:1200;--font-heading:'Inter', system-ui, sans-serif;--font-body:'Inter', system-ui, sans-serif}
+#s-menus{--fh:392;--fmh:560;--sbg:var(--background)}
+#e-navbar-3sdtsn2{--x:0;--y:40;--w:100;--h:72;--ord:1;--z:1;--c:var(--text);--bg:var(--background);--fs:16;--fw:600;--p:20}
+#e-navbar-bssjnkb{--x:0;--y:144;--w:100;--h:72;--ord:2;--z:2;--c:var(--text);--bg:var(--background);--fs:16;--fw:600;--p:20}
+#e-navbar-kcvs8ru{--x:0;--y:248;--w:100;--h:72;--ord:3;--z:3;--c:var(--text);--bg:var(--background);--fs:16;--fw:600;--p:20}
+#s-destino{--fh:192;--fmh:560;--sbg:var(--background)}
+#e-heading-7b2roj2{--x:4;--y:40;--w:26.667;--h:80;--ord:1;--z:1;--c:var(--text);--fs:44;--fw:700;--lh:1.1}
+#m-ventana{--dw:560;--dbg:var(--background);--fh:320;--fmh:420}
+#e-text-e07zlok{--x:10;--y:0;--w:40;--h:96;--ord:1;--z:1;--c:var(--muted);--fs:18;--fw:400;--lh:1.6}

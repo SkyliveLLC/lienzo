@@ -1,0 +1,10 @@
+.lz-page{--primary:#2563eb;--secondary:#0f172a;--background:#ffffff;--surface:#f8fafc;--text:#0f172a;--muted:#64748b;--radius:12px;--max-width:1200px;--ref:1200;--font-heading:'Inter', system-ui, sans-serif;--font-body:'Inter', system-ui, sans-serif}
+#s-seccion-dezh48l{--fh:520;--fmh:676;--sbg:var(--surface)}
+#e-heading-gpdzdi4{--x:6;--y:80;--w:32;--h:120;--ord:1;--z:1;--c:var(--secondary);--fs:38;--fw:700;--lh:1.1}
+#e-text-bhkvryu{--x:6;--y:190;--w:30;--h:110;--ord:5;--z:2;--c:var(--muted);--fs:17;--fw:400;--lh:1.6}
+#e-input-ljxch29{--x:44;--y:80;--w:24;--h:78;--ord:2;--z:3;--c:var(--secondary);--bg:var(--background);--fs:15;--r:12;--bw:1;--bc:var(--muted);--p:12}
+#e-input-6qc71bw{--x:70;--y:80;--w:24;--h:78;--ord:3;--z:4;--c:var(--secondary);--bg:var(--background);--fs:15;--r:12;--bw:1;--bc:var(--muted);--p:12}
+#e-select-hbhuuc8{--x:44;--y:172;--w:50;--h:78;--ord:4;--z:5;--c:var(--secondary);--bg:var(--background);--fs:15;--r:12;--bw:1;--bc:var(--muted);--p:12}
+#e-textarea-7p1inqd{--x:44;--y:264;--w:50;--h:110;--ord:6;--z:6;--c:var(--secondary);--bg:var(--background);--fs:15;--r:12;--bw:1;--bc:var(--muted);--p:12}
+#e-checkbox-5xvcab3{--x:44;--y:388;--w:50;--h:34;--ord:7;--z:7;--c:var(--muted);--bg:var(--surface);--fs:14;--r:10;--bw:1;--bc:var(--muted);--p:10}
+#e-button-dob1u0r{--x:44;--y:434;--w:50;--h:54;--ord:8;--z:8;--c:var(--background);--bg:var(--primary);--fs:17;--fw:700;--r:14}

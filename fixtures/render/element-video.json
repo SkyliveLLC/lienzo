@@ -1,0 +1,1600 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "variantes",
+        "height": {
+          "desktop": 956,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "video-ijerbw3",
+            "type": "video",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-pshavpa",
+            "type": "video",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://youtu.be/dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-5os6ehx",
+            "type": "video",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-0kav2jg",
+            "type": "video",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 332,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://vimeo.com/76979871",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-bkph0e6",
+            "type": "video",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 332,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://vimeo.com/video/76979871",
+              "alt": "Recorrido"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-gbarnds",
+            "type": "video",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 332,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://example.com/not-a-video",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-8mo8ema",
+            "type": "video",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 624,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            }
+          }
+        ]
+      },
+      {
+        "id": "relleno",
+        "height": {
+          "desktop": 2416,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "surface"
+        },
+        "elements": [
+          {
+            "id": "video-cku28an",
+            "type": "video",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "gradient": {
+                "type": "linear",
+                "from": "primary",
+                "to": "secondary",
+                "angle": 135
+              }
+            }
+          },
+          {
+            "id": "video-7or1tw3",
+            "type": "video",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "gradient": {
+                "type": "radial",
+                "from": "#f97316",
+                "to": "background",
+                "angle": 0
+              },
+              "background_opacity": 0.6
+            }
+          },
+          {
+            "id": "video-ngxnm9i",
+            "type": "video",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "background": "#fde68a",
+              "background_opacity": 0.4
+            }
+          },
+          {
+            "id": "video-tj4s1lp",
+            "type": "video",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 332,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "color": "#7c3aed",
+              "background": "surface"
+            }
+          },
+          {
+            "id": "video-ln5b5dg",
+            "type": "video",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 332,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "shadow": "sm"
+            }
+          },
+          {
+            "id": "video-wnzwcjt",
+            "type": "video",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 332,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "shadow": "md"
+            }
+          },
+          {
+            "id": "video-z01gkm4",
+            "type": "video",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 624,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "shadow": "lg"
+            }
+          },
+          {
+            "id": "video-vm0yo9e",
+            "type": "video",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 624,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "shadow": "custom",
+              "shadow_custom": {
+                "x": 4,
+                "y": 12,
+                "blur": 32,
+                "spread": -4,
+                "color": "primary",
+                "opacity": 0.35
+              }
+            }
+          },
+          {
+            "id": "video-bz6xyq4",
+            "type": "video",
+            "z": 9,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 624,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "shadow": "custom",
+              "shadow_custom": {
+                "x": 0,
+                "y": 0,
+                "blur": 0,
+                "spread": 0,
+                "color": "#000000",
+                "opacity": 1
+              }
+            }
+          },
+          {
+            "id": "video-5dyk8hx",
+            "type": "video",
+            "z": 10,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 916,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 999,
+              "border_width": 3,
+              "border_color": "#e11d48",
+              "padding": 24
+            }
+          },
+          {
+            "id": "video-z9zs0si",
+            "type": "video",
+            "z": 11,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 916,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 0,
+              "border_width": 2,
+              "padding": 0
+            }
+          },
+          {
+            "id": "video-na8rufu",
+            "type": "video",
+            "z": 12,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 916,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "font": "heading",
+              "size": 30,
+              "weight": 800,
+              "align": "center",
+              "line_height": 2
+            }
+          },
+          {
+            "id": "video-g16r5qp",
+            "type": "video",
+            "z": 13,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1208,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "opacity": 0.5
+            }
+          },
+          {
+            "id": "video-5mt7dmw",
+            "type": "video",
+            "z": 14,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1208,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "opacity": 0
+            }
+          },
+          {
+            "id": "video-iosk3ws",
+            "type": "video",
+            "z": 15,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 1208,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "blur": 8,
+              "background": "background",
+              "background_opacity": 0.5
+            }
+          },
+          {
+            "id": "video-x1knsmp",
+            "type": "video",
+            "z": 16,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1500,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "clip": true
+            }
+          },
+          {
+            "id": "video-mzvoep4",
+            "type": "video",
+            "z": 17,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1500,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "overflow": "hidden"
+            }
+          },
+          {
+            "id": "video-6z785va",
+            "type": "video",
+            "z": 18,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 1500,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "overflow": "scroll-x"
+            }
+          },
+          {
+            "id": "video-3i8pd29",
+            "type": "video",
+            "z": 19,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1792,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "overflow": "scroll-y"
+            }
+          },
+          {
+            "id": "video-1tqsz3i",
+            "type": "video",
+            "z": 20,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1792,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "clip": true,
+              "overflow": "visible"
+            }
+          },
+          {
+            "id": "video-c02r2ex",
+            "type": "video",
+            "z": 21,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 1792,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            },
+            "locked": true
+          },
+          {
+            "id": "video-00hlpna",
+            "type": "video",
+            "z": 22,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 2084,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            },
+            "group": "grupo-a"
+          },
+          {
+            "id": "video-oa8euf0",
+            "type": "video",
+            "z": 23,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 2084,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            },
+            "group": "grupo-a",
+            "locked": true
+          }
+        ]
+      },
+      {
+        "id": "movimiento",
+        "height": {
+          "desktop": 2124,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "video-e293jcp",
+            "type": "video",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "rotate": 12
+            }
+          },
+          {
+            "id": "video-ggasl1n",
+            "type": "video",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "rotate": -45.5
+            }
+          },
+          {
+            "id": "video-3jgt5nq",
+            "type": "video",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "flip_x": true
+            }
+          },
+          {
+            "id": "video-bw7i034",
+            "type": "video",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 332,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "flip_y": true
+            }
+          },
+          {
+            "id": "video-tmkv91r",
+            "type": "video",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 332,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "rotate": 30,
+              "flip_x": true,
+              "flip_y": true
+            }
+          },
+          {
+            "id": "video-rm25o8o",
+            "type": "video",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 332,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "hover": "lift"
+            }
+          },
+          {
+            "id": "video-kfw2vjd",
+            "type": "video",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 624,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "hover": "lift",
+              "rotate": -8
+            }
+          },
+          {
+            "id": "video-69xn6vw",
+            "type": "video",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 624,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "hover": "grow"
+            }
+          },
+          {
+            "id": "video-fneme7p",
+            "type": "video",
+            "z": 9,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 624,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "hover": "grow",
+              "flip_x": true
+            }
+          },
+          {
+            "id": "video-orb1ry6",
+            "type": "video",
+            "z": 10,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 916,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "hover": "fade"
+            }
+          },
+          {
+            "id": "video-96ihb0g",
+            "type": "video",
+            "z": 11,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 916,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "hover": "none"
+            }
+          },
+          {
+            "id": "video-82sgnjt",
+            "type": "video",
+            "z": 12,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 916,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "animation": {
+                "type": "fade",
+                "delay": 0,
+                "duration": 0.7
+              }
+            }
+          },
+          {
+            "id": "video-tfofs47",
+            "type": "video",
+            "z": 13,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1208,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "animation": {
+                "type": "up",
+                "delay": 0.2,
+                "duration": 1
+              }
+            }
+          },
+          {
+            "id": "video-t60f41k",
+            "type": "video",
+            "z": 14,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1208,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "animation": {
+                "type": "down",
+                "delay": 0.4,
+                "duration": 0.5
+              }
+            }
+          },
+          {
+            "id": "video-aydhdsq",
+            "type": "video",
+            "z": 15,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 1208,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "animation": {
+                "type": "left",
+                "delay": 0,
+                "duration": 0.2
+              }
+            }
+          },
+          {
+            "id": "video-mvrfkl1",
+            "type": "video",
+            "z": 16,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1500,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "animation": {
+                "type": "right",
+                "delay": 1.25,
+                "duration": 1.5
+              }
+            }
+          },
+          {
+            "id": "video-xhjik7m",
+            "type": "video",
+            "z": 17,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1500,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "animation": {
+                "type": "zoom",
+                "delay": 2,
+                "duration": 2
+              }
+            }
+          },
+          {
+            "id": "video-3zpn4ad",
+            "type": "video",
+            "z": 18,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 1500,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "animation": {
+                "type": "none",
+                "delay": 0,
+                "duration": 0.7
+              }
+            }
+          },
+          {
+            "id": "video-jh7hr9p",
+            "type": "video",
+            "z": 19,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1792,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "visible_on": "desktop"
+            }
+          },
+          {
+            "id": "video-r2konm2",
+            "type": "video",
+            "z": 20,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1792,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "visible_on": "mobile"
+            }
+          },
+          {
+            "id": "video-afb55xx",
+            "type": "video",
+            "z": 21,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 1792,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": null
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "visible_on": "all"
+            }
+          }
+        ]
+      },
+      {
+        "id": "movil",
+        "height": {
+          "desktop": 956,
+          "mobile": 2064
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "video-z9nkla8",
+            "type": "video",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": {
+                "x": 4,
+                "y": 24,
+                "w": 90,
+                "h": 208
+              }
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-x71w6i2",
+            "type": "video",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": {
+                "x": 6,
+                "y": 248,
+                "w": 90,
+                "h": 208
+              }
+            },
+            "props": {
+              "url": "https://youtu.be/dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-g1psth5",
+            "type": "video",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": {
+                "x": 4,
+                "y": 472,
+                "w": 90,
+                "h": 208
+              }
+            },
+            "props": {
+              "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-z1207d2",
+            "type": "video",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 332,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": {
+                "x": 6,
+                "y": 696,
+                "w": 90,
+                "h": 208
+              }
+            },
+            "props": {
+              "url": "https://vimeo.com/76979871",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-zo8gdka",
+            "type": "video",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 332,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": {
+                "x": 4,
+                "y": 920,
+                "w": 90,
+                "h": 208
+              }
+            },
+            "props": {
+              "url": "https://vimeo.com/video/76979871",
+              "alt": "Recorrido"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-msyjv15",
+            "type": "video",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 332,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": {
+                "x": 6,
+                "y": 1144,
+                "w": 90,
+                "h": 208
+              }
+            },
+            "props": {
+              "url": "https://example.com/not-a-video",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-y6m2x0y",
+            "type": "video",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 624,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": {
+                "x": 4,
+                "y": 1368,
+                "w": 90,
+                "h": 208
+              }
+            },
+            "props": {
+              "url": "",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16
+            }
+          },
+          {
+            "id": "video-lwx2o4e",
+            "type": "video",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 624,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": {
+                "x": 6,
+                "y": 1592,
+                "w": 90,
+                "h": 208
+              }
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "visible_on": "desktop"
+            }
+          },
+          {
+            "id": "video-giabi89",
+            "type": "video",
+            "z": 9,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 624,
+                "w": 26.666666666666668,
+                "h": 260
+              },
+              "mobile": {
+                "x": 4,
+                "y": 1816,
+                "w": 90,
+                "h": 208
+              }
+            },
+            "props": {
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "alt": "Video de la clínica"
+            },
+            "style": {
+              "radius": 16,
+              "visible_on": "mobile"
+            }
+          }
+        ]
+      }
+    ],
+    "modals": [
+      {
+        "id": "ventana",
+        "title": "Información",
+        "size": "md",
+        "show_title": true,
+        "width": 560,
+        "height": {
+          "desktop": 320,
+          "mobile": 420
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "text-4f7zf02",
+            "type": "text",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 0,
+                "w": 40,
+                "h": 96
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Cuenta en una frase qué hace distinta a tu clínica."
+            },
+            "style": {
+              "color": "muted",
+              "font": "body",
+              "size": 18,
+              "weight": 400,
+              "align": "left",
+              "line_height": 1.6
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "site": {
+    "name": "Demo Site",
+    "locale": "es",
+    "theme": {
+      "primary": "#2563eb",
+      "secondary": "#0f172a",
+      "background": "#ffffff",
+      "surface": "#f8fafc",
+      "text": "#0f172a",
+      "muted": "#64748b",
+      "heading_font": "Inter",
+      "body_font": "Inter",
+      "radius": 12,
+      "max_width": 1200
+    },
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "favicon": null,
+    "og_image": null
+  },
+  "page": {
+    "slug": "",
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "url": "https://demo.test/"
+  },
+  "base": "",
+  "mode": "public",
+  "host": {
+    "media": {
+      "media:1": {
+        "url": "https://demo.test/media/1",
+        "thumb": "https://demo.test/media/1/thumb",
+        "width": 1600,
+        "height": 1067
+      },
+      "media:2": {
+        "url": "https://demo.test/media/2",
+        "thumb": "https://demo.test/media/2/thumb",
+        "width": 1200,
+        "height": 1200
+      },
+      "media:3": {
+        "url": "https://demo.test/media/3",
+        "thumb": null,
+        "width": null,
+        "height": null
+      },
+      "media:4": {
+        "url": "https://demo.test/media/4",
+        "thumb": "https://demo.test/media/4/thumb",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "actions": {
+      "booking": "/book"
+    },
+    "form": {
+      "action": "https://demo.test/site-messages",
+      "csrf": {
+        "name": "_token",
+        "value": "fixture-csrf-token"
+      },
+      "old": {},
+      "errors": {},
+      "notice": null
+    },
+    "nonce": null,
+    "head": null
+  }
+}

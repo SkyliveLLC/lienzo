@@ -1,0 +1,25 @@
+.lz-page{--primary:#2563eb;--secondary:#0f172a;--background:#ffffff;--surface:#f8fafc;--text:#0f172a;--muted:#64748b;--radius:12px;--max-width:1200px;--ref:1200;--font-heading:'Inter', system-ui, sans-serif;--font-body:'Inter', system-ui, sans-serif}
+#s-seccion-ib5ofdl{--fh:680;--fmh:884;--sbg:var(--background)}
+#e-shape-ugj8h2b{--x:52;--y:120;--w:42;--h:400;--ord:2;--z:1;--bg:var(--surface);--r:16;--op:1}
+#e-image-caomhk2{--x:50;--y:96;--w:40;--h:380;--ord:1;--z:2;--r:22}
+#e-heading-h2l7zqf{--x:6;--y:140;--w:40;--h:180;--ord:3;--z:3;--c:var(--secondary);--fs:48;--fw:700;--lh:1.1}
+#e-text-hw1vvcd{--x:6;--y:336;--w:36;--h:90;--ord:4;--z:4;--c:var(--muted);--fs:18;--fw:400;--lh:1.6}
+#e-button-8e5ok3h{--x:6;--y:456;--w:16;--h:54;--ord:5;--z:5;--c:var(--background);--bg:var(--primary);--fs:16;--fw:600;--r:14}
+#s-seccion-xoqkp08{--fh:300;--fmh:390;--sbg:var(--primary)}
+#e-heading-64i9oil{--x:6;--y:80;--w:48;--h:110;--ord:1;--z:1;--c:var(--background);--fs:34;--fw:700;--lh:1.15}
+#e-text-6d92tux{--x:6;--y:196;--w:40;--h:56;--ord:3;--z:2;--c:var(--background);--fs:16;--fw:400;--lh:1.6;--op:0.9}
+#e-button-meh1zm6{--x:66;--y:110;--w:28;--h:56;--ord:2;--z:3;--c:var(--primary);--bg:var(--background);--fs:16;--fw:700;--r:14}
+#s-seccion-lvpwgru{--fh:520;--fmh:676;--sbg:var(--surface)}
+#e-heading-1se231r{--x:6;--y:80;--w:32;--h:120;--ord:1;--z:1;--c:var(--secondary);--fs:38;--fw:700;--lh:1.1}
+#e-text-bcvnwwu{--x:6;--y:190;--w:30;--h:110;--ord:5;--z:2;--c:var(--muted);--fs:17;--fw:400;--lh:1.6}
+#e-input-4u07956{--x:44;--y:80;--w:24;--h:78;--ord:2;--z:3;--c:var(--secondary);--bg:var(--background);--fs:15;--r:12;--bw:1;--bc:var(--muted);--p:12}
+#e-input-nt9he3p{--x:70;--y:80;--w:24;--h:78;--ord:3;--z:4;--c:var(--secondary);--bg:var(--background);--fs:15;--r:12;--bw:1;--bc:var(--muted);--p:12}
+#e-select-2cq6hav{--x:44;--y:172;--w:50;--h:78;--ord:4;--z:5;--c:var(--secondary);--bg:var(--background);--fs:15;--r:12;--bw:1;--bc:var(--muted);--p:12}
+#e-textarea-efzlp3f{--x:44;--y:264;--w:50;--h:110;--ord:6;--z:6;--c:var(--secondary);--bg:var(--background);--fs:15;--r:12;--bw:1;--bc:var(--muted);--p:12}
+#e-checkbox-g4smq8v{--x:44;--y:388;--w:50;--h:34;--ord:7;--z:7;--c:var(--muted);--bg:var(--surface);--fs:14;--r:10;--bw:1;--bc:var(--muted);--p:10}
+#e-button-6uhl7xq{--x:44;--y:434;--w:50;--h:54;--ord:8;--z:8;--c:var(--background);--bg:var(--primary);--fs:17;--fw:700;--r:14}
+#s-seccion-epmzagi{--fh:280;--fmh:364;--sbg:var(--secondary)}
+#e-heading-rs39wl1{--x:6;--y:64;--w:26;--h:50;--ord:1;--z:1;--c:var(--background);--fs:24;--fw:700;--lh:1.1}
+#e-text-kdyjee0{--x:6;--y:122;--w:26;--h:100;--ord:4;--z:2;--c:var(--background);--fs:15;--fw:400;--lh:1.7;--op:0.75}
+#e-text-b1pezsr{--x:38;--y:64;--w:26;--h:160;--ord:2;--z:3;--c:var(--background);--fs:15;--fw:400;--lh:1.8;--op:0.75}
+#e-button-2nvj1cw{--x:70;--y:64;--w:24;--h:48;--ord:3;--z:4;--c:var(--background);--bg:var(--primary);--fs:16;--fw:600;--r:12}

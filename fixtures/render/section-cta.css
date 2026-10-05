@@ -1,0 +1,5 @@
+.lz-page{--primary:#2563eb;--secondary:#0f172a;--background:#ffffff;--surface:#f8fafc;--text:#0f172a;--muted:#64748b;--radius:12px;--max-width:1200px;--ref:1200;--font-heading:'Inter', system-ui, sans-serif;--font-body:'Inter', system-ui, sans-serif}
+#s-seccion-ycpj6d3{--fh:300;--fmh:390;--sbg:var(--primary)}
+#e-heading-d69ef1l{--x:6;--y:80;--w:48;--h:110;--ord:1;--z:1;--c:var(--background);--fs:34;--fw:700;--lh:1.15}
+#e-text-yhnegng{--x:6;--y:196;--w:40;--h:56;--ord:3;--z:2;--c:var(--background);--fs:16;--fw:400;--lh:1.6;--op:0.9}
+#e-button-oi5x080{--x:66;--y:110;--w:28;--h:56;--ord:2;--z:3;--c:var(--primary);--bg:var(--background);--fs:16;--fw:700;--r:14}

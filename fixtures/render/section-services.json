@@ -1,0 +1,192 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "seccion-mysw5zj",
+        "height": {
+          "desktop": 460,
+          "mobile": 598
+        },
+        "background": {
+          "type": "color",
+          "color": "surface"
+        },
+        "elements": [
+          {
+            "id": "shape-86jki6a",
+            "type": "shape",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 39,
+                "y": 72,
+                "w": 56,
+                "h": 300
+              },
+              "mobile": null
+            },
+            "props": {
+              "shape": "rectangle"
+            },
+            "style": {
+              "background": "background",
+              "radius": 24,
+              "opacity": 1,
+              "shadow": "sm"
+            }
+          },
+          {
+            "id": "heading-a1mtbpw",
+            "type": "heading",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 6,
+                "y": 92,
+                "w": 30,
+                "h": 70
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Lo que hacemos",
+              "level": 2
+            },
+            "style": {
+              "color": "secondary",
+              "font": "heading",
+              "size": 38,
+              "weight": 700,
+              "align": "left",
+              "line_height": 1.1
+            }
+          },
+          {
+            "id": "text-7h0nktm",
+            "type": "text",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 6,
+                "y": 172,
+                "w": 28,
+                "h": 110
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Cada tratamiento empieza con un diagnóstico claro y un plan por escrito."
+            },
+            "style": {
+              "color": "muted",
+              "font": "body",
+              "size": 17,
+              "weight": 400,
+              "align": "left",
+              "line_height": 1.6
+            }
+          },
+          {
+            "id": "services-g0m4thk",
+            "type": "services",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 43,
+                "y": 104,
+                "w": 48,
+                "h": 236
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 8,
+              "columns": 1,
+              "variant": "list"
+            },
+            "style": {
+              "color": "secondary",
+              "font": "body",
+              "size": 18
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "site": {
+    "name": "Demo Site",
+    "locale": "es",
+    "theme": {
+      "primary": "#2563eb",
+      "secondary": "#0f172a",
+      "background": "#ffffff",
+      "surface": "#f8fafc",
+      "text": "#0f172a",
+      "muted": "#64748b",
+      "heading_font": "Inter",
+      "body_font": "Inter",
+      "radius": 12,
+      "max_width": 1200
+    },
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "favicon": null,
+    "og_image": null
+  },
+  "page": {
+    "slug": "",
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "url": "https://demo.test/"
+  },
+  "base": "",
+  "mode": "public",
+  "host": {
+    "media": {
+      "media:1": {
+        "url": "https://demo.test/media/1",
+        "thumb": "https://demo.test/media/1/thumb",
+        "width": 1600,
+        "height": 1067
+      },
+      "media:2": {
+        "url": "https://demo.test/media/2",
+        "thumb": "https://demo.test/media/2/thumb",
+        "width": 1200,
+        "height": 1200
+      },
+      "media:3": {
+        "url": "https://demo.test/media/3",
+        "thumb": null,
+        "width": null,
+        "height": null
+      },
+      "media:4": {
+        "url": "https://demo.test/media/4",
+        "thumb": "https://demo.test/media/4/thumb",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "actions": {
+      "booking": "/book"
+    },
+    "form": {
+      "action": "https://demo.test/site-messages",
+      "csrf": {
+        "name": "_token",
+        "value": "fixture-csrf-token"
+      },
+      "old": {},
+      "errors": {},
+      "notice": null
+    },
+    "nonce": null,
+    "head": null
+  }
+}

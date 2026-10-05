@@ -1,0 +1,1783 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "variantes",
+        "height": {
+          "desktop": 896,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "team-hg3ud6v",
+            "type": "team",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 1,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-977paf1",
+            "type": "team",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 4,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-natzrhe",
+            "type": "team",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "list"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-9d7uavj",
+            "type": "team",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 312,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "compact"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-4hasaam",
+            "type": "team",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 312,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 1,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-q5b0mcn",
+            "type": "team",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 312,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards",
+              "show_role": false
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-dp6v8ty",
+            "type": "team",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 584,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "list",
+              "show_role": false
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          }
+        ]
+      },
+      {
+        "id": "relleno",
+        "height": {
+          "desktop": 2256,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "surface"
+        },
+        "elements": [
+          {
+            "id": "team-cpxwh16",
+            "type": "team",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "gradient": {
+                "type": "linear",
+                "from": "primary",
+                "to": "secondary",
+                "angle": 135
+              }
+            }
+          },
+          {
+            "id": "team-mn0eull",
+            "type": "team",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "gradient": {
+                "type": "radial",
+                "from": "#f97316",
+                "to": "background",
+                "angle": 0
+              },
+              "background_opacity": 0.6
+            }
+          },
+          {
+            "id": "team-r77x1f8",
+            "type": "team",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "background": "#fde68a",
+              "background_opacity": 0.4
+            }
+          },
+          {
+            "id": "team-ek2z5rq",
+            "type": "team",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 312,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "#7c3aed",
+              "font": "body",
+              "size": 16,
+              "background": "surface"
+            }
+          },
+          {
+            "id": "team-2jax82e",
+            "type": "team",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 312,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "shadow": "sm"
+            }
+          },
+          {
+            "id": "team-tjfta60",
+            "type": "team",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 312,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "shadow": "md"
+            }
+          },
+          {
+            "id": "team-n8n0j9i",
+            "type": "team",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 584,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "shadow": "lg"
+            }
+          },
+          {
+            "id": "team-zbgrhen",
+            "type": "team",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 584,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "shadow": "custom",
+              "shadow_custom": {
+                "x": 4,
+                "y": 12,
+                "blur": 32,
+                "spread": -4,
+                "color": "primary",
+                "opacity": 0.35
+              }
+            }
+          },
+          {
+            "id": "team-bms8pkb",
+            "type": "team",
+            "z": 9,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 584,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "shadow": "custom",
+              "shadow_custom": {
+                "x": 0,
+                "y": 0,
+                "blur": 0,
+                "spread": 0,
+                "color": "#000000",
+                "opacity": 1
+              }
+            }
+          },
+          {
+            "id": "team-ifn5rt8",
+            "type": "team",
+            "z": 10,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 856,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "border_width": 3,
+              "border_color": "#e11d48",
+              "radius": 999,
+              "padding": 24
+            }
+          },
+          {
+            "id": "team-bptsl52",
+            "type": "team",
+            "z": 11,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 856,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "border_width": 2,
+              "radius": 0,
+              "padding": 0
+            }
+          },
+          {
+            "id": "team-k8i07vb",
+            "type": "team",
+            "z": 12,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 856,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "heading",
+              "size": 30,
+              "weight": 800,
+              "align": "center",
+              "line_height": 2
+            }
+          },
+          {
+            "id": "team-0m8t9lk",
+            "type": "team",
+            "z": 13,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1128,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "opacity": 0.5
+            }
+          },
+          {
+            "id": "team-e55mncq",
+            "type": "team",
+            "z": 14,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1128,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "opacity": 0
+            }
+          },
+          {
+            "id": "team-a8qf6o7",
+            "type": "team",
+            "z": 15,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 1128,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "blur": 8,
+              "background": "background",
+              "background_opacity": 0.5
+            }
+          },
+          {
+            "id": "team-x73jcak",
+            "type": "team",
+            "z": 16,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1400,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "clip": true
+            }
+          },
+          {
+            "id": "team-lq0uprg",
+            "type": "team",
+            "z": 17,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1400,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "overflow": "hidden"
+            }
+          },
+          {
+            "id": "team-4dtpbb7",
+            "type": "team",
+            "z": 18,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 1400,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "overflow": "scroll-x"
+            }
+          },
+          {
+            "id": "team-akni253",
+            "type": "team",
+            "z": 19,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1672,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "overflow": "scroll-y"
+            }
+          },
+          {
+            "id": "team-hy49o4j",
+            "type": "team",
+            "z": 20,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1672,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "clip": true,
+              "overflow": "visible"
+            }
+          },
+          {
+            "id": "team-ey9l7rh",
+            "type": "team",
+            "z": 21,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 1672,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            },
+            "locked": true
+          },
+          {
+            "id": "team-y4qvjoq",
+            "type": "team",
+            "z": 22,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1944,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            },
+            "group": "grupo-a"
+          },
+          {
+            "id": "team-7jwergz",
+            "type": "team",
+            "z": 23,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1944,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            },
+            "group": "grupo-a",
+            "locked": true
+          }
+        ]
+      },
+      {
+        "id": "movimiento",
+        "height": {
+          "desktop": 1984,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "team-z6hqqx8",
+            "type": "team",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "rotate": 12
+            }
+          },
+          {
+            "id": "team-s4wdxmo",
+            "type": "team",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "rotate": -45.5
+            }
+          },
+          {
+            "id": "team-5hg35m1",
+            "type": "team",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "flip_x": true
+            }
+          },
+          {
+            "id": "team-44bsj6q",
+            "type": "team",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 312,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "flip_y": true
+            }
+          },
+          {
+            "id": "team-20g76hp",
+            "type": "team",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 312,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "rotate": 30,
+              "flip_x": true,
+              "flip_y": true
+            }
+          },
+          {
+            "id": "team-2xu6b93",
+            "type": "team",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 312,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "hover": "lift"
+            }
+          },
+          {
+            "id": "team-ilbqw7l",
+            "type": "team",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 584,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "hover": "lift",
+              "rotate": -8
+            }
+          },
+          {
+            "id": "team-31d5mi4",
+            "type": "team",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 584,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "hover": "grow"
+            }
+          },
+          {
+            "id": "team-90dwj8n",
+            "type": "team",
+            "z": 9,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 584,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "hover": "grow",
+              "flip_x": true
+            }
+          },
+          {
+            "id": "team-qvvg5hu",
+            "type": "team",
+            "z": 10,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 856,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "hover": "fade"
+            }
+          },
+          {
+            "id": "team-l3gl307",
+            "type": "team",
+            "z": 11,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 856,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "hover": "none"
+            }
+          },
+          {
+            "id": "team-6ku9e1w",
+            "type": "team",
+            "z": 12,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 856,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "animation": {
+                "type": "fade",
+                "delay": 0,
+                "duration": 0.7
+              }
+            }
+          },
+          {
+            "id": "team-vh9ok86",
+            "type": "team",
+            "z": 13,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1128,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "animation": {
+                "type": "up",
+                "delay": 0.2,
+                "duration": 1
+              }
+            }
+          },
+          {
+            "id": "team-pdclfeq",
+            "type": "team",
+            "z": 14,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1128,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "animation": {
+                "type": "down",
+                "delay": 0.4,
+                "duration": 0.5
+              }
+            }
+          },
+          {
+            "id": "team-iv1h4bh",
+            "type": "team",
+            "z": 15,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 1128,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "animation": {
+                "type": "left",
+                "delay": 0,
+                "duration": 0.2
+              }
+            }
+          },
+          {
+            "id": "team-053gi2u",
+            "type": "team",
+            "z": 16,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1400,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "animation": {
+                "type": "right",
+                "delay": 1.25,
+                "duration": 1.5
+              }
+            }
+          },
+          {
+            "id": "team-89sz3ua",
+            "type": "team",
+            "z": 17,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1400,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "animation": {
+                "type": "zoom",
+                "delay": 2,
+                "duration": 2
+              }
+            }
+          },
+          {
+            "id": "team-ntezpu8",
+            "type": "team",
+            "z": 18,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 1400,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "animation": {
+                "type": "none",
+                "delay": 0,
+                "duration": 0.7
+              }
+            }
+          },
+          {
+            "id": "team-mvtiani",
+            "type": "team",
+            "z": 19,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 1672,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "visible_on": "desktop"
+            }
+          },
+          {
+            "id": "team-x8ncue6",
+            "type": "team",
+            "z": 20,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 1672,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "visible_on": "mobile"
+            }
+          },
+          {
+            "id": "team-z3mfmf0",
+            "type": "team",
+            "z": 21,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 1672,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "visible_on": "all"
+            }
+          }
+        ]
+      },
+      {
+        "id": "movil",
+        "height": {
+          "desktop": 896,
+          "mobile": 1920
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "team-6ajuykb",
+            "type": "team",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": {
+                "x": 4,
+                "y": 24,
+                "w": 90,
+                "h": 192
+              }
+            },
+            "props": {
+              "limit": 6,
+              "columns": 1,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-wyklvem",
+            "type": "team",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": {
+                "x": 6,
+                "y": 232,
+                "w": 90,
+                "h": 192
+              }
+            },
+            "props": {
+              "limit": 6,
+              "columns": 4,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-5899r8r",
+            "type": "team",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": {
+                "x": 4,
+                "y": 440,
+                "w": 90,
+                "h": 192
+              }
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "list"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-ulavftq",
+            "type": "team",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 312,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": {
+                "x": 6,
+                "y": 648,
+                "w": 90,
+                "h": 192
+              }
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "compact"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-akfnysu",
+            "type": "team",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 312,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": {
+                "x": 4,
+                "y": 856,
+                "w": 90,
+                "h": 192
+              }
+            },
+            "props": {
+              "limit": 1,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-vljemlo",
+            "type": "team",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 312,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": {
+                "x": 6,
+                "y": 1064,
+                "w": 90,
+                "h": 192
+              }
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards",
+              "show_role": false
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-te9c40l",
+            "type": "team",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 584,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": {
+                "x": 4,
+                "y": 1272,
+                "w": 90,
+                "h": 192
+              }
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "list",
+              "show_role": false
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16
+            }
+          },
+          {
+            "id": "team-jkdspyc",
+            "type": "team",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 584,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": {
+                "x": 6,
+                "y": 1480,
+                "w": 90,
+                "h": 192
+              }
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "visible_on": "desktop"
+            }
+          },
+          {
+            "id": "team-9qvsum8",
+            "type": "team",
+            "z": 9,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 584,
+                "w": 26.666666666666668,
+                "h": 240
+              },
+              "mobile": {
+                "x": 4,
+                "y": 1688,
+                "w": 90,
+                "h": 192
+              }
+            },
+            "props": {
+              "limit": 6,
+              "columns": 3,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "visible_on": "mobile"
+            }
+          }
+        ]
+      }
+    ],
+    "modals": [
+      {
+        "id": "ventana",
+        "title": "Información",
+        "size": "md",
+        "show_title": true,
+        "width": 560,
+        "height": {
+          "desktop": 320,
+          "mobile": 420
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "text-f5rrjcu",
+            "type": "text",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 0,
+                "w": 40,
+                "h": 96
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Cuenta en una frase qué hace distinta a tu clínica."
+            },
+            "style": {
+              "color": "muted",
+              "font": "body",
+              "size": 18,
+              "weight": 400,
+              "align": "left",
+              "line_height": 1.6
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "site": {
+    "name": "Demo Site",
+    "locale": "es",
+    "theme": {
+      "primary": "#2563eb",
+      "secondary": "#0f172a",
+      "background": "#ffffff",
+      "surface": "#f8fafc",
+      "text": "#0f172a",
+      "muted": "#64748b",
+      "heading_font": "Inter",
+      "body_font": "Inter",
+      "radius": 12,
+      "max_width": 1200
+    },
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "favicon": null,
+    "og_image": null
+  },
+  "page": {
+    "slug": "",
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "url": "https://demo.test/"
+  },
+  "base": "",
+  "mode": "public",
+  "host": {
+    "media": {
+      "media:1": {
+        "url": "https://demo.test/media/1",
+        "thumb": "https://demo.test/media/1/thumb",
+        "width": 1600,
+        "height": 1067
+      },
+      "media:2": {
+        "url": "https://demo.test/media/2",
+        "thumb": "https://demo.test/media/2/thumb",
+        "width": 1200,
+        "height": 1200
+      },
+      "media:3": {
+        "url": "https://demo.test/media/3",
+        "thumb": null,
+        "width": null,
+        "height": null
+      },
+      "media:4": {
+        "url": "https://demo.test/media/4",
+        "thumb": "https://demo.test/media/4/thumb",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "actions": {
+      "booking": "/book"
+    },
+    "form": {
+      "action": "https://demo.test/site-messages",
+      "csrf": {
+        "name": "_token",
+        "value": "fixture-csrf-token"
+      },
+      "old": {},
+      "errors": {},
+      "notice": null
+    },
+    "nonce": null,
+    "head": null
+  }
+}

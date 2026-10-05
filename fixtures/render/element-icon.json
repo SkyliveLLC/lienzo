@@ -1,0 +1,1729 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "variantes",
+        "height": {
+          "desktop": 344,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "icon-im8r3k9",
+            "type": "icon",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-47oo7q3",
+            "type": "icon",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "sparkles",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-byot8yv",
+            "type": "icon",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "calendar-check",
+              "stroke": 0.5
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-3iyf8as",
+            "type": "icon",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 128,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "phone",
+              "stroke": 4
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-mr6tre3",
+            "type": "icon",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 128,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "at-sign",
+              "stroke": 1.25
+            },
+            "style": {
+              "color": "#e11d48"
+            }
+          },
+          {
+            "id": "icon-dwdvzrw",
+            "type": "icon",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 128,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "globe",
+              "stroke": 2,
+              "label": "Sitio",
+              "action": {
+                "type": "url",
+                "value": "https://example.com"
+              }
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-kovfwi8",
+            "type": "icon",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 216,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "map-pin",
+              "stroke": 2,
+              "action": {
+                "type": "anchor",
+                "value": "variantes"
+              }
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-sypb1xh",
+            "type": "icon",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 216,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "message-circle",
+              "stroke": 2,
+              "action": {
+                "type": "whatsapp",
+                "value": "300 111 2233"
+              }
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-a14060r",
+            "type": "icon",
+            "z": 9,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 216,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "star",
+              "stroke": 2,
+              "action": {
+                "type": "modal",
+                "value": "ventana"
+              }
+            },
+            "style": {
+              "color": "primary"
+            }
+          }
+        ]
+      },
+      {
+        "id": "relleno",
+        "height": {
+          "desktop": 784,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "surface"
+        },
+        "elements": [
+          {
+            "id": "icon-n3e4pk1",
+            "type": "icon",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "gradient": {
+                "type": "linear",
+                "from": "primary",
+                "to": "secondary",
+                "angle": 135
+              }
+            }
+          },
+          {
+            "id": "icon-nznb4rp",
+            "type": "icon",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "gradient": {
+                "type": "radial",
+                "from": "#f97316",
+                "to": "background",
+                "angle": 0
+              },
+              "background_opacity": 0.6
+            }
+          },
+          {
+            "id": "icon-0tfq92d",
+            "type": "icon",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "background": "#fde68a",
+              "background_opacity": 0.4
+            }
+          },
+          {
+            "id": "icon-uxikhpp",
+            "type": "icon",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 128,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "#7c3aed",
+              "background": "surface"
+            }
+          },
+          {
+            "id": "icon-dlfhyu1",
+            "type": "icon",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 128,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "shadow": "sm"
+            }
+          },
+          {
+            "id": "icon-dw7zp14",
+            "type": "icon",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 128,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "shadow": "md"
+            }
+          },
+          {
+            "id": "icon-uy3bb3f",
+            "type": "icon",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 216,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "shadow": "lg"
+            }
+          },
+          {
+            "id": "icon-8y8mzi7",
+            "type": "icon",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 216,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "shadow": "custom",
+              "shadow_custom": {
+                "x": 4,
+                "y": 12,
+                "blur": 32,
+                "spread": -4,
+                "color": "primary",
+                "opacity": 0.35
+              }
+            }
+          },
+          {
+            "id": "icon-k8cye1j",
+            "type": "icon",
+            "z": 9,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 216,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "shadow": "custom",
+              "shadow_custom": {
+                "x": 0,
+                "y": 0,
+                "blur": 0,
+                "spread": 0,
+                "color": "#000000",
+                "opacity": 1
+              }
+            }
+          },
+          {
+            "id": "icon-5nur9js",
+            "type": "icon",
+            "z": 10,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 304,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "border_width": 3,
+              "border_color": "#e11d48",
+              "radius": 999,
+              "padding": 24
+            }
+          },
+          {
+            "id": "icon-rgafyty",
+            "type": "icon",
+            "z": 11,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 304,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "border_width": 2,
+              "radius": 0,
+              "padding": 0
+            }
+          },
+          {
+            "id": "icon-b3dtddx",
+            "type": "icon",
+            "z": 12,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 304,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "font": "heading",
+              "size": 30,
+              "weight": 800,
+              "align": "center",
+              "line_height": 2
+            }
+          },
+          {
+            "id": "icon-4gi8ubq",
+            "type": "icon",
+            "z": 13,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 392,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "opacity": 0.5
+            }
+          },
+          {
+            "id": "icon-hw7v31z",
+            "type": "icon",
+            "z": 14,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 392,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "opacity": 0
+            }
+          },
+          {
+            "id": "icon-ohbdrpr",
+            "type": "icon",
+            "z": 15,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 392,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "blur": 8,
+              "background": "background",
+              "background_opacity": 0.5
+            }
+          },
+          {
+            "id": "icon-a66kl90",
+            "type": "icon",
+            "z": 16,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 480,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "clip": true
+            }
+          },
+          {
+            "id": "icon-ogc5kjp",
+            "type": "icon",
+            "z": 17,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 480,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "overflow": "hidden"
+            }
+          },
+          {
+            "id": "icon-53q2ep1",
+            "type": "icon",
+            "z": 18,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 480,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "overflow": "scroll-x"
+            }
+          },
+          {
+            "id": "icon-3gh6vok",
+            "type": "icon",
+            "z": 19,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 568,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "overflow": "scroll-y"
+            }
+          },
+          {
+            "id": "icon-di80ef9",
+            "type": "icon",
+            "z": 20,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 568,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "clip": true,
+              "overflow": "visible"
+            }
+          },
+          {
+            "id": "icon-zmpixfb",
+            "type": "icon",
+            "z": 21,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 568,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary"
+            },
+            "locked": true
+          },
+          {
+            "id": "icon-qfgd0e9",
+            "type": "icon",
+            "z": 22,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 656,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary"
+            },
+            "group": "grupo-a"
+          },
+          {
+            "id": "icon-pfq7srm",
+            "type": "icon",
+            "z": 23,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 656,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary"
+            },
+            "group": "grupo-a",
+            "locked": true
+          }
+        ]
+      },
+      {
+        "id": "movimiento",
+        "height": {
+          "desktop": 696,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "icon-pth0ae1",
+            "type": "icon",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "rotate": 12
+            }
+          },
+          {
+            "id": "icon-nno9aq1",
+            "type": "icon",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "rotate": -45.5
+            }
+          },
+          {
+            "id": "icon-mccneb8",
+            "type": "icon",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "flip_x": true
+            }
+          },
+          {
+            "id": "icon-bvixafz",
+            "type": "icon",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 128,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "flip_y": true
+            }
+          },
+          {
+            "id": "icon-ie9z2m8",
+            "type": "icon",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 128,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "rotate": 30,
+              "flip_x": true,
+              "flip_y": true
+            }
+          },
+          {
+            "id": "icon-lrcfo46",
+            "type": "icon",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 128,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "hover": "lift"
+            }
+          },
+          {
+            "id": "icon-3yyre65",
+            "type": "icon",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 216,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "hover": "lift",
+              "rotate": -8
+            }
+          },
+          {
+            "id": "icon-fvfg3z5",
+            "type": "icon",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 216,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "hover": "grow"
+            }
+          },
+          {
+            "id": "icon-3gqlyjd",
+            "type": "icon",
+            "z": 9,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 216,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "hover": "grow",
+              "flip_x": true
+            }
+          },
+          {
+            "id": "icon-z3erycb",
+            "type": "icon",
+            "z": 10,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 304,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "hover": "fade"
+            }
+          },
+          {
+            "id": "icon-8gi603g",
+            "type": "icon",
+            "z": 11,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 304,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "hover": "none"
+            }
+          },
+          {
+            "id": "icon-3npfp07",
+            "type": "icon",
+            "z": 12,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 304,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "animation": {
+                "type": "fade",
+                "delay": 0,
+                "duration": 0.7
+              }
+            }
+          },
+          {
+            "id": "icon-a0dm37w",
+            "type": "icon",
+            "z": 13,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 392,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "animation": {
+                "type": "up",
+                "delay": 0.2,
+                "duration": 1
+              }
+            }
+          },
+          {
+            "id": "icon-xdpupga",
+            "type": "icon",
+            "z": 14,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 392,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "animation": {
+                "type": "down",
+                "delay": 0.4,
+                "duration": 0.5
+              }
+            }
+          },
+          {
+            "id": "icon-rdz5ovz",
+            "type": "icon",
+            "z": 15,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 392,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "animation": {
+                "type": "left",
+                "delay": 0,
+                "duration": 0.2
+              }
+            }
+          },
+          {
+            "id": "icon-wfsb0ep",
+            "type": "icon",
+            "z": 16,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 480,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "animation": {
+                "type": "right",
+                "delay": 1.25,
+                "duration": 1.5
+              }
+            }
+          },
+          {
+            "id": "icon-wezd6mx",
+            "type": "icon",
+            "z": 17,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 480,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "animation": {
+                "type": "zoom",
+                "delay": 2,
+                "duration": 2
+              }
+            }
+          },
+          {
+            "id": "icon-zy76qh9",
+            "type": "icon",
+            "z": 18,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 480,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "animation": {
+                "type": "none",
+                "delay": 0,
+                "duration": 0.7
+              }
+            }
+          },
+          {
+            "id": "icon-bha9lcn",
+            "type": "icon",
+            "z": 19,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 568,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "visible_on": "desktop"
+            }
+          },
+          {
+            "id": "icon-k596m9n",
+            "type": "icon",
+            "z": 20,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 568,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "visible_on": "mobile"
+            }
+          },
+          {
+            "id": "icon-6s57ujs",
+            "type": "icon",
+            "z": 21,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 568,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "visible_on": "all"
+            }
+          }
+        ]
+      },
+      {
+        "id": "movil",
+        "height": {
+          "desktop": 432,
+          "mobile": 719
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "icon-fl72sv3",
+            "type": "icon",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": {
+                "x": 4,
+                "y": 24,
+                "w": 90,
+                "h": 45
+              }
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-ygu62xk",
+            "type": "icon",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": {
+                "x": 6,
+                "y": 85,
+                "w": 90,
+                "h": 45
+              }
+            },
+            "props": {
+              "icon": "sparkles",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-cnntmzh",
+            "type": "icon",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": {
+                "x": 4,
+                "y": 146,
+                "w": 90,
+                "h": 45
+              }
+            },
+            "props": {
+              "icon": "calendar-check",
+              "stroke": 0.5
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-2pfm1f8",
+            "type": "icon",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 128,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": {
+                "x": 6,
+                "y": 207,
+                "w": 90,
+                "h": 45
+              }
+            },
+            "props": {
+              "icon": "phone",
+              "stroke": 4
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-8290o5j",
+            "type": "icon",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 128,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": {
+                "x": 4,
+                "y": 268,
+                "w": 90,
+                "h": 45
+              }
+            },
+            "props": {
+              "icon": "at-sign",
+              "stroke": 1.25
+            },
+            "style": {
+              "color": "#e11d48"
+            }
+          },
+          {
+            "id": "icon-7mmvw6m",
+            "type": "icon",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 128,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": {
+                "x": 6,
+                "y": 329,
+                "w": 90,
+                "h": 45
+              }
+            },
+            "props": {
+              "icon": "globe",
+              "stroke": 2,
+              "label": "Sitio",
+              "action": {
+                "type": "url",
+                "value": "https://example.com"
+              }
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-snf6041",
+            "type": "icon",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 216,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": {
+                "x": 4,
+                "y": 390,
+                "w": 90,
+                "h": 45
+              }
+            },
+            "props": {
+              "icon": "map-pin",
+              "stroke": 2,
+              "action": {
+                "type": "anchor",
+                "value": "variantes"
+              }
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-lm0t2b3",
+            "type": "icon",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 216,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": {
+                "x": 6,
+                "y": 451,
+                "w": 90,
+                "h": 45
+              }
+            },
+            "props": {
+              "icon": "message-circle",
+              "stroke": 2,
+              "action": {
+                "type": "whatsapp",
+                "value": "300 111 2233"
+              }
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-13t3sb8",
+            "type": "icon",
+            "z": 9,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 216,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": {
+                "x": 4,
+                "y": 512,
+                "w": 90,
+                "h": 45
+              }
+            },
+            "props": {
+              "icon": "star",
+              "stroke": 2,
+              "action": {
+                "type": "modal",
+                "value": "ventana"
+              }
+            },
+            "style": {
+              "color": "primary"
+            }
+          },
+          {
+            "id": "icon-go25qky",
+            "type": "icon",
+            "z": 10,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 304,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": {
+                "x": 6,
+                "y": 573,
+                "w": 90,
+                "h": 45
+              }
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "visible_on": "desktop"
+            }
+          },
+          {
+            "id": "icon-ba8lhoo",
+            "type": "icon",
+            "z": 11,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 304,
+                "w": 26.666666666666668,
+                "h": 56
+              },
+              "mobile": {
+                "x": 4,
+                "y": 634,
+                "w": 90,
+                "h": 45
+              }
+            },
+            "props": {
+              "icon": "heart-pulse",
+              "stroke": 2
+            },
+            "style": {
+              "color": "primary",
+              "visible_on": "mobile"
+            }
+          }
+        ]
+      }
+    ],
+    "modals": [
+      {
+        "id": "ventana",
+        "title": "Información",
+        "size": "md",
+        "show_title": true,
+        "width": 560,
+        "height": {
+          "desktop": 320,
+          "mobile": 420
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "text-lpu8ztq",
+            "type": "text",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 0,
+                "w": 40,
+                "h": 96
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Cuenta en una frase qué hace distinta a tu clínica."
+            },
+            "style": {
+              "color": "muted",
+              "font": "body",
+              "size": 18,
+              "weight": 400,
+              "align": "left",
+              "line_height": 1.6
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "site": {
+    "name": "Demo Site",
+    "locale": "es",
+    "theme": {
+      "primary": "#2563eb",
+      "secondary": "#0f172a",
+      "background": "#ffffff",
+      "surface": "#f8fafc",
+      "text": "#0f172a",
+      "muted": "#64748b",
+      "heading_font": "Inter",
+      "body_font": "Inter",
+      "radius": 12,
+      "max_width": 1200
+    },
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "favicon": null,
+    "og_image": null
+  },
+  "page": {
+    "slug": "",
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "url": "https://demo.test/"
+  },
+  "base": "",
+  "mode": "public",
+  "host": {
+    "media": {
+      "media:1": {
+        "url": "https://demo.test/media/1",
+        "thumb": "https://demo.test/media/1/thumb",
+        "width": 1600,
+        "height": 1067
+      },
+      "media:2": {
+        "url": "https://demo.test/media/2",
+        "thumb": "https://demo.test/media/2/thumb",
+        "width": 1200,
+        "height": 1200
+      },
+      "media:3": {
+        "url": "https://demo.test/media/3",
+        "thumb": null,
+        "width": null,
+        "height": null
+      },
+      "media:4": {
+        "url": "https://demo.test/media/4",
+        "thumb": "https://demo.test/media/4/thumb",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "actions": {
+      "booking": "/book"
+    },
+    "form": {
+      "action": "https://demo.test/site-messages",
+      "csrf": {
+        "name": "_token",
+        "value": "fixture-csrf-token"
+      },
+      "old": {},
+      "errors": {},
+      "notice": null
+    },
+    "nonce": null,
+    "head": null
+  }
+}

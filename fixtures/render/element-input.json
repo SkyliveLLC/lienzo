@@ -1,0 +1,2179 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "variantes",
+        "height": {
+          "desktop": 296,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "input-sqellq8",
+            "type": "input",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "input-hpk02om",
+            "type": "input",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Correo",
+              "placeholder": "tu@correo.com",
+              "required": true,
+              "input_type": "email",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "input-gz9qxag",
+            "type": "input",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "WhatsApp",
+              "placeholder": "300 111 2233",
+              "required": true,
+              "input_type": "tel",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "input-s9qrkla",
+            "type": "input",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 148,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Edad",
+              "placeholder": "Escribe aquí",
+              "required": false,
+              "input_type": "number",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "input-8yp0jqc",
+            "type": "input",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 148,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Fecha preferida",
+              "placeholder": "",
+              "required": true,
+              "input_type": "date",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "input-fk4q7bw",
+            "type": "input",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 148,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "relleno",
+        "height": {
+          "desktop": 944,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "surface"
+        },
+        "elements": [
+          {
+            "id": "input-05c33fq",
+            "type": "input",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "gradient": {
+                "type": "linear",
+                "from": "primary",
+                "to": "secondary",
+                "angle": 135
+              }
+            }
+          },
+          {
+            "id": "input-skb4ji4",
+            "type": "input",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "gradient": {
+                "type": "radial",
+                "from": "#f97316",
+                "to": "background",
+                "angle": 0
+              },
+              "background_opacity": 0.6
+            }
+          },
+          {
+            "id": "input-gmp9g5i",
+            "type": "input",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "#fde68a",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "background_opacity": 0.4
+            }
+          },
+          {
+            "id": "input-25awabv",
+            "type": "input",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 148,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "#7c3aed",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "input-3n18596",
+            "type": "input",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 148,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "shadow": "sm"
+            }
+          },
+          {
+            "id": "input-7wdwkpd",
+            "type": "input",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 148,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "shadow": "md"
+            }
+          },
+          {
+            "id": "input-nmbhtvp",
+            "type": "input",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 256,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "shadow": "lg"
+            }
+          },
+          {
+            "id": "input-utaqszh",
+            "type": "input",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 256,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "shadow": "custom",
+              "shadow_custom": {
+                "x": 4,
+                "y": 12,
+                "blur": 32,
+                "spread": -4,
+                "color": "primary",
+                "opacity": 0.35
+              }
+            }
+          },
+          {
+            "id": "input-wxi6r7h",
+            "type": "input",
+            "z": 9,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 256,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "shadow": "custom",
+              "shadow_custom": {
+                "x": 0,
+                "y": 0,
+                "blur": 0,
+                "spread": 0,
+                "color": "#000000",
+                "opacity": 1
+              }
+            }
+          },
+          {
+            "id": "input-wt78gmh",
+            "type": "input",
+            "z": 10,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 364,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "#e11d48",
+              "border_width": 3,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 999,
+              "padding": 24
+            }
+          },
+          {
+            "id": "input-c2chsid",
+            "type": "input",
+            "z": 11,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 364,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 2,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 0,
+              "padding": 0
+            }
+          },
+          {
+            "id": "input-9kaq1do",
+            "type": "input",
+            "z": 12,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 364,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "heading",
+              "size": 30,
+              "align": "center",
+              "radius": 10,
+              "padding": 10,
+              "weight": 800,
+              "line_height": 2
+            }
+          },
+          {
+            "id": "input-6go26te",
+            "type": "input",
+            "z": 13,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 472,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "opacity": 0.5
+            }
+          },
+          {
+            "id": "input-5uzlwxe",
+            "type": "input",
+            "z": 14,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 472,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "opacity": 0
+            }
+          },
+          {
+            "id": "input-4ssogzq",
+            "type": "input",
+            "z": 15,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 472,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "background",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "blur": 8,
+              "background_opacity": 0.5
+            }
+          },
+          {
+            "id": "input-21sjjzr",
+            "type": "input",
+            "z": 16,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 580,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "clip": true
+            }
+          },
+          {
+            "id": "input-ax8xq0d",
+            "type": "input",
+            "z": 17,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 580,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "overflow": "hidden"
+            }
+          },
+          {
+            "id": "input-7gixe3a",
+            "type": "input",
+            "z": 18,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 580,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "overflow": "scroll-x"
+            }
+          },
+          {
+            "id": "input-sfq8t0i",
+            "type": "input",
+            "z": 19,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 688,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "overflow": "scroll-y"
+            }
+          },
+          {
+            "id": "input-1ehaf5x",
+            "type": "input",
+            "z": 20,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 688,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "clip": true,
+              "overflow": "visible"
+            }
+          },
+          {
+            "id": "input-7hpel00",
+            "type": "input",
+            "z": 21,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 688,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            },
+            "locked": true
+          },
+          {
+            "id": "input-o7m8df7",
+            "type": "input",
+            "z": 22,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 796,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            },
+            "group": "grupo-a"
+          },
+          {
+            "id": "input-sri136r",
+            "type": "input",
+            "z": 23,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 796,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            },
+            "group": "grupo-a",
+            "locked": true
+          }
+        ]
+      },
+      {
+        "id": "movimiento",
+        "height": {
+          "desktop": 836,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "input-7aibqnj",
+            "type": "input",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "rotate": 12
+            }
+          },
+          {
+            "id": "input-uvu6a4y",
+            "type": "input",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "rotate": -45.5
+            }
+          },
+          {
+            "id": "input-jgr7ms1",
+            "type": "input",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "flip_x": true
+            }
+          },
+          {
+            "id": "input-vdv34ci",
+            "type": "input",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 148,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "flip_y": true
+            }
+          },
+          {
+            "id": "input-7ihrk3l",
+            "type": "input",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 148,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "rotate": 30,
+              "flip_x": true,
+              "flip_y": true
+            }
+          },
+          {
+            "id": "input-ss9jztu",
+            "type": "input",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 148,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "hover": "lift"
+            }
+          },
+          {
+            "id": "input-fekob5c",
+            "type": "input",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 256,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "hover": "lift",
+              "rotate": -8
+            }
+          },
+          {
+            "id": "input-0o7rxht",
+            "type": "input",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 256,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "hover": "grow"
+            }
+          },
+          {
+            "id": "input-xhwu0xr",
+            "type": "input",
+            "z": 9,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 256,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "hover": "grow",
+              "flip_x": true
+            }
+          },
+          {
+            "id": "input-93j3zi1",
+            "type": "input",
+            "z": 10,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 364,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "hover": "fade"
+            }
+          },
+          {
+            "id": "input-1xw9xh6",
+            "type": "input",
+            "z": 11,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 364,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "hover": "none"
+            }
+          },
+          {
+            "id": "input-y8bdab6",
+            "type": "input",
+            "z": 12,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 364,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "animation": {
+                "type": "fade",
+                "delay": 0,
+                "duration": 0.7
+              }
+            }
+          },
+          {
+            "id": "input-x1wrlk8",
+            "type": "input",
+            "z": 13,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 472,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "animation": {
+                "type": "up",
+                "delay": 0.2,
+                "duration": 1
+              }
+            }
+          },
+          {
+            "id": "input-6l8xlqd",
+            "type": "input",
+            "z": 14,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 472,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "animation": {
+                "type": "down",
+                "delay": 0.4,
+                "duration": 0.5
+              }
+            }
+          },
+          {
+            "id": "input-abzyghp",
+            "type": "input",
+            "z": 15,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 472,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "animation": {
+                "type": "left",
+                "delay": 0,
+                "duration": 0.2
+              }
+            }
+          },
+          {
+            "id": "input-03r1q0u",
+            "type": "input",
+            "z": 16,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 580,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "animation": {
+                "type": "right",
+                "delay": 1.25,
+                "duration": 1.5
+              }
+            }
+          },
+          {
+            "id": "input-d29jsmc",
+            "type": "input",
+            "z": 17,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 580,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "animation": {
+                "type": "zoom",
+                "delay": 2,
+                "duration": 2
+              }
+            }
+          },
+          {
+            "id": "input-8j70xuh",
+            "type": "input",
+            "z": 18,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 580,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "animation": {
+                "type": "none",
+                "delay": 0,
+                "duration": 0.7
+              }
+            }
+          },
+          {
+            "id": "input-yk8bmmh",
+            "type": "input",
+            "z": 19,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 688,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "visible_on": "desktop"
+            }
+          },
+          {
+            "id": "input-5s5zu7l",
+            "type": "input",
+            "z": 20,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 688,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "visible_on": "mobile"
+            }
+          },
+          {
+            "id": "input-x4o9gg0",
+            "type": "input",
+            "z": 21,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 688,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "visible_on": "all"
+            }
+          }
+        ]
+      },
+      {
+        "id": "movil",
+        "height": {
+          "desktop": 404,
+          "mobile": 664
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "input-3qhyl0g",
+            "type": "input",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": {
+                "x": 4,
+                "y": 24,
+                "w": 90,
+                "h": 61
+              }
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "input-uhbnmz2",
+            "type": "input",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": {
+                "x": 6,
+                "y": 101,
+                "w": 90,
+                "h": 61
+              }
+            },
+            "props": {
+              "label": "Correo",
+              "placeholder": "tu@correo.com",
+              "required": true,
+              "input_type": "email",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "input-jiyagm8",
+            "type": "input",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": {
+                "x": 4,
+                "y": 178,
+                "w": 90,
+                "h": 61
+              }
+            },
+            "props": {
+              "label": "WhatsApp",
+              "placeholder": "300 111 2233",
+              "required": true,
+              "input_type": "tel",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "input-8zpcgs9",
+            "type": "input",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 148,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": {
+                "x": 6,
+                "y": 255,
+                "w": 90,
+                "h": 61
+              }
+            },
+            "props": {
+              "label": "Edad",
+              "placeholder": "Escribe aquí",
+              "required": false,
+              "input_type": "number",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "input-mac1dx9",
+            "type": "input",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 148,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": {
+                "x": 4,
+                "y": 332,
+                "w": 90,
+                "h": 61
+              }
+            },
+            "props": {
+              "label": "Fecha preferida",
+              "placeholder": "",
+              "required": true,
+              "input_type": "date",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "input-nupkl3i",
+            "type": "input",
+            "z": 6,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333334,
+                "y": 148,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": {
+                "x": 6,
+                "y": 409,
+                "w": 90,
+                "h": 61
+              }
+            },
+            "props": {
+              "label": "",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "input-6nqj9g8",
+            "type": "input",
+            "z": 7,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 256,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": {
+                "x": 4,
+                "y": 486,
+                "w": 90,
+                "h": 61
+              }
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "visible_on": "desktop"
+            }
+          },
+          {
+            "id": "input-j4fwb98",
+            "type": "input",
+            "z": 8,
+            "layout": {
+              "desktop": {
+                "x": 34.66666666666667,
+                "y": 256,
+                "w": 26.666666666666668,
+                "h": 76
+              },
+              "mobile": {
+                "x": 6,
+                "y": 563,
+                "w": 90,
+                "h": 61
+              }
+            },
+            "props": {
+              "label": "Nombre",
+              "placeholder": "Escribe aquí",
+              "required": true,
+              "input_type": "text",
+              "options": []
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10,
+              "visible_on": "mobile"
+            }
+          }
+        ]
+      }
+    ],
+    "modals": [
+      {
+        "id": "ventana",
+        "title": "Información",
+        "size": "md",
+        "show_title": true,
+        "width": 560,
+        "height": {
+          "desktop": 320,
+          "mobile": 420
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "text-ly0p2ik",
+            "type": "text",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 0,
+                "w": 40,
+                "h": 96
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Cuenta en una frase qué hace distinta a tu clínica."
+            },
+            "style": {
+              "color": "muted",
+              "font": "body",
+              "size": 18,
+              "weight": 400,
+              "align": "left",
+              "line_height": 1.6
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "site": {
+    "name": "Demo Site",
+    "locale": "es",
+    "theme": {
+      "primary": "#2563eb",
+      "secondary": "#0f172a",
+      "background": "#ffffff",
+      "surface": "#f8fafc",
+      "text": "#0f172a",
+      "muted": "#64748b",
+      "heading_font": "Inter",
+      "body_font": "Inter",
+      "radius": 12,
+      "max_width": 1200
+    },
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "favicon": null,
+    "og_image": null
+  },
+  "page": {
+    "slug": "",
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "url": "https://demo.test/"
+  },
+  "base": "",
+  "mode": "public",
+  "host": {
+    "media": {
+      "media:1": {
+        "url": "https://demo.test/media/1",
+        "thumb": "https://demo.test/media/1/thumb",
+        "width": 1600,
+        "height": 1067
+      },
+      "media:2": {
+        "url": "https://demo.test/media/2",
+        "thumb": "https://demo.test/media/2/thumb",
+        "width": 1200,
+        "height": 1200
+      },
+      "media:3": {
+        "url": "https://demo.test/media/3",
+        "thumb": null,
+        "width": null,
+        "height": null
+      },
+      "media:4": {
+        "url": "https://demo.test/media/4",
+        "thumb": "https://demo.test/media/4/thumb",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "actions": {
+      "booking": "/book"
+    },
+    "form": {
+      "action": "https://demo.test/site-messages",
+      "csrf": {
+        "name": "_token",
+        "value": "fixture-csrf-token"
+      },
+      "old": {},
+      "errors": {},
+      "notice": null
+    },
+    "nonce": null,
+    "head": null
+  }
+}

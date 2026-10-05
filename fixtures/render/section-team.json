@@ -1,0 +1,191 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "seccion-j44hrir",
+        "height": {
+          "desktop": 480,
+          "mobile": 624
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "image-kbhorml",
+            "type": "image",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 6,
+                "y": 80,
+                "w": 32,
+                "h": 320
+              },
+              "mobile": null
+            },
+            "props": {
+              "src": "",
+              "alt": "Consultorio"
+            },
+            "style": {
+              "radius": 22,
+              "object_fit": "cover"
+            }
+          },
+          {
+            "id": "heading-eyjdnf8",
+            "type": "heading",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 44,
+                "y": 90,
+                "w": 40,
+                "h": 70
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Quién te atiende",
+              "level": 2
+            },
+            "style": {
+              "color": "secondary",
+              "font": "heading",
+              "size": 38,
+              "weight": 700,
+              "align": "left",
+              "line_height": 1.1
+            }
+          },
+          {
+            "id": "text-s634qp5",
+            "type": "text",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 44,
+                "y": 172,
+                "w": 40,
+                "h": 80
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "El mismo profesional te acompaña de la valoración al control."
+            },
+            "style": {
+              "color": "muted",
+              "font": "body",
+              "size": 17,
+              "weight": 400,
+              "align": "left",
+              "line_height": 1.6
+            }
+          },
+          {
+            "id": "team-9r6jer8",
+            "type": "team",
+            "z": 4,
+            "layout": {
+              "desktop": {
+                "x": 44,
+                "y": 268,
+                "w": 50,
+                "h": 140
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 4,
+              "columns": 2,
+              "variant": "cards"
+            },
+            "style": {
+              "color": "secondary",
+              "font": "body",
+              "size": 17
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "site": {
+    "name": "Demo Site",
+    "locale": "es",
+    "theme": {
+      "primary": "#2563eb",
+      "secondary": "#0f172a",
+      "background": "#ffffff",
+      "surface": "#f8fafc",
+      "text": "#0f172a",
+      "muted": "#64748b",
+      "heading_font": "Inter",
+      "body_font": "Inter",
+      "radius": 12,
+      "max_width": 1200
+    },
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "favicon": null,
+    "og_image": null
+  },
+  "page": {
+    "slug": "",
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "url": "https://demo.test/"
+  },
+  "base": "",
+  "mode": "public",
+  "host": {
+    "media": {
+      "media:1": {
+        "url": "https://demo.test/media/1",
+        "thumb": "https://demo.test/media/1/thumb",
+        "width": 1600,
+        "height": 1067
+      },
+      "media:2": {
+        "url": "https://demo.test/media/2",
+        "thumb": "https://demo.test/media/2/thumb",
+        "width": 1200,
+        "height": 1200
+      },
+      "media:3": {
+        "url": "https://demo.test/media/3",
+        "thumb": null,
+        "width": null,
+        "height": null
+      },
+      "media:4": {
+        "url": "https://demo.test/media/4",
+        "thumb": "https://demo.test/media/4/thumb",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "actions": {
+      "booking": "/book"
+    },
+    "form": {
+      "action": "https://demo.test/site-messages",
+      "csrf": {
+        "name": "_token",
+        "value": "fixture-csrf-token"
+      },
+      "old": {},
+      "errors": {},
+      "notice": null
+    },
+    "nonce": null,
+    "head": null
+  }
+}

@@ -1,0 +1,408 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "menus",
+        "height": {
+          "desktop": 392,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "navbar-3sdtsn2",
+            "type": "navbar",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 0,
+                "y": 40,
+                "w": 100,
+                "h": 72
+              },
+              "mobile": null
+            },
+            "props": {
+              "brand": "Tu clínica",
+              "layout": "split",
+              "links": [
+                {
+                  "label": "none",
+                  "action": {
+                    "type": "none",
+                    "value": ""
+                  }
+                },
+                {
+                  "label": "none",
+                  "action": {
+                    "type": "none",
+                    "value": "ignorado"
+                  }
+                },
+                {
+                  "label": "whatsapp",
+                  "action": {
+                    "type": "whatsapp",
+                    "value": "+57 300 111 2233"
+                  }
+                },
+                {
+                  "label": "whatsapp",
+                  "action": {
+                    "type": "whatsapp",
+                    "value": ""
+                  }
+                },
+                {
+                  "label": "phone",
+                  "action": {
+                    "type": "phone",
+                    "value": "+57 (300) 111-2233"
+                  }
+                },
+                {
+                  "label": "email",
+                  "action": {
+                    "type": "email",
+                    "value": "hola@demo.test"
+                  }
+                },
+                {
+                  "label": "url",
+                  "action": {
+                    "type": "url",
+                    "value": "https://example.com/precios?plan=1"
+                  }
+                },
+                {
+                  "label": "url",
+                  "action": {
+                    "type": "url",
+                    "value": "http://example.com"
+                  }
+                }
+              ]
+            },
+            "style": {
+              "background": "background",
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "weight": 600,
+              "padding": 20
+            }
+          },
+          {
+            "id": "navbar-bssjnkb",
+            "type": "navbar",
+            "z": 2,
+            "layout": {
+              "desktop": {
+                "x": 0,
+                "y": 144,
+                "w": 100,
+                "h": 72
+              },
+              "mobile": null
+            },
+            "props": {
+              "brand": "Tu clínica",
+              "layout": "center",
+              "links": [
+                {
+                  "label": "anchor",
+                  "action": {
+                    "type": "anchor",
+                    "value": "destino"
+                  }
+                },
+                {
+                  "label": "anchor",
+                  "action": {
+                    "type": "anchor",
+                    "value": "des tino!"
+                  }
+                },
+                {
+                  "label": "modal",
+                  "action": {
+                    "type": "modal",
+                    "value": "ventana"
+                  }
+                },
+                {
+                  "label": "modal",
+                  "action": {
+                    "type": "modal",
+                    "value": ""
+                  }
+                },
+                {
+                  "label": "page",
+                  "action": {
+                    "type": "page",
+                    "value": "Servicios Premium"
+                  }
+                },
+                {
+                  "label": "page",
+                  "action": {
+                    "type": "page",
+                    "value": "servicios-premium"
+                  }
+                },
+                {
+                  "label": "page",
+                  "action": {
+                    "type": "page",
+                    "value": ""
+                  }
+                },
+                {
+                  "label": "booking",
+                  "action": {
+                    "type": "booking",
+                    "value": ""
+                  }
+                }
+              ]
+            },
+            "style": {
+              "background": "background",
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "weight": 600,
+              "padding": 20
+            }
+          },
+          {
+            "id": "navbar-kcvs8ru",
+            "type": "navbar",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": 0,
+                "y": 248,
+                "w": 100,
+                "h": 72
+              },
+              "mobile": null
+            },
+            "props": {
+              "brand": "Tu clínica",
+              "layout": "left",
+              "links": [
+                {
+                  "label": "top",
+                  "action": {
+                    "type": "top",
+                    "value": ""
+                  }
+                },
+                {
+                  "label": "back",
+                  "action": {
+                    "type": "back",
+                    "value": ""
+                  }
+                },
+                {
+                  "label": "step_next",
+                  "action": {
+                    "type": "step_next",
+                    "value": ""
+                  }
+                },
+                {
+                  "label": "step_prev",
+                  "action": {
+                    "type": "step_prev",
+                    "value": ""
+                  }
+                },
+                {
+                  "label": "submit",
+                  "action": {
+                    "type": "submit",
+                    "value": ""
+                  }
+                }
+              ]
+            },
+            "style": {
+              "background": "background",
+              "color": "text",
+              "font": "body",
+              "size": 16,
+              "weight": 600,
+              "padding": 20
+            }
+          }
+        ]
+      },
+      {
+        "id": "destino",
+        "height": {
+          "desktop": 192,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "heading-7b2roj2",
+            "type": "heading",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 80
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Destino del ancla",
+              "level": 2
+            },
+            "style": {
+              "color": "text",
+              "font": "heading",
+              "size": 44,
+              "weight": 700,
+              "align": "left",
+              "line_height": 1.1
+            }
+          }
+        ]
+      }
+    ],
+    "modals": [
+      {
+        "id": "ventana",
+        "title": "Información",
+        "size": "md",
+        "show_title": true,
+        "width": 560,
+        "height": {
+          "desktop": 320,
+          "mobile": 420
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "text-e07zlok",
+            "type": "text",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 0,
+                "w": 40,
+                "h": 96
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Cuenta en una frase qué hace distinta a tu clínica."
+            },
+            "style": {
+              "color": "muted",
+              "font": "body",
+              "size": 18,
+              "weight": 400,
+              "align": "left",
+              "line_height": 1.6
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "site": {
+    "name": "Demo Site",
+    "locale": "es",
+    "theme": {
+      "primary": "#2563eb",
+      "secondary": "#0f172a",
+      "background": "#ffffff",
+      "surface": "#f8fafc",
+      "text": "#0f172a",
+      "muted": "#64748b",
+      "heading_font": "Inter",
+      "body_font": "Inter",
+      "radius": 12,
+      "max_width": 1200
+    },
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "favicon": null,
+    "og_image": null
+  },
+  "page": {
+    "slug": "",
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "url": "https://demo.test/"
+  },
+  "base": "",
+  "mode": "public",
+  "host": {
+    "media": {
+      "media:1": {
+        "url": "https://demo.test/media/1",
+        "thumb": "https://demo.test/media/1/thumb",
+        "width": 1600,
+        "height": 1067
+      },
+      "media:2": {
+        "url": "https://demo.test/media/2",
+        "thumb": "https://demo.test/media/2/thumb",
+        "width": 1200,
+        "height": 1200
+      },
+      "media:3": {
+        "url": "https://demo.test/media/3",
+        "thumb": null,
+        "width": null,
+        "height": null
+      },
+      "media:4": {
+        "url": "https://demo.test/media/4",
+        "thumb": "https://demo.test/media/4/thumb",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "actions": {
+      "booking": "/book"
+    },
+    "form": {
+      "action": "https://demo.test/site-messages",
+      "csrf": {
+        "name": "_token",
+        "value": "fixture-csrf-token"
+      },
+      "old": {},
+      "errors": {},
+      "notice": null
+    },
+    "nonce": null,
+    "head": null
+  }
+}

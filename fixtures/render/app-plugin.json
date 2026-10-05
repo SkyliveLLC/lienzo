@@ -1,0 +1,488 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "top",
+        "height": {
+          "desktop": 120,
+          "mobile": 120
+        },
+        "background": {
+          "type": "image",
+          "image": "media:1",
+          "overlay": 0.4,
+          "parallax": true
+        },
+        "elements": [
+          {
+            "id": "nav",
+            "type": "navbar",
+            "z": 50,
+            "layout": {
+              "desktop": {
+                "x": 0,
+                "y": 0,
+                "w": 100,
+                "h": 72
+              },
+              "mobile": {
+                "x": 0,
+                "y": 0,
+                "w": 100,
+                "h": 64
+              }
+            },
+            "props": {
+              "brand": "Demo",
+              "layout": "split",
+              "sticky": true,
+              "scroll_style": "compact",
+              "links": [
+                {
+                  "label": "Offer",
+                  "action": {
+                    "type": "modal",
+                    "value": "offer"
+                  }
+                },
+                {
+                  "label": "Book",
+                  "action": {
+                    "type": "booking",
+                    "value": ""
+                  }
+                },
+                {
+                  "label": "Up",
+                  "action": {
+                    "type": "top",
+                    "value": ""
+                  }
+                }
+              ]
+            },
+            "style": {
+              "background": "surface",
+              "color": "text",
+              "size": 16,
+              "padding": 16,
+              "blur": 8,
+              "background_opacity": 0.9
+            }
+          }
+        ]
+      },
+      {
+        "id": "services",
+        "height": {
+          "desktop": 400,
+          "mobile": 520
+        },
+        "background": {
+          "type": "gradient",
+          "gradient": {
+            "type": "radial",
+            "from": "primary",
+            "to": "#112233"
+          }
+        },
+        "elements": [
+          {
+            "id": "list",
+            "type": "services",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 20,
+                "w": 40,
+                "h": 60
+              },
+              "mobile": null
+            },
+            "props": {
+              "limit": 4,
+              "columns": 2,
+              "variant": "cards",
+              "show_duration": true,
+              "stray": "dropped"
+            },
+            "style": {
+              "color": "text",
+              "animation": {
+                "type": "up",
+                "delay": 0.2,
+                "duration": 0.6
+              }
+            }
+          },
+          {
+            "id": "cta",
+            "type": "button",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 55,
+                "y": 40,
+                "w": 30,
+                "h": 48
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Book now",
+              "action": {
+                "type": "booking",
+                "value": ""
+              }
+            },
+            "style": {
+              "background": "primary",
+              "color": "background",
+              "radius": 999,
+              "gradient": {
+                "from": "primary",
+                "to": "secondary",
+                "angle": 90
+              },
+              "hover": "lift",
+              "rotate": -2.5,
+              "flip_x": true
+            }
+          },
+          {
+            "id": "map",
+            "type": "map",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 55,
+                "y": 120,
+                "w": 40,
+                "h": 200
+              },
+              "mobile": null
+            },
+            "props": {
+              "lat": 4.6,
+              "lng": -74.08,
+              "zoom": 12
+            },
+            "style": {}
+          },
+          {
+            "id": "ghost",
+            "type": "image",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 300,
+                "w": 20,
+                "h": 80
+              },
+              "mobile": null
+            },
+            "props": {
+              "src": "media:99",
+              "alt": "Deleted picture",
+              "shape": "blob"
+            },
+            "style": {
+              "shadow": "custom",
+              "shadow_custom": {
+                "x": 0,
+                "y": 8,
+                "blur": 24,
+                "spread": 0,
+                "color": "#000000",
+                "opacity": 0.3
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "step-one",
+        "group": {
+          "id": "signup",
+          "type": "steps",
+          "label": ""
+        },
+        "height": {
+          "desktop": 300,
+          "mobile": 360
+        },
+        "background": {
+          "type": "color",
+          "color": "surface"
+        },
+        "elements": [
+          {
+            "id": "name",
+            "type": "input",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 20,
+                "w": 40,
+                "h": 60
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Name",
+              "placeholder": "Your name",
+              "required": true,
+              "input_type": "text"
+            },
+            "style": {
+              "border_width": 1,
+              "border_color": "muted",
+              "radius": 8,
+              "padding": 10
+            }
+          },
+          {
+            "id": "next",
+            "type": "button",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 120,
+                "w": 20,
+                "h": 40
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Next",
+              "action": {
+                "type": "step_next",
+                "value": ""
+              }
+            },
+            "style": {}
+          }
+        ]
+      },
+      {
+        "id": "step-two",
+        "group": {
+          "id": "signup",
+          "type": "steps",
+          "label": "Details"
+        },
+        "height": {
+          "desktop": 300,
+          "mobile": 360
+        },
+        "background": {
+          "type": "color",
+          "color": "surface"
+        },
+        "elements": [
+          {
+            "id": "topic",
+            "type": "select",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 20,
+                "w": 40,
+                "h": 60
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Topic",
+              "options": [
+                "Sales",
+                "Support"
+              ],
+              "required": true
+            },
+            "style": {}
+          },
+          {
+            "id": "agree",
+            "type": "checkbox",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 100,
+                "w": 40,
+                "h": 30
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "I agree",
+              "required": true
+            },
+            "style": {}
+          },
+          {
+            "id": "send",
+            "type": "button",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 160,
+                "w": 20,
+                "h": 40
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Send",
+              "action": {
+                "type": "submit",
+                "value": ""
+              }
+            },
+            "style": {
+              "visible_on": "desktop"
+            }
+          },
+          {
+            "id": "send-mobile",
+            "type": "button",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 210,
+                "w": 20,
+                "h": 40
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Send",
+              "action": {
+                "type": "submit",
+                "value": ""
+              }
+            },
+            "style": {
+              "visible_on": "mobile"
+            }
+          }
+        ]
+      }
+    ],
+    "modals": [
+      {
+        "id": "offer",
+        "title": "Offer & terms",
+        "size": "md",
+        "show_title": true,
+        "width": 480,
+        "height": {
+          "desktop": 240,
+          "mobile": 300
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "offer-text",
+            "type": "text",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 10,
+                "y": 20,
+                "w": 40,
+                "h": 60
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Ten percent off for “new” patients <today>.",
+              "accent": "Ten percent"
+            },
+            "style": {
+              "accent_color": "primary",
+              "size": 18,
+              "align": "center"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "site": {
+    "name": "Demo & Co",
+    "locale": "en",
+    "theme": {
+      "primary": "#0055ff",
+      "heading_font": "Playfair Display",
+      "body_font": "Inter",
+      "radius": 8,
+      "max_width": 1100
+    },
+    "seo": {
+      "title": "Demo site",
+      "description": "A fixture page"
+    },
+    "favicon": "media:4",
+    "og_image": "https://images.example.com/share.jpg"
+  },
+  "page": {
+    "slug": "offers",
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "url": "https://demo.test/offers"
+  },
+  "base": "/site",
+  "mode": "public",
+  "host": {
+    "media": {
+      "media:1": {
+        "url": "https://demo.test/media/1",
+        "thumb": "https://demo.test/media/1/thumb",
+        "width": 1600,
+        "height": 1067
+      },
+      "media:4": {
+        "url": "https://demo.test/media/4",
+        "thumb": null,
+        "width": 512,
+        "height": 512
+      }
+    },
+    "actions": {
+      "booking": "/book"
+    },
+    "form": {
+      "action": "https://demo.test/site-messages",
+      "csrf": {
+        "name": "_token",
+        "value": "fixture-csrf-token"
+      },
+      "old": {
+        "source": "signup",
+        "fields.name": "Ana \"A\" Pérez",
+        "fields.topic": "Support",
+        "fields.agree": "1"
+      },
+      "errors": {
+        "fields.topic": "Pick a topic."
+      },
+      "notice": "Thanks, we got it."
+    },
+    "nonce": "fixture-nonce",
+    "head": "<meta name=\"fixture-head\" content=\"1\">"
+  }
+}
