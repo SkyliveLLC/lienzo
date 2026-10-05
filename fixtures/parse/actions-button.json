@@ -772,7 +772,13 @@
           ]
         }
       ]
-    }
+    },
+    "forms": [
+      {
+        "source": "formulario",
+        "fields": []
+      }
+    ]
   },
   "site": {
     "ok": {

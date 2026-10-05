@@ -1,25 +1,29 @@
 /**
  * Parses every render fixture input and every fixtures/parse/inputs/<name>.json
  * with the fixture catalog, and writes fixtures/parse/<name>.json: the parsed
- * document and site settings, or their issues as `path:code` when parsing
- * fails. Other backends parse the same inputs and must produce the same JSON.
+ * document with its `formFields`, and the parsed site settings, or their
+ * issues as `path:code` when parsing fails. Other backends parse the same
+ * inputs and must produce the same JSON.
  *
  * Usage: node scripts/parse-golden.ts
  */
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { DocumentError, parseDocument, parseSiteSettings } from '../src/index.ts';
+import { DocumentError, formFields, parseDocument, parseSiteSettings } from '../src/index.ts';
 import { fixtureCatalog, fixtureNames, readFixture } from './golden.ts';
 
 export const parseFixtures = join(import.meta.dirname, '../../../fixtures/parse');
 const parseInputs = join(parseFixtures, 'inputs');
 
 type Input = { document?: unknown; site?: unknown };
-type Outcome = { ok: unknown } | { issues: string[] };
+type Outcome = ({ ok: unknown } & Record<string, unknown>) | { issues: string[] };
 
-function outcome(parse: () => unknown): Outcome {
+/** `extra` adds what is derived from a successful parse, like the document's forms. */
+function outcome<T>(parse: () => T, extra: (value: T) => Record<string, unknown> = () => ({})): Outcome {
     try {
-        return { ok: parse() };
+        const value = parse();
+
+        return { ok: value, ...extra(value) };
     } catch (error) {
         if (error instanceof DocumentError) {
             return { issues: error.issues.map((issue) => `${issue.path}:${issue.code}`) };
@@ -50,7 +54,7 @@ export function parseCases(): Map<string, Input> {
 export function parseGolden(input: Input): string {
     const catalog = fixtureCatalog();
     const golden = {
-        ...('document' in input ? { document: outcome(() => parseDocument(input.document, catalog)) } : {}),
+        ...('document' in input ? { document: outcome(() => parseDocument(input.document, catalog), (document) => ({ forms: formFields(document) })) } : {}),
         ...('site' in input ? { site: outcome(() => parseSiteSettings(input.site)) } : {}),
     };
 

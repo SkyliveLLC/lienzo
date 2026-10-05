@@ -617,7 +617,52 @@
           ]
         }
       ]
-    }
+    },
+    "forms": [
+      {
+        "source": "seccion-lvpwgru",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "input-4u07956",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-nt9he3p",
+            "label": "WhatsApp",
+            "required": true,
+            "inputType": "tel"
+          },
+          {
+            "kind": "select",
+            "name": "select-2cq6hav",
+            "label": "Motivo",
+            "required": true,
+            "options": [
+              "Valoración",
+              "Limpieza",
+              "Dolor o urgencia",
+              "Otro"
+            ]
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-efzlp3f",
+            "label": "Cuéntanos qué sientes",
+            "required": false
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-g4smq8v",
+            "label": "Autorizo el tratamiento de mis datos",
+            "required": true
+          }
+        ]
+      }
+    ]
   },
   "site": {
     "ok": {

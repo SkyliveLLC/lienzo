@@ -419,7 +419,37 @@
           ]
         }
       ]
-    }
+    },
+    "forms": [
+      {
+        "source": "signup",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "name",
+            "label": "Name",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "select",
+            "name": "topic",
+            "label": "Topic",
+            "required": true,
+            "options": [
+              "Sales",
+              "Support"
+            ]
+          },
+          {
+            "kind": "checkbox",
+            "name": "agree",
+            "label": "I agree",
+            "required": true
+          }
+        ]
+      }
+    ]
   },
   "site": {
     "ok": {

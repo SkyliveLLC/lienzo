@@ -692,7 +692,37 @@
           ]
         }
       ]
-    }
+    },
+    "forms": [
+      {
+        "source": "cita",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "input-dexlemg",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "select",
+            "name": "select-t0f6tfw",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-fejzqnr",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          }
+        ]
+      }
+    ]
   },
   "site": {
     "ok": {

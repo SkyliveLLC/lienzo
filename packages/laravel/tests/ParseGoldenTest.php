@@ -6,13 +6,16 @@ use Skylive\Lienzo\Document\DocumentError;
 use Skylive\Lienzo\Document\Issue;
 use Skylive\Lienzo\Document\ParsedDocument;
 use Skylive\Lienzo\Document\ParsedSiteSettings;
+use Skylive\Lienzo\Render\Canvas;
 use Skylive\Lienzo\Tests\Fixtures;
 
-/** The golden's `{ok: ...}` or `{issues: ['path:code', ...]}` for one parse. */
-function parseOutcome(Closure $parse): array
+/** The golden's `{ok: ..., ...extra}` or `{issues: ['path:code', ...]}` for one parse. */
+function parseOutcome(Closure $parse, ?Closure $extra = null): array
 {
     try {
-        return ['ok' => $parse()];
+        $value = $parse();
+
+        return ['ok' => $value->toArray(), ...($extra === null ? [] : $extra($value))];
     } catch (DocumentError $error) {
         return ['issues' => array_map(fn (Issue $issue): string => "{$issue->path}:{$issue->code->value}", $error->issues)];
     }
@@ -32,11 +35,14 @@ it('parses like core', function (string $name): void {
     $actual = [];
 
     if (array_key_exists('document', $input)) {
-        $actual['document'] = parseOutcome(fn (): array => ParsedDocument::parse($input['document'], Fixtures::catalog())->toArray());
+        $actual['document'] = parseOutcome(
+            fn (): ParsedDocument => ParsedDocument::parse($input['document'], Fixtures::catalog()),
+            fn (ParsedDocument $document): array => ['forms' => Canvas::formFields($document)],
+        );
     }
 
     if (array_key_exists('site', $input)) {
-        $actual['site'] = parseOutcome(fn (): array => ParsedSiteSettings::parse($input['site'])->toArray());
+        $actual['site'] = parseOutcome(fn (): ParsedSiteSettings => ParsedSiteSettings::parse($input['site']));
     }
 
     expect(Fixtures::encode($actual))->toBe(Fixtures::encode($golden));

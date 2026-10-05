@@ -955,7 +955,27 @@
           ]
         }
       ]
-    }
+    },
+    "forms": [
+      {
+        "source": "ventana-formulario",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "input-73zl6dl",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-lwilhax",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          }
+        ]
+      }
+    ]
   },
   "site": {
     "ok": {

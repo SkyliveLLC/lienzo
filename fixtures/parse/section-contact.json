@@ -262,7 +262,52 @@
           ]
         }
       ]
-    }
+    },
+    "forms": [
+      {
+        "source": "seccion-dezh48l",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "input-ljxch29",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-6qc71bw",
+            "label": "WhatsApp",
+            "required": true,
+            "inputType": "tel"
+          },
+          {
+            "kind": "select",
+            "name": "select-hbhuuc8",
+            "label": "Motivo",
+            "required": true,
+            "options": [
+              "Valoración",
+              "Limpieza",
+              "Dolor o urgencia",
+              "Otro"
+            ]
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-7p1inqd",
+            "label": "Cuéntanos qué sientes",
+            "required": false
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-5xvcab3",
+            "label": "Autorizo el tratamiento de mis datos",
+            "required": true
+          }
+        ]
+      }
+    ]
   },
   "site": {
     "ok": {

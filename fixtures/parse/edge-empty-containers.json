@@ -73,7 +73,21 @@
         }
       ],
       "modals": []
-    }
+    },
+    "forms": [
+      {
+        "source": "s1",
+        "fields": [
+          {
+            "kind": "select",
+            "name": "e1",
+            "label": "",
+            "required": false,
+            "options": []
+          }
+        ]
+      }
+    ]
   },
   "site": {
     "ok": {

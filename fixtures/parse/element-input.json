@@ -2101,7 +2101,435 @@
           ]
         }
       ]
-    }
+    },
+    "forms": [
+      {
+        "source": "variantes",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "input-sqellq8",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-hpk02om",
+            "label": "Correo",
+            "required": true,
+            "inputType": "email"
+          },
+          {
+            "kind": "input",
+            "name": "input-gz9qxag",
+            "label": "WhatsApp",
+            "required": true,
+            "inputType": "tel"
+          },
+          {
+            "kind": "input",
+            "name": "input-s9qrkla",
+            "label": "Edad",
+            "required": false,
+            "inputType": "number"
+          },
+          {
+            "kind": "input",
+            "name": "input-8yp0jqc",
+            "label": "Fecha preferida",
+            "required": true,
+            "inputType": "date"
+          },
+          {
+            "kind": "input",
+            "name": "input-fk4q7bw",
+            "label": "",
+            "required": true,
+            "inputType": "text"
+          }
+        ]
+      },
+      {
+        "source": "relleno",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "input-05c33fq",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-skb4ji4",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-gmp9g5i",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-25awabv",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-3n18596",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-7wdwkpd",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-nmbhtvp",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-utaqszh",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-wxi6r7h",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-wt78gmh",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-c2chsid",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-9kaq1do",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-6go26te",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-5uzlwxe",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-4ssogzq",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-21sjjzr",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-ax8xq0d",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-7gixe3a",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-sfq8t0i",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-1ehaf5x",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-7hpel00",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-o7m8df7",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-sri136r",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          }
+        ]
+      },
+      {
+        "source": "movimiento",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "input-7aibqnj",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-uvu6a4y",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-jgr7ms1",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-vdv34ci",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-7ihrk3l",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-ss9jztu",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-fekob5c",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-0o7rxht",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-xhwu0xr",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-93j3zi1",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-1xw9xh6",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-y8bdab6",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-x1wrlk8",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-6l8xlqd",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-abzyghp",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-03r1q0u",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-d29jsmc",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-8j70xuh",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-yk8bmmh",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-5s5zu7l",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-x4o9gg0",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          }
+        ]
+      },
+      {
+        "source": "movil",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "input-3qhyl0g",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-uhbnmz2",
+            "label": "Correo",
+            "required": true,
+            "inputType": "email"
+          },
+          {
+            "kind": "input",
+            "name": "input-jiyagm8",
+            "label": "WhatsApp",
+            "required": true,
+            "inputType": "tel"
+          },
+          {
+            "kind": "input",
+            "name": "input-8zpcgs9",
+            "label": "Edad",
+            "required": false,
+            "inputType": "number"
+          },
+          {
+            "kind": "input",
+            "name": "input-mac1dx9",
+            "label": "Fecha preferida",
+            "required": true,
+            "inputType": "date"
+          },
+          {
+            "kind": "input",
+            "name": "input-nupkl3i",
+            "label": "",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-6nqj9g8",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          },
+          {
+            "kind": "input",
+            "name": "input-j4fwb98",
+            "label": "Nombre",
+            "required": true,
+            "inputType": "text"
+          }
+        ]
+      }
+    ]
   },
   "site": {
     "ok": {

@@ -1894,7 +1894,341 @@
           ]
         }
       ]
-    }
+    },
+    "forms": [
+      {
+        "source": "variantes",
+        "fields": [
+          {
+            "kind": "textarea",
+            "name": "textarea-7c0dq0m",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-c9wsiwn",
+            "label": "Nombre",
+            "required": false
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-sish6yt",
+            "label": "Cuéntanos",
+            "required": true
+          }
+        ]
+      },
+      {
+        "source": "relleno",
+        "fields": [
+          {
+            "kind": "textarea",
+            "name": "textarea-8y9j1bs",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-7kkktv5",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-yjb32ej",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-55gyqfq",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-l8459wc",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-hlfnvs0",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-dsmalgu",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-54g5xwh",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-1gmbjeb",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-fofog92",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-mupniin",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-j4j8u44",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-n96uxqt",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-onrl1j9",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-lrdqe0m",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-3gl2ta1",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-ng1frhd",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-qtkme6h",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-ox8xoda",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-1y030t3",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-gy5pnhv",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-f2bpa8y",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-4xudl6w",
+            "label": "Nombre",
+            "required": true
+          }
+        ]
+      },
+      {
+        "source": "movimiento",
+        "fields": [
+          {
+            "kind": "textarea",
+            "name": "textarea-xy3vxnk",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-4i10laa",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-rrsa7yv",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-nyobfmf",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-natbrlt",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-83mujue",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-xsgsbdi",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-ysi5uav",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-8b1655t",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-eeul17h",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-x73sjml",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-htxz8mp",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-7kjcf9k",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-9hal58a",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-6ibepl7",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-es7bkk7",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-ssbx96k",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-7nbj0wy",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-k8tgoem",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-9mnmmga",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-27qjhfn",
+            "label": "Nombre",
+            "required": true
+          }
+        ]
+      },
+      {
+        "source": "movil",
+        "fields": [
+          {
+            "kind": "textarea",
+            "name": "textarea-ug89zl1",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-i142qts",
+            "label": "Nombre",
+            "required": false
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-bl1vkha",
+            "label": "Cuéntanos",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-ek4so5z",
+            "label": "Nombre",
+            "required": true
+          },
+          {
+            "kind": "textarea",
+            "name": "textarea-07wabns",
+            "label": "Nombre",
+            "required": true
+          }
+        ]
+      }
+    ]
   },
   "site": {
     "ok": {

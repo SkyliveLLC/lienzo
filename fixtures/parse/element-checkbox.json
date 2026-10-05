@@ -1894,7 +1894,341 @@
           ]
         }
       ]
-    }
+    },
+    "forms": [
+      {
+        "source": "variantes",
+        "fields": [
+          {
+            "kind": "checkbox",
+            "name": "checkbox-lxmfs4f",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-np0z5i8",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": false
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-xnxtgw3",
+            "label": "Quiero recibir recordatorios",
+            "required": true
+          }
+        ]
+      },
+      {
+        "source": "relleno",
+        "fields": [
+          {
+            "kind": "checkbox",
+            "name": "checkbox-t9k0htl",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-fyk6lm6",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-4la0ljp",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-lnlb13g",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-j8o20t5",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-ftd0dd5",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-tg2w898",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-deteqsu",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-a4wt020",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-fsikxzc",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-6bvr43e",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-7n6tfbi",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-ci63fj8",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-vlpnlr3",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-zmyj6yp",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-l6k1tsq",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-0nb0oy2",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-38rxd6q",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-p77lpp9",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-hrire6q",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-eyumop1",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-4b8d3c2",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-hmnd1qa",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          }
+        ]
+      },
+      {
+        "source": "movimiento",
+        "fields": [
+          {
+            "kind": "checkbox",
+            "name": "checkbox-sgkqoae",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-vk5u29a",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-8v3vllk",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-4vh0dls",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-6pd0fc1",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-yhw4mva",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-c52p8wq",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-my4ts2k",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-ubnnx7m",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-rtly2wr",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-9yw6wrk",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-d2d3xrn",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-xv5fgmm",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-1bztfgz",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-k1eddne",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-r46b5r1",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-pn6gda9",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-7qk8m1m",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-3wl5vb1",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-xi3uw25",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-hqxg6ms",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          }
+        ]
+      },
+      {
+        "source": "movil",
+        "fields": [
+          {
+            "kind": "checkbox",
+            "name": "checkbox-5gduufm",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-bia2cz0",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": false
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-d41rolp",
+            "label": "Quiero recibir recordatorios",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-nweewk8",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          },
+          {
+            "kind": "checkbox",
+            "name": "checkbox-yz1oc0h",
+            "label": "Acepto el tratamiento de mis datos",
+            "required": true
+          }
+        ]
+      }
+    ]
   },
   "site": {
     "ok": {

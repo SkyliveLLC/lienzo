@@ -224,7 +224,42 @@
           ]
         }
       ]
-    }
+    },
+    "forms": [
+      {
+        "source": "top",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "field",
+            "label": "Nombre",
+            "required": false,
+            "inputType": "text"
+          }
+        ]
+      },
+      {
+        "source": "wizard",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "f1",
+            "label": "Uno",
+            "required": false,
+            "inputType": "text"
+          },
+          {
+            "kind": "select",
+            "name": "f2",
+            "label": "",
+            "required": false,
+            "options": [
+              "x"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "site": {
     "ok": {

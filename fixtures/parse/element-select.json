@@ -2125,7 +2125,569 @@
           ]
         }
       ]
-    }
+    },
+    "forms": [
+      {
+        "source": "variantes",
+        "fields": [
+          {
+            "kind": "select",
+            "name": "select-phh2ivw",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-oi2hehe",
+            "label": "Nombre",
+            "required": true,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-cscsk8k",
+            "label": "Nombre",
+            "required": false,
+            "options": []
+          },
+          {
+            "kind": "select",
+            "name": "select-7nzfcaj",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Valoración",
+              "Limpieza",
+              "Dolor o urgencia",
+              "Ortodoncia",
+              "Otro"
+            ]
+          }
+        ]
+      },
+      {
+        "source": "relleno",
+        "fields": [
+          {
+            "kind": "select",
+            "name": "select-0eb04t7",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-0utoqk3",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-7alxnps",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-ef4v9ub",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-mwgm99h",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-nbwieaw",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-m9sb6oq",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-wu1r52i",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-f0r3anf",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-a0nndag",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-qxpvm9b",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-4ymc3yu",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-twpkgx6",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-adxm5sr",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-111houi",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-qw85ezp",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-mf9m5yd",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-gkjreea",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-s0fy7co",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-g6ilgsn",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-v60c9pv",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-xtu0il7",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-xq7l9j8",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          }
+        ]
+      },
+      {
+        "source": "movimiento",
+        "fields": [
+          {
+            "kind": "select",
+            "name": "select-qtdkkle",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-681n66f",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-1hf705f",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-x64kw5l",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-tvvdki4",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-ke1op6w",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-3g0ez59",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-88fijp9",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-jaz2f5u",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-ssuw534",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-w5ofsfk",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-6wzp2sj",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-tn3mdaa",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-ze6f6iv",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-olp6huj",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-e27a6g4",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-weiucbo",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-pbix9ii",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-200ljko",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-yd6cbqm",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-z9fcmxo",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          }
+        ]
+      },
+      {
+        "source": "movil",
+        "fields": [
+          {
+            "kind": "select",
+            "name": "select-0l68g80",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-4b2ie67",
+            "label": "Nombre",
+            "required": true,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-au0vil2",
+            "label": "Nombre",
+            "required": false,
+            "options": []
+          },
+          {
+            "kind": "select",
+            "name": "select-e9pdaey",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Valoración",
+              "Limpieza",
+              "Dolor o urgencia",
+              "Ortodoncia",
+              "Otro"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-lpegqi7",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          },
+          {
+            "kind": "select",
+            "name": "select-ql972fc",
+            "label": "Nombre",
+            "required": false,
+            "options": [
+              "Opción 1",
+              "Opción 2"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "site": {
     "ok": {

@@ -596,7 +596,55 @@
           ]
         }
       ]
-    }
+    },
+    "forms": [
+      {
+        "source": "contact",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "email",
+            "label": "Correo",
+            "required": true,
+            "inputType": "email"
+          },
+          {
+            "kind": "checkbox",
+            "name": "agree",
+            "label": "Acepto",
+            "required": false
+          },
+          {
+            "kind": "select",
+            "name": "topic",
+            "label": "Tema",
+            "required": false,
+            "options": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "kind": "textarea",
+            "name": "msg",
+            "label": "Mensaje",
+            "required": false
+          }
+        ]
+      },
+      {
+        "source": "promo",
+        "fields": [
+          {
+            "kind": "input",
+            "name": "pname",
+            "label": "Nombre",
+            "required": false,
+            "inputType": "text"
+          }
+        ]
+      }
+    ]
   },
   "site": {
     "ok": {
