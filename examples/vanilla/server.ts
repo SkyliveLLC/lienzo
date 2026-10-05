@@ -226,8 +226,8 @@ function fieldProblem(field: FormField, value: string): string | null {
 }
 
 /** Answers by label (the field id when it has none), for reading in the editor. */
-const answers = (fields: FormField[], value: (field: FormField) => string): Record<string, string> =>
-    Object.fromEntries(fields.map((field) => [field.label || field.name, field.kind === 'checkbox' ? (value(field) ? 'yes' : 'no') : value(field)]));
+const answers = (fields: FormField[], value: (field: FormField) => string): Record<string, string | boolean> =>
+    Object.fromEntries(fields.map((field) => [field.label || field.name, field.kind === 'checkbox' ? value(field) !== '' : value(field)]));
 
 type Handler = (request: Request, params: Record<string, string | undefined>, url: URL) => Response | Promise<Response>;
 const routes: { method: string; pattern: URLPattern; handler: Handler }[] = [];

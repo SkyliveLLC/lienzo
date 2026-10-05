@@ -65,7 +65,7 @@ it('stores what a browser posts, read through the names the page renders', funct
             ['name' => 'email', 'label' => 'Email', 'value' => 'ana@example.com'],
             ['name' => 'topic', 'label' => 'Topic', 'value' => 'Support'],
             ['name' => 'message', 'label' => 'Message', 'value' => ''],
-            ['name' => 'consent', 'label' => 'I agree', 'value' => 'yes'],
+            ['name' => 'consent', 'label' => 'I agree', 'value' => true],
         ]);
 
     $this->get('/')->assertSee('<p class="lz-notice" role="status">Thanks! We received your message.</p>', false);
@@ -157,5 +157,5 @@ it('collects every step of a steps form in one submission', function (): void {
     submitForm('/', 'booking', ['agree' => '1', 'service' => 'Cleaning'])->assertSessionHasErrors(['fields.name']);
     submitForm('/', 'booking', ['name' => 'Ana', 'service' => 'Cleaning', 'agree' => '1'])->assertSessionHasNoErrors();
 
-    expect(array_column(Submission::query()->sole()->fields, 'value', 'name'))->toBe(['name' => 'Ana', 'service' => 'Cleaning', 'agree' => 'yes']);
+    expect(array_column(Submission::query()->sole()->fields, 'value', 'name'))->toBe(['name' => 'Ana', 'service' => 'Cleaning', 'agree' => true]);
 });

@@ -54,7 +54,7 @@ const labels = computed(() => new Map(canvasesOf(editor.state.draft).flatMap((ca
                 <dl>
                     <template v-for="(value, name) in submission.fields" :key="name">
                         <dt>{{ labels.get(String(name)) ?? name }}</dt>
-                        <dd>{{ value }}</dd>
+                        <dd>{{ typeof value === 'boolean' ? t(value ? 'submissions.checked' : 'submissions.unchecked') : value }}</dd>
                     </template>
                 </dl>
             </li>

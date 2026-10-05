@@ -139,6 +139,7 @@ test('reads form messages a page at a time', async ({ editor, page }) => {
     const dialog = page.getByRole('dialog', { name: 'Form messages' });
     await expect(dialog.locator('.lze-submission')).toHaveCount(2);
     await expect(dialog).toContainText('Do you ship abroad?');
+    await expect(dialog.locator('.lze-submission dd:last-of-type')).toHaveText(['Yes', 'No']);
 
     await dialog.getByRole('button', { name: 'Load more' }).click();
     await expect(dialog.locator('.lze-submission')).toHaveCount(3);

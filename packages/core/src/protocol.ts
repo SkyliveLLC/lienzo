@@ -52,7 +52,8 @@ export type SiteUpdate = {
     meta?: SiteMeta;
 };
 
-export type Submission = { id: number; page: string; source: string; fields: Record<string, string>; createdAt: string };
+/** `fields` holds the answers by field label. A checkbox answer is a boolean; the editor words it in its own language. */
+export type Submission = { id: number; page: string; source: string; fields: Record<string, string | boolean>; createdAt: string };
 
 /** Every route, keyed by `METHOD path`. `req` is the JSON body; `res` is the 2xx JSON body. */
 export type Protocol = {

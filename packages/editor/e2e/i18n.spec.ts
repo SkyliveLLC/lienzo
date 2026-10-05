@@ -11,3 +11,12 @@ test('the Spanish locale shows Spanish chrome', async ({ page, request }) => {
     // App labels from the catalog follow the editor language too.
     await expect(page.locator('.lze-palette-item', { hasText: 'Tarjeta de precio' })).toBeVisible();
 });
+
+test('the Spanish locale reads checkbox answers in Spanish', async ({ page, request }) => {
+    await request.post('/api/__reset');
+    await page.goto('/?locale=es');
+
+    await page.getByRole('button', { name: 'Mensajes' }).click();
+    const dialog = page.getByRole('dialog', { name: 'Mensajes de formularios' });
+    await expect(dialog.locator('.lze-submission dd:last-of-type')).toHaveText(['Sí', 'No']);
+});

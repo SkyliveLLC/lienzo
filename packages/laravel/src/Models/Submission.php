@@ -10,13 +10,14 @@ use Illuminate\Support\Carbon;
 
 /**
  * What a visitor sent through a form on a published page. `page` is the
- * page's slug at the time, so the inbox outlives the page.
+ * page's slug at the time, so the inbox outlives the page. A checkbox's
+ * `value` is a boolean; every other value is the text sent.
  *
  * @property int $id
  * @property int $site_id
  * @property string $page
  * @property string $source
- * @property list<array{name: string, label: string, value: string}> $fields
+ * @property list<array{name: string, label: string, value: string|bool}> $fields
  * @property ?string $ip
  * @property ?Carbon $created_at
  */

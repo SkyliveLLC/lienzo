@@ -238,6 +238,8 @@ export const en = {
     'submissions.more': 'Load more',
     'submissions.from': '/{page} · {source}',
     'submissions.failed': "Couldn't load the messages: {message}",
+    'submissions.checked': 'Yes',
+    'submissions.unchecked': 'No',
     'versions.title': 'Published versions',
     'versions.description': 'Every publish keeps the previous one. Restoring brings it back to the draft without touching what visitors see until you publish.',
     'versions.by': 'Published by {name}',

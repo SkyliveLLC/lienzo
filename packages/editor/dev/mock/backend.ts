@@ -94,7 +94,7 @@ export function createBackend(options: { publicUrl: string; latency?: number }) 
         assets = [];
         submissions = [3, 2, 1].map((n) => ({
             id: n, page: '', source: 'contact', createdAt: new Date(Date.UTC(2026, 0, n, 9)).toISOString(),
-            fields: { name: `Visitor ${n}`, message: n === 3 ? 'Do you ship abroad?\nThanks!' : 'Hello' },
+            fields: { name: `Visitor ${n}`, message: n === 3 ? 'Do you ship abroad?\nThanks!' : 'Hello', newsletter: n === 3 },
         }));
     }
 

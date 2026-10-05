@@ -78,7 +78,7 @@ final class PublicController
                 'name' => $field['name'],
                 'label' => $field['label'],
                 'value' => $field['kind'] === 'checkbox'
-                    ? (filled($answers[$field['name']] ?? null) ? 'yes' : 'no')
+                    ? filled($answers[$field['name']] ?? null)
                     : (string) ($answers[$field['name']] ?? ''),
             ], $fields),
             'ip' => $request->ip(),

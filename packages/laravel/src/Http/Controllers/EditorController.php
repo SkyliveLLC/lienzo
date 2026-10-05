@@ -489,8 +489,8 @@ final class EditorController
     /**
      * A submission's answers by label, for reading. Two fields with the same label stay apart.
      *
-     * @param  list<array{name: string, label: string, value: string}>  $fields
-     * @return array<string, string>
+     * @param  list<array{name: string, label: string, value: string|bool}>  $fields
+     * @return array<string, string|bool>
      */
     private static function answers(array $fields): array
     {

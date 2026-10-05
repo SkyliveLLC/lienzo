@@ -222,6 +222,8 @@ export const es: Messages = {
     'submissions.more': 'Cargar más',
     'submissions.from': '/{page} · {source}',
     'submissions.failed': 'No se pudieron cargar los mensajes: {message}',
+    'submissions.checked': 'Sí',
+    'submissions.unchecked': 'No',
     'versions.title': 'Versiones publicadas',
     'versions.description': 'Cada publicación guarda la anterior. Restaurar la trae al borrador, sin tocar lo que ven los visitantes hasta que publiques.',
     'versions.by': 'Publicó {name}',
