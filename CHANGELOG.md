@@ -2,7 +2,7 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylive/lienzo-core` and `@skylive/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
-## 0.1.0 (unreleased)
+## 0.1.0 (2026-10-05)
 
 The first release.
 
