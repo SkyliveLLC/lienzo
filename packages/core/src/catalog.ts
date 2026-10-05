@@ -28,8 +28,11 @@ export type ElementSpec = {
     css?: string;
 };
 
-/** An action type the app registers; `RenderHost.action` turns it into an href. */
-export type ActionSpec = { type: string; label: Localized; value: Field | null };
+/**
+ * An action type the app registers; `RenderHost.action` turns it into an href.
+ * Its value is stored as one string, so it cannot itself be an action.
+ */
+export type ActionSpec = { type: string; label: Localized; value: Exclude<Field, { kind: 'action' }> | null };
 
 export type Catalog = {
     elements: ElementSpec[];

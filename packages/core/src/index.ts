@@ -1,4 +1,5 @@
 export {
+    CORE_ACTION_TYPES,
     DocumentError,
     parseDocument,
     parseSiteSettings,
@@ -8,6 +9,7 @@ export type {
     Action,
     AppElement,
     Box,
+    CoreActionType,
     CoreElement,
     CoreElementType,
     CoreProps,
