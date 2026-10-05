@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lienzo editor · standalone bundle</title>
+    <link rel="stylesheet" href="./hostile.css">
+    <!-- What a backend without a JS build ships: one prebuilt file, Vue included. -->
+    <script type="module" src="/standalone/lienzo-editor.js"></script>
+</head>
+<body>
+    <lienzo-editor endpoint="/api" locale="es" style="display: block; height: 100vh"></lienzo-editor>
+</body>
+</html>

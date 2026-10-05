@@ -1,0 +1,7 @@
+/* A host page that styles everything, to prove the editor and its canvas ignore it. */
+*, ::before, ::after { margin: 0; padding: 0; box-sizing: border-box; border: 0 solid; }
+html, body { height: 100%; }
+body { font: 20px/2 Georgia, serif; letter-spacing: 1px; color: #b91c1c; background: #fef3c7; }
+button, input, select, textarea { background: transparent; font: inherit; color: inherit; }
+img, svg, iframe { display: block; max-width: 100%; }
+h1, h2, h3, p { font-size: 40px; text-transform: uppercase; }
