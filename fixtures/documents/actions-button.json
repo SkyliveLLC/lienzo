@@ -1,0 +1,802 @@
+{
+    "title": "Acciones de botón",
+    "seo": {
+        "title": null,
+        "description": null
+    },
+    "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+    },
+    "profile": {
+        "address": null,
+        "city": null,
+        "phone": null,
+        "hours": null,
+        "og_image": null,
+        "favicon": null,
+        "ga4": null,
+        "pixel": null
+    },
+    "content": {
+        "sections": [
+            {
+                "id": "acciones",
+                "height": {
+                    "desktop": 500,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "button-o8vw1qg",
+                        "type": "button",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "none: (vacío)",
+                            "action": {
+                                "type": "none",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-skquj20",
+                        "type": "button",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 27,
+                                "y": 40,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "none: ignorado",
+                            "action": {
+                                "type": "none",
+                                "value": "ignorado"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-bwjbyt0",
+                        "type": "button",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 50,
+                                "y": 40,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "whatsapp: +57 300 111 2233",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": "+57 300 111 2233"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-f00npzg",
+                        "type": "button",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 73,
+                                "y": 40,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "whatsapp: (vacío)",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-1u2rbku",
+                        "type": "button",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 124,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "phone: +57 (300) 111-2233",
+                            "action": {
+                                "type": "phone",
+                                "value": "+57 (300) 111-2233"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-jmhi0dx",
+                        "type": "button",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 27,
+                                "y": 124,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "email: hola@demo.test",
+                            "action": {
+                                "type": "email",
+                                "value": "hola@demo.test"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-j3m5793",
+                        "type": "button",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 50,
+                                "y": 124,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "url: https://example.com/precios?plan=1",
+                            "action": {
+                                "type": "url",
+                                "value": "https://example.com/precios?plan=1"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-c35tdgm",
+                        "type": "button",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 73,
+                                "y": 124,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "url: http://example.com",
+                            "action": {
+                                "type": "url",
+                                "value": "http://example.com"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-cdqjng2",
+                        "type": "button",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 208,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "anchor: destino",
+                            "action": {
+                                "type": "anchor",
+                                "value": "destino"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-pxynigq",
+                        "type": "button",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 27,
+                                "y": 208,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "anchor: des tino!",
+                            "action": {
+                                "type": "anchor",
+                                "value": "des tino!"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-v17bfsm",
+                        "type": "button",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 50,
+                                "y": 208,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "modal: ventana",
+                            "action": {
+                                "type": "modal",
+                                "value": "ventana"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-f0ftpz7",
+                        "type": "button",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 73,
+                                "y": 208,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "modal: (vacío)",
+                            "action": {
+                                "type": "modal",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-11f62ed",
+                        "type": "button",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 292,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "page: Servicios Premium",
+                            "action": {
+                                "type": "page",
+                                "value": "Servicios Premium"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-o2eijdo",
+                        "type": "button",
+                        "z": 14,
+                        "layout": {
+                            "desktop": {
+                                "x": 27,
+                                "y": 292,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "page: servicios-premium",
+                            "action": {
+                                "type": "page",
+                                "value": "servicios-premium"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-3dgl56d",
+                        "type": "button",
+                        "z": 15,
+                        "layout": {
+                            "desktop": {
+                                "x": 50,
+                                "y": 292,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "page: (vacío)",
+                            "action": {
+                                "type": "page",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-mafca7r",
+                        "type": "button",
+                        "z": 16,
+                        "layout": {
+                            "desktop": {
+                                "x": 73,
+                                "y": 292,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "booking: (vacío)",
+                            "action": {
+                                "type": "booking",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-7ps0ak9",
+                        "type": "button",
+                        "z": 17,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 376,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "top: (vacío)",
+                            "action": {
+                                "type": "top",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-vtl3dlz",
+                        "type": "button",
+                        "z": 18,
+                        "layout": {
+                            "desktop": {
+                                "x": 27,
+                                "y": 376,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "back: (vacío)",
+                            "action": {
+                                "type": "back",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-w467lmo",
+                        "type": "button",
+                        "z": 19,
+                        "layout": {
+                            "desktop": {
+                                "x": 50,
+                                "y": 376,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "step_next: (vacío)",
+                            "action": {
+                                "type": "step_next",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-ae0ytgh",
+                        "type": "button",
+                        "z": 20,
+                        "layout": {
+                            "desktop": {
+                                "x": 73,
+                                "y": 376,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "step_prev: (vacío)",
+                            "action": {
+                                "type": "step_prev",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 13,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "formulario",
+                "height": {
+                    "desktop": 164,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "button-x8xaa26",
+                        "type": "button",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Enviar",
+                            "action": {
+                                "type": "submit",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-aul2sbc",
+                        "type": "button",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Enviar sin valor",
+                            "action": {
+                                "type": "submit",
+                                "value": "ignorado"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "destino",
+                "height": {
+                    "desktop": 192,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "heading-p8q91hp",
+                        "type": "heading",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 80
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Destino del ancla",
+                            "level": 2
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "heading",
+                            "size": 44,
+                            "weight": 700,
+                            "align": "left",
+                            "line_height": 1.1
+                        }
+                    }
+                ]
+            }
+        ],
+        "modals": [
+            {
+                "id": "ventana",
+                "title": "Información",
+                "size": "md",
+                "show_title": true,
+                "width": 560,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "text-xuuuo4p",
+                        "type": "text",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

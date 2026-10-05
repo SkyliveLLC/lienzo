@@ -1,0 +1,1763 @@
+{
+    "title": "Elemento: image",
+    "seo": {
+        "title": null,
+        "description": null
+    },
+    "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+    },
+    "profile": {
+        "address": null,
+        "city": null,
+        "phone": null,
+        "hours": null,
+        "og_image": null,
+        "favicon": null,
+        "ga4": null,
+        "pixel": null
+    },
+    "content": {
+        "sections": [
+            {
+                "id": "variantes",
+                "height": {
+                    "desktop": 1248,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "image-a52tvur",
+                        "type": "image",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Recepción"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-m5a5vu7",
+                        "type": "image",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": "Biblioteca con miniatura"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-veh3jux",
+                        "type": "image",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:2",
+                            "alt": "Otra de la biblioteca"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-zv2bzl0",
+                        "type": "image",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 332,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:3",
+                            "alt": "Biblioteca sin miniatura ni tamaño"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-8wq1p1b",
+                        "type": "image",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 332,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:99",
+                            "alt": "Referencia que no existe"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-s9mt17w",
+                        "type": "image",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 332,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "",
+                            "alt": ""
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-vijldvi",
+                        "type": "image",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 624,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": ""
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "contain"
+                        }
+                    },
+                    {
+                        "id": "image-h1zu6ya",
+                        "type": "image",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 624,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": "",
+                            "shape": "ellipse"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-q6cfige",
+                        "type": "image",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 624,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": "",
+                            "shape": "triangle"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-mjes88j",
+                        "type": "image",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 916,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/a.jpg",
+                            "alt": "Con \"comillas\" & <tags>"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "relleno",
+                "height": {
+                    "desktop": 2416,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "surface"
+                },
+                "elements": [
+                    {
+                        "id": "image-hhazqlw",
+                        "type": "image",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "gradient": {
+                                "type": "linear",
+                                "from": "primary",
+                                "to": "secondary",
+                                "angle": 135
+                            }
+                        }
+                    },
+                    {
+                        "id": "image-myqiuep",
+                        "type": "image",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "gradient": {
+                                "type": "radial",
+                                "from": "#f97316",
+                                "to": "background",
+                                "angle": 0
+                            },
+                            "background_opacity": 0.6
+                        }
+                    },
+                    {
+                        "id": "image-qy18g5b",
+                        "type": "image",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "background": "#fde68a",
+                            "background_opacity": 0.4
+                        }
+                    },
+                    {
+                        "id": "image-id8mtaw",
+                        "type": "image",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 332,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "color": "#7c3aed",
+                            "background": "surface"
+                        }
+                    },
+                    {
+                        "id": "image-3iazmrc",
+                        "type": "image",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 332,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "shadow": "sm"
+                        }
+                    },
+                    {
+                        "id": "image-86u7c7t",
+                        "type": "image",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 332,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "shadow": "md"
+                        }
+                    },
+                    {
+                        "id": "image-u8u9kml",
+                        "type": "image",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 624,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "shadow": "lg"
+                        }
+                    },
+                    {
+                        "id": "image-x3ie5oo",
+                        "type": "image",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 624,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "shadow": "custom",
+                            "shadow_custom": {
+                                "x": 4,
+                                "y": 12,
+                                "blur": 32,
+                                "spread": -4,
+                                "color": "primary",
+                                "opacity": 0.35
+                            }
+                        }
+                    },
+                    {
+                        "id": "image-xify9yw",
+                        "type": "image",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 624,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "shadow": "custom",
+                            "shadow_custom": {
+                                "x": 0,
+                                "y": 0,
+                                "blur": 0,
+                                "spread": 0,
+                                "color": "#000000",
+                                "opacity": 1
+                            }
+                        }
+                    },
+                    {
+                        "id": "image-gjwwlh2",
+                        "type": "image",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 916,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 999,
+                            "object_fit": "cover",
+                            "border_width": 3,
+                            "border_color": "#e11d48",
+                            "padding": 24
+                        }
+                    },
+                    {
+                        "id": "image-g08ng2v",
+                        "type": "image",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 916,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 0,
+                            "object_fit": "cover",
+                            "border_width": 2,
+                            "padding": 0
+                        }
+                    },
+                    {
+                        "id": "image-rbq6hei",
+                        "type": "image",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 916,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "font": "heading",
+                            "size": 30,
+                            "weight": 800,
+                            "align": "center",
+                            "line_height": 2
+                        }
+                    },
+                    {
+                        "id": "image-t1f9n04",
+                        "type": "image",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1208,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "opacity": 0.5
+                        }
+                    },
+                    {
+                        "id": "image-xbuz7b1",
+                        "type": "image",
+                        "z": 14,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1208,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "opacity": 0
+                        }
+                    },
+                    {
+                        "id": "image-5i63496",
+                        "type": "image",
+                        "z": 15,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1208,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "blur": 8,
+                            "background": "background",
+                            "background_opacity": 0.5
+                        }
+                    },
+                    {
+                        "id": "image-1f8i7m3",
+                        "type": "image",
+                        "z": 16,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1500,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "clip": true
+                        }
+                    },
+                    {
+                        "id": "image-0a2mo92",
+                        "type": "image",
+                        "z": 17,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1500,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "overflow": "hidden"
+                        }
+                    },
+                    {
+                        "id": "image-hxhvmta",
+                        "type": "image",
+                        "z": 18,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1500,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "overflow": "scroll-x"
+                        }
+                    },
+                    {
+                        "id": "image-hh88jqn",
+                        "type": "image",
+                        "z": 19,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1792,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "overflow": "scroll-y"
+                        }
+                    },
+                    {
+                        "id": "image-7lp81bv",
+                        "type": "image",
+                        "z": 20,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1792,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "clip": true,
+                            "overflow": "visible"
+                        }
+                    },
+                    {
+                        "id": "image-gc7zm7v",
+                        "type": "image",
+                        "z": 21,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1792,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        },
+                        "locked": true
+                    },
+                    {
+                        "id": "image-lvfjtpm",
+                        "type": "image",
+                        "z": 22,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 2084,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        },
+                        "group": "grupo-a"
+                    },
+                    {
+                        "id": "image-uuk1a3z",
+                        "type": "image",
+                        "z": 23,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 2084,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        },
+                        "group": "grupo-a",
+                        "locked": true
+                    }
+                ]
+            },
+            {
+                "id": "movimiento",
+                "height": {
+                    "desktop": 2124,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "image-xbjnd9e",
+                        "type": "image",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "rotate": 12
+                        }
+                    },
+                    {
+                        "id": "image-b419xpq",
+                        "type": "image",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "rotate": -45.5
+                        }
+                    },
+                    {
+                        "id": "image-yk3titr",
+                        "type": "image",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "flip_x": true
+                        }
+                    },
+                    {
+                        "id": "image-sfui7ky",
+                        "type": "image",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 332,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "flip_y": true
+                        }
+                    },
+                    {
+                        "id": "image-qzp3cwd",
+                        "type": "image",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 332,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "rotate": 30,
+                            "flip_x": true,
+                            "flip_y": true
+                        }
+                    },
+                    {
+                        "id": "image-cc6xyvc",
+                        "type": "image",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 332,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "hover": "lift"
+                        }
+                    },
+                    {
+                        "id": "image-f69hfxr",
+                        "type": "image",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 624,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "hover": "lift",
+                            "rotate": -8
+                        }
+                    },
+                    {
+                        "id": "image-gnwotzp",
+                        "type": "image",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 624,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "hover": "grow"
+                        }
+                    },
+                    {
+                        "id": "image-4h3k7zn",
+                        "type": "image",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 624,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "hover": "grow",
+                            "flip_x": true
+                        }
+                    },
+                    {
+                        "id": "image-1lsykmi",
+                        "type": "image",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 916,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "hover": "fade"
+                        }
+                    },
+                    {
+                        "id": "image-bbfdk97",
+                        "type": "image",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 916,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "hover": "none"
+                        }
+                    },
+                    {
+                        "id": "image-45bx94l",
+                        "type": "image",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 916,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "animation": {
+                                "type": "fade",
+                                "delay": 0,
+                                "duration": 0.7
+                            }
+                        }
+                    },
+                    {
+                        "id": "image-yoqrzri",
+                        "type": "image",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1208,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "animation": {
+                                "type": "up",
+                                "delay": 0.2,
+                                "duration": 1
+                            }
+                        }
+                    },
+                    {
+                        "id": "image-pxu9alb",
+                        "type": "image",
+                        "z": 14,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1208,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "animation": {
+                                "type": "down",
+                                "delay": 0.4,
+                                "duration": 0.5
+                            }
+                        }
+                    },
+                    {
+                        "id": "image-kath3t3",
+                        "type": "image",
+                        "z": 15,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1208,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "animation": {
+                                "type": "left",
+                                "delay": 0,
+                                "duration": 0.2
+                            }
+                        }
+                    },
+                    {
+                        "id": "image-2ot30t4",
+                        "type": "image",
+                        "z": 16,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1500,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "animation": {
+                                "type": "right",
+                                "delay": 1.25,
+                                "duration": 1.5
+                            }
+                        }
+                    },
+                    {
+                        "id": "image-fn8azog",
+                        "type": "image",
+                        "z": 17,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1500,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "animation": {
+                                "type": "zoom",
+                                "delay": 2,
+                                "duration": 2
+                            }
+                        }
+                    },
+                    {
+                        "id": "image-00hqn8t",
+                        "type": "image",
+                        "z": 18,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1500,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "animation": {
+                                "type": "none",
+                                "delay": 0,
+                                "duration": 0.7
+                            }
+                        }
+                    },
+                    {
+                        "id": "image-a2ulxrb",
+                        "type": "image",
+                        "z": 19,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1792,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "visible_on": "desktop"
+                        }
+                    },
+                    {
+                        "id": "image-w5wf5sv",
+                        "type": "image",
+                        "z": 20,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1792,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "visible_on": "mobile"
+                        }
+                    },
+                    {
+                        "id": "image-73192ox",
+                        "type": "image",
+                        "z": 21,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1792,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "visible_on": "all"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "movil",
+                "height": {
+                    "desktop": 1248,
+                    "mobile": 2736
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "image-fyzjtc9",
+                        "type": "image",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 24,
+                                "w": 90,
+                                "h": 208
+                            }
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Recepción"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-htl54bn",
+                        "type": "image",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 248,
+                                "w": 90,
+                                "h": 208
+                            }
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": "Biblioteca con miniatura"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-39iiqnu",
+                        "type": "image",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 472,
+                                "w": 90,
+                                "h": 208
+                            }
+                        },
+                        "props": {
+                            "src": "media:2",
+                            "alt": "Otra de la biblioteca"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-6uu8ph3",
+                        "type": "image",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 332,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 696,
+                                "w": 90,
+                                "h": 208
+                            }
+                        },
+                        "props": {
+                            "src": "media:3",
+                            "alt": "Biblioteca sin miniatura ni tamaño"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-4u1m8x7",
+                        "type": "image",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 332,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 920,
+                                "w": 90,
+                                "h": 208
+                            }
+                        },
+                        "props": {
+                            "src": "media:99",
+                            "alt": "Referencia que no existe"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-tzm7yq5",
+                        "type": "image",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 332,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 1144,
+                                "w": 90,
+                                "h": 208
+                            }
+                        },
+                        "props": {
+                            "src": "",
+                            "alt": ""
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-v4zp3sa",
+                        "type": "image",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 624,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 1368,
+                                "w": 90,
+                                "h": 208
+                            }
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": ""
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "contain"
+                        }
+                    },
+                    {
+                        "id": "image-q16kigq",
+                        "type": "image",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 624,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 1592,
+                                "w": 90,
+                                "h": 208
+                            }
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": "",
+                            "shape": "ellipse"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-ow8qzah",
+                        "type": "image",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 624,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 1816,
+                                "w": 90,
+                                "h": 208
+                            }
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": "",
+                            "shape": "triangle"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-jh6mw09",
+                        "type": "image",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 916,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 2040,
+                                "w": 90,
+                                "h": 208
+                            }
+                        },
+                        "props": {
+                            "src": "https://images.example.com/a.jpg",
+                            "alt": "Con \"comillas\" & <tags>"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    },
+                    {
+                        "id": "image-gmdh29o",
+                        "type": "image",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 916,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 2264,
+                                "w": 90,
+                                "h": 208
+                            }
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "visible_on": "desktop"
+                        }
+                    },
+                    {
+                        "id": "image-v1he2an",
+                        "type": "image",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 916,
+                                "w": 26.666666666666668,
+                                "h": 260
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 2488,
+                                "w": 90,
+                                "h": 208
+                            }
+                        },
+                        "props": {
+                            "src": "https://images.example.com/clinic.jpg",
+                            "alt": "Clínica"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover",
+                            "visible_on": "mobile"
+                        }
+                    }
+                ]
+            }
+        ],
+        "modals": [
+            {
+                "id": "ventana",
+                "title": "Información",
+                "size": "md",
+                "show_title": true,
+                "width": 560,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "text-nsfpg5k",
+                        "type": "text",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

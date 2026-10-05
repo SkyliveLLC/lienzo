@@ -1,0 +1,1958 @@
+{
+    "title": "Elemento: button",
+    "seo": {
+        "title": null,
+        "description": null
+    },
+    "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+    },
+    "profile": {
+        "address": null,
+        "city": null,
+        "phone": null,
+        "hours": null,
+        "og_image": null,
+        "favicon": null,
+        "ga4": null,
+        "pixel": null
+    },
+    "content": {
+        "sections": [
+            {
+                "id": "variantes",
+                "height": {
+                    "desktop": 248,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "button-twvencg",
+                        "type": "button",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-4ik9iym",
+                        "type": "button",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Un botón con una etiqueta bastante más larga de lo normal",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-kfiqngz",
+                        "type": "button",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-zhhlk6e",
+                        "type": "button",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 124,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "secondary",
+                            "color": "#facc15",
+                            "font": "heading",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "left",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-kyfboyd",
+                        "type": "button",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 124,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "background",
+                            "color": "primary",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "border_width": 2,
+                            "border_color": "primary"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "relleno",
+                "height": {
+                    "desktop": 752,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "surface"
+                },
+                "elements": [
+                    {
+                        "id": "button-9z6e3p9",
+                        "type": "button",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "gradient": {
+                                "type": "linear",
+                                "from": "primary",
+                                "to": "secondary",
+                                "angle": 135
+                            }
+                        }
+                    },
+                    {
+                        "id": "button-6fsn4wn",
+                        "type": "button",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "gradient": {
+                                "type": "radial",
+                                "from": "#f97316",
+                                "to": "background",
+                                "angle": 0
+                            },
+                            "background_opacity": 0.6
+                        }
+                    },
+                    {
+                        "id": "button-dh21h25",
+                        "type": "button",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "#fde68a",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "background_opacity": 0.4
+                        }
+                    },
+                    {
+                        "id": "button-ureox5h",
+                        "type": "button",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 124,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "surface",
+                            "color": "#7c3aed",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-86aghab",
+                        "type": "button",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 124,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "shadow": "sm"
+                        }
+                    },
+                    {
+                        "id": "button-q3jajr2",
+                        "type": "button",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 124,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "shadow": "md"
+                        }
+                    },
+                    {
+                        "id": "button-cmoq6wb",
+                        "type": "button",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 208,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "shadow": "lg"
+                        }
+                    },
+                    {
+                        "id": "button-4nqha7c",
+                        "type": "button",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 208,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "shadow": "custom",
+                            "shadow_custom": {
+                                "x": 4,
+                                "y": 12,
+                                "blur": 32,
+                                "spread": -4,
+                                "color": "primary",
+                                "opacity": 0.35
+                            }
+                        }
+                    },
+                    {
+                        "id": "button-7sjjn8m",
+                        "type": "button",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 208,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "shadow": "custom",
+                            "shadow_custom": {
+                                "x": 0,
+                                "y": 0,
+                                "blur": 0,
+                                "spread": 0,
+                                "color": "#000000",
+                                "opacity": 1
+                            }
+                        }
+                    },
+                    {
+                        "id": "button-pgrspda",
+                        "type": "button",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 292,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 999,
+                            "border_width": 3,
+                            "border_color": "#e11d48",
+                            "padding": 24
+                        }
+                    },
+                    {
+                        "id": "button-43r89eo",
+                        "type": "button",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 292,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 0,
+                            "border_width": 2,
+                            "padding": 0
+                        }
+                    },
+                    {
+                        "id": "button-i4v62on",
+                        "type": "button",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 292,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "heading",
+                            "size": 30,
+                            "weight": 800,
+                            "align": "center",
+                            "radius": 12,
+                            "line_height": 2
+                        }
+                    },
+                    {
+                        "id": "button-lh80wx9",
+                        "type": "button",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 376,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "opacity": 0.5
+                        }
+                    },
+                    {
+                        "id": "button-4fxxgtc",
+                        "type": "button",
+                        "z": 14,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 376,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "opacity": 0
+                        }
+                    },
+                    {
+                        "id": "button-4ozkrf9",
+                        "type": "button",
+                        "z": 15,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 376,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "background",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "blur": 8,
+                            "background_opacity": 0.5
+                        }
+                    },
+                    {
+                        "id": "button-zw8xbcd",
+                        "type": "button",
+                        "z": 16,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 460,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "clip": true
+                        }
+                    },
+                    {
+                        "id": "button-xvwx5pk",
+                        "type": "button",
+                        "z": 17,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 460,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "overflow": "hidden"
+                        }
+                    },
+                    {
+                        "id": "button-85q5c1g",
+                        "type": "button",
+                        "z": 18,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 460,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "overflow": "scroll-x"
+                        }
+                    },
+                    {
+                        "id": "button-4rpt9oz",
+                        "type": "button",
+                        "z": 19,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 544,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "overflow": "scroll-y"
+                        }
+                    },
+                    {
+                        "id": "button-0gl3n14",
+                        "type": "button",
+                        "z": 20,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 544,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "clip": true,
+                            "overflow": "visible"
+                        }
+                    },
+                    {
+                        "id": "button-a8xp9cr",
+                        "type": "button",
+                        "z": 21,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 544,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        },
+                        "locked": true
+                    },
+                    {
+                        "id": "button-l5g9cey",
+                        "type": "button",
+                        "z": 22,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 628,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        },
+                        "group": "grupo-a"
+                    },
+                    {
+                        "id": "button-iex76lk",
+                        "type": "button",
+                        "z": 23,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 628,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        },
+                        "group": "grupo-a",
+                        "locked": true
+                    }
+                ]
+            },
+            {
+                "id": "movimiento",
+                "height": {
+                    "desktop": 668,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "button-z61q5yi",
+                        "type": "button",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "rotate": 12
+                        }
+                    },
+                    {
+                        "id": "button-gl48bx3",
+                        "type": "button",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "rotate": -45.5
+                        }
+                    },
+                    {
+                        "id": "button-wmxamhf",
+                        "type": "button",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "flip_x": true
+                        }
+                    },
+                    {
+                        "id": "button-ddp3dua",
+                        "type": "button",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 124,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "flip_y": true
+                        }
+                    },
+                    {
+                        "id": "button-0fb43iv",
+                        "type": "button",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 124,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "rotate": 30,
+                            "flip_x": true,
+                            "flip_y": true
+                        }
+                    },
+                    {
+                        "id": "button-w9rh5tg",
+                        "type": "button",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 124,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "hover": "lift"
+                        }
+                    },
+                    {
+                        "id": "button-vvq1fhw",
+                        "type": "button",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 208,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "hover": "lift",
+                            "rotate": -8
+                        }
+                    },
+                    {
+                        "id": "button-h6io78s",
+                        "type": "button",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 208,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "hover": "grow"
+                        }
+                    },
+                    {
+                        "id": "button-81eipm2",
+                        "type": "button",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 208,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "hover": "grow",
+                            "flip_x": true
+                        }
+                    },
+                    {
+                        "id": "button-6i86zdg",
+                        "type": "button",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 292,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "hover": "fade"
+                        }
+                    },
+                    {
+                        "id": "button-iy0cb44",
+                        "type": "button",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 292,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "hover": "none"
+                        }
+                    },
+                    {
+                        "id": "button-mrk1lfw",
+                        "type": "button",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 292,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "animation": {
+                                "type": "fade",
+                                "delay": 0,
+                                "duration": 0.7
+                            }
+                        }
+                    },
+                    {
+                        "id": "button-2ujk35n",
+                        "type": "button",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 376,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "animation": {
+                                "type": "up",
+                                "delay": 0.2,
+                                "duration": 1
+                            }
+                        }
+                    },
+                    {
+                        "id": "button-sjjnx5f",
+                        "type": "button",
+                        "z": 14,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 376,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "animation": {
+                                "type": "down",
+                                "delay": 0.4,
+                                "duration": 0.5
+                            }
+                        }
+                    },
+                    {
+                        "id": "button-ifumhil",
+                        "type": "button",
+                        "z": 15,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 376,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "animation": {
+                                "type": "left",
+                                "delay": 0,
+                                "duration": 0.2
+                            }
+                        }
+                    },
+                    {
+                        "id": "button-t9t34zy",
+                        "type": "button",
+                        "z": 16,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 460,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "animation": {
+                                "type": "right",
+                                "delay": 1.25,
+                                "duration": 1.5
+                            }
+                        }
+                    },
+                    {
+                        "id": "button-94gq8mb",
+                        "type": "button",
+                        "z": 17,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 460,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "animation": {
+                                "type": "zoom",
+                                "delay": 2,
+                                "duration": 2
+                            }
+                        }
+                    },
+                    {
+                        "id": "button-ryac96x",
+                        "type": "button",
+                        "z": 18,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 460,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "animation": {
+                                "type": "none",
+                                "delay": 0,
+                                "duration": 0.7
+                            }
+                        }
+                    },
+                    {
+                        "id": "button-u2si9j7",
+                        "type": "button",
+                        "z": 19,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 544,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "visible_on": "desktop"
+                        }
+                    },
+                    {
+                        "id": "button-7ra9oom",
+                        "type": "button",
+                        "z": 20,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 544,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "visible_on": "mobile"
+                        }
+                    },
+                    {
+                        "id": "button-cioucpd",
+                        "type": "button",
+                        "z": 21,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 544,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "visible_on": "all"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "movil",
+                "height": {
+                    "desktop": 332,
+                    "mobile": 454
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "button-fytawun",
+                        "type": "button",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 24,
+                                "w": 90,
+                                "h": 42
+                            }
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-btexunc",
+                        "type": "button",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 82,
+                                "w": 90,
+                                "h": 42
+                            }
+                        },
+                        "props": {
+                            "label": "Un botón con una etiqueta bastante más larga de lo normal",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-5l7s3du",
+                        "type": "button",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 140,
+                                "w": 90,
+                                "h": 42
+                            }
+                        },
+                        "props": {
+                            "label": "",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-ze5o2z6",
+                        "type": "button",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 124,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 198,
+                                "w": 90,
+                                "h": 42
+                            }
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "secondary",
+                            "color": "#facc15",
+                            "font": "heading",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "left",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-7uw6cvi",
+                        "type": "button",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 124,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 256,
+                                "w": 90,
+                                "h": 42
+                            }
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "background",
+                            "color": "primary",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "border_width": 2,
+                            "border_color": "primary"
+                        }
+                    },
+                    {
+                        "id": "button-yysswqj",
+                        "type": "button",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 124,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 314,
+                                "w": 90,
+                                "h": 42
+                            }
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "visible_on": "desktop"
+                        }
+                    },
+                    {
+                        "id": "button-ez0wv8h",
+                        "type": "button",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 208,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 372,
+                                "w": 90,
+                                "h": 42
+                            }
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12,
+                            "visible_on": "mobile"
+                        }
+                    }
+                ]
+            }
+        ],
+        "modals": [
+            {
+                "id": "ventana",
+                "title": "Información",
+                "size": "md",
+                "show_title": true,
+                "width": 560,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "text-ie4pmt7",
+                        "type": "text",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

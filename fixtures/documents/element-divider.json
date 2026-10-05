@@ -1,0 +1,1252 @@
+{
+    "title": "Elemento: divider",
+    "seo": {
+        "title": null,
+        "description": null
+    },
+    "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+    },
+    "profile": {
+        "address": null,
+        "city": null,
+        "phone": null,
+        "hours": null,
+        "og_image": null,
+        "favicon": null,
+        "ga4": null,
+        "pixel": null
+    },
+    "content": {
+        "sections": [
+            {
+                "id": "variantes",
+                "height": {
+                    "desktop": 148,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "divider-2dnwhs8",
+                        "type": "divider",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted"
+                        }
+                    },
+                    {
+                        "id": "divider-vme1t9s",
+                        "type": "divider",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "primary"
+                        }
+                    },
+                    {
+                        "id": "divider-q0szvbz",
+                        "type": "divider",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "#e11d48"
+                        }
+                    },
+                    {
+                        "id": "divider-3mouqci",
+                        "type": "divider",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 74,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "rotate": 90
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "relleno",
+                "height": {
+                    "desktop": 352,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "surface"
+                },
+                "elements": [
+                    {
+                        "id": "divider-itroi51",
+                        "type": "divider",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "gradient": {
+                                "type": "linear",
+                                "from": "primary",
+                                "to": "secondary",
+                                "angle": 135
+                            }
+                        }
+                    },
+                    {
+                        "id": "divider-ybevco9",
+                        "type": "divider",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "gradient": {
+                                "type": "radial",
+                                "from": "#f97316",
+                                "to": "background",
+                                "angle": 0
+                            },
+                            "background_opacity": 0.6
+                        }
+                    },
+                    {
+                        "id": "divider-2jga3a7",
+                        "type": "divider",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "background": "#fde68a",
+                            "background_opacity": 0.4
+                        }
+                    },
+                    {
+                        "id": "divider-5w7tird",
+                        "type": "divider",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 74,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "#7c3aed",
+                            "background": "surface"
+                        }
+                    },
+                    {
+                        "id": "divider-8z6bp6e",
+                        "type": "divider",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 74,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "shadow": "sm"
+                        }
+                    },
+                    {
+                        "id": "divider-00tcxtx",
+                        "type": "divider",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 74,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "shadow": "md"
+                        }
+                    },
+                    {
+                        "id": "divider-bkuj53p",
+                        "type": "divider",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 108,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "shadow": "lg"
+                        }
+                    },
+                    {
+                        "id": "divider-oj7bbyd",
+                        "type": "divider",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 108,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "shadow": "custom",
+                            "shadow_custom": {
+                                "x": 4,
+                                "y": 12,
+                                "blur": 32,
+                                "spread": -4,
+                                "color": "primary",
+                                "opacity": 0.35
+                            }
+                        }
+                    },
+                    {
+                        "id": "divider-hkdxms4",
+                        "type": "divider",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 108,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "shadow": "custom",
+                            "shadow_custom": {
+                                "x": 0,
+                                "y": 0,
+                                "blur": 0,
+                                "spread": 0,
+                                "color": "#000000",
+                                "opacity": 1
+                            }
+                        }
+                    },
+                    {
+                        "id": "divider-zcbvn5d",
+                        "type": "divider",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 142,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "border_width": 3,
+                            "border_color": "#e11d48",
+                            "radius": 999,
+                            "padding": 24
+                        }
+                    },
+                    {
+                        "id": "divider-dwiyybe",
+                        "type": "divider",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 142,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "border_width": 2,
+                            "radius": 0,
+                            "padding": 0
+                        }
+                    },
+                    {
+                        "id": "divider-vxkv97u",
+                        "type": "divider",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 142,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "font": "heading",
+                            "size": 30,
+                            "weight": 800,
+                            "align": "center",
+                            "line_height": 2
+                        }
+                    },
+                    {
+                        "id": "divider-muxkrsl",
+                        "type": "divider",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 176,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "opacity": 0.5
+                        }
+                    },
+                    {
+                        "id": "divider-bxlko5s",
+                        "type": "divider",
+                        "z": 14,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 176,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "opacity": 0
+                        }
+                    },
+                    {
+                        "id": "divider-f7mx3j0",
+                        "type": "divider",
+                        "z": 15,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 176,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "blur": 8,
+                            "background": "background",
+                            "background_opacity": 0.5
+                        }
+                    },
+                    {
+                        "id": "divider-rr3x24f",
+                        "type": "divider",
+                        "z": 16,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 210,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "clip": true
+                        }
+                    },
+                    {
+                        "id": "divider-0fstb8q",
+                        "type": "divider",
+                        "z": 17,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 210,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "overflow": "hidden"
+                        }
+                    },
+                    {
+                        "id": "divider-9ifac3l",
+                        "type": "divider",
+                        "z": 18,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 210,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "overflow": "scroll-x"
+                        }
+                    },
+                    {
+                        "id": "divider-yt2w7qv",
+                        "type": "divider",
+                        "z": 19,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 244,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "overflow": "scroll-y"
+                        }
+                    },
+                    {
+                        "id": "divider-4jsisp4",
+                        "type": "divider",
+                        "z": 20,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 244,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "clip": true,
+                            "overflow": "visible"
+                        }
+                    },
+                    {
+                        "id": "divider-3k0y6qf",
+                        "type": "divider",
+                        "z": 21,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 244,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted"
+                        },
+                        "locked": true
+                    },
+                    {
+                        "id": "divider-3e5lkk5",
+                        "type": "divider",
+                        "z": 22,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 278,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted"
+                        },
+                        "group": "grupo-a"
+                    },
+                    {
+                        "id": "divider-c6ukftm",
+                        "type": "divider",
+                        "z": 23,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 278,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted"
+                        },
+                        "group": "grupo-a",
+                        "locked": true
+                    }
+                ]
+            },
+            {
+                "id": "movimiento",
+                "height": {
+                    "desktop": 318,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "divider-kzm7jlb",
+                        "type": "divider",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "rotate": 12
+                        }
+                    },
+                    {
+                        "id": "divider-85xre7k",
+                        "type": "divider",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "rotate": -45.5
+                        }
+                    },
+                    {
+                        "id": "divider-ihhg619",
+                        "type": "divider",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "flip_x": true
+                        }
+                    },
+                    {
+                        "id": "divider-e8xuvef",
+                        "type": "divider",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 74,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "flip_y": true
+                        }
+                    },
+                    {
+                        "id": "divider-vec3b6v",
+                        "type": "divider",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 74,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "rotate": 30,
+                            "flip_x": true,
+                            "flip_y": true
+                        }
+                    },
+                    {
+                        "id": "divider-wi2y85f",
+                        "type": "divider",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 74,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "hover": "lift"
+                        }
+                    },
+                    {
+                        "id": "divider-4ph07te",
+                        "type": "divider",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 108,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "hover": "lift",
+                            "rotate": -8
+                        }
+                    },
+                    {
+                        "id": "divider-zfukyv6",
+                        "type": "divider",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 108,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "hover": "grow"
+                        }
+                    },
+                    {
+                        "id": "divider-227fiiu",
+                        "type": "divider",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 108,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "hover": "grow",
+                            "flip_x": true
+                        }
+                    },
+                    {
+                        "id": "divider-guu1bem",
+                        "type": "divider",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 142,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "hover": "fade"
+                        }
+                    },
+                    {
+                        "id": "divider-jxz8prx",
+                        "type": "divider",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 142,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "hover": "none"
+                        }
+                    },
+                    {
+                        "id": "divider-bsv2a46",
+                        "type": "divider",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 142,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "animation": {
+                                "type": "fade",
+                                "delay": 0,
+                                "duration": 0.7
+                            }
+                        }
+                    },
+                    {
+                        "id": "divider-fx4l0i0",
+                        "type": "divider",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 176,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "animation": {
+                                "type": "up",
+                                "delay": 0.2,
+                                "duration": 1
+                            }
+                        }
+                    },
+                    {
+                        "id": "divider-t7172yz",
+                        "type": "divider",
+                        "z": 14,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 176,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "animation": {
+                                "type": "down",
+                                "delay": 0.4,
+                                "duration": 0.5
+                            }
+                        }
+                    },
+                    {
+                        "id": "divider-lhdk2nc",
+                        "type": "divider",
+                        "z": 15,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 176,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "animation": {
+                                "type": "left",
+                                "delay": 0,
+                                "duration": 0.2
+                            }
+                        }
+                    },
+                    {
+                        "id": "divider-lgvss4q",
+                        "type": "divider",
+                        "z": 16,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 210,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "animation": {
+                                "type": "right",
+                                "delay": 1.25,
+                                "duration": 1.5
+                            }
+                        }
+                    },
+                    {
+                        "id": "divider-itbdmma",
+                        "type": "divider",
+                        "z": 17,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 210,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "animation": {
+                                "type": "zoom",
+                                "delay": 2,
+                                "duration": 2
+                            }
+                        }
+                    },
+                    {
+                        "id": "divider-uw5lr83",
+                        "type": "divider",
+                        "z": 18,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 210,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "animation": {
+                                "type": "none",
+                                "delay": 0,
+                                "duration": 0.7
+                            }
+                        }
+                    },
+                    {
+                        "id": "divider-quhcwvp",
+                        "type": "divider",
+                        "z": 19,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 244,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "visible_on": "desktop"
+                        }
+                    },
+                    {
+                        "id": "divider-i4y5jkt",
+                        "type": "divider",
+                        "z": 20,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 244,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "visible_on": "mobile"
+                        }
+                    },
+                    {
+                        "id": "divider-s0b8gj7",
+                        "type": "divider",
+                        "z": 21,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 244,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": null
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "visible_on": "all"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "movil",
+                "height": {
+                    "desktop": 148,
+                    "mobile": 156
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "divider-lm2fmwt",
+                        "type": "divider",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 24,
+                                "w": 90,
+                                "h": 2
+                            }
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted"
+                        }
+                    },
+                    {
+                        "id": "divider-maezh6v",
+                        "type": "divider",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 42,
+                                "w": 90,
+                                "h": 2
+                            }
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "primary"
+                        }
+                    },
+                    {
+                        "id": "divider-1swbyn2",
+                        "type": "divider",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 60,
+                                "w": 90,
+                                "h": 2
+                            }
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "#e11d48"
+                        }
+                    },
+                    {
+                        "id": "divider-bw312jv",
+                        "type": "divider",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 74,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 78,
+                                "w": 90,
+                                "h": 2
+                            }
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "rotate": 90
+                        }
+                    },
+                    {
+                        "id": "divider-npcr5x1",
+                        "type": "divider",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 74,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 96,
+                                "w": 90,
+                                "h": 2
+                            }
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "visible_on": "desktop"
+                        }
+                    },
+                    {
+                        "id": "divider-2tocc08",
+                        "type": "divider",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 74,
+                                "w": 26.666666666666668,
+                                "h": 2
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 114,
+                                "w": 90,
+                                "h": 2
+                            }
+                        },
+                        "props": {},
+                        "style": {
+                            "color": "muted",
+                            "visible_on": "mobile"
+                        }
+                    }
+                ]
+            }
+        ],
+        "modals": [
+            {
+                "id": "ventana",
+                "title": "Información",
+                "size": "md",
+                "show_title": true,
+                "width": 560,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "text-59fk9ph",
+                        "type": "text",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

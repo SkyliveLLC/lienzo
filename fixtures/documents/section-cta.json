@@ -1,0 +1,128 @@
+{
+    "title": "Sección: Llamada a la acción",
+    "seo": {
+        "title": null,
+        "description": null
+    },
+    "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+    },
+    "profile": {
+        "address": null,
+        "city": null,
+        "phone": null,
+        "hours": null,
+        "og_image": null,
+        "favicon": null,
+        "ga4": null,
+        "pixel": null
+    },
+    "content": {
+        "sections": [
+            {
+                "id": "seccion-ycpj6d3",
+                "height": {
+                    "desktop": 300,
+                    "mobile": 390
+                },
+                "background": {
+                    "type": "color",
+                    "color": "primary"
+                },
+                "elements": [
+                    {
+                        "id": "heading-d69ef1l",
+                        "type": "heading",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 6,
+                                "y": 80,
+                                "w": 48,
+                                "h": 110
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "¿Hace más de un año que no te revisan?",
+                            "level": 2
+                        },
+                        "style": {
+                            "color": "background",
+                            "font": "heading",
+                            "size": 34,
+                            "weight": 700,
+                            "align": "left",
+                            "line_height": 1.15
+                        }
+                    },
+                    {
+                        "id": "text-yhnegng",
+                        "type": "text",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 6,
+                                "y": 196,
+                                "w": 40,
+                                "h": 56
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Una valoración toma 45 minutos y te ahorra la mitad de los problemas del año que viene."
+                        },
+                        "style": {
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6,
+                            "opacity": 0.9
+                        }
+                    },
+                    {
+                        "id": "button-oi5x080",
+                        "type": "button",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 66,
+                                "y": 110,
+                                "w": 28,
+                                "h": 56
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Escríbenos por WhatsApp",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "background",
+                            "color": "primary",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 700,
+                            "align": "center",
+                            "radius": 14
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

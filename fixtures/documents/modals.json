@@ -1,0 +1,984 @@
+{
+    "title": "Ventanas",
+    "seo": {
+        "title": null,
+        "description": null
+    },
+    "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+    },
+    "profile": {
+        "address": null,
+        "city": null,
+        "phone": null,
+        "hours": null,
+        "og_image": null,
+        "favicon": null,
+        "ga4": null,
+        "pixel": null
+    },
+    "content": {
+        "sections": [
+            {
+                "id": "abrir",
+                "height": {
+                    "desktop": 332,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "button-df33ete",
+                        "type": "button",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Abrir ventana-sm",
+                            "action": {
+                                "type": "modal",
+                                "value": "ventana-sm"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-ack4ptb",
+                        "type": "button",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 27,
+                                "y": 40,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Abrir ventana-md",
+                            "action": {
+                                "type": "modal",
+                                "value": "ventana-md"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-n7zzkjb",
+                        "type": "button",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 50,
+                                "y": 40,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Abrir ventana-lg",
+                            "action": {
+                                "type": "modal",
+                                "value": "ventana-lg"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-fkim42n",
+                        "type": "button",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 73,
+                                "y": 40,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Abrir ventana-xl",
+                            "action": {
+                                "type": "modal",
+                                "value": "ventana-xl"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-pk6ktb9",
+                        "type": "button",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 124,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Abrir ventana-full",
+                            "action": {
+                                "type": "modal",
+                                "value": "ventana-full"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-myho0f2",
+                        "type": "button",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 27,
+                                "y": 124,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Abrir ventana-custom",
+                            "action": {
+                                "type": "modal",
+                                "value": "ventana-custom"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-z89xgwq",
+                        "type": "button",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 50,
+                                "y": 124,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Abrir ventana-vacia",
+                            "action": {
+                                "type": "modal",
+                                "value": "ventana-vacia"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-ajmqrcc",
+                        "type": "button",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 73,
+                                "y": 124,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Abrir ventana-fondo",
+                            "action": {
+                                "type": "modal",
+                                "value": "ventana-fondo"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-316v84d",
+                        "type": "button",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 208,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Abrir ventana-formulario",
+                            "action": {
+                                "type": "modal",
+                                "value": "ventana-formulario"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-x9xqpmb",
+                        "type": "button",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 27,
+                                "y": 208,
+                                "w": 19,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Abrir ventana-apilada",
+                            "action": {
+                                "type": "modal",
+                                "value": "ventana-apilada"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    }
+                ]
+            }
+        ],
+        "modals": [
+            {
+                "id": "ventana-sm",
+                "title": "Ventana sm",
+                "size": "sm",
+                "show_title": true,
+                "width": 420,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "text-9nctenx",
+                        "type": "text",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    },
+                    {
+                        "id": "image-t35ooqf",
+                        "type": "image",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 55,
+                                "y": 0,
+                                "w": 35,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": ""
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "ventana-md",
+                "title": "Ventana md",
+                "size": "md",
+                "show_title": false,
+                "width": 560,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "text-2gife95",
+                        "type": "text",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    },
+                    {
+                        "id": "image-kk6m7fb",
+                        "type": "image",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 55,
+                                "y": 0,
+                                "w": 35,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": ""
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "ventana-lg",
+                "title": "Ventana lg",
+                "size": "lg",
+                "width": 760,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "text-9erzper",
+                        "type": "text",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    },
+                    {
+                        "id": "image-4diz17k",
+                        "type": "image",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 55,
+                                "y": 0,
+                                "w": 35,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": ""
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "ventana-xl",
+                "title": "Ventana xl",
+                "size": "xl",
+                "show_title": true,
+                "width": 960,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "text-phrz8k9",
+                        "type": "text",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    },
+                    {
+                        "id": "image-k4r6xt8",
+                        "type": "image",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 55,
+                                "y": 0,
+                                "w": 35,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": ""
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "ventana-full",
+                "title": "Ventana full",
+                "size": "full",
+                "show_title": true,
+                "width": 1200,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "text-la8pl84",
+                        "type": "text",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    },
+                    {
+                        "id": "image-2lvmnew",
+                        "type": "image",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 55,
+                                "y": 0,
+                                "w": 35,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": ""
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "ventana-custom",
+                "title": "Ventana custom",
+                "size": "custom",
+                "show_title": false,
+                "width": 700,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "text-s1wqpex",
+                        "type": "text",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    },
+                    {
+                        "id": "image-elb6uj4",
+                        "type": "image",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 55,
+                                "y": 0,
+                                "w": 35,
+                                "h": 260
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "media:1",
+                            "alt": ""
+                        },
+                        "style": {
+                            "radius": 16,
+                            "object_fit": "cover"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "ventana-vacia",
+                "title": "Ventana vacía",
+                "size": "md",
+                "show_title": true,
+                "width": 560,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": []
+            },
+            {
+                "id": "ventana-fondo",
+                "title": "Fondo propio",
+                "size": "md",
+                "show_title": true,
+                "width": 560,
+                "height": {
+                    "desktop": 200,
+                    "mobile": 260
+                },
+                "background": {
+                    "type": "color",
+                    "color": "#f1f5f9"
+                },
+                "elements": [
+                    {
+                        "id": "heading-7rciu4p",
+                        "type": "heading",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 80
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Fondo hexadecimal",
+                            "level": 2
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "heading",
+                            "size": 44,
+                            "weight": 700,
+                            "align": "left",
+                            "line_height": 1.1
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "ventana-formulario",
+                "title": "Formulario",
+                "size": "md",
+                "show_title": true,
+                "width": 560,
+                "height": {
+                    "desktop": 404,
+                    "mobile": 225
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "input-73zl6dl",
+                        "type": "input",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 40,
+                                "w": 40,
+                                "h": 76
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 24,
+                                "w": 90,
+                                "h": 61
+                            }
+                        },
+                        "props": {
+                            "label": "Nombre",
+                            "placeholder": "Escribe aquí",
+                            "required": true,
+                            "input_type": "text",
+                            "options": []
+                        },
+                        "style": {
+                            "color": "text",
+                            "background": "surface",
+                            "border_color": "muted",
+                            "border_width": 1,
+                            "font": "body",
+                            "size": 15,
+                            "align": "left",
+                            "radius": 10,
+                            "padding": 10
+                        }
+                    },
+                    {
+                        "id": "checkbox-lwilhax",
+                        "type": "checkbox",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 148,
+                                "w": 40,
+                                "h": 32
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 101,
+                                "w": 90,
+                                "h": 26
+                            }
+                        },
+                        "props": {
+                            "label": "Acepto el tratamiento de mis datos",
+                            "placeholder": "Escribe aquí",
+                            "required": true,
+                            "input_type": "text",
+                            "options": []
+                        },
+                        "style": {
+                            "color": "text",
+                            "background": "surface",
+                            "border_color": "muted",
+                            "border_width": 1,
+                            "font": "body",
+                            "size": 15,
+                            "align": "left",
+                            "radius": 10,
+                            "padding": 10
+                        }
+                    },
+                    {
+                        "id": "button-sfhlmz4",
+                        "type": "button",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 256,
+                                "w": 18,
+                                "h": 52
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 143,
+                                "w": 90,
+                                "h": 42
+                            }
+                        },
+                        "props": {
+                            "label": "Enviar",
+                            "action": {
+                                "type": "submit",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "ventana-apilada",
+                "title": "Apilada",
+                "size": "md",
+                "show_title": true,
+                "width": 560,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "heading-heou5q5",
+                        "type": "heading",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 42,
+                                "h": 80
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Se apila",
+                            "level": 2
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "heading",
+                            "size": 44,
+                            "weight": 700,
+                            "align": "left",
+                            "line_height": 1.1
+                        }
+                    },
+                    {
+                        "id": "text-jgzkck5",
+                        "type": "text",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 50,
+                                "y": 40,
+                                "w": 42,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

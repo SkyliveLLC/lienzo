@@ -1,0 +1,1 @@
+#s-inicio .frame{container-type:inline-size;--u:calc(min(100cqw,1200px) / 1200);height:calc(520 * var(--u));}@media (max-width:640px){#s-inicio .frame{container-type:inline-size;--u:calc(min(100cqw,390px) / 390);height:calc(560 * var(--u));}}

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo Clinic</title>
+        <meta property="og:title" content="Demo Clinic">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://demo.test">
+    <meta property="og:site_name" content="Demo Clinic">
+                <link rel="canonical" href="https://demo.test">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #0f172a;
+            --background: #ffffff;
+            --surface: #f8fafc;
+            --text: #0f172a;
+            --muted: #64748b;
+            --radius: 12px;
+            --max-width: 1200px;
+            --font-heading: 'Inter', system-ui, sans-serif;
+            --font-body: 'Inter', system-ui, sans-serif;
+        }
+        * { box-sizing: border-box; }
+        /* Los enlaces internos bajan con animación, respetando a quien pidió
+           menos movimiento, y sin quedar tapados por un menú fijo. */
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+        section[id] { scroll-margin-top: 0px; }
+        /* El ancho del cuerpo es la referencia de `--u`, sin contar la barra de desplazamiento. */
+        body { margin: 0; container-type: inline-size; background: var(--background); color: var(--text); font-family: var(--font-body); }
+        .canvas { position: relative; width: 100%; }
+        /* El lienzo define --u, el píxel del diseño: todo encoge en proporción. */
+        .frame { position: relative; margin: 0 auto; max-width: var(--max-width); }
+        .element { margin: 0; display: block; overflow-wrap: break-word; }
+        img.element { object-fit: cover; }
+        a.element, button.element { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+        button.element { font: inherit; border: 0; cursor: pointer; }
+        hr.element { border: none; border-top: 1px solid currentColor; }
+        .element iframe { width: 100%; height: 100%; border: 0; border-radius: inherit; }
+        .cards { display: grid; gap: calc(12 * var(--u)); height: 100%; overflow: auto; }
+        .card { background: var(--surface); border-radius: var(--radius); padding: calc(14 * var(--u)) calc(16 * var(--u)); }
+        .card strong { display: block; font-family: var(--font-heading); }
+        .card span { color: var(--muted); font-size: .875em; }
+        .chips { display: flex; flex-wrap: wrap; gap: calc(10 * var(--u)); align-content: flex-start; height: 100%; overflow: auto; }
+        .chip { display: inline-flex; align-items: baseline; gap: calc(8 * var(--u)); padding: calc(10 * var(--u)) calc(16 * var(--u)); border-radius: 999px; background: var(--surface); font-family: var(--font-heading); font-weight: 600; }
+        .chip i { font-style: normal; font-weight: 400; font-size: .8em; color: var(--muted); }
+        .rows { display: flex; flex-direction: column; height: 100%; overflow: auto; }
+        .rows .row { display: flex; align-items: baseline; gap: calc(18 * var(--u)); padding: calc(14 * var(--u)) 0; border-bottom: 1px solid color-mix(in srgb, currentColor 16%, transparent); }
+        .rows .row:last-child { border-bottom: 0; }
+        .rows i { font-style: normal; font-size: .75em; opacity: .5; font-variant-numeric: tabular-nums; }
+        .rows strong { flex: 1; font-family: var(--font-heading); font-weight: 600; }
+        .rows span { color: var(--muted); font-size: .85em; white-space: nowrap; }
+        /* Entrada al aparecer en pantalla. Sin JavaScript o con movimiento
+           reducido, todo se ve de una vez. */
+        @media (prefers-reduced-motion: no-preference) {
+            [data-anim] { opacity: 0; transition: opacity var(--anim-duration, .7s) ease var(--anim-delay, 0s), transform var(--anim-duration, .7s) cubic-bezier(.22, .61, .36, 1) var(--anim-delay, 0s); }
+            [data-anim="up"] { transform: translateY(28px); }
+            [data-anim="down"] { transform: translateY(-28px); }
+            [data-anim="left"] { transform: translateX(-32px); }
+            [data-anim="right"] { transform: translateX(32px); }
+            [data-anim="zoom"] { transform: scale(.94); }
+            [data-anim].is-in { opacity: 1; transform: none; }
+        }
+        .navbar[style*="position:fixed"], nav.navbar { transition: box-shadow .25s ease; }
+        nav.navbar[data-scrolled] { box-shadow: 0 8px 24px rgba(15, 23, 42, .1); }
+        @media (max-width: 640px) {
+            .canvas[data-parallax] { background-attachment: scroll !important; }
+        }
+        /* Pestañas y pasos: una sección visible a la vez. */
+        .stack-nav { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 24px 20px 0; background: var(--background); }
+        .stack-nav button { font: inherit; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 18px; border: 1px solid color-mix(in srgb, var(--muted) 35%, transparent); border-radius: 999px;
+            background: transparent; color: var(--muted); transition: background .2s ease, color .2s ease; }
+        .stack-nav button[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: var(--background); }
+        .stack-nav i { font-style: normal; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 999px;
+            background: color-mix(in srgb, currentColor 18%, transparent); font-size: .8em; }
+        .stack-panel { display: none; }
+        .stack-panel[data-on] { display: block; }
+        .icon { display: grid; place-items: center; }
+        .icon svg { width: 100%; height: 100%; }
+        .navbar { display: flex; align-items: center; gap: calc(24 * var(--u)); }
+        .navbar-brand { font-family: var(--font-heading); font-weight: 700; font-size: 1.15em; white-space: nowrap; }
+        .navbar-links { display: flex; align-items: center; gap: calc(22 * var(--u)); margin-left: auto; }
+        .navbar-left .navbar-links, .navbar-center .navbar-links { margin-left: 0; }
+        .navbar-center { justify-content: center; }
+        .navbar a { color: inherit; text-decoration: none; white-space: nowrap; }
+        .navbar a:hover { opacity: .7; }
+        .navbar-menu { display: none; position: relative; margin-left: auto; }
+        .navbar-menu summary { list-style: none; cursor: pointer; font-size: 1.5em; line-height: 1; }
+        .navbar-menu summary::-webkit-details-marker { display: none; }
+        .navbar-drop { position: absolute; z-index: 60; top: 100%; right: 0; display: grid; gap: 12px; min-width: 160px; margin-top: 8px; padding: 14px 16px; background: var(--surface); color: var(--text); border-radius: var(--radius); box-shadow: 0 12px 32px rgba(15,23,42,.18); }
+        @media (max-width: 640px) {
+            .navbar-links { display: none; }
+            .navbar-menu { display: block; }
+            /* Al apilarse, nada puede ser más ancho que la pantalla. */
+            .element { max-width: 100%; min-width: 0; }
+            img.element { height: auto; }
+            /* Un icono conserva su tamaño en vez de estirarse a todo el ancho. */
+            .icon { width: max-content; }
+            .icon svg { width: calc(36 * var(--u)); height: calc(36 * var(--u)); }
+        }
+        .field { display: flex; flex-direction: column; gap: 4px; justify-content: center; text-align: left; }
+        .field > span { font-size: .78em; opacity: .75; }
+        .field > span i { font-style: normal; color: #dc2626; margin-left: 2px; }
+        .field input, .field select, .field textarea { font: inherit; color: inherit; width: 100%; flex: 1; min-height: 0; background: transparent; border: 0; padding: 0; outline: none; resize: none; }
+        .field-check { flex-direction: row; justify-content: flex-start; align-items: center; gap: 10px; }
+        .field-check input { flex: 0 0 auto; width: 18px; height: 18px; accent-color: var(--primary); }
+        .field-error { position: absolute; top: 100%; left: 0; margin-top: 2px; font-size: 12px; font-style: normal; color: #dc2626; }
+        .notice { position: fixed; z-index: 99; top: 16px; left: 50%; transform: translateX(-50%); background: var(--primary); color: var(--background); padding: 12px 20px; border-radius: var(--radius); box-shadow: 0 12px 32px rgba(15,23,42,.2); }
+        dialog { border: none; border-radius: var(--radius); padding: 0; max-width: calc(100% - 2rem); max-height: calc(100dvh - 3rem); color: var(--text); background: var(--background); font-family: var(--font-body); overflow: auto; }
+        dialog::backdrop { background: rgba(15, 23, 42, .5); }
+        dialog .canvas { overflow: hidden; }
+        /* El cierre vive en su propia franja: nunca tapa el contenido del lienzo. */
+        .modal-bar { display: flex; align-items: center; gap: calc(12 * var(--u)); padding: calc(8 * var(--u)) calc(10 * var(--u)) calc(8 * var(--u)) calc(18 * var(--u)); }
+        .modal-title { margin: 0; font-family: var(--font-heading); font-size: calc(20 * var(--u)); font-weight: 700; }
+        .modal-close { margin-left: auto; width: calc(34 * var(--u)); height: calc(34 * var(--u)); display: grid; place-items: center; font: inherit; font-size: calc(20 * var(--u)); line-height: 1; color: var(--text); background: var(--surface); border: 0; border-radius: 999px; cursor: pointer; }
+        .modal-close:hover { opacity: .8; }
+        #s-menus .frame{container-type:inline-size;--u:calc(min(100cqw,1200px) / 1200);height:calc(392 * var(--u));}#e-navbar-3sdtsn2{position:absolute;left:0%;top:calc(40 * var(--u));width:100%;height:calc(72 * var(--u));color:var(--text);background:var(--background);font-family:var(--font-body);font-size:calc(16 * var(--u));font-weight:600;padding:calc(20 * var(--u));z-index:1;}#e-navbar-bssjnkb{position:absolute;left:0%;top:calc(144 * var(--u));width:100%;height:calc(72 * var(--u));color:var(--text);background:var(--background);font-family:var(--font-body);font-size:calc(16 * var(--u));font-weight:600;padding:calc(20 * var(--u));z-index:2;}#e-navbar-kcvs8ru{position:absolute;left:0%;top:calc(248 * var(--u));width:100%;height:calc(72 * var(--u));color:var(--text);background:var(--background);font-family:var(--font-body);font-size:calc(16 * var(--u));font-weight:600;padding:calc(20 * var(--u));z-index:3;}#s-destino .frame{container-type:inline-size;--u:calc(min(100cqw,1200px) / 1200);height:calc(192 * var(--u));}#e-heading-7b2roj2{position:absolute;left:4%;top:calc(40 * var(--u));width:26.667%;height:calc(80 * var(--u));color:var(--text);font-family:var(--font-heading);font-size:calc(44 * var(--u));font-weight:700;text-align:left;line-height:1.1;z-index:1;}#m-ventana{width:min(560px,calc(100vw - 2rem));--u:calc(min(100vw - 2rem,560px) / 560);background:var(--background);}#m-ventana .canvas{height:calc(320 * var(--u));}#e-text-e07zlok{position:absolute;left:10%;top:calc(0 * var(--u));width:40%;height:calc(96 * var(--u));color:var(--muted);font-family:var(--font-body);font-size:calc(18 * var(--u));font-weight:400;text-align:left;line-height:1.6;z-index:1;}@media (max-width:640px){#s-menus .frame{container-type:inline-size;--u:calc(min(100cqw,390px) / 390);height:auto;padding:32px 20px;display:flex;flex-direction:column;gap:20px;}#e-navbar-3sdtsn2{position:static;width:auto;height:auto;order:1;}#e-navbar-bssjnkb{position:static;width:auto;height:auto;order:2;}#e-navbar-kcvs8ru{position:static;width:auto;height:auto;order:3;}#s-destino .frame{container-type:inline-size;--u:calc(min(100cqw,390px) / 390);height:auto;padding:32px 20px;display:flex;flex-direction:column;gap:20px;}#e-heading-7b2roj2{position:static;width:auto;height:auto;order:1;}#m-ventana .canvas{height:auto;padding:32px 20px;display:flex;flex-direction:column;gap:20px;}#e-text-e07zlok{position:static;width:auto;height:auto;order:1;}}
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","name":"Demo Clinic","url":"https://demo.test"}</script>
+        </head>
+<body>
+    
+    
+                                        <section id="s-menus" class="canvas"  style="background: var(--background);">
+            <div class="frame">
+                                                            <nav id="e-navbar-3sdtsn2" class="element navbar navbar-split">
+                            <span class="navbar-brand">Tu clínica</span>
+                        <div class="navbar-links">
+                                                        <a  href="#" >none</a>
+                                                        <a  href="#" >none</a>
+                                                        <a  href="https://wa.me/573001112233"  target="_blank" rel="noopener noreferrer"  >whatsapp</a>
+                                                        <a  href="#" >whatsapp</a>
+                                                        <a  href="tel:+573001112233"  >phone</a>
+                                                        <a  href="mailto:hola@demo.test"  >email</a>
+                                                        <a  href="https://example.com/precios?plan=1"  target="_blank" rel="noopener noreferrer"  >url</a>
+                                                        <a  href="#" >url</a>
+                            </div>
+                            <details class="navbar-menu">
+                    <summary aria-label="Abrir el menú">&#9776;</summary>
+                    <div class="navbar-drop">
+                                                                                <a  href="#" >none</a>
+                                                                                <a  href="#" >none</a>
+                                                                                <a  href="https://wa.me/573001112233"  target="_blank" rel="noopener noreferrer"  >whatsapp</a>
+                                                                                <a  href="#" >whatsapp</a>
+                                                                                <a  href="tel:+573001112233"  >phone</a>
+                                                                                <a  href="mailto:hola@demo.test"  >email</a>
+                                                                                <a  href="https://example.com/precios?plan=1"  target="_blank" rel="noopener noreferrer"  >url</a>
+                                                                                <a  href="#" >url</a>
+                                            </div>
+                </details>
+                    </nav>
+                                                    <nav id="e-navbar-bssjnkb" class="element navbar navbar-center">
+                            <span class="navbar-brand">Tu clínica</span>
+                        <div class="navbar-links">
+                                                        <a  href="#destino"  >anchor</a>
+                                                        <a  href="#destino"  >anchor</a>
+                                                        <a  href="#"  >modal</a>
+                                                        <a  href="#" >modal</a>
+                                                        <a  href="/serviciospremium"  >page</a>
+                                                        <a  href="/servicios-premium"  >page</a>
+                                                        <a  href="#" >page</a>
+                                                        <a  href="/agendar"  >booking</a>
+                            </div>
+                            <details class="navbar-menu">
+                    <summary aria-label="Abrir el menú">&#9776;</summary>
+                    <div class="navbar-drop">
+                                                                                <a  href="#destino"  >anchor</a>
+                                                                                <a  href="#destino"  >anchor</a>
+                                                                                <a  href="#"  >modal</a>
+                                                                                <a  href="#" >modal</a>
+                                                                                <a  href="/serviciospremium"  >page</a>
+                                                                                <a  href="/servicios-premium"  >page</a>
+                                                                                <a  href="#" >page</a>
+                                                                                <a  href="/agendar"  >booking</a>
+                                            </div>
+                </details>
+                    </nav>
+                                                    <nav id="e-navbar-kcvs8ru" class="element navbar navbar-left">
+                            <span class="navbar-brand">Tu clínica</span>
+                        <div class="navbar-links">
+                                                        <a  href="#"  >top</a>
+                                                        <a  href="#"  >back</a>
+                                                        <a  href="#"  >step_next</a>
+                                                        <a  href="#"  >step_prev</a>
+                                                        <a  href="#" >submit</a>
+                            </div>
+                            <details class="navbar-menu">
+                    <summary aria-label="Abrir el menú">&#9776;</summary>
+                    <div class="navbar-drop">
+                                                                                <a  href="#"  >top</a>
+                                                                                <a  href="#"  >back</a>
+                                                                                <a  href="#"  >step_next</a>
+                                                                                <a  href="#"  >step_prev</a>
+                                                                                <a  href="#" >submit</a>
+                                            </div>
+                </details>
+                    </nav>
+                                                        </div>
+        </section>
+                                                            <section id="s-destino" class="canvas"  style="background: var(--background);">
+            <div class="frame">
+                                                            <h2 id="e-heading-7b2roj2" class="element">Destino del ancla</h2>
+                                                        </div>
+        </section>
+                        
+            <dialog id="m-ventana" aria-label="Información">
+            <div class="modal-bar">
+                                    <h2 class="modal-title">Información</h2>
+                                <button type="button" class="modal-close" data-close aria-label="Cerrar">&times;</button>
+            </div>
+                            <div class="canvas">
+                                            <p id="e-text-e07zlok" class="element">Cuenta en una frase qué hace distinta a tu clínica.</p>
+                                            </div>
+                    </dialog>
+    
+    <script>
+        // Avisar a la analítica cuando alguien escribe o envía el formulario.
+        (() => {
+            const track = (name) => {
+                if (typeof gtag === 'function') {
+                    gtag('event', name);
+                }
+                if (typeof fbq === 'function') {
+                    fbq('track', name === 'contact' ? 'Contact' : 'Lead');
+                }
+            };
+
+            document.querySelectorAll('a[href^="https://wa.me"], a[href^="tel:"]').forEach((link) => {
+                link.addEventListener('click', () => track('contact'));
+            });
+
+            document.querySelectorAll('form[method="post"]').forEach((form) => {
+                form.addEventListener('submit', () => track('lead'));
+            });
+        })();
+
+        // Cada elemento con animación aparece cuando entra en pantalla.
+        (() => {
+            const targets = document.querySelectorAll('[data-anim]');
+
+            if (!targets.length) {
+                return;
+            }
+
+            if (!('IntersectionObserver' in window)) {
+                targets.forEach((node) => node.classList.add('is-in'));
+
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.01 });
+
+            targets.forEach((node) => observer.observe(node));
+
+            // Red de seguridad: nada puede quedarse invisible, ni en una
+            // página que no alcanza a desplazarse.
+            setTimeout(() => {
+                targets.forEach((node) => node.classList.add('is-in'));
+            }, 3000);
+        })();
+
+        // Pestañas y pasos.
+        (() => {
+            document.querySelectorAll('.stack').forEach((stack) => {
+                const buttons = [...stack.querySelectorAll('.stack-nav button')];
+                const panels = [...stack.querySelectorAll('.stack-panel')];
+
+                const go = (index) => {
+                    buttons.forEach((button, position) => {
+                        button.setAttribute('aria-pressed', String(position === index));
+                    });
+                    panels.forEach((panel, position) => {
+                        panel.toggleAttribute('data-on', position === index);
+                    });
+                    stack.dataset.current = String(index);
+                };
+
+                buttons.forEach((button, index) => button.addEventListener('click', () => go(index)));
+
+                stack.addEventListener('click', (event) => {
+                    const step = event.target.closest('[data-step]');
+
+                    if (!step) {
+                        return;
+                    }
+
+                    event.preventDefault();
+                    const current = Number(stack.dataset.current ?? 0);
+                    const next = current + (step.dataset.step === 'next' ? 1 : -1);
+
+                    if (next >= 0 && next < panels.length) {
+                        go(next);
+                        stack.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        })();
+
+        // Volver arriba y volver atrás.
+        (() => {
+            document.querySelectorAll('[data-top]').forEach((node) => {
+                node.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+
+            document.querySelectorAll('[data-back]').forEach((node) => {
+                node.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    history.length > 1 ? history.back() : (window.location.href = '/');
+                });
+            });
+        })();
+
+        // El menú fijo gana sombra en cuanto la página baja.
+        (() => {
+            const bars = document.querySelectorAll('nav.navbar[data-sticky]');
+
+            if (!bars.length) {
+                return;
+            }
+
+            const mark = () => bars.forEach((bar) => {
+                bar.toggleAttribute('data-scrolled', window.scrollY > 16);
+            });
+
+            mark();
+            window.addEventListener('scroll', mark, { passive: true });
+        })();
+    </script>
+    <noscript>
+        <style>[data-anim] { opacity: 1 !important; transform: none !important; }</style>
+    </noscript>
+
+            <script>
+            const open = (id) => document.getElementById('m-' + id)?.showModal();
+
+            document.querySelectorAll('[data-modal]').forEach((trigger) => {
+                trigger.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    open(trigger.dataset.modal);
+                });
+            });
+
+            document.querySelectorAll('[data-close]').forEach((button) => {
+                button.addEventListener('click', () => button.closest('dialog')?.close());
+            });
+
+            document.querySelectorAll('dialog').forEach((dialog) => {
+                dialog.addEventListener('click', (event) => {
+                    if (event.target === dialog) {
+                        dialog.close();
+                    }
+                });
+            });
+
+                    </script>
+    </body>
+</html>

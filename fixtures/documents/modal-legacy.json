@@ -1,0 +1,118 @@
+{
+    "title": "Ventanas antiguas",
+    "seo": {
+        "title": null,
+        "description": null
+    },
+    "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+    },
+    "profile": {
+        "address": null,
+        "city": null,
+        "phone": null,
+        "hours": null,
+        "og_image": null,
+        "favicon": null,
+        "ga4": null,
+        "pixel": null
+    },
+    "content": {
+        "sections": [
+            {
+                "id": "abrir",
+                "height": {
+                    "desktop": 164,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "button-ztfm1bw",
+                        "type": "button",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Abrir aviso",
+                            "action": {
+                                "type": "modal",
+                                "value": "aviso"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "button-ox6txol",
+                        "type": "button",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 52
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Abrir vacía",
+                            "action": {
+                                "type": "modal",
+                                "value": "vacia"
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    }
+                ]
+            }
+        ],
+        "modals": [
+            {
+                "id": "aviso",
+                "title": "Aviso",
+                "text": "  Texto de una ventana antigua\ncon un salto de línea.  "
+            },
+            {
+                "id": "vacia",
+                "title": "Vacía",
+                "text": "   "
+            }
+        ]
+    }
+}

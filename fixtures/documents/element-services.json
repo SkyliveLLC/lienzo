@@ -1,0 +1,1953 @@
+{
+    "title": "Elemento: services",
+    "seo": {
+        "title": null,
+        "description": null
+    },
+    "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+    },
+    "profile": {
+        "address": null,
+        "city": null,
+        "phone": null,
+        "hours": null,
+        "og_image": null,
+        "favicon": null,
+        "ga4": null,
+        "pixel": null
+    },
+    "content": {
+        "sections": [
+            {
+                "id": "variantes",
+                "height": {
+                    "desktop": 1168,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "services-5bellyx",
+                        "type": "services",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 1,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-us6igyp",
+                        "type": "services",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 2,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-8j6y0s3",
+                        "type": "services",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-mvm8kpn",
+                        "type": "services",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 312,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 4,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-4g5jsm4",
+                        "type": "services",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 312,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "list"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-56y94wq",
+                        "type": "services",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 312,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "compact"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-eyr4to1",
+                        "type": "services",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 584,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 1,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-7gxseti",
+                        "type": "services",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 584,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards",
+                            "show_duration": false
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-vm6ob4f",
+                        "type": "services",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 584,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards",
+                            "show_review": true
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-tdsx1f3",
+                        "type": "services",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 856,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "list",
+                            "show_duration": false,
+                            "show_review": true
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-arm6kpv",
+                        "type": "services",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 856,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "compact",
+                            "show_duration": false
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "relleno",
+                "height": {
+                    "desktop": 2256,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "surface"
+                },
+                "elements": [
+                    {
+                        "id": "services-wqa3oki",
+                        "type": "services",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "gradient": {
+                                "type": "linear",
+                                "from": "primary",
+                                "to": "secondary",
+                                "angle": 135
+                            }
+                        }
+                    },
+                    {
+                        "id": "services-70g1kgj",
+                        "type": "services",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "gradient": {
+                                "type": "radial",
+                                "from": "#f97316",
+                                "to": "background",
+                                "angle": 0
+                            },
+                            "background_opacity": 0.6
+                        }
+                    },
+                    {
+                        "id": "services-7lxrzko",
+                        "type": "services",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "background": "#fde68a",
+                            "background_opacity": 0.4
+                        }
+                    },
+                    {
+                        "id": "services-hz75blm",
+                        "type": "services",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 312,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "#7c3aed",
+                            "font": "body",
+                            "size": 16,
+                            "background": "surface"
+                        }
+                    },
+                    {
+                        "id": "services-7qzu91n",
+                        "type": "services",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 312,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "shadow": "sm"
+                        }
+                    },
+                    {
+                        "id": "services-wz1bx6l",
+                        "type": "services",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 312,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "shadow": "md"
+                        }
+                    },
+                    {
+                        "id": "services-91n4vy4",
+                        "type": "services",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 584,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "shadow": "lg"
+                        }
+                    },
+                    {
+                        "id": "services-uqi3vzz",
+                        "type": "services",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 584,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "shadow": "custom",
+                            "shadow_custom": {
+                                "x": 4,
+                                "y": 12,
+                                "blur": 32,
+                                "spread": -4,
+                                "color": "primary",
+                                "opacity": 0.35
+                            }
+                        }
+                    },
+                    {
+                        "id": "services-susjidv",
+                        "type": "services",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 584,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "shadow": "custom",
+                            "shadow_custom": {
+                                "x": 0,
+                                "y": 0,
+                                "blur": 0,
+                                "spread": 0,
+                                "color": "#000000",
+                                "opacity": 1
+                            }
+                        }
+                    },
+                    {
+                        "id": "services-447ey0b",
+                        "type": "services",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 856,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "border_width": 3,
+                            "border_color": "#e11d48",
+                            "radius": 999,
+                            "padding": 24
+                        }
+                    },
+                    {
+                        "id": "services-ii153m5",
+                        "type": "services",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 856,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "border_width": 2,
+                            "radius": 0,
+                            "padding": 0
+                        }
+                    },
+                    {
+                        "id": "services-rgjq0q2",
+                        "type": "services",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 856,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "heading",
+                            "size": 30,
+                            "weight": 800,
+                            "align": "center",
+                            "line_height": 2
+                        }
+                    },
+                    {
+                        "id": "services-2u2amxr",
+                        "type": "services",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1128,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "opacity": 0.5
+                        }
+                    },
+                    {
+                        "id": "services-v0ov7pl",
+                        "type": "services",
+                        "z": 14,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1128,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "opacity": 0
+                        }
+                    },
+                    {
+                        "id": "services-e2142mr",
+                        "type": "services",
+                        "z": 15,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1128,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "blur": 8,
+                            "background": "background",
+                            "background_opacity": 0.5
+                        }
+                    },
+                    {
+                        "id": "services-i7816av",
+                        "type": "services",
+                        "z": 16,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1400,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "clip": true
+                        }
+                    },
+                    {
+                        "id": "services-hy0w3ca",
+                        "type": "services",
+                        "z": 17,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1400,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "overflow": "hidden"
+                        }
+                    },
+                    {
+                        "id": "services-7bd32mz",
+                        "type": "services",
+                        "z": 18,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1400,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "overflow": "scroll-x"
+                        }
+                    },
+                    {
+                        "id": "services-7v12gqg",
+                        "type": "services",
+                        "z": 19,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1672,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "overflow": "scroll-y"
+                        }
+                    },
+                    {
+                        "id": "services-c4zb7dv",
+                        "type": "services",
+                        "z": 20,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1672,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "clip": true,
+                            "overflow": "visible"
+                        }
+                    },
+                    {
+                        "id": "services-qi36irg",
+                        "type": "services",
+                        "z": 21,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1672,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        },
+                        "locked": true
+                    },
+                    {
+                        "id": "services-kcwnuck",
+                        "type": "services",
+                        "z": 22,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1944,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        },
+                        "group": "grupo-a"
+                    },
+                    {
+                        "id": "services-8k4ak0b",
+                        "type": "services",
+                        "z": 23,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1944,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        },
+                        "group": "grupo-a",
+                        "locked": true
+                    }
+                ]
+            },
+            {
+                "id": "movimiento",
+                "height": {
+                    "desktop": 1984,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "services-gvuv9vp",
+                        "type": "services",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "rotate": 12
+                        }
+                    },
+                    {
+                        "id": "services-0xjx5d4",
+                        "type": "services",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "rotate": -45.5
+                        }
+                    },
+                    {
+                        "id": "services-75mavfq",
+                        "type": "services",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "flip_x": true
+                        }
+                    },
+                    {
+                        "id": "services-kyu3itx",
+                        "type": "services",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 312,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "flip_y": true
+                        }
+                    },
+                    {
+                        "id": "services-qly8oku",
+                        "type": "services",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 312,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "rotate": 30,
+                            "flip_x": true,
+                            "flip_y": true
+                        }
+                    },
+                    {
+                        "id": "services-p4nt1s9",
+                        "type": "services",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 312,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "hover": "lift"
+                        }
+                    },
+                    {
+                        "id": "services-2ppxkmn",
+                        "type": "services",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 584,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "hover": "lift",
+                            "rotate": -8
+                        }
+                    },
+                    {
+                        "id": "services-hhhdhcz",
+                        "type": "services",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 584,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "hover": "grow"
+                        }
+                    },
+                    {
+                        "id": "services-gnoigc5",
+                        "type": "services",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 584,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "hover": "grow",
+                            "flip_x": true
+                        }
+                    },
+                    {
+                        "id": "services-s8f44h2",
+                        "type": "services",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 856,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "hover": "fade"
+                        }
+                    },
+                    {
+                        "id": "services-e14i3mv",
+                        "type": "services",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 856,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "hover": "none"
+                        }
+                    },
+                    {
+                        "id": "services-2qlcs0j",
+                        "type": "services",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 856,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "animation": {
+                                "type": "fade",
+                                "delay": 0,
+                                "duration": 0.7
+                            }
+                        }
+                    },
+                    {
+                        "id": "services-aegv99x",
+                        "type": "services",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1128,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "animation": {
+                                "type": "up",
+                                "delay": 0.2,
+                                "duration": 1
+                            }
+                        }
+                    },
+                    {
+                        "id": "services-sy5v6i4",
+                        "type": "services",
+                        "z": 14,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1128,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "animation": {
+                                "type": "down",
+                                "delay": 0.4,
+                                "duration": 0.5
+                            }
+                        }
+                    },
+                    {
+                        "id": "services-ewavwpg",
+                        "type": "services",
+                        "z": 15,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1128,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "animation": {
+                                "type": "left",
+                                "delay": 0,
+                                "duration": 0.2
+                            }
+                        }
+                    },
+                    {
+                        "id": "services-qee0n7l",
+                        "type": "services",
+                        "z": 16,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1400,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "animation": {
+                                "type": "right",
+                                "delay": 1.25,
+                                "duration": 1.5
+                            }
+                        }
+                    },
+                    {
+                        "id": "services-im3ndx5",
+                        "type": "services",
+                        "z": 17,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1400,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "animation": {
+                                "type": "zoom",
+                                "delay": 2,
+                                "duration": 2
+                            }
+                        }
+                    },
+                    {
+                        "id": "services-jol4rwy",
+                        "type": "services",
+                        "z": 18,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1400,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "animation": {
+                                "type": "none",
+                                "delay": 0,
+                                "duration": 0.7
+                            }
+                        }
+                    },
+                    {
+                        "id": "services-qzdu2j6",
+                        "type": "services",
+                        "z": 19,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1672,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "visible_on": "desktop"
+                        }
+                    },
+                    {
+                        "id": "services-tvr4nj7",
+                        "type": "services",
+                        "z": 20,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1672,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "visible_on": "mobile"
+                        }
+                    },
+                    {
+                        "id": "services-01ygg70",
+                        "type": "services",
+                        "z": 21,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1672,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "visible_on": "all"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "movil",
+                "height": {
+                    "desktop": 1440,
+                    "mobile": 2752
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "services-24ajnpk",
+                        "type": "services",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 24,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 1,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-ud9ih40",
+                        "type": "services",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 232,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 2,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-0abj7ec",
+                        "type": "services",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 440,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-i783fpb",
+                        "type": "services",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 312,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 648,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 4,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-zi64jcr",
+                        "type": "services",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 312,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 856,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "list"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-vy0lls2",
+                        "type": "services",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 312,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 1064,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "compact"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-1dmj81b",
+                        "type": "services",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 584,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 1272,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 1,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-xv6fz5k",
+                        "type": "services",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 584,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 1480,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards",
+                            "show_duration": false
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-0kmdbcw",
+                        "type": "services",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 584,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 1688,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards",
+                            "show_review": true
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-e589qu2",
+                        "type": "services",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 856,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 1896,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "list",
+                            "show_duration": false,
+                            "show_review": true
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-uyjjtx5",
+                        "type": "services",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 856,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 2104,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "compact",
+                            "show_duration": false
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16
+                        }
+                    },
+                    {
+                        "id": "services-wonce83",
+                        "type": "services",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 856,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 2312,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "visible_on": "desktop"
+                        }
+                    },
+                    {
+                        "id": "services-xd9rfe0",
+                        "type": "services",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1128,
+                                "w": 26.666666666666668,
+                                "h": 240
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 2520,
+                                "w": 90,
+                                "h": 192
+                            }
+                        },
+                        "props": {
+                            "limit": 6,
+                            "columns": 3,
+                            "variant": "cards"
+                        },
+                        "style": {
+                            "color": "text",
+                            "font": "body",
+                            "size": 16,
+                            "visible_on": "mobile"
+                        }
+                    }
+                ]
+            }
+        ],
+        "modals": [
+            {
+                "id": "ventana",
+                "title": "Información",
+                "size": "md",
+                "show_title": true,
+                "width": 560,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "text-ujgrj5d",
+                        "type": "text",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

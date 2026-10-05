@@ -1,0 +1,647 @@
+{
+    "title": "Plantilla: Una sola oferta",
+    "seo": {
+        "title": null,
+        "description": null
+    },
+    "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+    },
+    "profile": {
+        "address": null,
+        "city": null,
+        "phone": null,
+        "hours": null,
+        "og_image": null,
+        "favicon": null,
+        "ga4": null,
+        "pixel": null
+    },
+    "content": {
+        "sections": [
+            {
+                "id": "seccion-ib5ofdl",
+                "height": {
+                    "desktop": 680,
+                    "mobile": 884
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "shape-ugj8h2b",
+                        "type": "shape",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 52,
+                                "y": 120,
+                                "w": 42,
+                                "h": 400
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "blob"
+                        },
+                        "style": {
+                            "background": "surface",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "image-caomhk2",
+                        "type": "image",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 50,
+                                "y": 96,
+                                "w": 40,
+                                "h": 380
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "src": "",
+                            "alt": "Foto de la clínica"
+                        },
+                        "style": {
+                            "radius": 22,
+                            "object_fit": "cover",
+                            "shadow": "lg"
+                        }
+                    },
+                    {
+                        "id": "heading-h2l7zqf",
+                        "type": "heading",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 6,
+                                "y": 140,
+                                "w": 40,
+                                "h": 180
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Una sonrisa sana empieza por una buena valoración",
+                            "level": 1
+                        },
+                        "style": {
+                            "color": "secondary",
+                            "font": "heading",
+                            "size": 48,
+                            "weight": 700,
+                            "align": "left",
+                            "line_height": 1.1
+                        }
+                    },
+                    {
+                        "id": "text-hw1vvcd",
+                        "type": "text",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 6,
+                                "y": 336,
+                                "w": 36,
+                                "h": 90
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Te explicamos qué necesitas, cuánto toma y cuánto cuesta antes de empezar."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    },
+                    {
+                        "id": "button-8e5ok3h",
+                        "type": "button",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 6,
+                                "y": 456,
+                                "w": 16,
+                                "h": 54
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 14
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "seccion-xoqkp08",
+                "height": {
+                    "desktop": 300,
+                    "mobile": 390
+                },
+                "background": {
+                    "type": "color",
+                    "color": "primary"
+                },
+                "elements": [
+                    {
+                        "id": "heading-64i9oil",
+                        "type": "heading",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 6,
+                                "y": 80,
+                                "w": 48,
+                                "h": 110
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "¿Hace más de un año que no te revisan?",
+                            "level": 2
+                        },
+                        "style": {
+                            "color": "background",
+                            "font": "heading",
+                            "size": 34,
+                            "weight": 700,
+                            "align": "left",
+                            "line_height": 1.15
+                        }
+                    },
+                    {
+                        "id": "text-6d92tux",
+                        "type": "text",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 6,
+                                "y": 196,
+                                "w": 40,
+                                "h": 56
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Una valoración toma 45 minutos y te ahorra la mitad de los problemas del año que viene."
+                        },
+                        "style": {
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6,
+                            "opacity": 0.9
+                        }
+                    },
+                    {
+                        "id": "button-meh1zm6",
+                        "type": "button",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 66,
+                                "y": 110,
+                                "w": 28,
+                                "h": 56
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Escríbenos por WhatsApp",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "background",
+                            "color": "primary",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 700,
+                            "align": "center",
+                            "radius": 14
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "seccion-lvpwgru",
+                "height": {
+                    "desktop": 520,
+                    "mobile": 676
+                },
+                "background": {
+                    "type": "color",
+                    "color": "surface"
+                },
+                "elements": [
+                    {
+                        "id": "heading-1se231r",
+                        "type": "heading",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 6,
+                                "y": 80,
+                                "w": 32,
+                                "h": 120
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Pide tu cita",
+                            "level": 2
+                        },
+                        "style": {
+                            "color": "secondary",
+                            "font": "heading",
+                            "size": 38,
+                            "weight": 700,
+                            "align": "left",
+                            "line_height": 1.1
+                        }
+                    },
+                    {
+                        "id": "text-bcvnwwu",
+                        "type": "text",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 6,
+                                "y": 190,
+                                "w": 30,
+                                "h": 110
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Déjanos tus datos y te confirmamos el horario por WhatsApp el mismo día."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 17,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    },
+                    {
+                        "id": "input-4u07956",
+                        "type": "input",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 44,
+                                "y": 80,
+                                "w": 24,
+                                "h": 78
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Nombre",
+                            "placeholder": "Cómo te llamas",
+                            "required": true,
+                            "input_type": "text",
+                            "options": []
+                        },
+                        "style": {
+                            "color": "secondary",
+                            "background": "background",
+                            "border_color": "muted",
+                            "border_width": 1,
+                            "font": "body",
+                            "size": 15,
+                            "align": "left",
+                            "radius": 12,
+                            "padding": 12
+                        }
+                    },
+                    {
+                        "id": "input-nt9he3p",
+                        "type": "input",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 70,
+                                "y": 80,
+                                "w": 24,
+                                "h": 78
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "WhatsApp",
+                            "placeholder": "300 111 2233",
+                            "required": true,
+                            "input_type": "tel",
+                            "options": []
+                        },
+                        "style": {
+                            "color": "secondary",
+                            "background": "background",
+                            "border_color": "muted",
+                            "border_width": 1,
+                            "font": "body",
+                            "size": 15,
+                            "align": "left",
+                            "radius": 12,
+                            "padding": 12
+                        }
+                    },
+                    {
+                        "id": "select-2cq6hav",
+                        "type": "select",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 44,
+                                "y": 172,
+                                "w": 50,
+                                "h": 78
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Motivo",
+                            "placeholder": "",
+                            "required": true,
+                            "input_type": "text",
+                            "options": [
+                                "Valoración",
+                                "Limpieza",
+                                "Dolor o urgencia",
+                                "Otro"
+                            ]
+                        },
+                        "style": {
+                            "color": "secondary",
+                            "background": "background",
+                            "border_color": "muted",
+                            "border_width": 1,
+                            "font": "body",
+                            "size": 15,
+                            "align": "left",
+                            "radius": 12,
+                            "padding": 12
+                        }
+                    },
+                    {
+                        "id": "textarea-efzlp3f",
+                        "type": "textarea",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 44,
+                                "y": 264,
+                                "w": 50,
+                                "h": 110
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Cuéntanos qué sientes",
+                            "placeholder": "Opcional",
+                            "required": false,
+                            "input_type": "text",
+                            "options": []
+                        },
+                        "style": {
+                            "color": "secondary",
+                            "background": "background",
+                            "border_color": "muted",
+                            "border_width": 1,
+                            "font": "body",
+                            "size": 15,
+                            "align": "left",
+                            "radius": 12,
+                            "padding": 12
+                        }
+                    },
+                    {
+                        "id": "checkbox-g4smq8v",
+                        "type": "checkbox",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 44,
+                                "y": 388,
+                                "w": 50,
+                                "h": 34
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Autorizo el tratamiento de mis datos",
+                            "placeholder": "Escribe aquí",
+                            "required": true,
+                            "input_type": "text",
+                            "options": []
+                        },
+                        "style": {
+                            "color": "muted",
+                            "background": "surface",
+                            "border_color": "muted",
+                            "border_width": 1,
+                            "font": "body",
+                            "size": 14,
+                            "align": "left",
+                            "radius": 10,
+                            "padding": 10
+                        }
+                    },
+                    {
+                        "id": "button-6uhl7xq",
+                        "type": "button",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 44,
+                                "y": 434,
+                                "w": 50,
+                                "h": 54
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Enviar solicitud",
+                            "action": {
+                                "type": "submit",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 17,
+                            "weight": 700,
+                            "align": "center",
+                            "radius": 14
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "seccion-epmzagi",
+                "height": {
+                    "desktop": 280,
+                    "mobile": 364
+                },
+                "background": {
+                    "type": "color",
+                    "color": "secondary"
+                },
+                "elements": [
+                    {
+                        "id": "heading-rs39wl1",
+                        "type": "heading",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 6,
+                                "y": 64,
+                                "w": 26,
+                                "h": 50
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Tu clínica",
+                            "level": 3
+                        },
+                        "style": {
+                            "color": "background",
+                            "font": "heading",
+                            "size": 24,
+                            "weight": 700,
+                            "align": "left",
+                            "line_height": 1.1
+                        }
+                    },
+                    {
+                        "id": "text-kdyjee0",
+                        "type": "text",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 6,
+                                "y": 122,
+                                "w": 26,
+                                "h": 100
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Dirección de la clínica\nTel. 300 000 0000"
+                        },
+                        "style": {
+                            "color": "background",
+                            "font": "body",
+                            "size": 15,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.7,
+                            "opacity": 0.75
+                        }
+                    },
+                    {
+                        "id": "text-b1pezsr",
+                        "type": "text",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 38,
+                                "y": 64,
+                                "w": 26,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Horario\nLunes a viernes, 8:00 a 18:00\nSábados, 8:00 a 13:00"
+                        },
+                        "style": {
+                            "color": "background",
+                            "font": "body",
+                            "size": 15,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.8,
+                            "opacity": 0.75
+                        }
+                    },
+                    {
+                        "id": "button-2nvj1cw",
+                        "type": "button",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 70,
+                                "y": 64,
+                                "w": 24,
+                                "h": 48
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "label": "Pedir cita",
+                            "action": {
+                                "type": "whatsapp",
+                                "value": ""
+                            }
+                        },
+                        "style": {
+                            "background": "primary",
+                            "color": "background",
+                            "font": "body",
+                            "size": 16,
+                            "weight": 600,
+                            "align": "center",
+                            "radius": 12
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,1658 @@
+{
+    "title": "Elemento: shape",
+    "seo": {
+        "title": null,
+        "description": null
+    },
+    "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+    },
+    "profile": {
+        "address": null,
+        "city": null,
+        "phone": null,
+        "hours": null,
+        "og_image": null,
+        "favicon": null,
+        "ga4": null,
+        "pixel": null
+    },
+    "content": {
+        "sections": [
+            {
+                "id": "variantes",
+                "height": {
+                    "desktop": 656,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "shape-xszqepp",
+                        "type": "shape",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "shape-eb91ack",
+                        "type": "shape",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "ellipse"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "shape-cos7lgv",
+                        "type": "shape",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "triangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "shape-g9e78on",
+                        "type": "shape",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 232,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "blob"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "shape-vdctifw",
+                        "type": "shape",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 232,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "arch"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "shape-tf57uvi",
+                        "type": "shape",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 232,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "diagonal"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "shape-7scww7x",
+                        "type": "shape",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 424,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "dots"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "opacity": 1,
+                            "color": "primary"
+                        }
+                    },
+                    {
+                        "id": "shape-7w4mij4",
+                        "type": "shape",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 424,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "grid"
+                        },
+                        "style": {
+                            "background": "surface",
+                            "radius": 16,
+                            "opacity": 1,
+                            "color": "#94a3b8"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "relleno",
+                "height": {
+                    "desktop": 1616,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "surface"
+                },
+                "elements": [
+                    {
+                        "id": "shape-3k3xpmk",
+                        "type": "shape",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "gradient": {
+                                "type": "linear",
+                                "from": "primary",
+                                "to": "secondary",
+                                "angle": 135
+                            }
+                        }
+                    },
+                    {
+                        "id": "shape-hmxnbd4",
+                        "type": "shape",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "gradient": {
+                                "type": "radial",
+                                "from": "#f97316",
+                                "to": "background",
+                                "angle": 0
+                            },
+                            "background_opacity": 0.6
+                        }
+                    },
+                    {
+                        "id": "shape-twu23jk",
+                        "type": "shape",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "#fde68a",
+                            "radius": 16,
+                            "opacity": 1,
+                            "background_opacity": 0.4
+                        }
+                    },
+                    {
+                        "id": "shape-5a7t9zc",
+                        "type": "shape",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 232,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "surface",
+                            "radius": 16,
+                            "opacity": 1,
+                            "color": "#7c3aed"
+                        }
+                    },
+                    {
+                        "id": "shape-lpx5kdt",
+                        "type": "shape",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 232,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "shadow": "sm"
+                        }
+                    },
+                    {
+                        "id": "shape-wje9k5b",
+                        "type": "shape",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 232,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "shadow": "md"
+                        }
+                    },
+                    {
+                        "id": "shape-qjqzcxd",
+                        "type": "shape",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 424,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "shadow": "lg"
+                        }
+                    },
+                    {
+                        "id": "shape-gbvft03",
+                        "type": "shape",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 424,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "shadow": "custom",
+                            "shadow_custom": {
+                                "x": 4,
+                                "y": 12,
+                                "blur": 32,
+                                "spread": -4,
+                                "color": "primary",
+                                "opacity": 0.35
+                            }
+                        }
+                    },
+                    {
+                        "id": "shape-jkohdl5",
+                        "type": "shape",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 424,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "shadow": "custom",
+                            "shadow_custom": {
+                                "x": 0,
+                                "y": 0,
+                                "blur": 0,
+                                "spread": 0,
+                                "color": "#000000",
+                                "opacity": 1
+                            }
+                        }
+                    },
+                    {
+                        "id": "shape-ajph6bl",
+                        "type": "shape",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 616,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 999,
+                            "opacity": 1,
+                            "border_width": 3,
+                            "border_color": "#e11d48",
+                            "padding": 24
+                        }
+                    },
+                    {
+                        "id": "shape-3ryjbqu",
+                        "type": "shape",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 616,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 0,
+                            "opacity": 1,
+                            "border_width": 2,
+                            "padding": 0
+                        }
+                    },
+                    {
+                        "id": "shape-7hrtz80",
+                        "type": "shape",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 616,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "font": "heading",
+                            "size": 30,
+                            "weight": 800,
+                            "align": "center",
+                            "line_height": 2
+                        }
+                    },
+                    {
+                        "id": "shape-nn3us7e",
+                        "type": "shape",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 808,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 0.5
+                        }
+                    },
+                    {
+                        "id": "shape-bmuy4oo",
+                        "type": "shape",
+                        "z": 14,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 808,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 0
+                        }
+                    },
+                    {
+                        "id": "shape-oim1xjh",
+                        "type": "shape",
+                        "z": 15,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 808,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "background",
+                            "radius": 16,
+                            "opacity": 1,
+                            "blur": 8,
+                            "background_opacity": 0.5
+                        }
+                    },
+                    {
+                        "id": "shape-do3af3q",
+                        "type": "shape",
+                        "z": 16,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1000,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "clip": true
+                        }
+                    },
+                    {
+                        "id": "shape-xwz12an",
+                        "type": "shape",
+                        "z": 17,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1000,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "overflow": "hidden"
+                        }
+                    },
+                    {
+                        "id": "shape-xh77hnc",
+                        "type": "shape",
+                        "z": 18,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1000,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "overflow": "scroll-x"
+                        }
+                    },
+                    {
+                        "id": "shape-lu2f5hy",
+                        "type": "shape",
+                        "z": 19,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1192,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "overflow": "scroll-y"
+                        }
+                    },
+                    {
+                        "id": "shape-jurzu1n",
+                        "type": "shape",
+                        "z": 20,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1192,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "clip": true,
+                            "overflow": "visible"
+                        }
+                    },
+                    {
+                        "id": "shape-04faibg",
+                        "type": "shape",
+                        "z": 21,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1192,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        },
+                        "locked": true
+                    },
+                    {
+                        "id": "shape-kc3ghij",
+                        "type": "shape",
+                        "z": 22,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1384,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        },
+                        "group": "grupo-a"
+                    },
+                    {
+                        "id": "shape-k0cmh65",
+                        "type": "shape",
+                        "z": 23,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1384,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        },
+                        "group": "grupo-a",
+                        "locked": true
+                    }
+                ]
+            },
+            {
+                "id": "movimiento",
+                "height": {
+                    "desktop": 1424,
+                    "mobile": 560
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "shape-r8taagt",
+                        "type": "shape",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "rotate": 12
+                        }
+                    },
+                    {
+                        "id": "shape-ygdd1ac",
+                        "type": "shape",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "rotate": -45.5
+                        }
+                    },
+                    {
+                        "id": "shape-dovk2it",
+                        "type": "shape",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "flip_x": true
+                        }
+                    },
+                    {
+                        "id": "shape-pouvyzs",
+                        "type": "shape",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 232,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "flip_y": true
+                        }
+                    },
+                    {
+                        "id": "shape-orz8n6b",
+                        "type": "shape",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 232,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "rotate": 30,
+                            "flip_x": true,
+                            "flip_y": true
+                        }
+                    },
+                    {
+                        "id": "shape-anavrlk",
+                        "type": "shape",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 232,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "hover": "lift"
+                        }
+                    },
+                    {
+                        "id": "shape-hjkptp8",
+                        "type": "shape",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 424,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "hover": "lift",
+                            "rotate": -8
+                        }
+                    },
+                    {
+                        "id": "shape-c87xtho",
+                        "type": "shape",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 424,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "hover": "grow"
+                        }
+                    },
+                    {
+                        "id": "shape-g53e5rl",
+                        "type": "shape",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 424,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "hover": "grow",
+                            "flip_x": true
+                        }
+                    },
+                    {
+                        "id": "shape-do7xz2i",
+                        "type": "shape",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 616,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "hover": "fade"
+                        }
+                    },
+                    {
+                        "id": "shape-4ysac8s",
+                        "type": "shape",
+                        "z": 11,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 616,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "hover": "none"
+                        }
+                    },
+                    {
+                        "id": "shape-mugeggw",
+                        "type": "shape",
+                        "z": 12,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 616,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "animation": {
+                                "type": "fade",
+                                "delay": 0,
+                                "duration": 0.7
+                            }
+                        }
+                    },
+                    {
+                        "id": "shape-zac3x37",
+                        "type": "shape",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 808,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "animation": {
+                                "type": "up",
+                                "delay": 0.2,
+                                "duration": 1
+                            }
+                        }
+                    },
+                    {
+                        "id": "shape-fchc634",
+                        "type": "shape",
+                        "z": 14,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 808,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "animation": {
+                                "type": "down",
+                                "delay": 0.4,
+                                "duration": 0.5
+                            }
+                        }
+                    },
+                    {
+                        "id": "shape-xyepadt",
+                        "type": "shape",
+                        "z": 15,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 808,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "animation": {
+                                "type": "left",
+                                "delay": 0,
+                                "duration": 0.2
+                            }
+                        }
+                    },
+                    {
+                        "id": "shape-d6c99f2",
+                        "type": "shape",
+                        "z": 16,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1000,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "animation": {
+                                "type": "right",
+                                "delay": 1.25,
+                                "duration": 1.5
+                            }
+                        }
+                    },
+                    {
+                        "id": "shape-w610xbe",
+                        "type": "shape",
+                        "z": 17,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1000,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "animation": {
+                                "type": "zoom",
+                                "delay": 2,
+                                "duration": 2
+                            }
+                        }
+                    },
+                    {
+                        "id": "shape-aqgtb74",
+                        "type": "shape",
+                        "z": 18,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1000,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "animation": {
+                                "type": "none",
+                                "delay": 0,
+                                "duration": 0.7
+                            }
+                        }
+                    },
+                    {
+                        "id": "shape-se2e0eg",
+                        "type": "shape",
+                        "z": 19,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 1192,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "visible_on": "desktop"
+                        }
+                    },
+                    {
+                        "id": "shape-4o35x49",
+                        "type": "shape",
+                        "z": 20,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 1192,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "visible_on": "mobile"
+                        }
+                    },
+                    {
+                        "id": "shape-2novp1e",
+                        "type": "shape",
+                        "z": 21,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 1192,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "visible_on": "all"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "movil",
+                "height": {
+                    "desktop": 848,
+                    "mobile": 1488
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "shape-dh7qejv",
+                        "type": "shape",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 24,
+                                "w": 90,
+                                "h": 128
+                            }
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "shape-kius1ul",
+                        "type": "shape",
+                        "z": 2,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 168,
+                                "w": 90,
+                                "h": 128
+                            }
+                        },
+                        "props": {
+                            "shape": "ellipse"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "shape-p7nemc3",
+                        "type": "shape",
+                        "z": 3,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 40,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 312,
+                                "w": 90,
+                                "h": 128
+                            }
+                        },
+                        "props": {
+                            "shape": "triangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "shape-y9f6p7o",
+                        "type": "shape",
+                        "z": 4,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 232,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 456,
+                                "w": 90,
+                                "h": 128
+                            }
+                        },
+                        "props": {
+                            "shape": "blob"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "shape-600sc7i",
+                        "type": "shape",
+                        "z": 5,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 232,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 600,
+                                "w": 90,
+                                "h": 128
+                            }
+                        },
+                        "props": {
+                            "shape": "arch"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "shape-hojgcsm",
+                        "type": "shape",
+                        "z": 6,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 232,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 744,
+                                "w": 90,
+                                "h": 128
+                            }
+                        },
+                        "props": {
+                            "shape": "diagonal"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1
+                        }
+                    },
+                    {
+                        "id": "shape-vi345qz",
+                        "type": "shape",
+                        "z": 7,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 424,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 888,
+                                "w": 90,
+                                "h": 128
+                            }
+                        },
+                        "props": {
+                            "shape": "dots"
+                        },
+                        "style": {
+                            "radius": 16,
+                            "opacity": 1,
+                            "color": "primary"
+                        }
+                    },
+                    {
+                        "id": "shape-e90f30y",
+                        "type": "shape",
+                        "z": 8,
+                        "layout": {
+                            "desktop": {
+                                "x": 34.66666666666667,
+                                "y": 424,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 1032,
+                                "w": 90,
+                                "h": 128
+                            }
+                        },
+                        "props": {
+                            "shape": "grid"
+                        },
+                        "style": {
+                            "background": "surface",
+                            "radius": 16,
+                            "opacity": 1,
+                            "color": "#94a3b8"
+                        }
+                    },
+                    {
+                        "id": "shape-6j2c566",
+                        "type": "shape",
+                        "z": 9,
+                        "layout": {
+                            "desktop": {
+                                "x": 65.33333333333334,
+                                "y": 424,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": {
+                                "x": 4,
+                                "y": 1176,
+                                "w": 90,
+                                "h": 128
+                            }
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "visible_on": "desktop"
+                        }
+                    },
+                    {
+                        "id": "shape-7oyvkzw",
+                        "type": "shape",
+                        "z": 10,
+                        "layout": {
+                            "desktop": {
+                                "x": 4,
+                                "y": 616,
+                                "w": 26.666666666666668,
+                                "h": 160
+                            },
+                            "mobile": {
+                                "x": 6,
+                                "y": 1320,
+                                "w": 90,
+                                "h": 128
+                            }
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "primary",
+                            "radius": 16,
+                            "opacity": 1,
+                            "visible_on": "mobile"
+                        }
+                    }
+                ]
+            }
+        ],
+        "modals": [
+            {
+                "id": "ventana",
+                "title": "Información",
+                "size": "md",
+                "show_title": true,
+                "width": 560,
+                "height": {
+                    "desktop": 320,
+                    "mobile": 420
+                },
+                "background": {
+                    "type": "color",
+                    "color": "background"
+                },
+                "elements": [
+                    {
+                        "id": "text-q05wfus",
+                        "type": "text",
+                        "z": 1,
+                        "layout": {
+                            "desktop": {
+                                "x": 10,
+                                "y": 0,
+                                "w": 40,
+                                "h": 96
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "text": "Cuenta en una frase qué hace distinta a tu clínica."
+                        },
+                        "style": {
+                            "color": "muted",
+                            "font": "body",
+                            "size": 18,
+                            "weight": 400,
+                            "align": "left",
+                            "line_height": 1.6
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
