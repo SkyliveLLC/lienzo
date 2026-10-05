@@ -157,6 +157,8 @@ Lienzo::element(LatestPosts::class);
 
 Fields come from a closed set: `text`, `number`, `toggle`, `choice`, `image` and `action`. An element can also return scoped CSS from `css()`.
 
+Fields check type, length, range and choices, not formats. When a text value must have a shape, such as an analytics id, check it where you use it and skip it when it does not match, for example `preg_match('/^G-[A-Z0-9]+$/', $site->meta['ga4'] ?? '') === 1`.
+
 **Actions.** A button or a link can run an app action. The closure turns the stored value into a link, or returns null to render the button inert:
 
 ```php

@@ -26,10 +26,11 @@ The first release.
 
 ### Laravel
 
-- `php artisan lienzo:install`, `Route::lienzoEditor()`, `Route::lienzo()` and `<x-lienzo::editor>`.
+- `php artisan lienzo:install`, `Route::lienzoEditor()`, `Route::lienzo()` and `<x-lienzo::editor>`. Both route macros also work inside a group with parameters of its own, such as `Route::domain('{tenant}')`.
+- `Lienzo::editorScriptUrl()`, for Inertia and single-page apps that render `<lienzo-editor>` themselves.
 - Sites owned by any model, or one default site.
 - Uploads re-encoded to WebP with thumbnails, sanitized SVG, quotas, and images that stay private until a published page uses them.
-- Form submissions validated against the published form, with CSRF, a honeypot and rate limiting.
+- Form submissions validated against the published form, with CSRF, a honeypot and rate limiting. Checkbox answers are stored as booleans, and the editor's inbox words them in its own language. The form replies `sent` and `formUnavailable` come in English and Spanish and can be overridden with `Lienzo::messages()`.
 - `sitemap.xml` and `robots.txt`. `lienzo:install` removes Laravel's stock `public/robots.txt`, which would hide Lienzo's.
 
 ### Examples
