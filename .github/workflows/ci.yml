@@ -28,6 +28,15 @@ jobs:
           name: playwright-report
           path: packages/editor/playwright-report
 
+  # Composer installs what git archive holds. .gitattributes keeps it to what a Laravel app runs; this fails on anything else.
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: |
+          extra=$(git archive HEAD | tar -t | grep -vE '^(composer\.json|LICENSE|README\.md|CHANGELOG\.md|THIRD_PARTY_NOTICES\.md|packages/(laravel/((src|config|database|resources|dist)/.*)?)?)$' || true)
+          if [ -n "$extra" ]; then echo "Not runtime files, add them to .gitattributes:"; echo "$extra"; exit 1; fi
+
   # Both examples install the package the way their READMEs say and drive it in Chromium.
   examples:
     runs-on: ubuntu-latest
