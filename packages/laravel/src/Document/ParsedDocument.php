@@ -116,12 +116,13 @@ final readonly class ParsedDocument
     }
 
     /**
-     * Schema for an app element's props, derived from its declared fields like core's `fieldsSchema`.
+     * Schema for values of declared fields (an app element's props, a site's
+     * meta), like core's `fieldsSchema`. Unknown keys are stripped.
      *
      * @param  list<array<string, mixed>>  $fields
      * @return array<string, mixed>
      */
-    private static function fieldsSchema(array $fields): array
+    public static function fieldsSchema(array $fields): array
     {
         $properties = [];
 

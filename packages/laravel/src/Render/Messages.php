@@ -10,14 +10,24 @@ use Skylive\Lienzo\Assets;
 final class Messages
 {
     /**
-     * `es-MX` falls back to `es`, then to English.
+     * `es-MX` falls back to `es`, then to English, key by key. `$extra` holds
+     * an app's strings by locale and wins over the shipped ones.
      *
+     * @param  array<string, array<string, string>>  $extra
      * @return array<string, string>
      */
-    public static function for(string $locale): array
+    public static function for(string $locale, array $extra = []): array
     {
-        $messages = Assets::data()['messages'];
+        $shipped = Assets::data()['messages'];
+        $language = explode('-', $locale)[0];
 
-        return $messages[$locale] ?? $messages[explode('-', $locale)[0]] ?? $messages['en'];
+        return [
+            ...$shipped['en'],
+            ...$extra['en'] ?? [],
+            ...$shipped[$language] ?? [],
+            ...$extra[$language] ?? [],
+            ...$shipped[$locale] ?? [],
+            ...$extra[$locale] ?? [],
+        ];
     }
 }

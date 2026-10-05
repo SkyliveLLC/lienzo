@@ -39,7 +39,10 @@ final class Renderer
 
     private readonly ?FormHost $form;
 
-    /** @param Catalog $catalog */
+    /**
+     * @param  Catalog  $catalog
+     * @param  array<string, array<string, string>>  $messages
+     */
     private function __construct(
         private readonly array $catalog,
         private readonly ParsedSiteSettings $site,
@@ -47,14 +50,16 @@ final class Renderer
         private readonly string $base,
         private readonly RenderMode $mode,
         private readonly RenderHost $host,
+        array $messages,
     ) {
-        $this->t = Messages::for($site->locale);
+        $this->t = Messages::for($site->locale, $messages);
         $this->form = $host->form();
     }
 
     /**
      * @param  Catalog  $catalog
      * @param  string  $base  path prefix for `page` actions, '' when pages live at the root
+     * @param  array<string, array<string, string>>  $messages  extra public strings by locale, over the shipped ones
      */
     public static function renderPage(
         ParsedDocument $document,
@@ -64,8 +69,9 @@ final class Renderer
         string $base,
         RenderMode $mode,
         RenderHost $host,
+        array $messages = [],
     ): RenderedPage {
-        return (new self($catalog, $site, $page, $base, $mode, $host))->render($document->toArray());
+        return (new self($catalog, $site, $page, $base, $mode, $host, $messages))->render($document->toArray());
     }
 
     /** @param array{sections: list<array<string, mixed>>, modals?: ?list<array<string, mixed>>} $document */
