@@ -26,6 +26,9 @@ export default defineConfig(({ command, mode }) => {
             build: {
                 outDir: 'dist/standalone',
                 emptyOutDir: true,
+                // Library builds leave minifying to the app's bundler; this file is served as is.
+                minify: true,
+                rolldownOptions: { output: { minify: true } },
                 sourcemap: true,
                 lib: { entry: resolve(import.meta.dirname, 'src/element.ts'), formats: ['es'], fileName: () => 'lienzo-editor.js' },
             },
