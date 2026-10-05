@@ -23,6 +23,7 @@ jobs:
           cache: pnpm
           registry-url: https://registry.npmjs.org
       - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
       - name: Check the tag matches the package versions
         run: |
           for package in core editor; do
