@@ -59,8 +59,8 @@ final class LienzoManager
 
     /** @var array<string, array<string, string>> public page strings by locale, over the ones core ships */
     private array $messages = [
-        'en' => ['sent' => 'Thanks! We received your message.'],
-        'es' => ['sent' => '¡Gracias! Recibimos tu mensaje.'],
+        'en' => ['sent' => 'Thanks! We received your message.', 'formUnavailable' => 'This form is no longer available.'],
+        'es' => ['sent' => '¡Gracias! Recibimos tu mensaje.', 'formUnavailable' => 'Este formulario ya no está disponible.'],
     ];
 
     public function __construct(private readonly Container $container) {}

@@ -48,7 +48,8 @@ final class PublicController
             'slug' => ['nullable', 'string', 'max:120'],
             'source' => ['required', 'string', 'max:40'],
         ]);
-        $sent = $this->lienzo->message('sent', $site->settings()->locale);
+        $locale = $site->settings()->locale;
+        $sent = $this->lienzo->message('sent', $locale);
 
         // Bots fill the hidden field; they get the same answer and nothing is stored.
         if (filled($request->input('website'))) {
@@ -60,7 +61,7 @@ final class PublicController
             ->firstWhere('source', $data['source']);
 
         if ($form === null) {
-            throw ValidationException::withMessages(['source' => 'This form is no longer available.']);
+            throw ValidationException::withMessages(['source' => $this->lienzo->message('formUnavailable', $locale)]);
         }
 
         $fields = $form['fields'];

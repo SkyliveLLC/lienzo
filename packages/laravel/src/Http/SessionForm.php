@@ -44,10 +44,11 @@ final readonly class SessionForm implements FormHost
         return $message === '' ? null : $message;
     }
 
+    /** The flashed notice, or why a submission was refused as a whole (its form is gone), which no field shows. */
     public function notice(): ?string
     {
         $notice = $this->request->hasSession() ? $this->request->session()->get(self::NOTICE) : null;
 
-        return is_string($notice) ? $notice : null;
+        return is_string($notice) ? $notice : $this->error('source');
     }
 }

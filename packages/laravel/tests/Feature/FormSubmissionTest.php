@@ -110,6 +110,20 @@ it('accepts only the forms and fields of the published page', function (): void 
         ->and(array_column(Submission::query()->sole()->fields, 'name'))->toBe(['name', 'email', 'topic', 'message', 'consent']);
 });
 
+it('tells the visitor in the site language when the form was taken off the page', function (): void {
+    $site = Site::default();
+    $site->update(['locale' => 'es']);
+    $page = publishedPage($site, document(contactSection()));
+    $this->get('/')->assertOk();
+    $page->update(['published' => document(section('hero', [element('heading', 'title', ['text' => 'Hola'])]))]);
+
+    $this->from('/')->post('/lienzo/submit', ['slug' => '', 'source' => 'contact', 'fields' => ['name' => 'Ana', 'consent' => '1']])
+        ->assertRedirect('/');
+
+    $this->get('/')->assertSee('<p class="lz-notice" role="status">Este formulario ya no está disponible.</p>', false);
+    expect(Submission::query()->count())->toBe(0);
+});
+
 it('answers bots that fill the hidden field as if they succeeded, and stores nothing', function (): void {
     publishedPage(Site::default(), document(contactSection()));
 

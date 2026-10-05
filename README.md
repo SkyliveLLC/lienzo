@@ -147,7 +147,7 @@ Lienzo::action(
 Lienzo::siteFields(Field::text('phone', 'Phone number', max: 30));
 ```
 
-`Lienzo::head()` adds trusted markup to every page's `<head>`, and `Lienzo::messages()` overrides the public page strings per locale.
+`Lienzo::head()` adds trusted markup to every page's `<head>`, and `Lienzo::messages()` overrides the public page strings per locale, including the form replies `sent` and `formUnavailable`.
 
 ## Security model
 
