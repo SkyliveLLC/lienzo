@@ -1,0 +1,625 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "Ñandú/1",
+          "height": {
+            "desktop": 600,
+            "mobile": 700
+          },
+          "background": {
+            "type": "gradient",
+            "color": "#ffffff",
+            "gradient": {
+              "type": "radial",
+              "from": "secondary",
+              "to": "#123456",
+              "angle": 45
+            },
+            "overlay": 0.35
+          },
+          "elements": [
+            {
+              "id": "h",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 90,
+                  "h": 80
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {
+                "text": "Café con leche ☕ y más",
+                "level": 1,
+                "accent": " leche ☕ "
+              },
+              "style": {
+                "size": 40,
+                "accent_color": "primary"
+              }
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 130,
+                  "w": 90,
+                  "h": 40
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {
+                "text": "Sin acento",
+                "accent": "acento"
+              },
+              "style": {
+                "line_height": 1.25
+              }
+            },
+            {
+              "id": "b1",
+              "type": "button",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 180,
+                  "w": 20,
+                  "h": 40
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {
+                "label": "Ciudad",
+                "action": {
+                  "type": "page",
+                  "value": "  İstanbul Şehir--  "
+                }
+              },
+              "style": {}
+            },
+            {
+              "id": "b2",
+              "type": "button",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 30,
+                  "y": 180,
+                  "w": 20,
+                  "h": 40
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {
+                "label": "WhatsApp",
+                "action": {
+                  "type": "whatsapp",
+                  "value": "+57 (300) 111"
+                }
+              },
+              "style": {}
+            },
+            {
+              "id": "b3",
+              "type": "button",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 56,
+                  "y": 180,
+                  "w": 20,
+                  "h": 40
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {
+                "label": "Reservar",
+                "action": {
+                  "type": "booking",
+                  "value": null
+                }
+              },
+              "style": {}
+            },
+            {
+              "id": "b4",
+              "type": "button",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 80,
+                  "y": 180,
+                  "w": 15,
+                  "h": 40
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {
+                "label": "Nada",
+                "action": {
+                  "type": "unknown_app",
+                  "value": "x"
+                }
+              },
+              "style": {}
+            },
+            {
+              "id": "ic",
+              "type": "icon",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 230,
+                  "w": 5,
+                  "h": 40
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {
+                "icon": "heart",
+                "stroke": 1.5,
+                "action": {
+                  "type": "modal",
+                  "value": "pro mo"
+                }
+              },
+              "style": {
+                "color": "#ff0000"
+              }
+            },
+            {
+              "id": "i1",
+              "type": "image",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 280,
+                  "w": 33.3333,
+                  "h": 100
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {
+                "src": "media:1",
+                "alt": "Uno",
+                "shape": "blob"
+              },
+              "style": {
+                "object_fit": "contain"
+              }
+            },
+            {
+              "id": "i2",
+              "type": "image",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 40,
+                  "y": 280,
+                  "w": 20,
+                  "h": 100
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {
+                "src": "media:99"
+              },
+              "style": {}
+            },
+            {
+              "id": "i3",
+              "type": "image",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 64,
+                  "y": 280,
+                  "w": 20,
+                  "h": 100
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {
+                "src": "https://cdn.test/a.png?x=1&y=2"
+              },
+              "style": {}
+            },
+            {
+              "id": "v",
+              "type": "video",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 390,
+                  "w": 40,
+                  "h": 100
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {
+                "alt": "Demo",
+                "url": "https://youtu.be/dQw4w9WgXcQ"
+              },
+              "style": {}
+            },
+            {
+              "id": "d",
+              "type": "divider",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 50,
+                  "y": 390,
+                  "w": 40,
+                  "h": 2
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {},
+              "style": {
+                "border_width": 0,
+                "opacity": 0,
+                "shadow": "none",
+                "blur": 0,
+                "rotate": 0,
+                "visible_on": "all",
+                "hover": "none"
+              }
+            },
+            {
+              "id": "sh",
+              "type": "shape",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": -0.0005,
+                  "y": 1.0005,
+                  "w": 99.9995,
+                  "h": 2.675
+                },
+                "mobile": {
+                  "x": 5,
+                  "y": 10,
+                  "w": 90,
+                  "h": 50
+                }
+              },
+              "props": {
+                "shape": "triangle"
+              },
+              "style": {
+                "gradient": {
+                  "from": "primary",
+                  "to": "#00ff00"
+                },
+                "rotate": -0.0005,
+                "flip_x": true,
+                "clip": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "contact",
+          "height": {
+            "desktop": 600,
+            "mobile": 700
+          },
+          "background": {
+            "type": "image",
+            "color": "#000000",
+            "image": "media:1",
+            "parallax": true
+          },
+          "elements": [
+            {
+              "id": "email",
+              "type": "input",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 40,
+                  "h": 60
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": " Correo ",
+                "placeholder": "",
+                "required": true,
+                "input_type": "email"
+              },
+              "style": {}
+            },
+            {
+              "id": "agree",
+              "type": "checkbox",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 40,
+                  "h": 60
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto"
+              },
+              "style": {}
+            },
+            {
+              "id": "topic",
+              "type": "select",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 40,
+                  "h": 60
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Tema",
+                "placeholder": "",
+                "options": [
+                  "A",
+                  "B"
+                ]
+              },
+              "style": {}
+            },
+            {
+              "id": "msg",
+              "type": "textarea",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 40,
+                  "h": 60
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Mensaje",
+                "placeholder": "Escribe"
+              },
+              "style": {}
+            },
+            {
+              "id": "send",
+              "type": "button",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 40,
+                  "h": 60
+                },
+                "mobile": null
+              },
+              "props": {
+                "action": {
+                  "type": "submit"
+                }
+              },
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "tab-a",
+          "group": {
+            "id": "g1",
+            "type": "tabs",
+            "label": ""
+          },
+          "height": {
+            "desktop": 600,
+            "mobile": 700
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "ta",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 40,
+                  "h": 60
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "A"
+              },
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "tab-b",
+          "group": {
+            "id": "g1",
+            "label": "  "
+          },
+          "height": {
+            "desktop": 600,
+            "mobile": 700
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "tb",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 40,
+                  "h": 60
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "B"
+              },
+              "style": {}
+            }
+          ]
+        }
+      ],
+      "modals": [
+        {
+          "id": "promo",
+          "title": "Promo & más",
+          "size": "custom",
+          "show_title": false,
+          "width": 480,
+          "height": {
+            "desktop": 300,
+            "mobile": 360
+          },
+          "background": {
+            "type": "color",
+            "color": "#fafafa"
+          },
+          "elements": [
+            {
+              "id": "pname",
+              "type": "input",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 40,
+                  "h": 60
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre"
+              },
+              "style": {}
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Sitio \"Demo\"",
+      "locale": "es-MX",
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Playfair Display",
+        "body_font": "Inter",
+        "radius": 0,
+        "max_width": 1440
+      },
+      "seo": {
+        "title": "Fallback title",
+        "description": "Desc & \"quotes\""
+      },
+      "favicon": "https://demo.test/favicon.png",
+      "og_image": "media:4"
+    }
+  }
+}

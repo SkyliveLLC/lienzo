@@ -1,0 +1,27 @@
+.lz-page{--primary:#2563eb;--secondary:#0f172a;--background:#ffffff;--surface:#f8fafc;--text:#0f172a;--muted:#64748b;--radius:0px;--max-width:1440px;--ref:1440;--font-heading:'Playfair Display', system-ui, sans-serif;--font-body:'Inter', system-ui, sans-serif}
+#s-and1{--fh:600;--fmh:700;--sg1:var(--secondary);--sg2:#123456;--sga:45;--ov:0.35}
+#e-h{--x:4;--y:40;--w:90;--h:80;--mx:5;--my:10;--mw:90;--mh:50;--z:1;--fs:40;--ac:var(--primary)}
+#e-t{--x:4;--y:130;--w:90;--h:40;--mx:5;--my:10;--mw:90;--mh:50;--z:1;--lh:1.25}
+#e-b1{--x:4;--y:180;--w:20;--h:40;--mx:5;--my:10;--mw:90;--mh:50;--z:1}
+#e-b2{--x:30;--y:180;--w:20;--h:40;--mx:5;--my:10;--mw:90;--mh:50;--z:1}
+#e-b3{--x:56;--y:180;--w:20;--h:40;--mx:5;--my:10;--mw:90;--mh:50;--z:1}
+#e-b4{--x:80;--y:180;--w:15;--h:40;--mx:5;--my:10;--mw:90;--mh:50;--z:1}
+#e-ic{--x:4;--y:230;--w:5;--h:40;--mx:5;--my:10;--mw:90;--mh:50;--z:1;--c:#ff0000}
+#e-i1{--x:4;--y:280;--w:33.333;--h:100;--mx:5;--my:10;--mw:90;--mh:50;--z:1}
+#e-i2{--x:40;--y:280;--w:20;--h:100;--mx:5;--my:10;--mw:90;--mh:50;--z:1}
+#e-i3{--x:64;--y:280;--w:20;--h:100;--mx:5;--my:10;--mw:90;--mh:50;--z:1}
+#e-v{--x:4;--y:390;--w:40;--h:100;--mx:5;--my:10;--mw:90;--mh:50;--z:1}
+#e-d{--x:50;--y:390;--w:40;--h:2;--mx:5;--my:10;--mw:90;--mh:50;--z:1;--op:0}
+#e-sh{--x:-0.001;--y:1.001;--w:100;--h:2.675;--mx:5;--my:10;--mw:90;--mh:50;--z:1;--g1:var(--primary);--g2:#00ff00;--rot:-0.001}
+#s-contact{--fh:600;--fmh:700}
+#e-email{--x:4;--y:40;--w:40;--h:60;--ord:1;--z:1}
+#e-agree{--x:4;--y:40;--w:40;--h:60;--ord:2;--z:1}
+#e-topic{--x:4;--y:40;--w:40;--h:60;--ord:3;--z:1}
+#e-msg{--x:4;--y:40;--w:40;--h:60;--ord:4;--z:1}
+#e-send{--x:4;--y:40;--w:40;--h:60;--ord:5;--z:1}
+#s-tab-a{--fh:600;--fmh:700;--sbg:var(--background)}
+#e-ta{--x:4;--y:40;--w:40;--h:60;--ord:1;--z:1}
+#s-tab-b{--fh:600;--fmh:700;--sbg:var(--background)}
+#e-tb{--x:4;--y:40;--w:40;--h:60;--ord:1;--z:1}
+#m-promo{--dw:480;--dbg:#fafafa;--fh:300;--fmh:360}
+#e-pname{--x:4;--y:40;--w:40;--h:60;--ord:1;--z:1}
