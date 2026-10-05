@@ -218,7 +218,8 @@ export const isCoreElement = (element: Element): element is CoreElement => isCor
 
 export type Issue = {
     path: string;
-    code: 'type' | 'range' | 'pattern' | 'enum' | 'size' | 'required';
+    /** `unique`: another record already uses the value (a page slug). Parsing never reports it; backends do. */
+    code: 'type' | 'range' | 'pattern' | 'enum' | 'size' | 'required' | 'unique';
     message: string;
 };
 

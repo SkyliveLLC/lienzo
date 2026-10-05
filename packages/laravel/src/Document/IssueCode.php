@@ -12,4 +12,6 @@ enum IssueCode: string
     case Enum = 'enum';
     case Size = 'size';
     case Required = 'required';
+    /** Another record already uses the value (a page slug). Parsing never reports it; the editor routes do. */
+    case Unique = 'unique';
 }
