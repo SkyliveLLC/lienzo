@@ -7,3 +7,4 @@ todo.md
 .phpunit.cache
 composer.lock
 design/
+scripts/parity/out
