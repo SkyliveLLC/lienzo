@@ -48,11 +48,11 @@ final class PublicController
             'slug' => ['nullable', 'string', 'max:120'],
             'source' => ['required', 'string', 'max:40'],
         ]);
-        $sent = back()->with(SessionForm::NOTICE, $this->lienzo->message('sent', $site->settings()->locale));
+        $sent = $this->lienzo->message('sent', $site->settings()->locale);
 
         // Bots fill the hidden field; they get the same answer and nothing is stored.
         if (filled($request->input('website'))) {
-            return $sent;
+            return back()->with(SessionForm::NOTICE, $sent);
         }
 
         $page = $site->pages()->published()->where('published_slug', $data['slug'] ?? '')->first();
@@ -83,7 +83,7 @@ final class PublicController
             'ip' => $request->ip(),
         ]);
 
-        return $sent;
+        return back()->with(SessionForm::NOTICE, $sent);
     }
 
     public function media(Request $request, AssetLibrary $library): StreamedResponse

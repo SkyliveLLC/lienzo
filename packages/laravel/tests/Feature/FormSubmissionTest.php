@@ -91,7 +91,8 @@ it('sends the visitor back with their input and the errors', function (): void {
 
     $this->get('/')
         ->assertSee('<em class="lz-field-error">The Your name field is required.</em>', false)
-        ->assertSee('value="not-an-email"', false);
+        ->assertSee('value="not-an-email"', false)
+        ->assertDontSee('class="lz-notice"', false);
     expect(Submission::query()->count())->toBe(0);
 });
 
