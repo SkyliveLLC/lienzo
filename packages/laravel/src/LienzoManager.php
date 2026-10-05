@@ -259,6 +259,24 @@ final class LienzoManager
         }
     }
 
+    /**
+     * The editor bundle's URL, for apps that render `<lienzo-editor>`
+     * themselves (Inertia, an SPA): `lienzo.editor_url` when set, else the
+     * editor route with a content hash, so it caches for good.
+     */
+    public function editorScriptUrl(): string
+    {
+        $base = config('lienzo.editor_url');
+
+        if (is_string($base) && $base !== '') {
+            return rtrim($base, '/').'/lienzo-editor.js';
+        }
+
+        $path = Assets::path('editor/lienzo-editor.js');
+
+        return Routes::url('lienzo.editor.bundle', ['v' => is_file($path) ? hash_file('xxh3', $path) : null]);
+    }
+
     /** A public page string in a locale, the app's over the shipped one. */
     public function message(string $key, string $locale): string
     {

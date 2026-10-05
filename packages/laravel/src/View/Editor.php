@@ -7,7 +7,7 @@ namespace Skylive\Lienzo\View;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\View\Component;
-use Skylive\Lienzo\Assets;
+use Skylive\Lienzo\Facades\Lienzo;
 use Skylive\Lienzo\Http\Routes;
 use Skylive\Lienzo\Models\Site;
 
@@ -26,22 +26,8 @@ final class Editor extends Component
         return view('lienzo::editor', [
             'endpoint' => Routes::url('lienzo.editor', ['lienzoSite' => $this->site]),
             'editorLocale' => $this->locale ?? config('lienzo.locale'),
-            'script' => $this->bundle(),
+            'script' => Lienzo::editorScriptUrl(),
             'nonce' => Vite::cspNonce(),
         ]);
-    }
-
-    /** The bundle's URL: `lienzo.editor_url` when set, else the editor route with a content hash to bust caches. */
-    private function bundle(): string
-    {
-        $base = config('lienzo.editor_url');
-
-        if (is_string($base) && $base !== '') {
-            return rtrim($base, '/').'/lienzo-editor.js';
-        }
-
-        $path = Assets::path('editor/lienzo-editor.js');
-
-        return Routes::url('lienzo.editor.bundle', ['v' => is_file($path) ? hash_file('xxh3', $path) : null]);
     }
 }

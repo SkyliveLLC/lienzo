@@ -65,6 +65,33 @@ Lienzo supports Laravel 12 and 13 on PHP 8.3 or later, with the `gd`, `dom`, and
 
 Open the admin page. The editor asks for a first page. Leave its address empty to make it the home page, then click **Publish**.
 
+### Inertia or a single-page app
+
+`<x-lienzo::editor>` is a Blade component. On an Inertia or single-page app page, render the `<lienzo-editor>` element yourself and load the bundle from `Lienzo::editorScriptUrl()`, which honors `editor_url` and busts caches the way the component does:
+
+```php
+return Inertia::render('SiteEditor', [
+    'editorScript' => Lienzo::editorScriptUrl(),
+    'endpoint' => route('lienzo.editor', ['lienzoSite' => $site]),
+]);
+```
+
+```vue
+<script setup lang="ts">
+import { onMounted } from 'vue';
+
+const props = defineProps<{ editorScript: string; endpoint: string }>();
+
+onMounted(() => import(/* @vite-ignore */ props.editorScript));
+</script>
+
+<template>
+    <lienzo-editor :endpoint="endpoint" locale="en" style="display: block; height: 100vh" />
+</template>
+```
+
+Tell Vue that `lienzo-editor` is a custom element, with `isCustomElement: (tag) => tag.startsWith('lienzo-')` in the Vue plugin's `template.compilerOptions`.
+
 ### One site per team or tenant
 
 `Site::default()` is the single site of a single-site app. If your app has one site per team or tenant, add the `HasLienzoSite` trait to the owner model, use `Site::forOwner($team)` on the admin page, and tell Lienzo which site a public request is for:

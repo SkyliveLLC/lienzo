@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Skylive\Lienzo\Assets;
+use Skylive\Lienzo\Facades\Lienzo;
 use Skylive\Lienzo\Models\Site;
 
 it('renders the editor element pointed at the site', function (): void {
@@ -23,4 +24,12 @@ it('loads the bundle from the configured URL instead', function (): void {
     expect((string) $this->blade('<x-lienzo::editor :site="$site" />', ['site' => Site::default()]))
         ->toContain('src="https://cdn.example/lienzo/lienzo-editor.js"')
         ->toContain('locale="en"');
+});
+
+it('gives apps that render the element themselves the same bundle URL', function (): void {
+    expect(Lienzo::editorScriptUrl())->toBe('http://localhost/admin/site/lienzo-editor.js?v='.hash_file('xxh3', Assets::path('editor/lienzo-editor.js')));
+
+    config(['lienzo.editor_url' => 'https://cdn.example/lienzo/']);
+
+    expect(Lienzo::editorScriptUrl())->toBe('https://cdn.example/lienzo/lienzo-editor.js');
 });
