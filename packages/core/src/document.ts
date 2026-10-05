@@ -210,9 +210,12 @@ export type Issue = {
 };
 
 export class DocumentError extends Error {
-    constructor(readonly issues: Issue[]) {
+    readonly issues: Issue[];
+
+    constructor(issues: Issue[]) {
         super(`Invalid document: ${issues.slice(0, 3).map((issue) => `${issue.path} ${issue.message}`).join('; ')}`);
         this.name = 'DocumentError';
+        this.issues = issues;
     }
 }
 
@@ -357,8 +360,6 @@ function legacyText(modalId: string, value: unknown): unknown[] {
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
     typeof value === 'object' && value !== null && !Array.isArray(value);
-
-// ───────────────────────────── Site settings ─────────────────────────────
 
 /** Fonts reach `font-family` and the Google Fonts URL, so the pattern is the injection guard. */
 const font = z.string().regex(/^[A-Za-z0-9 ]{1,60}$/);

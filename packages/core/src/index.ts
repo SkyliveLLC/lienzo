@@ -27,3 +27,9 @@ export type {
 } from './document.ts';
 export { emptyCatalog } from './catalog.ts';
 export type { ActionSpec, Catalog, ElementSpec, Field, Localized, StyleGroup } from './catalog.ts';
+export { formFields } from './canvas.ts';
+export type { FormField, FormSpec } from './canvas.ts';
+export { trustedHtml } from './html.ts';
+export type { TrustedHtml } from './html.ts';
+export { renderPage } from './render.ts';
+export type { FormHost, Link, MediaFile, Meta, PageInfo, RenderedPage, RenderHost, RenderInput } from './render.ts';
