@@ -524,6 +524,23 @@ export const en = {
     'pageTemplate.simple.note': 'Hero, features and a contact form',
     'pageTemplate.landing': 'Single offer',
     'pageTemplate.landing.note': 'Hero, call to action and a form',
+
+    // Panels and dialogs
+    'position.x': 'X',
+    'position.y': 'Y',
+    'style.font': 'Font',
+    'style.align': 'Text alignment',
+    'gradient.presets': 'Suggested gradients',
+    'action.target': 'Destination',
+    'action.unknown': 'Unavailable action ({type})',
+    'el.linkN': 'Link {n}',
+    'el.videoPlaceholder': 'https://youtu.be/…',
+    'el.iconOptions': 'Available icons',
+    'page.homeHint': "The home page lives at the root of the site, so its address doesn't change and it can't be deleted.",
+    'section.anchorInvalid': 'Use letters, numbers, - or _, and an id no other section or modal has.',
+    'newPage.slugFallback': 'address',
+    'theme.hex': '{label}, hex code',
+    'site.localeHint': 'Two letters, optionally with the country: en, es, pt-BR.',
 };
 
 export type MessageKey = keyof typeof en;

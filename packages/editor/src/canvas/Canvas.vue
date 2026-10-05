@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Box } from '@skylive/lienzo-core';
-import { computed, nextTick, onBeforeUnmount, onMounted, ref, shallowRef, watch } from 'vue';
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, shallowRef, toRaw, watch } from 'vue';
 import { boxOf, canvasHeight, findCanvas, stacksOnMobile, type Device } from '../model/document.ts';
 import { anchorsOf, clamp, dragBox, snapToAnchors, type Anchors, type Guides, type Handle } from '../model/geometry.ts';
 import { fontsHref } from '../model/theme.ts';
@@ -73,7 +73,8 @@ async function render() {
     rendering = true;
 
     try {
-        const draft = editor.state.draft;
+        // Raw data: parsing walks every value, and the deep watcher already tracks changes.
+        const draft = toRaw(editor.state.draft);
         const result = await renderDraft(draft, context(), 'edit');
 
         if (!result.ok) {

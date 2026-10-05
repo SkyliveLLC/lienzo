@@ -16,9 +16,10 @@
 
 .lze-overlay { position: absolute; inset: 0; pointer-events: none; --line: calc(1px * var(--inv)); }
 .lze-overlay > * { position: absolute; }
-.lze-canvas-outline { outline: calc(2px * var(--inv)) solid var(--lze-select); outline-offset: calc(-2px * var(--inv)); }
+.lze-canvas-outline { outline: calc(2px * var(--inv)) solid var(--lze-select); outline-offset: calc(-2px * var(--inv)); box-shadow: inset 0 0 0 calc(4px * var(--inv)) rgb(255 255 255 / .7); }
 .lze-hover { outline: var(--line) solid var(--lze-select); }
-.lze-selection { outline: calc(2px * var(--inv)) solid var(--lze-select); outline-offset: var(--line); }
+/* A white halo keeps the blue line visible on a blue site. */
+.lze-selection { outline: calc(2px * var(--inv)) solid var(--lze-select); outline-offset: var(--line); box-shadow: 0 0 0 calc(4px * var(--inv)) rgb(255 255 255 / .7); }
 .lze-selection[data-locked='true'] { outline-style: dashed; }
 .lze-lock { position: absolute; top: calc(-18px * var(--inv)); right: 0; width: calc(12px * var(--inv)); height: calc(12px * var(--inv)); color: var(--lze-select); }
 .lze-handles { pointer-events: none; }

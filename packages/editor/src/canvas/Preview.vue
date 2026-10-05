@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref, shallowRef, watch } from 'vue';
+import { onBeforeUnmount, onMounted, ref, shallowRef, toRaw, watch } from 'vue';
 import { clamp } from '../model/geometry.ts';
 import { useEditor } from '../state/editor.ts';
 import { renderDraft } from './render.ts';
@@ -16,7 +16,7 @@ const size = ref({ width: 0, height: 0 });
 let observer: ResizeObserver | null = null;
 
 async function render() {
-    const result = await renderDraft(editor.state.draft, {
+    const result = await renderDraft(toRaw(editor.state.draft), {
         catalog: editor.catalog.value,
         site: editor.site.value,
         assets: editor.state.workspace.assets,

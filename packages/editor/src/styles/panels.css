@@ -1,0 +1,67 @@
+/* Settings panels and dialogs. */
+.lze-panel-title { font-size: 13px; font-weight: 650; }
+.lze-grow { flex: 1; min-width: 0; }
+.lze-nowrap { flex-wrap: nowrap; }
+.lze-divided { padding-top: 12px; border-top: 1px solid var(--lze-border); }
+
+.lze-image-preview { overflow: hidden; border: 1px solid var(--lze-border); border-radius: var(--lze-radius); background: var(--lze-bg); }
+.lze-image-preview img { display: block; width: 100%; height: 96px; object-fit: contain; }
+.lze-image-preview[data-thumb='icon'] { width: fit-content; padding: 6px; }
+.lze-image-preview[data-thumb='icon'] img { width: 40px; height: 40px; }
+
+.lze-tabs-inline { display: flex; gap: 4px; padding: 3px; border-radius: var(--lze-radius); background: var(--lze-bg); }
+.lze-tabs-inline button { flex: 1; padding: 5px 8px; border: 0; border-radius: 6px; background: transparent; color: var(--lze-muted); font-size: 12px; font-weight: 500; cursor: pointer; }
+.lze-tabs-inline button:hover { color: var(--lze-fg); }
+.lze-tabs-inline button[aria-pressed='true'] { background: var(--lze-panel); color: var(--lze-fg); box-shadow: 0 1px 2px rgb(15 23 42 / .08); }
+
+.lze-gradient-presets { display: flex; flex-wrap: wrap; gap: 6px; }
+.lze-gradient-preset { width: 48px; height: 28px; padding: 0; border: 1px solid rgb(15 23 42 / .12); border-radius: 6px; cursor: pointer; }
+.lze-gradient-preset:hover { outline: 2px solid var(--lze-fg); outline-offset: 1px; }
+
+.lze-link-card { display: grid; gap: 8px; margin: 0; padding: 8px; border: 1px solid var(--lze-border); border-radius: var(--lze-radius); }
+.lze-link-card legend { padding: 0 4px; font-size: 11px; color: var(--lze-muted); }
+
+.lze-icon-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; max-height: 192px; padding: 6px; overflow-y: auto; border: 1px solid var(--lze-border); border-radius: var(--lze-radius); }
+.lze-icon-grid .lze-hint { grid-column: 1 / -1; padding: 8px 0; text-align: center; }
+.lze-icon-choice { display: grid; place-items: center; aspect-ratio: 1; padding: 0; border: 0; border-radius: 6px; background: transparent; color: var(--lze-muted); cursor: pointer; }
+.lze-icon-choice:hover { background: var(--lze-hover); color: var(--lze-fg); }
+.lze-icon-choice[aria-pressed='true'] { background: var(--lze-active); color: var(--lze-fg); }
+
+.lze-slug { display: flex; align-items: center; gap: 6px; font-family: ui-monospace, monospace; color: var(--lze-muted); }
+.lze-slug-static { display: flex; gap: 6px; padding: 6px 8px; border: 1px solid var(--lze-border); border-radius: 6px; color: var(--lze-muted); }
+.lze-slug-root { font-family: ui-monospace, monospace; }
+.lze-choice { display: grid; gap: 2px; padding: 8px 10px; border: 1px solid var(--lze-border); border-radius: var(--lze-radius); background: var(--lze-panel); color: inherit; text-align: left; cursor: pointer; }
+.lze-choice:hover { border-color: var(--lze-fg); background: var(--lze-hover); }
+.lze-shortcuts { display: grid; gap: 4px; margin: 0; padding-left: 16px; }
+
+.lze-rows { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.lze-row-item { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 12px; border: 1px solid var(--lze-border); border-radius: var(--lze-radius); }
+
+.lze-palette-choice { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border: 1px solid var(--lze-border); border-radius: var(--lze-radius); background: var(--lze-panel); color: inherit; cursor: pointer; }
+.lze-palette-choice:hover { border-color: var(--lze-fg); background: var(--lze-hover); }
+.lze-palette-choice .lze-row { gap: 3px; }
+.lze-dot { width: 14px; height: 14px; border-radius: 999px; border: 1px solid rgb(15 23 42 / .12); }
+.lze-theme-colors { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; }
+.lze-theme-color { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid var(--lze-border); border-radius: var(--lze-radius); }
+.lze-theme-color span { flex: 1; }
+.lze-theme-color .lze-hex { width: 84px; min-height: 28px; padding: 3px 6px; font-family: ui-monospace, monospace; font-size: 12px; }
+.lze-theme-color input[type='color'] { width: 32px; height: 32px; padding: 0; border: 1px solid var(--lze-border); border-radius: 6px; background: none; cursor: pointer; }
+.lze-theme-preview { display: grid; gap: 10px; padding: 20px; border: 1px solid var(--lze-border); }
+.lze-theme-preview-heading { font-size: 24px; font-weight: 700; line-height: 1.2; }
+.lze-theme-preview-button { width: fit-content; padding: 8px 16px; font-weight: 600; }
+
+.lze-file-input { display: none; }
+.lze-asset-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.lze-upload-tile {
+    display: grid; place-items: center; align-content: center; gap: 4px; height: 128px; padding: 8px;
+    border: 2px dashed var(--lze-border); border-radius: var(--lze-radius); background: var(--lze-panel); color: var(--lze-muted); text-align: center; cursor: pointer;
+}
+.lze-upload-tile:hover:not(:disabled) { border-color: var(--lze-fg); color: var(--lze-fg); }
+.lze-upload-tile:disabled { cursor: progress; }
+.lze-asset { position: relative; height: 128px; margin: 0; overflow: hidden; border: 1px solid var(--lze-border); border-radius: var(--lze-radius); }
+.lze-asset:hover { border-color: var(--lze-fg); }
+.lze-asset-use { display: flex; flex-direction: column; width: 100%; height: 100%; padding: 0; border: 0; background: var(--lze-bg); color: inherit; cursor: pointer; }
+.lze-asset-use img { flex: 1; min-height: 0; width: 100%; object-fit: contain; }
+.lze-asset-use figcaption { padding: 4px 8px; overflow: hidden; background: var(--lze-panel); font-size: 11px; color: var(--lze-muted); text-align: left; white-space: nowrap; text-overflow: ellipsis; }
+.lze-asset .lze-asset-delete { position: absolute; top: 6px; right: 6px; width: 28px; height: 28px; background: rgb(255 255 255 / .92); opacity: 0; }
+.lze-asset:hover .lze-asset-delete, .lze-asset .lze-asset-delete:focus-visible { opacity: 1; }
