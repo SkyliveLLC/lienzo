@@ -80,6 +80,7 @@ function choosePage(event: Event) {
                 {{ editor.state.previewing ? t('toolbar.edit') : t('toolbar.preview') }}
             </Button>
             <Button v-if="page?.versions.length" variant="ghost" :title="t('toolbar.versionsHint')" @click="editor.state.dialog = 'versions'"><History :size="16" aria-hidden="true" />{{ t('toolbar.versions') }}</Button>
+            <Button variant="ghost" :title="t('toolbar.submissionsHint')" @click="editor.state.dialog = 'submissions'">{{ t('toolbar.submissions') }}</Button>
             <Button variant="ghost" @click="editor.state.dialog = 'theme'">{{ t('toolbar.theme') }}</Button>
             <Button variant="ghost" :title="t('toolbar.siteHint')" @click="editor.state.dialog = 'site'">{{ t('toolbar.site') }}</Button>
             <a v-if="publicUrl" class="lze-btn" :href="publicUrl" target="_blank" rel="noopener noreferrer">{{ t('toolbar.viewSite') }}</a>

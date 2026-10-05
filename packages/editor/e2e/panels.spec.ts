@@ -130,5 +130,17 @@ test('saves site details the app declared', async ({ editor, page }) => {
 
     const workspace = await (await page.request.get('/api/')).json();
     expect(workspace.meta.hours).toBe('Monday to Friday');
-    void editor;
+    await expect(editor.frame).toBeVisible();
+});
+
+test('reads form messages a page at a time', async ({ editor, page }) => {
+    await expect(editor.frame).toBeVisible();
+    await page.getByRole('button', { name: 'Messages' }).click();
+    const dialog = page.getByRole('dialog', { name: 'Form messages' });
+    await expect(dialog.locator('.lze-submission')).toHaveCount(2);
+    await expect(dialog).toContainText('Do you ship abroad?');
+
+    await dialog.getByRole('button', { name: 'Load more' }).click();
+    await expect(dialog.locator('.lze-submission')).toHaveCount(3);
+    await expect(dialog.getByRole('button', { name: 'Load more' })).toBeHidden();
 });

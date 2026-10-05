@@ -62,7 +62,7 @@ export type Selection =
     | { kind: 'canvas'; canvas: string }
     | { kind: 'elements'; canvas: string; ids: string[]; active: string };
 
-export type Dialog = 'newPage' | 'versions' | 'theme' | 'site' | 'conflict' | null;
+export type Dialog = 'newPage' | 'versions' | 'theme' | 'site' | 'submissions' | 'conflict' | null;
 
 export type Toast = { id: number; tone: 'info' | 'error'; text: string };
 

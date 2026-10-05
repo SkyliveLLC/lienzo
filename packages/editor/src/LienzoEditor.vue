@@ -7,6 +7,7 @@ import ConflictDialog from './dialogs/ConflictDialog.vue';
 import MediaLibrary from './dialogs/MediaLibrary.vue';
 import NewPageDialog from './dialogs/NewPageDialog.vue';
 import SiteDialog from './dialogs/SiteDialog.vue';
+import SubmissionsDialog from './dialogs/SubmissionsDialog.vue';
 import ThemeDialog from './dialogs/ThemeDialog.vue';
 import VersionsDialog from './dialogs/VersionsDialog.vue';
 import { createTranslator, type MessageOverrides } from './i18n/index.ts';
@@ -117,6 +118,7 @@ onBeforeUnmount(() => {
         <VersionsDialog />
         <ThemeDialog />
         <SiteDialog />
+        <SubmissionsDialog />
         <ConflictDialog />
         <MediaLibrary />
         <Toasts />

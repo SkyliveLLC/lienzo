@@ -76,3 +76,56 @@ test('edits text in place and undoes it', async ({ editor, page }) => {
     await page.keyboard.press('ControlOrMeta+z');
     await expect(heading).toHaveText('Build something people remember');
 });
+
+test('shift-click selects several elements and aligns them together', async ({ editor, page }) => {
+    const hero = editor.canvas.locator('section.lz-section').first();
+    await hero.locator('h1.lz-el').click();
+    await hero.locator('a.lz-el').click({ modifiers: ['Shift'] });
+    await expect(page.locator('.lze-right')).toContainText('2 elements selected');
+
+    await page.locator('.lze-right').getByRole('button', { name: 'Align right' }).click();
+    await editor.waitForSave();
+    const draft = await editor.draft();
+    // The joint box spans 6%..46% (the heading); the button moves to end at 46%.
+    expect(desktopBox(draft, 0, 'button')?.x).toBe(30);
+    expect(desktopBox(draft, 0, 'heading')?.x).toBe(6);
+});
+
+test('keyboard duplicates, nudges and deletes the selection', async ({ editor, page }) => {
+    const hero = editor.canvas.locator('section.lz-section').first();
+    await hero.locator('a.lz-el').click();
+    await page.keyboard.press('ControlOrMeta+d');
+    await expect(hero.locator('a.lz-el')).toHaveCount(2);
+
+    await page.keyboard.press('Shift+ArrowRight');
+    await editor.waitForSave();
+    expect(desktopBox(await editor.draft(), 0, 'button', 1)).toEqual({ x: 11, y: 480, w: 16, h: 54 });
+
+    await page.keyboard.press('Delete');
+    await expect(hero.locator('a.lz-el')).toHaveCount(1);
+});
+
+test('a locked element does not move, and rotating follows the handle', async ({ editor, page }) => {
+    const heading = editor.canvas.locator('h1.lz-el');
+    await page.getByRole('tab', { name: 'Layers' }).click();
+    await page.locator('.lze-layer-row', { hasText: 'Build something people' }).getByRole('button', { name: 'Lock' }).click();
+    await editor.drag(await editor.center(heading), { x: 100, y: 100 });
+    await editor.waitForSave();
+    expect(desktopBox(await editor.draft(), 0, 'heading')).toEqual({ x: 6, y: 140, w: 40, h: 180 });
+
+    await page.locator('.lze-layer-row', { hasText: 'Build something people' }).getByRole('button', { name: 'Unlock' }).click();
+    await heading.click();
+    const handle = page.locator('.lze-rotate');
+    const center = await editor.center(heading);
+    const start = await editor.center(handle);
+    await page.mouse.move(start.x, start.y);
+    await page.mouse.down();
+    // A quarter turn clockwise around the element's center, snapped to 15° with Shift.
+    await page.keyboard.down('Shift');
+    await page.mouse.move(center.x - (start.y - center.y), center.y + (start.x - center.x), { steps: 10 });
+    await page.mouse.up();
+    await page.keyboard.up('Shift');
+
+    await editor.waitForSave();
+    expect((await editor.draft()).sections[0]!.elements.find((element) => element.type === 'heading')?.style.rotate).toBe(90);
+});

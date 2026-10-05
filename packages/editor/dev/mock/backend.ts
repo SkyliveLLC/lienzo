@@ -19,10 +19,10 @@ import {
     type Parsed,
     type SiteSettings,
 } from '@skylive/lienzo-core';
-import type { Asset, PageState, PageVersion, SiteMeta, SiteUpdate, Workspace } from '@skylive/lienzo-core/protocol';
+import type { Asset, PageState, PageVersion, SiteMeta, SiteUpdate, Submission, Workspace } from '@skylive/lienzo-core/protocol';
 import { buildPageTemplate } from '../../src/model/templates.ts';
 
-export type MockRequest = { method: string; path: string; json: unknown; file: File | null };
+export type MockRequest = { method: string; path: string; query: URLSearchParams; json: unknown; file: File | null };
 export type MockResponse = { status: number; json?: unknown; bytes?: Uint8Array; type?: string; html?: string };
 
 export const catalog: Catalog = {
@@ -80,6 +80,7 @@ export function createBackend(options: { publicUrl: string; latency?: number }) 
     let meta: SiteMeta;
     let pages: StoredPage[];
     let assets: StoredAsset[];
+    let submissions: Submission[];
 
     function reset() {
         ids = 100;
@@ -91,6 +92,10 @@ export function createBackend(options: { publicUrl: string; latency?: number }) 
             { id: 2, slug: 'pricing', title: 'Pricing', seo: { title: null, description: null }, draft: withPluginGone(buildPageTemplate('landing')), revision: 1, published: null, publishedAt: null, versions: [] },
         ];
         assets = [];
+        submissions = [3, 2, 1].map((n) => ({
+            id: n, page: '', source: 'contact', createdAt: new Date(Date.UTC(2026, 0, n, 9)).toISOString(),
+            fields: { name: `Visitor ${n}`, message: n === 3 ? 'Do you ship abroad?\nThanks!' : 'Hello' },
+        }));
     }
 
     reset();
@@ -316,8 +321,12 @@ export function createBackend(options: { publicUrl: string; latency?: number }) 
 
                 return ok(Object.fromEntries(elements.map((element) => [String(element.id), renderPricing(record(element.props))])));
             }
-            case 'GET /submissions':
-                return ok({ data: [], next: null });
+            case 'GET /submissions': {
+                const from = Number(request.query.get('cursor') ?? 0);
+                const next = from + 2 < submissions.length ? String(from + 2) : null;
+
+                return ok({ data: submissions.slice(from, from + 2), next });
+            }
             default:
                 return missing();
         }

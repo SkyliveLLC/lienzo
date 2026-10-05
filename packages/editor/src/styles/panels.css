@@ -65,3 +65,8 @@
 .lze-asset-use figcaption { padding: 4px 8px; overflow: hidden; background: var(--lze-panel); font-size: 11px; color: var(--lze-muted); text-align: left; white-space: nowrap; text-overflow: ellipsis; }
 .lze-asset .lze-asset-delete { position: absolute; top: 6px; right: 6px; width: 28px; height: 28px; background: rgb(255 255 255 / .92); opacity: 0; }
 .lze-asset:hover .lze-asset-delete, .lze-asset .lze-asset-delete:focus-visible { opacity: 1; }
+
+.lze-submission { display: grid; gap: 6px; padding: 10px 0; border-bottom: 1px solid var(--lze-border); }
+.lze-submission dl { display: grid; grid-template-columns: minmax(96px, max-content) 1fr; gap: 4px 12px; margin: 0; }
+.lze-submission dt { color: var(--lze-muted); }
+.lze-submission dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }

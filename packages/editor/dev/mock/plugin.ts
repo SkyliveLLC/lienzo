@@ -46,6 +46,7 @@ export function mockBackend(options: { latency?: number } = {}): Plugin {
         const response = await instance(url).handle({
             method,
             path: url.pathname.slice('/api'.length) || '/',
+            query: url.searchParams,
             json: text ? JSON.parse(text) : null,
             file: file instanceof File ? file : null,
         });

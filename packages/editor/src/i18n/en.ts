@@ -229,6 +229,14 @@ export const en = {
     'newPage.create': 'Create page',
 
     // Versions
+    'toolbar.submissions': 'Messages',
+    'toolbar.submissionsHint': 'What visitors sent through your forms',
+    'submissions.title': 'Form messages',
+    'submissions.description': 'What visitors sent through the forms on your pages, newest first.',
+    'submissions.empty': 'No messages yet.',
+    'submissions.more': 'Load more',
+    'submissions.from': '/{page} · {source}',
+    'submissions.failed': "Couldn't load the messages: {message}",
     'versions.title': 'Published versions',
     'versions.description': 'Every publish keeps the previous one. Restoring brings it back to the draft without touching what visitors see until you publish.',
     'versions.by': 'Published by {name}',
