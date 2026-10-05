@@ -1,6 +1,6 @@
 {
-  "name": "@skylive/lienzo-editor",
-  "version": "0.1.0",
+  "name": "@skylivellc/lienzo-editor",
+  "version": "0.1.1",
   "description": "Visual editor for Lienzo landing pages. A Vue 3 component and a <lienzo-editor> custom element that talk to any backend over the Lienzo protocol.",
   "keywords": [
     "landing-page",
@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@lucide/vue": "^1.52.0",
-    "@skylive/lienzo-core": "workspace:*"
+    "@skylivellc/lienzo-core": "workspace:*"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",

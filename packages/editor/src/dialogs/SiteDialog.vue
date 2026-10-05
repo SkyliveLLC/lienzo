@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { FieldValue, Issue } from '@skylive/lienzo-core';
+import type { FieldValue, Issue } from '@skylivellc/lienzo-core';
 import { computed, reactive, useId, watch } from 'vue';
 import { plain } from '../model/document.ts';
 import FieldControl from '../panels/FieldControl.vue';

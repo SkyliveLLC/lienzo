@@ -1,4 +1,4 @@
-import { icons as catalog } from '@skylive/lienzo-core/data.json';
+import { icons as catalog } from '@skylivellc/lienzo-core/data.json';
 
 /** One stroke of a catalog icon, as core renders it. */
 export type IconNode = readonly [tag: 'path' | 'circle' | 'rect' | 'line', attrs: Readonly<Record<string, string>>];

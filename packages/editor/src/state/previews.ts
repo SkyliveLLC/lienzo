@@ -1,4 +1,4 @@
-import type { AppElement } from '@skylive/lienzo-core';
+import type { AppElement } from '@skylivellc/lienzo-core';
 import { shallowRef, type ShallowRef } from 'vue';
 import type { Client } from '../client.ts';
 

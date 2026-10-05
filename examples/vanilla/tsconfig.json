@@ -6,8 +6,8 @@
     "erasableSyntaxOnly": true,
     "types": ["node"],
     "paths": {
-      "@skylive/lienzo-core": ["../../packages/core/src/index.ts"],
-      "@skylive/lienzo-core/protocol": ["../../packages/core/src/protocol.ts"]
+      "@skylivellc/lienzo-core": ["../../packages/core/src/index.ts"],
+      "@skylivellc/lienzo-core/protocol": ["../../packages/core/src/protocol.ts"]
     }
   },
   "include": ["server.ts", "playwright.config.ts", "e2e"]

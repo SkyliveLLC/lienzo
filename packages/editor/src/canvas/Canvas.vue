@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Box } from '@skylive/lienzo-core';
+import type { Box } from '@skylivellc/lienzo-core';
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, shallowRef, toRaw, watch } from 'vue';
 import { boxOf, canvasHeight, findCanvas, stacksOnMobile, type Device } from '../model/document.ts';
 import { anchorsOf, clamp, clampBox, dragBox, snapToAnchors, type Anchors, type Guides, type Handle } from '../model/geometry.ts';

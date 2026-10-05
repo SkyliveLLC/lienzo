@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Issue } from '@skylive/lienzo-core';
+import type { Issue } from '@skylivellc/lienzo-core';
 import { computed, reactive, useId, watch } from 'vue';
 import { useEditor } from '../state/editor.ts';
 import Button from '../ui/Button.vue';

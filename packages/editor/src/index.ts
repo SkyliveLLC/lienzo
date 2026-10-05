@@ -1,6 +1,6 @@
 /**
- * `@skylive/lienzo-editor`: the Lienzo visual editor as a Vue 3 component.
- * For any other stack, `@skylive/lienzo-editor/element` registers the
+ * `@skylivellc/lienzo-editor`: the Lienzo visual editor as a Vue 3 component.
+ * For any other stack, `@skylivellc/lienzo-editor/element` registers the
  * `<lienzo-editor>` custom element.
  */
 export { default as LienzoEditor } from './LienzoEditor.vue';

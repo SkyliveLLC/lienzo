@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Section } from '@skylive/lienzo-core';
+import type { Section } from '@skylivellc/lienzo-core';
 import { Trash2 } from '@lucide/vue';
 import { ref, useId, watch } from 'vue';
 import { findCanvas } from '../model/document.ts';

@@ -12,8 +12,8 @@ import {
     type Seo,
     type SiteSettings,
     type Theme,
-} from '@skylive/lienzo-core';
-import type { Asset, PageState, PageSummary, PageVersion, SiteUpdate, Workspace } from '@skylive/lienzo-core/protocol';
+} from '@skylivellc/lienzo-core';
+import type { Asset, PageState, PageSummary, PageVersion, SiteUpdate, Workspace } from '@skylivellc/lienzo-core/protocol';
 import { computed, inject, reactive, shallowRef, watch, type InjectionKey, type WritableComputedRef } from 'vue';
 import type { Client, Failure } from '../client.ts';
 import type { Translator } from '../i18n/index.ts';

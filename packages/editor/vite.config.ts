@@ -42,7 +42,7 @@ export default defineConfig(({ command, mode }) => {
             emptyOutDir: false,
             sourcemap: true,
             lib: { entry: { index: resolve(import.meta.dirname, 'src/index.ts'), element: resolve(import.meta.dirname, 'src/element.ts') }, formats: ['es'] },
-            rolldownOptions: { external: [/^vue$/, /^@skylive\/lienzo-core(\/protocol)?$/, /^@lucide\/vue/] },
+            rolldownOptions: { external: [/^vue$/, /^@skylivellc\/lienzo-core(\/protocol)?$/, /^@lucide\/vue/] },
         },
     };
 });

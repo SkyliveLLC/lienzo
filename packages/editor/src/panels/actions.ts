@@ -1,4 +1,4 @@
-import type { CoreActionType, Field } from '@skylive/lienzo-core';
+import type { CoreActionType, Field } from '@skylivellc/lienzo-core';
 import type { MessageKey } from '../i18n/index.ts';
 
 /** How the value of a core action is edited, by what core does with it. */

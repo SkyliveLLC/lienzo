@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CORE_ACTION_TYPES, type Action, type FieldValue } from '@skylive/lienzo-core';
+import { CORE_ACTION_TYPES, type Action, type FieldValue } from '@skylivellc/lienzo-core';
 import { computed, useId } from 'vue';
 import { useEditor } from '../state/editor.ts';
 import SelectInput from '../ui/SelectInput.vue';

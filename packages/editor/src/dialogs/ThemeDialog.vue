@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Issue, Theme, ThemeToken } from '@skylive/lienzo-core';
+import type { Issue, Theme, ThemeToken } from '@skylivellc/lienzo-core';
 import { computed, reactive, ref, useId, watch } from 'vue';
 import { plain } from '../model/document.ts';
 import { FONTS, fontNote, fontsHref, linkToPalette, MAX_WIDTHS, PALETTES, THEME_TOKENS, widthLabel, type Palette } from '../model/theme.ts';

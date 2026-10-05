@@ -11,8 +11,8 @@ Lienzo has three packages:
 | Package | What it is |
 | --- | --- |
 | [`skylive/lienzo`](packages/laravel) (Composer) | The Laravel integration: tables, editor routes, public pages, uploads, form submissions and the PHP renderer. Ships the editor prebuilt. |
-| [`@skylive/lienzo-core`](packages/core) (npm) | The document schema, the renderer, the stylesheet, the page script and the protocol types. No framework. |
-| [`@skylive/lienzo-editor`](packages/editor) (npm) | The editor, as a Vue 3 component and as a `<lienzo-editor>` custom element. |
+| [`@skylivellc/lienzo-core`](packages/core) (npm) | The document schema, the renderer, the stylesheet, the page script and the protocol types. No framework. |
+| [`@skylivellc/lienzo-editor`](packages/editor) (npm) | The editor, as a Vue 3 component and as a `<lienzo-editor>` custom element. |
 
 ## Laravel quickstart
 
@@ -110,10 +110,10 @@ Both route macros also work inside a group with parameters of its own, such as `
 
 ## Other backends
 
-The editor talks to any backend over the HTTP protocol that [`@skylive/lienzo-core/protocol`](packages/core/src/protocol.ts) describes: about a dozen JSON routes for the workspace, pages, publishing, versions, uploads, app element previews and form submissions. To host Lienzo on another stack, do these things:
+The editor talks to any backend over the HTTP protocol that [`@skylivellc/lienzo-core/protocol`](packages/core/src/protocol.ts) describes: about a dozen JSON routes for the workspace, pages, publishing, versions, uploads, app element previews and form submissions. To host Lienzo on another stack, do these things:
 
 1. Implement the protocol routes. Validate every draft with `parseDocument(input, catalog)` and answer `422` with its issues. Answer `409` when `baseRevision` is stale.
-2. Serve the editor. Load the prebuilt `@skylive/lienzo-editor/standalone` file in a `<script type="module">` and add `<lienzo-editor endpoint="/your/endpoint">`. If your app already uses Vue, import the `LienzoEditor` component from `@skylive/lienzo-editor` instead.
+2. Serve the editor. Load the prebuilt `@skylivellc/lienzo-editor/standalone` file in a `<script type="module">` and add `<lienzo-editor endpoint="/your/endpoint">`. If your app already uses Vue, import the `LienzoEditor` component from `@skylivellc/lienzo-editor` instead.
 3. Render published pages with `renderPage()`, passing a `RenderHost` that resolves images, app actions, app elements and forms.
 4. Store form submissions. Check the posted fields against `formFields()` of the published document, never against what the browser sent.
 

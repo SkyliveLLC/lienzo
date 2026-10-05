@@ -9,13 +9,13 @@
       "vite/client"
     ],
     "paths": {
-      "@skylive/lienzo-core": [
+      "@skylivellc/lienzo-core": [
         "../core/src/index.ts"
       ],
-      "@skylive/lienzo-core/protocol": [
+      "@skylivellc/lienzo-core/protocol": [
         "../core/src/protocol.ts"
       ],
-      "@skylive/lienzo-core/data.json": [
+      "@skylivellc/lienzo-core/data.json": [
         "./src/core-data.d.ts"
       ]
     }

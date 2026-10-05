@@ -1,5 +1,5 @@
 /**
- * `@skylive/lienzo-core/protocol`: the HTTP contract between the editor and
+ * `@skylivellc/lienzo-core/protocol`: the HTTP contract between the editor and
  * any backend. Paths are relative to the `endpoint` the host page gives the
  * editor. Laravel implements it first; other backends implement the same table.
  */

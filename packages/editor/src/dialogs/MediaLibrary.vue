@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Asset } from '@skylive/lienzo-core/protocol';
+import type { Asset } from '@skylivellc/lienzo-core/protocol';
 import { Trash2, Upload } from '@lucide/vue';
 import { computed, ref } from 'vue';
 import { useEditor } from '../state/editor.ts';

@@ -1,6 +1,6 @@
 import { test as base, expect, type APIRequestContext, type FrameLocator, type Locator, type Page } from '@playwright/test';
-import type { Box, Document } from '@skylive/lienzo-core';
-import type { PageState } from '@skylive/lienzo-core/protocol';
+import type { Box, Document } from '@skylivellc/lienzo-core';
+import type { PageState } from '@skylivellc/lienzo-core/protocol';
 
 /** The editor on the dev harness, with helpers that speak in design units. */
 export class EditorPage {

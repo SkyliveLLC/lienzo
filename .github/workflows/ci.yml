@@ -20,8 +20,8 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm test
       - run: pnpm build
-      - run: pnpm --filter @skylive/lienzo-editor exec playwright install --with-deps chromium
-      - run: pnpm --filter @skylive/lienzo-editor e2e
+      - run: pnpm --filter @skylivellc/lienzo-editor exec playwright install --with-deps chromium
+      - run: pnpm --filter @skylivellc/lienzo-editor e2e
       - uses: actions/upload-artifact@v4
         if: failure()
         with:

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CoreElement } from '@skylive/lienzo-core';
+import type { CoreElement } from '@skylivellc/lienzo-core';
 import { computed, useId } from 'vue';
 import { plain } from '../../model/document.ts';
 import { navbarPresets } from '../../model/elements.ts';

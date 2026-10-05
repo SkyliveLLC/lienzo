@@ -1,6 +1,6 @@
-# @skylive/lienzo-editor
+# @skylivellc/lienzo-editor
 
-The visual editor of [Lienzo](https://github.com/SkyliveLLC/lienzo), an open-source landing page builder. Admins place headings, images, forms and your app's own elements on a free-form canvas, with a separate phone layout, then publish. The canvas renders through `@skylive/lienzo-core` in an iframe, so it shows the same markup and styles visitors get, and your app's CSS cannot leak into it.
+The visual editor of [Lienzo](https://github.com/SkyliveLLC/lienzo), an open-source landing page builder. Admins place headings, images, forms and your app's own elements on a free-form canvas, with a separate phone layout, then publish. The canvas renders through `@skylivellc/lienzo-core` in an iframe, so it shows the same markup and styles visitors get, and your app's CSS cannot leak into it.
 
 The editor talks to a backend over the Lienzo protocol. The Laravel package `skylive/lienzo` implements it and ships this editor prebuilt, so Laravel apps do not install this package. For other backends, see [Other backends](https://github.com/SkyliveLLC/lienzo#other-backends).
 
@@ -9,12 +9,12 @@ The editor comes in three forms. Pick the one that matches your frontend.
 ## Use it as a Vue 3 component
 
 ```sh
-npm install @skylive/lienzo-editor vue
+npm install @skylivellc/lienzo-editor vue
 ```
 
 ```vue
 <script setup lang="ts">
-import { LienzoEditor } from '@skylive/lienzo-editor';
+import { LienzoEditor } from '@skylivellc/lienzo-editor';
 </script>
 
 <template>
@@ -24,10 +24,10 @@ import { LienzoEditor } from '@skylive/lienzo-editor';
 
 ## Use it as a custom element with your bundler
 
-`@skylive/lienzo-editor/element` registers `<lienzo-editor>`. Install `vue` next to it, as for the component, because your bundler resolves it. The editor renders in a shadow root, so page CSS does not reach it.
+`@skylivellc/lienzo-editor/element` registers `<lienzo-editor>`. Install `vue` next to it, as for the component, because your bundler resolves it. The editor renders in a shadow root, so page CSS does not reach it.
 
 ```ts
-import '@skylive/lienzo-editor/element';
+import '@skylivellc/lienzo-editor/element';
 ```
 
 ```html
@@ -36,7 +36,7 @@ import '@skylive/lienzo-editor/element';
 
 ## Use the standalone file with no build step
 
-`@skylive/lienzo-editor/standalone` is one ES module with Vue and the editor's CSS inside. The file is `dist/standalone/lienzo-editor.js` in the package. Serve it as a static file and load it with a script tag:
+`@skylivellc/lienzo-editor/standalone` is one ES module with Vue and the editor's CSS inside. The file is `dist/standalone/lienzo-editor.js` in the package. Serve it as a static file and load it with a script tag:
 
 ```html
 <script type="module" src="/assets/lienzo-editor.js"></script>

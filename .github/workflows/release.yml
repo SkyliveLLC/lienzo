@@ -1,6 +1,6 @@
 name: Release
 
-# Publishes @skylive/lienzo-core and @skylive/lienzo-editor to npm when a
+# Publishes @skylivellc/lienzo-core and @skylivellc/lienzo-editor to npm when a
 # vX.Y.Z tag is pushed. Publishing from Actions lets npm attach provenance.
 # Packagist picks up the same tag for skylive/lienzo on its own.
 on:

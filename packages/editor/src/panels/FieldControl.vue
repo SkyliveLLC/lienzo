@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Action, Field, FieldValue } from '@skylive/lienzo-core';
+import type { Action, Field, FieldValue } from '@skylivellc/lienzo-core';
 import { computed, useId } from 'vue';
 import { useEditor } from '../state/editor.ts';
 import FieldShell from '../ui/Field.vue';

@@ -10,8 +10,8 @@ import {
     type Parsed,
     type RenderedPage,
     type SiteSettings,
-} from '@skylive/lienzo-core';
-import type { Asset } from '@skylive/lienzo-core/protocol';
+} from '@skylivellc/lienzo-core';
+import type { Asset } from '@skylivellc/lienzo-core/protocol';
 import type { Editor } from '../state/editor.ts';
 import type { Preview } from '../state/previews.ts';
 

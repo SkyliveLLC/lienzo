@@ -8,14 +8,14 @@ import { existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync 
 import { createServer, type IncomingMessage } from 'node:http';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { DocumentError, formFields, parseDocument, parseFields, parseSeo, parseSiteSettings, renderPage, trustedHtml } from '@skylive/lienzo-core';
-import type { AppElement, Catalog, Document, FormField, Issue, Seo, SiteSettings, TrustedHtml } from '@skylive/lienzo-core';
-import type { Asset, PageState, PageSummary, PageVersion, SiteMeta, Submission, Workspace } from '@skylive/lienzo-core/protocol';
+import { DocumentError, formFields, parseDocument, parseFields, parseSeo, parseSiteSettings, renderPage, trustedHtml } from '@skylivellc/lienzo-core';
+import type { AppElement, Catalog, Document, FormField, Issue, Seo, SiteSettings, TrustedHtml } from '@skylivellc/lienzo-core';
+import type { Asset, PageState, PageSummary, PageVersion, SiteMeta, Submission, Workspace } from '@skylivellc/lienzo-core/protocol';
 
 const PORT = Number(process.env.PORT ?? 3000);
 const PUBLIC_URL = process.env.PUBLIC_URL ?? `http://localhost:${PORT}/`;
 const DATA = process.env.LIENZO_DATA ?? join(import.meta.dirname, '.data');
-const EDITOR_BUNDLE = fileURLToPath(import.meta.resolve('@skylive/lienzo-editor/standalone'));
+const EDITOR_BUNDLE = fileURLToPath(import.meta.resolve('@skylivellc/lienzo-editor/standalone'));
 const MAX_BODY = 8 * 1024 * 1024;
 const UPLOAD_MAX = 5 * 1024 * 1024;
 const QUOTA = 100 * 1024 * 1024;

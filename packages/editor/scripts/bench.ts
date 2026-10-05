@@ -2,7 +2,7 @@
  * Canvas isolation bench (dev/bench): prints drag and re-render timings for
  * a 40-section page mounted in a shadow root and in an iframe.
  *
- * Usage: node scripts/bench.ts   (needs a built @skylive/lienzo-core)
+ * Usage: node scripts/bench.ts   (needs a built @skylivellc/lienzo-core)
  */
 import { chromium } from 'playwright';
 import { createServer } from 'vite';

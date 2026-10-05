@@ -1,4 +1,4 @@
-import type { CoreElementType } from '@skylive/lienzo-core';
+import type { CoreElementType } from '@skylivellc/lienzo-core';
 import {
     AlignLeft,
     Image,

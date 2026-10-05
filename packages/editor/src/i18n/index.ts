@@ -1,4 +1,4 @@
-import type { Localized } from '@skylive/lienzo-core';
+import type { Localized } from '@skylivellc/lienzo-core';
 import { en, type MessageKey, type Messages } from './en.ts';
 import { es } from './es.ts';
 

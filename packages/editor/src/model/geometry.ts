@@ -1,4 +1,4 @@
-import type { Box } from '@skylive/lienzo-core';
+import type { Box } from '@skylivellc/lienzo-core';
 
 /**
  * Layout math of the canvas, in design units: x and w are percent of the

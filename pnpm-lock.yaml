@@ -202,10 +202,10 @@ importers:
 
   examples/vanilla:
     dependencies:
-      '@skylive/lienzo-core':
+      '@skylivellc/lienzo-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@skylive/lienzo-editor':
+      '@skylivellc/lienzo-editor':
         specifier: workspace:*
         version: link:../../packages/editor
     devDependencies:
@@ -234,7 +234,7 @@ importers:
       '@lucide/vue':
         specifier: ^1.52.0
         version: 1.52.0(vue@3.5.43(typescript@6.0.3))
-      '@skylive/lienzo-core':
+      '@skylivellc/lienzo-core':
         specifier: workspace:*
         version: link:../core
     devDependencies:

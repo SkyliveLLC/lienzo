@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AppElement, ElementSpec, FieldValue } from '@skylive/lienzo-core';
+import type { AppElement, ElementSpec, FieldValue } from '@skylivellc/lienzo-core';
 import { useEditor } from '../../state/editor.ts';
 import FieldControl from '../FieldControl.vue';
 

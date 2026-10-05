@@ -76,7 +76,7 @@ THE SOFTWARE.
 
 ## Zod
 
-@skylive/lienzo-core depends on Zod (https://zod.dev), and the editor's standalone bundle includes it.
+@skylivellc/lienzo-core depends on Zod (https://zod.dev), and the editor's standalone bundle includes it.
 
 MIT License
 

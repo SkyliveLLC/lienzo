@@ -23,7 +23,7 @@ import Toasts from './ui/Toasts.vue';
 
 /**
  * The Lienzo editor. Give it the protocol `endpoint` of a backend (see
- * `@skylive/lienzo-core/protocol`); everything else is optional. Props are
+ * `@skylivellc/lienzo-core/protocol`); everything else is optional. Props are
  * read once, when the editor mounts.
  */
 const props = defineProps<{

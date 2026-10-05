@@ -3,8 +3,8 @@
  * in a shadow root and in a same-origin iframe, then dragged. Run with
  * `node e2e/bench.ts` (starts the dev server and prints the numbers).
  */
-import { emptyCatalog, parseDocument, parseSiteSettings, renderPage, type RenderedPage } from '@skylive/lienzo-core';
-import lienzoCss from '@skylive/lienzo-core/lienzo.css?raw';
+import { emptyCatalog, parseDocument, parseSiteSettings, renderPage, type RenderedPage } from '@skylivellc/lienzo-core';
+import lienzoCss from '@skylivellc/lienzo-core/lienzo.css?raw';
 
 const SECTIONS = 40;
 const WIDTH = 1200;

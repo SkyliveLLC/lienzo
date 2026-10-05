@@ -1,4 +1,4 @@
-import type { CoreProps } from '@skylive/lienzo-core';
+import type { CoreProps } from '@skylivellc/lienzo-core';
 import type { Translator } from '../../i18n/index.ts';
 
 type Shape = NonNullable<CoreProps['shape']>;

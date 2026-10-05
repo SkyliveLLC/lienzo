@@ -1,4 +1,4 @@
-import type { Box, CoreElementType, Document, Element, Modal, Section } from '@skylive/lienzo-core';
+import type { Box, CoreElementType, Document, Element, Modal, Section } from '@skylivellc/lienzo-core';
 
 /** Lienzo designs every page twice: on a desktop frame and on a phone frame. */
 export type Device = 'desktop' | 'mobile';

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Box, Element } from '@skylive/lienzo-core';
+import type { Box, Element } from '@skylivellc/lienzo-core';
 import { computed } from 'vue';
 import { boxOf, writeBox } from '../../model/document.ts';
 import { clampBox } from '../../model/geometry.ts';

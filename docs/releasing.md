@@ -1,13 +1,13 @@
 # Releasing Lienzo
 
-The three packages share one version: `skylive/lienzo` on Packagist, and `@skylive/lienzo-core` and `@skylive/lienzo-editor` on npm. A release is one commit and one `vX.Y.Z` tag. Pushing the tag publishes the npm packages from GitHub Actions, and Packagist reads the same tag.
+The three packages share one version: `skylive/lienzo` on Packagist, and `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor` on npm. A release is one commit and one `vX.Y.Z` tag. Pushing the tag publishes the npm packages from GitHub Actions, and Packagist reads the same tag.
 
 ## Before the first release
 
 Do these once:
 
 1. Make the GitHub repository public. Packagist and npm provenance both need a public source.
-2. On npmjs.com, create the `@skylive` organization if it does not exist. Add an automation token as the `NPM_TOKEN` secret of the repository, or set up trusted publishing for `.github/workflows/release.yml` on both packages.
+2. On npmjs.com, create the `@skylivellc` organization if it does not exist. Add an automation token as the `NPM_TOKEN` secret of the repository, or set up trusted publishing for `.github/workflows/release.yml` on both packages.
 3. Submit `https://github.com/SkyliveLLC/lienzo` at <https://packagist.org/packages/submit>. Then connect the Packagist GitHub app, or add the Packagist webhook, so new tags update the package without a manual step.
 
 ## Prepare the release
@@ -64,10 +64,10 @@ Run every step from a clean checkout of `main`.
 
 3. Check the results:
 
-    - <https://www.npmjs.com/package/@skylive/lienzo-core> and <https://www.npmjs.com/package/@skylive/lienzo-editor> show the new version with a provenance badge.
+    - <https://www.npmjs.com/package/@skylivellc/lienzo-core> and <https://www.npmjs.com/package/@skylivellc/lienzo-editor> show the new version with a provenance badge.
     - <https://packagist.org/packages/skylive/lienzo> lists `vX.Y.Z`.
     - In a new Laravel app, `composer require skylive/lienzo` installs it.
 
 4. Create a GitHub release for the tag, with the version's `CHANGELOG.md` section as its notes.
 
-To see what a package will contain without publishing it, run `pnpm --filter @skylive/lienzo-core pack` and list the tarball with `tar tzf`.
+To see what a package will contain without publishing it, run `pnpm --filter @skylivellc/lienzo-core pack` and list the tarball with `tar tzf`.

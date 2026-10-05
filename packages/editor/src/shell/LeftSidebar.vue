@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CoreElementType } from '@skylive/lienzo-core';
+import type { CoreElementType } from '@skylivellc/lienzo-core';
 import { ChevronDown, ChevronUp, Frame, Image as ImageIcon, Layers, Lock, LockOpen, PanelTop, Plus, Trash2 } from '@lucide/vue';
 import { computed, ref } from 'vue';
 import { CORE_TYPES, isModal } from '../model/document.ts';

@@ -1,6 +1,10 @@
 # Changelog
 
-All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylive/lienzo-core` and `@skylive/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
+All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
+
+## 0.1.1 (2026-10-05)
+
+The first release on npm. The npm packages are published under the `@skylivellc` scope as `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`. Version 0.1.0 was only released on Packagist. For Composer users, 0.1.1 is the same as 0.1.0.
 
 ## 0.1.0 (2026-10-05)
 
@@ -20,7 +24,7 @@ The first release.
 ### Rendering
 
 - A JSON document format with one schema for TypeScript and PHP. Elements of unknown types are kept, never dropped.
-- A TypeScript renderer in `@skylive/lienzo-core` and a native PHP renderer in `skylive/lienzo` that produce byte-identical HTML, checked by golden files.
+- A TypeScript renderer in `@skylivellc/lienzo-core` and a native PHP renderer in `skylive/lienzo` that produce byte-identical HTML, checked by golden files.
 - One static stylesheet and a small page script. Container queries make the phone layout and the editor's phone frame the same code path.
 - App elements that render live data from the backend, app actions, and app site fields.
 

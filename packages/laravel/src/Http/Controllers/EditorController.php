@@ -30,7 +30,7 @@ use Skylive\Lienzo\Render\Canvas;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
 /**
- * The editor protocol (`@skylive/lienzo-core/protocol`) for one site, as
+ * The editor protocol (`@skylivellc/lienzo-core/protocol`) for one site, as
  * JSON. Routes are registered by `Route::lienzoEditor()`, which authorizes
  * the `lienzo.manage` gate against the site before any of these run.
  *

@@ -10,7 +10,7 @@
       "vite/client"
     ],
     "paths": {
-      "@skylive/lienzo-core/data.json": [
+      "@skylivellc/lienzo-core/data.json": [
         "./src/core-data.d.ts"
       ]
     },

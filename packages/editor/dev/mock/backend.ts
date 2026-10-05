@@ -18,8 +18,8 @@ import {
     type Issue,
     type Parsed,
     type SiteSettings,
-} from '@skylive/lienzo-core';
-import type { Asset, PageState, PageVersion, SiteMeta, SiteUpdate, Submission, Workspace } from '@skylive/lienzo-core/protocol';
+} from '@skylivellc/lienzo-core';
+import type { Asset, PageState, PageVersion, SiteMeta, SiteUpdate, Submission, Workspace } from '@skylivellc/lienzo-core/protocol';
 import { buildPageTemplate } from '../../src/model/templates.ts';
 
 export type MockRequest = { method: string; path: string; query: URLSearchParams; json: unknown; file: File | null };

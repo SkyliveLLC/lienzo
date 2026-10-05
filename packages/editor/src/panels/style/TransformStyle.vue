@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Element } from '@skylive/lienzo-core';
+import type { Element } from '@skylivellc/lienzo-core';
 import { FoldHorizontal, FoldVertical, RotateCcw } from '@lucide/vue';
 import { useId } from 'vue';
 import { useEditor } from '../../state/editor.ts';

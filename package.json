@@ -8,7 +8,7 @@
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck && tsc -p scripts",
     "parity": "node scripts/parity/run.ts",
-    "golden": "pnpm --filter @skylive/lienzo-core golden",
+    "golden": "pnpm --filter @skylivellc/lienzo-core golden",
     "sync:php": "node scripts/sync-php-assets.ts",
     "e2e": "pnpm -r --workspace-concurrency=1 e2e",
     "e2e:examples": "pnpm --filter './examples/*' --workspace-concurrency=1 e2e"

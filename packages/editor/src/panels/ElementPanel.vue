@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CoreElementType, Element, StyleGroup } from '@skylive/lienzo-core';
+import type { CoreElementType, Element, StyleGroup } from '@skylivellc/lienzo-core';
 import { computed, type Component } from 'vue';
 import { useEditor } from '../state/editor.ts';
 import Button from '../ui/Button.vue';

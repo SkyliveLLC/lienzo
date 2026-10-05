@@ -1,4 +1,4 @@
-import type { Issue } from '@skylive/lienzo-core';
+import type { Issue } from '@skylivellc/lienzo-core';
 import { shallowRef, type ShallowRef } from 'vue';
 import type { Failure } from '../client.ts';
 

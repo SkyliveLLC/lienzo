@@ -11,7 +11,7 @@
             "options": {
                 "symlink": true,
                 "versions": {
-                    "skylive/lienzo": "0.1.0"
+                    "skylive/lienzo": "0.1.1"
                 }
             }
         }

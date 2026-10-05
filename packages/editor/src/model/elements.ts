@@ -1,4 +1,4 @@
-import type { AppElement, Catalog, CoreElement, CoreElementType, Element, ElementSpec, FieldValue, StyleGroup } from '@skylive/lienzo-core';
+import type { AppElement, Catalog, CoreElement, CoreElementType, Element, ElementSpec, FieldValue, StyleGroup } from '@skylivellc/lienzo-core';
 import type { MessageKey } from '../i18n/index.ts';
 import { isCoreType, newId } from './document.ts';
 import { snap } from './geometry.ts';

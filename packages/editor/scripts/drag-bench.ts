@@ -4,7 +4,7 @@
  * element for ~2s at 60 moves per second and prints the frame intervals the
  * browser produced meanwhile, plus the time each pointer move took to handle.
  *
- * Usage: node scripts/drag-bench.ts   (needs a built @skylive/lienzo-core)
+ * Usage: node scripts/drag-bench.ts   (needs a built @skylivellc/lienzo-core)
  */
 import { chromium } from 'playwright';
 import { createServer } from 'vite';

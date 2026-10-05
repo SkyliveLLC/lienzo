@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Element } from '@skylive/lienzo-core';
+import type { Element } from '@skylivellc/lienzo-core';
 import { AlignCenter, AlignLeft, AlignRight } from '@lucide/vue';
 import { useEditor } from '../../state/editor.ts';
 import IconButton from '../../ui/IconButton.vue';

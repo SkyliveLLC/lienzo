@@ -8,8 +8,8 @@
     "e2e": "playwright test"
   },
   "dependencies": {
-    "@skylive/lienzo-core": "workspace:*",
-    "@skylive/lienzo-editor": "workspace:*"
+    "@skylivellc/lienzo-core": "workspace:*",
+    "@skylivellc/lienzo-editor": "workspace:*"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0"

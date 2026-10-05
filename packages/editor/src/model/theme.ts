@@ -1,4 +1,4 @@
-import type { Document, Style, Theme, ThemeToken } from '@skylive/lienzo-core';
+import type { Document, Style, Theme, ThemeToken } from '@skylivellc/lienzo-core';
 import type { MessageKey } from '../i18n/index.ts';
 import { canvasesOf } from './document.ts';
 

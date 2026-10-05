@@ -1,5 +1,5 @@
-import lienzoCss from '@skylive/lienzo-core/lienzo.css?raw';
-import type { Box, Document as Draft } from '@skylive/lienzo-core';
+import lienzoCss from '@skylivellc/lienzo-core/lienzo.css?raw';
+import type { Box, Document as Draft } from '@skylivellc/lienzo-core';
 import { canvasesOf, type Device } from '../model/document.ts';
 import { frameCss } from './frameCss.ts';
 import { domId } from './render.ts';

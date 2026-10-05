@@ -1,5 +1,5 @@
-import type { Issue } from '@skylive/lienzo-core';
-import type { Protocol, Route } from '@skylive/lienzo-core/protocol';
+import type { Issue } from '@skylivellc/lienzo-core';
+import type { Protocol, Route } from '@skylivellc/lienzo-core/protocol';
 
 /** Why a request did not succeed. Every caller handles each kind, so none is ever silent. */
 export type Failure =

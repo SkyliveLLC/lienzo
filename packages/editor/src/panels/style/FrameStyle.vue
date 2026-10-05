@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Element, Style } from '@skylive/lienzo-core';
+import type { Element, Style } from '@skylivellc/lienzo-core';
 import { computed, useId } from 'vue';
 import { useEditor } from '../../state/editor.ts';
 import ColorPicker from '../../ui/ColorPicker.vue';

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Modal } from '@skylive/lienzo-core';
+import type { Modal } from '@skylivellc/lienzo-core';
 import { useId } from 'vue';
 import { MODAL_SIZES } from '../model/document.ts';
 import { useEditor } from '../state/editor.ts';

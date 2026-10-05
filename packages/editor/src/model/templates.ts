@@ -1,4 +1,4 @@
-import type { Box, CoreElement, CoreElementType, Section } from '@skylive/lienzo-core';
+import type { Box, CoreElement, CoreElementType, Section } from '@skylivellc/lienzo-core';
 import { createTranslator, type MessageKey } from '../i18n/index.ts';
 import { newId } from './document.ts';
 import { coreSpecs } from './elements.ts';

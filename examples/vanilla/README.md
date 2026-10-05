@@ -1,11 +1,11 @@
 # Lienzo on plain Node
 
-This example hosts Lienzo with Node's `node:http` module and nothing else: no framework and no bundler. It shows that any backend that implements the protocol in `@skylive/lienzo-core/protocol` can run the editor and serve the published pages.
+This example hosts Lienzo with Node's `node:http` module and nothing else: no framework and no bundler. It shows that any backend that implements the protocol in `@skylivellc/lienzo-core/protocol` can run the editor and serve the published pages.
 
 `server.ts` is the whole backend:
 
 - `/api` implements every protocol route. Core's `parseDocument`, `parseSiteSettings`, `parseFields`, and `parseSeo` validate what the editor sends.
-- `/admin` serves an HTML page with `<lienzo-editor endpoint="/api">`, loaded from the editor's prebuilt `@skylive/lienzo-editor/standalone` bundle.
+- `/admin` serves an HTML page with `<lienzo-editor endpoint="/api">`, loaded from the editor's prebuilt `@skylivellc/lienzo-editor/standalone` bundle.
 - `/` and `/<slug>` render published pages with core's `renderPage`. Forms post to `/submit`, which checks the fields against the published page and stores the message.
 - `/media/<id>`, `/sitemap.xml`, and `/robots.txt` serve what visitors and search engines read. An image is public only after a published page uses it.
 

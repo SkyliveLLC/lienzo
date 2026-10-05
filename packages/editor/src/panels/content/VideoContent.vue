@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CoreElement } from '@skylive/lienzo-core';
+import type { CoreElement } from '@skylivellc/lienzo-core';
 import { useId } from 'vue';
 import { useEditor } from '../../state/editor.ts';
 import Field from '../../ui/Field.vue';

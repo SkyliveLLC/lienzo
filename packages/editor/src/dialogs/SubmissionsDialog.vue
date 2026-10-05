@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Submission } from '@skylive/lienzo-core/protocol';
+import type { Submission } from '@skylivellc/lienzo-core/protocol';
 import { computed, ref, watch } from 'vue';
 import { canvasesOf } from '../model/document.ts';
 import { domId } from '../canvas/render.ts';
