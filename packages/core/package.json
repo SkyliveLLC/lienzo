@@ -12,7 +12,9 @@
     },
     "./schema.json": "./dist/schema.json"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsdown",
     "test": "vitest run",
@@ -22,6 +24,7 @@
     "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@types/node": "^24.19.1",
     "tsdown": "^0.23.0"
   }
 }

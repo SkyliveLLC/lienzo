@@ -1,0 +1,56 @@
+{
+  "elements": [
+    {
+      "type": "services",
+      "label": { "en": "Services", "es": "Servicios" },
+      "icon": "clipboard-list",
+      "fields": [
+        { "kind": "number", "key": "limit", "label": { "en": "How many" }, "min": 1, "max": 12, "step": 1, "default": 6 },
+        { "kind": "number", "key": "columns", "label": { "en": "Columns" }, "min": 1, "max": 4, "step": 1, "default": 3 },
+        {
+          "kind": "choice",
+          "key": "variant",
+          "label": { "en": "Look" },
+          "options": [
+            { "value": "cards", "label": { "en": "Cards" } },
+            { "value": "list", "label": { "en": "List" } },
+            { "value": "compact", "label": { "en": "Compact" } }
+          ],
+          "default": "cards"
+        },
+        { "kind": "toggle", "key": "show_duration", "label": { "en": "Show duration" }, "default": true },
+        { "kind": "toggle", "key": "show_review", "label": { "en": "Mention review" }, "default": false }
+      ],
+      "styles": ["text", "fill", "border", "effects", "motion"],
+      "size": { "w": 60, "h": 240 },
+      "css": ".cards{display:grid;gap:calc(12 * var(--u));height:100%;overflow:auto}.card{background:var(--surface);border-radius:var(--radius);padding:calc(14 * var(--u)) calc(16 * var(--u))}.card strong{display:block;font-family:var(--font-heading)}.card span{color:var(--muted);font-size:.875em}.chips{display:flex;flex-wrap:wrap;gap:calc(10 * var(--u));align-content:flex-start;height:100%;overflow:auto}.chip{display:inline-flex;align-items:baseline;gap:calc(8 * var(--u));padding:calc(10 * var(--u)) calc(16 * var(--u));border-radius:999px;background:var(--surface);font-family:var(--font-heading);font-weight:600}.chip i{font-style:normal;font-weight:400;font-size:.8em;color:var(--muted)}.rows{display:flex;flex-direction:column;height:100%;overflow:auto}.rows .row{display:flex;align-items:baseline;gap:calc(18 * var(--u));padding:calc(14 * var(--u)) 0;border-bottom:1px solid color-mix(in srgb,currentColor 16%,transparent)}.rows .row:last-child{border-bottom:0}.rows i{font-style:normal;font-size:.75em;opacity:.5;font-variant-numeric:tabular-nums}.rows strong{flex:1;font-family:var(--font-heading);font-weight:600}.rows span{color:var(--muted);font-size:.85em;white-space:nowrap}"
+    },
+    {
+      "type": "team",
+      "label": { "en": "Team", "es": "Equipo" },
+      "icon": "users",
+      "fields": [
+        { "kind": "number", "key": "limit", "label": { "en": "How many" }, "min": 1, "max": 12, "step": 1, "default": 6 },
+        { "kind": "number", "key": "columns", "label": { "en": "Columns" }, "min": 1, "max": 4, "step": 1, "default": 3 },
+        {
+          "kind": "choice",
+          "key": "variant",
+          "label": { "en": "Look" },
+          "options": [
+            { "value": "cards", "label": { "en": "Cards" } },
+            { "value": "list", "label": { "en": "List" } },
+            { "value": "compact", "label": { "en": "Compact" } }
+          ],
+          "default": "cards"
+        },
+        { "kind": "toggle", "key": "show_role", "label": { "en": "Show role" }, "default": true }
+      ],
+      "styles": ["text", "fill", "border", "effects", "motion"],
+      "size": { "w": 60, "h": 240 },
+      "css": ".cards{display:grid;gap:calc(12 * var(--u));height:100%;overflow:auto}.card{background:var(--surface);border-radius:var(--radius);padding:calc(14 * var(--u)) calc(16 * var(--u))}.card strong{display:block;font-family:var(--font-heading)}.card span{color:var(--muted);font-size:.875em}.chips{display:flex;flex-wrap:wrap;gap:calc(10 * var(--u));align-content:flex-start;height:100%;overflow:auto}.chip{display:inline-flex;align-items:baseline;gap:calc(8 * var(--u));padding:calc(10 * var(--u)) calc(16 * var(--u));border-radius:999px;background:var(--surface);font-family:var(--font-heading);font-weight:600}.chip i{font-style:normal;font-weight:400;font-size:.8em;color:var(--muted)}.rows{display:flex;flex-direction:column;height:100%;overflow:auto}.rows .row{display:flex;align-items:baseline;gap:calc(18 * var(--u));padding:calc(14 * var(--u)) 0;border-bottom:1px solid color-mix(in srgb,currentColor 16%,transparent)}.rows .row:last-child{border-bottom:0}.rows i{font-style:normal;font-size:.75em;opacity:.5;font-variant-numeric:tabular-nums}.rows strong{flex:1;font-family:var(--font-heading);font-weight:600}.rows span{color:var(--muted);font-size:.85em;white-space:nowrap}"
+    }
+  ],
+  "actions": [
+    { "type": "booking", "label": { "en": "Open online booking", "es": "Abrir la reserva en línea" }, "value": null }
+  ]
+}
