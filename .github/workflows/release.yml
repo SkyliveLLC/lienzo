@@ -1,0 +1,36 @@
+name: Release
+
+# Publishes @skylive/lienzo-core and @skylive/lienzo-editor to npm when a
+# vX.Y.Z tag is pushed. Publishing from Actions lets npm attach provenance.
+# Packagist picks up the same tag for skylive/lienzo on its own.
+on:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - run: pnpm install --frozen-lockfile
+      - name: Check the tag matches the package versions
+        run: |
+          for package in core editor; do
+            test "v$(node -p "require('./packages/$package/package.json').version")" = "$GITHUB_REF_NAME"
+          done
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm build
+      - run: pnpm -r --filter './packages/*' publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
