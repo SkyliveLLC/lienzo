@@ -1,6 +1,6 @@
 /**
- * Copies the static assets the PHP renderer reads from packages/core/dist
- * into packages/laravel/dist, where the Composer package ships them. Run it
+ * Copies the static assets the PHP renderer reads from packages/core/dist,
+ * and the standalone editor bundle, into packages/laravel/dist, where the Composer package ships them. Run it
  * after `pnpm build` whenever an asset changes; the PHP suite fails while the
  * copies differ from a fresh build.
  *
@@ -15,8 +15,10 @@ const root = join(import.meta.dirname, '..');
 const from = join(root, 'packages/core/dist');
 const to = join(root, 'packages/laravel/dist');
 
-mkdirSync(to, { recursive: true });
+mkdirSync(join(to, 'editor'), { recursive: true });
 
 for (const file of phpAssets) {
     copyFileSync(join(from, file), join(to, file));
 }
+
+copyFileSync(join(root, 'packages/editor/dist/standalone/lienzo-editor.js'), join(to, 'editor/lienzo-editor.js'));

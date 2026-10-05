@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Skylive\Lienzo\Assets;
 use Skylive\Lienzo\Models\Site;
 
 it('renders the editor element pointed at the site', function (): void {
@@ -11,9 +12,9 @@ it('renders the editor element pointed at the site', function (): void {
     $html = (string) $this->blade('<x-lienzo::editor :site="$site" locale="es" class="h-screen" />', ['site' => $site]);
 
     expect($html)
-        ->toContain('<script type="module" src="http://localhost/admin/site/lienzo-editor.js"')
-        ->toContain('<link rel="stylesheet" href="http://localhost/admin/site/lienzo-editor.css"')
-        ->toContain('<lienzo-editor endpoint="http://localhost/admin/site/'.$site->id.'" locale="es" headers="'.e(json_encode(['X-CSRF-TOKEN' => csrf_token(), 'Accept' => 'application/json'])).'" class="h-screen"></lienzo-editor>');
+        ->toContain('<script type="module" src="http://localhost/admin/site/lienzo-editor.js?v='.hash_file('xxh3', Assets::path('editor/lienzo-editor.js')).'"')
+        ->toContain('<lienzo-editor endpoint="http://localhost/admin/site/'.$site->id.'" locale="es" class="h-screen"></lienzo-editor>')
+        ->not->toContain('headers=');
 });
 
 it('loads the bundle from the configured URL instead', function (): void {

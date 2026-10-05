@@ -7,17 +7,17 @@ namespace Skylive\Lienzo\Http\Controllers;
 use Skylive\Lienzo\Assets;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
-/** Serves the editor bundle shipped in `dist/editor`. URLs carry a content hash, so it caches for good. */
+/** Serves the editor bundle shipped in `dist/editor` (its CSS is inlined). URLs carry a content hash, so it caches for good. */
 final class EditorAssetsController
 {
-    public function __invoke(string $extension): BinaryFileResponse
+    public function __invoke(): BinaryFileResponse
     {
-        $path = Assets::path("editor/lienzo-editor.{$extension}");
+        $path = Assets::path('editor/lienzo-editor.js');
 
         abort_unless(is_file($path), 404);
 
         return response()->file($path, [
-            'Content-Type' => $extension === 'js' ? 'text/javascript; charset=UTF-8' : 'text/css; charset=UTF-8',
+            'Content-Type' => 'text/javascript; charset=UTF-8',
             'Cache-Control' => 'public, max-age=31536000, immutable',
         ]);
     }

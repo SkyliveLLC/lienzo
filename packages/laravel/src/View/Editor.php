@@ -13,6 +13,7 @@ use Skylive\Lienzo\Models\Site;
 /**
  * `<x-lienzo::editor :site="$site" locale="en" />`: the editor for one site,
  * as the `<lienzo-editor>` custom element talking to `Route::lienzoEditor()`.
+ * The editor echoes Laravel's XSRF-TOKEN cookie, so no CSRF header is passed.
  * Extra attributes (class, style) land on the element.
  */
 final class Editor extends Component
@@ -24,24 +25,22 @@ final class Editor extends Component
         return view('lienzo::editor', [
             'endpoint' => route('lienzo.editor', ['lienzoSite' => $this->site]),
             'editorLocale' => $this->locale ?? config('lienzo.locale'),
-            'headers' => json_encode(['X-CSRF-TOKEN' => csrf_token(), 'Accept' => 'application/json'], JSON_THROW_ON_ERROR),
-            'script' => $this->bundle('js'),
-            'style' => $this->bundle('css'),
+            'script' => $this->bundle(),
             'nonce' => Vite::cspNonce(),
         ]);
     }
 
-    /** The bundle file's URL: `lienzo.editor_url` when set, else the editor route with a content hash to bust caches. */
-    private function bundle(string $extension): string
+    /** The bundle's URL: `lienzo.editor_url` when set, else the editor route with a content hash to bust caches. */
+    private function bundle(): string
     {
         $base = config('lienzo.editor_url');
 
         if (is_string($base) && $base !== '') {
-            return rtrim($base, '/')."/lienzo-editor.{$extension}";
+            return rtrim($base, '/').'/lienzo-editor.js';
         }
 
-        $path = Assets::path("editor/lienzo-editor.{$extension}");
+        $path = Assets::path('editor/lienzo-editor.js');
 
-        return route('lienzo.editor.bundle', ['extension' => $extension, 'v' => is_file($path) ? hash_file('xxh3', $path) : null]);
+        return route('lienzo.editor.bundle', ['v' => is_file($path) ? hash_file('xxh3', $path) : null]);
     }
 }

@@ -57,8 +57,8 @@ return [
     | registered in. Every route also checks the `lienzo.manage` gate.
     |
     | The editor bundle ships with the package and is served by the editor
-    | routes. Set `editor_url` to a directory URL holding lienzo-editor.js and
-    | lienzo-editor.css to serve it from a CDN instead. `locale` is the
+    | routes. Set `editor_url` to a directory URL holding lienzo-editor.js to
+    | serve it from a CDN instead. `locale` is the
     | editor's default interface language.
     |
     */

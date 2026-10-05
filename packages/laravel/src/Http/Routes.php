@@ -48,7 +48,7 @@ final class Routes
     public static function editor(Router $router, string $prefix): void
     {
         $router->prefix(trim($prefix, '/'))->middleware(config('lienzo.editor_middleware'))->group(function (Router $router): void {
-            $router->get('lienzo-editor.{extension}', EditorAssetsController::class)->whereIn('extension', ['js', 'css'])->name('lienzo.editor.bundle');
+            $router->get('lienzo-editor.js', EditorAssetsController::class)->name('lienzo.editor.bundle');
 
             $router->prefix('{lienzoSite}')->whereNumber('lienzoSite')->middleware('can:lienzo.manage,lienzoSite')->controller(EditorController::class)->group(function (Router $router): void {
                 $router->get('/', 'workspace')->name('lienzo.editor');
