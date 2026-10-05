@@ -75,6 +75,20 @@ describe('parseDocument', () => {
     it('accepts PHP empty arrays where objects are expected', () => {
         expect(parseDocument(page(element({ type: 'divider', props: [], style: [] })), emptyCatalog).sections[0]?.elements[0]).toMatchObject({ props: {}, style: {} });
     });
+
+    it('accepts empty objects where lists are expected, since PHP encodes both as []', () => {
+        const parsed = parseDocument({ ...page(element({ type: 'select', props: { options: {} } })), modals: {} }, emptyCatalog);
+
+        expect(parsed.modals).toEqual([]);
+        expect(parsed.sections[0]?.elements[0]?.props).toEqual({ options: [] });
+    });
+
+    it('tells a value of the wrong type from a missing one', () => {
+        const { z: _, ...withoutZ } = element();
+
+        expect(issuesOf(page(element({ z: 'top' })))).toEqual(['sections.0.elements.0.z:type']);
+        expect(issuesOf(page(withoutZ))).toEqual(['sections.0.elements.0.z:required']);
+    });
 });
 
 describe('hostile documents', () => {

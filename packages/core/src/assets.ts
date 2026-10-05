@@ -1,11 +1,14 @@
 import * as z from 'zod';
 import { coreActions } from './actions.ts';
 import {
+    action,
+    blankAsNull,
     CORE_ELEMENT_TYPES,
     corePropsSchema,
     defaultTheme,
     documentSchema,
     FIELD_TYPES,
+    image,
     OPAQUE_PROPS_MAX_BYTES,
     siteSettingsSchema,
     styleSchema,
@@ -19,7 +22,15 @@ import { styleTable } from './style.ts';
 import { stylesheet } from './stylesheet.ts';
 
 const jsonSchema = (schema: z.ZodType, reused: 'ref' | 'inline' = 'inline') => {
-    const { $schema: _, ...rest } = z.toJSONSchema(schema, { io: 'output', reused });
+    const { $schema: _, ...rest } = z.toJSONSchema(schema, {
+        io: 'output',
+        reused,
+        override: ({ zodSchema, jsonSchema: node }) => {
+            if (blankAsNull.has(zodSchema)) {
+                node['x-blank-as-null'] = true;
+            }
+        },
+    });
 
     return rest;
 };
@@ -31,12 +42,16 @@ export function assets(): Record<'lienzo.css' | 'runtime.js' | 'schema.json' | '
     const schema = {
         $schema: 'https://json-schema.org/draft/2020-12/schema',
         $comment: 'Validation contract for Lienzo documents. Unknown keys are stripped, not rejected (additionalProperties:false means "drop"). '
-            + 'A blank string in a typed optional field means null. An empty JSON array where an object is expected means an empty object. '
-            + 'Element props are checked by type: CoreProps for core types, the app field list for catalog types, and only a size limit otherwise.',
+            + 'In a node marked x-blank-as-null, a blank string (only whitespace) means null. '
+            + 'An empty JSON array where an object is expected means an empty object, and an empty object where an array is expected means an empty array. '
+            + 'minLength and maxLength count UTF-16 code units (JavaScript string length), not code points. '
+            + 'Element props are checked by type: CoreProps for core types, the app field list for catalog types (built from Image and Action), and only a size limit otherwise.',
         ...document,
         $defs: {
             ...documentDefs,
             CoreProps: jsonSchema(corePropsSchema),
+            Image: jsonSchema(image),
+            Action: jsonSchema(action),
             Style: jsonSchema(styleSchema),
             Theme: jsonSchema(themeSchema),
             SiteSettings: jsonSchema(siteSettingsSchema),

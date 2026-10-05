@@ -25,26 +25,39 @@ const hex = z.string().regex(HEX);
 /** A theme token stays a token so the page follows palette changes. */
 const color = z.union([z.enum(THEME_TOKENS), hex]);
 /** `media:<id>` is resolved by the host at render time; anything else must be a plain https URL. */
-const image = z.string().max(500).regex(/^(https:\/\/[^\s"'<>]+|media:[0-9]+)$/);
+export const image = z.string().max(500).regex(/^(https:\/\/[^\s"'<>]+|media:[0-9]+)$/);
 const httpsUrl = z.string().max(500).regex(/^https:\/\/[^\s"'<>]+$/);
 const id = z.string().min(1).max(40);
 const between = (min: number, max: number) => z.number().min(min).max(max);
 const intBetween = (min: number, max: number) => z.int().min(min).max(max);
 
-/** Stored documents come from PHP, where an empty object is serialized as `[]`. */
+/**
+ * PHP cannot tell an empty list from an empty map: both are `[]`. Stored
+ * documents come from PHP, so an empty array where an object is expected is
+ * an empty object, and the other way round, in every language.
+ */
 const emptyArrayAsObject = (value: unknown) => (Array.isArray(value) && value.length === 0 ? {} : value);
+const emptyObjectAsArray = (value: unknown) => (isRecord(value) && Object.keys(value).length === 0 ? [] : value);
 const object = <T extends z.ZodRawShape>(shape: T) => z.preprocess(emptyArrayAsObject, z.object(shape));
+const list = <T extends z.ZodArray>(schema: T) => z.preprocess(emptyObjectAsArray, schema);
+
+/** Every schema built by `optional`, so the JSON Schema export can mark it `x-blank-as-null`. */
+export const blankAsNull = new WeakSet<object>();
 
 /**
  * An optional typed value. Laravel skips every rule of a nullable field when
  * the value is blank, so a blank string means "not set" and becomes null.
  */
-const optional = <T extends z.ZodType>(schema: T) =>
-    z.preprocess((value) => (typeof value === 'string' && value.trim() === '' ? null : value), schema.nullish());
+const optional = <T extends z.ZodType>(schema: T) => {
+    const optionalSchema = z.preprocess((value) => (typeof value === 'string' && value.trim() === '' ? null : value), schema.nullish());
+    blankAsNull.add(optionalSchema);
+
+    return optionalSchema;
+};
 
 /** Core actions plus whatever the app registers. Unknown types survive and render inert, like opaque elements. */
 const actionType = z.string().regex(/^[a-z][a-z0-9_]{0,39}$/);
-const action = object({ type: optional(actionType), value: z.string().max(300).nullish() });
+export const action = object({ type: optional(actionType), value: z.string().max(300).nullish() });
 
 const gradient = object({
     type: optional(z.enum(['linear', 'radial'])),
@@ -113,13 +126,13 @@ export const corePropsSchema = object({
     placeholder: z.string().max(120).nullish(),
     required: optional(z.boolean()),
     input_type: optional(z.enum(['text', 'email', 'tel', 'number', 'date'])),
-    options: z.array(z.string().min(1).max(120)).max(30).nullish(),
+    options: list(z.array(z.string().min(1).max(120)).max(30)).nullish(),
     brand: z.string().max(60).nullish(),
     layout: optional(z.enum(['split', 'left', 'center'])),
-    links: z.array(object({
+    links: list(z.array(object({
         label: z.string().min(1).max(40),
         action: object({ type: actionType, value: z.string().max(300).nullish() }),
-    })).max(8).nullish(),
+    })).max(8)).nullish(),
     action: action.nullish(),
 });
 
@@ -154,7 +167,7 @@ const sectionSchema = object({
         overlay: optional(between(0, 1)),
         parallax: optional(z.boolean()),
     }),
-    elements: z.array(elementEnvelope).max(60),
+    elements: list(z.array(elementEnvelope).max(60)),
 });
 
 const modalSchema = object({
@@ -165,12 +178,12 @@ const modalSchema = object({
     width: intBetween(280, 1200),
     height: object({ desktop: intBetween(80, 2000), mobile: intBetween(80, 2400) }),
     background: object({ type: z.literal('color'), color: optional(color) }),
-    elements: z.array(elementEnvelope).max(60),
+    elements: list(z.array(elementEnvelope).max(60)),
 });
 
 export const documentSchema = object({
-    sections: z.array(sectionSchema).min(1).max(40),
-    modals: z.array(modalSchema).max(10).nullish(),
+    sections: list(z.array(sectionSchema).min(1).max(40)),
+    modals: list(z.array(modalSchema).max(10)).nullish(),
 });
 
 export type Style = z.output<typeof styleSchema>;
@@ -323,7 +336,9 @@ function upgradeLegacyModals(input: unknown): unknown {
 
     return {
         ...input,
-        modals: input.modals.map((modal: unknown) => {
+        modals: input.modals.map((stored: unknown) => {
+            const modal = emptyArrayAsObject(stored);
+
             if (!isRecord(modal)) {
                 return modal;
             }
@@ -450,7 +465,8 @@ export function parseSiteSettings(input: unknown): Parsed<SiteSettings> {
 
 
 function check<S extends z.ZodType>(schema: S, input: unknown, path: (string | number)[]): z.output<S> {
-    const result = schema.safeParse(input);
+    // `reportInput` keeps the input on each issue, which is how a wrong type is told apart from a missing value.
+    const result = schema.safeParse(input, { reportInput: true });
 
     if (result.success) {
         return result.data;
