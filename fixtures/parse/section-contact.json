@@ -1,0 +1,291 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "seccion-dezh48l",
+          "height": {
+            "desktop": 520,
+            "mobile": 676
+          },
+          "background": {
+            "type": "color",
+            "color": "surface"
+          },
+          "elements": [
+            {
+              "id": "heading-gpdzdi4",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 80,
+                  "w": 32,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Pide tu cita",
+                "level": 2
+              },
+              "style": {
+                "color": "secondary",
+                "font": "heading",
+                "size": 38,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            },
+            {
+              "id": "text-bhkvryu",
+              "type": "text",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 190,
+                  "w": 30,
+                  "h": 110
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Déjanos tus datos y te confirmamos el horario por WhatsApp el mismo día."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 17,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "input-ljxch29",
+              "type": "input",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 44,
+                  "y": 80,
+                  "w": 24,
+                  "h": 78
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Cómo te llamas",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "secondary",
+                "background": "background",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 12,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 12
+              }
+            },
+            {
+              "id": "input-6qc71bw",
+              "type": "input",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 70,
+                  "y": 80,
+                  "w": 24,
+                  "h": 78
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "WhatsApp",
+                "placeholder": "300 111 2233",
+                "required": true,
+                "input_type": "tel",
+                "options": []
+              },
+              "style": {
+                "color": "secondary",
+                "background": "background",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 12,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 12
+              }
+            },
+            {
+              "id": "select-hbhuuc8",
+              "type": "select",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 44,
+                  "y": 172,
+                  "w": 50,
+                  "h": 78
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Motivo",
+                "placeholder": "",
+                "required": true,
+                "input_type": "text",
+                "options": [
+                  "Valoración",
+                  "Limpieza",
+                  "Dolor o urgencia",
+                  "Otro"
+                ]
+              },
+              "style": {
+                "color": "secondary",
+                "background": "background",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 12,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 12
+              }
+            },
+            {
+              "id": "textarea-7p1inqd",
+              "type": "textarea",
+              "z": 6,
+              "layout": {
+                "desktop": {
+                  "x": 44,
+                  "y": 264,
+                  "w": 50,
+                  "h": 110
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Cuéntanos qué sientes",
+                "placeholder": "Opcional",
+                "required": false,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "secondary",
+                "background": "background",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 12,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 12
+              }
+            },
+            {
+              "id": "checkbox-5xvcab3",
+              "type": "checkbox",
+              "z": 7,
+              "layout": {
+                "desktop": {
+                  "x": 44,
+                  "y": 388,
+                  "w": 50,
+                  "h": 34
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Autorizo el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "muted",
+                "background": "surface",
+                "font": "body",
+                "size": 14,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "button-dob1u0r",
+              "type": "button",
+              "z": 8,
+              "layout": {
+                "desktop": {
+                  "x": 44,
+                  "y": 434,
+                  "w": 50,
+                  "h": 54
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Enviar solicitud",
+                "action": {
+                  "type": "submit",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 17,
+                "weight": 700,
+                "align": "center",
+                "radius": 14
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo Site",
+      "locale": "es",
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+      },
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "favicon": null,
+      "og_image": null
+    }
+  }
+}

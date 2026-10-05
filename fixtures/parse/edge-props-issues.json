@@ -1,0 +1,15 @@
+{
+  "document": {
+    "issues": [
+      "sections.0.elements.0.props.links.0.label:size",
+      "sections.0.elements.0.props.links.0.action.type:required",
+      "sections.0.elements.0.props.links.1.action.type:pattern",
+      "sections.0.elements.0.props.links.2:type",
+      "sections.0.elements.0.props.action.type:pattern",
+      "sections.0.elements.1.props.text:type",
+      "sections.0.elements.1.props.url:pattern",
+      "sections.0.elements.1.props.icon:enum",
+      "sections.0.elements.1.props.options.0:size"
+    ]
+  }
+}

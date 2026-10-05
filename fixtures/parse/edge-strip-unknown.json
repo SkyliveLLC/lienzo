@@ -1,0 +1,75 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "s1",
+          "group": {
+            "id": "g",
+            "type": "steps",
+            "label": "One"
+          },
+          "height": {
+            "desktop": 400,
+            "mobile": 400
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "e1",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 50,
+                  "h": 40
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Hi"
+              },
+              "style": {
+                "color": "text",
+                "gradient": {
+                  "type": "radial",
+                  "from": "primary",
+                  "to": "secondary"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo",
+      "locale": "es-MX",
+      "theme": {
+        "primary": "#ABCDEF",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Open Sans",
+        "radius": 12,
+        "max_width": 1200
+      },
+      "seo": {
+        "title": "T",
+        "description": "D"
+      },
+      "favicon": "media:3",
+      "og_image": "https://a.test/og.png"
+    }
+  }
+}

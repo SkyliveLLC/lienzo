@@ -1,0 +1,97 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "s1",
+          "group": {
+            "id": "",
+            "type": null,
+            "label": ""
+          },
+          "height": {
+            "desktop": 400,
+            "mobile": 400
+          },
+          "background": {
+            "type": "image",
+            "color": null,
+            "image": null,
+            "overlay": null,
+            "parallax": null
+          },
+          "elements": [
+            {
+              "id": "e1",
+              "type": "text",
+              "z": 1,
+              "locked": null,
+              "group": "",
+              "layout": {
+                "desktop": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 50,
+                  "h": 40
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "  ",
+                "level": null,
+                "alt": "",
+                "url": null,
+                "icon": null,
+                "sticky": null,
+                "options": null,
+                "action": {
+                  "type": null,
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": null,
+                "size": null,
+                "weight": null,
+                "shadow_custom": null,
+                "gradient": {
+                  "type": null,
+                  "from": null,
+                  "to": "primary",
+                  "angle": null
+                },
+                "animation": {
+                  "type": null
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo",
+      "locale": "en",
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+      },
+      "seo": {
+        "title": "",
+        "description": null
+      },
+      "favicon": null,
+      "og_image": null
+    }
+  }
+}

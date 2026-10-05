@@ -1,0 +1,66 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "s1",
+          "height": {
+            "desktop": 400,
+            "mobile": 400
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "e1",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 50,
+                  "h": 40
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": " ",
+                "level": null,
+                "label": "​",
+                "url": "https://a.test/x",
+                "icon": null
+              },
+              "style": {
+                "color": null
+              }
+            },
+            {
+              "id": "e2",
+              "type": "button",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 50,
+                  "h": 40
+                },
+                "mobile": null
+              },
+              "props": {
+                "action": {
+                  "type": null,
+                  "value": ""
+                }
+              },
+              "style": {}
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

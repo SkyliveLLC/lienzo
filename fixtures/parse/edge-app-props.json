@@ -1,0 +1,63 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "s1",
+          "height": {
+            "desktop": 400,
+            "mobile": 400
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "e1",
+              "type": "services",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 50,
+                  "h": 40
+                },
+                "mobile": null
+              },
+              "props": {
+                "limit": null,
+                "columns": 2.5,
+                "variant": null,
+                "show_duration": null,
+                "show_review": true
+              },
+              "style": {}
+            },
+            {
+              "id": "e2",
+              "type": "team",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 50,
+                  "h": 40
+                },
+                "mobile": null
+              },
+              "props": {
+                "limit": 12,
+                "variant": "compact",
+                "show_role": false
+              },
+              "style": {}
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

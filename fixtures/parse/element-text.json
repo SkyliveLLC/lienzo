@@ -1,0 +1,1736 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "variantes",
+          "height": {
+            "desktop": 336,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "text-s5wmoe7",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Primera línea\nSegunda línea\n\nTras un hueco"
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "text-r24elcz",
+              "type": "text",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Escapa <script>alert(1)</script> & \"comillas\""
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "text-jmt4xv3",
+              "type": "text",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Limpieza dental en una sola visita",
+                "accent": "una sola visita"
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "accent_color": "secondary"
+              }
+            },
+            {
+              "id": "text-cjsa6je",
+              "type": "text",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": ""
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "text-hqs1xjt",
+              "type": "text",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "center",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "text-ynedvom",
+              "type": "text",
+              "z": 6,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 14,
+                "weight": 500,
+                "align": "right",
+                "line_height": 1.6
+              }
+            }
+          ]
+        },
+        {
+          "id": "relleno",
+          "height": {
+            "desktop": 1104,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "surface"
+          },
+          "elements": [
+            {
+              "id": "text-cetf7aw",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "gradient": {
+                  "type": "linear",
+                  "from": "primary",
+                  "to": "secondary",
+                  "angle": 135
+                }
+              }
+            },
+            {
+              "id": "text-yrl03vq",
+              "type": "text",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "gradient": {
+                  "type": "radial",
+                  "from": "#f97316",
+                  "to": "background",
+                  "angle": 0
+                },
+                "background_opacity": 0.6
+              }
+            },
+            {
+              "id": "text-rwykuo7",
+              "type": "text",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "background": "#fde68a",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "background_opacity": 0.4
+              }
+            },
+            {
+              "id": "text-8qhiog8",
+              "type": "text",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "#7c3aed",
+                "background": "surface",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "text-qnjd222",
+              "type": "text",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "shadow": "sm"
+              }
+            },
+            {
+              "id": "text-drdovmq",
+              "type": "text",
+              "z": 6,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "shadow": "md"
+              }
+            },
+            {
+              "id": "text-5jwdsi5",
+              "type": "text",
+              "z": 7,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "shadow": "lg"
+              }
+            },
+            {
+              "id": "text-coxhctz",
+              "type": "text",
+              "z": 8,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "shadow": "custom",
+                "shadow_custom": {
+                  "x": 4,
+                  "y": 12,
+                  "blur": 32,
+                  "spread": -4,
+                  "color": "primary",
+                  "opacity": 0.35
+                }
+              }
+            },
+            {
+              "id": "text-8b4xqq6",
+              "type": "text",
+              "z": 9,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "shadow": "custom",
+                "shadow_custom": {
+                  "x": 0,
+                  "y": 0,
+                  "blur": 0,
+                  "spread": 0,
+                  "color": "#000000",
+                  "opacity": 1
+                }
+              }
+            },
+            {
+              "id": "text-ckmycus",
+              "type": "text",
+              "z": 10,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 424,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "radius": 999,
+                "border_width": 3,
+                "border_color": "#e11d48",
+                "padding": 24
+              }
+            },
+            {
+              "id": "text-xg3o2gm",
+              "type": "text",
+              "z": 11,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 424,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "radius": 0,
+                "border_width": 2,
+                "padding": 0
+              }
+            },
+            {
+              "id": "text-i2dga77",
+              "type": "text",
+              "z": 12,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 424,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "heading",
+                "size": 30,
+                "weight": 800,
+                "align": "center",
+                "line_height": 2
+              }
+            },
+            {
+              "id": "text-67wozsd",
+              "type": "text",
+              "z": 13,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 552,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "opacity": 0.5
+              }
+            },
+            {
+              "id": "text-rmp4mqd",
+              "type": "text",
+              "z": 14,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 552,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "opacity": 0
+              }
+            },
+            {
+              "id": "text-mmy3a1b",
+              "type": "text",
+              "z": 15,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 552,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "background": "background",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "background_opacity": 0.5,
+                "blur": 8
+              }
+            },
+            {
+              "id": "text-nebncca",
+              "type": "text",
+              "z": 16,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 680,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "clip": true
+              }
+            },
+            {
+              "id": "text-d2x4elq",
+              "type": "text",
+              "z": 17,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 680,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "overflow": "hidden"
+              }
+            },
+            {
+              "id": "text-0shk0gz",
+              "type": "text",
+              "z": 18,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 680,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "overflow": "scroll-x"
+              }
+            },
+            {
+              "id": "text-yhoj3ov",
+              "type": "text",
+              "z": 19,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 808,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "overflow": "scroll-y"
+              }
+            },
+            {
+              "id": "text-dmr8b59",
+              "type": "text",
+              "z": 20,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 808,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "clip": true,
+                "overflow": "visible"
+              }
+            },
+            {
+              "id": "text-jxozuji",
+              "type": "text",
+              "z": 21,
+              "locked": true,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 808,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "text-s3lhod9",
+              "type": "text",
+              "z": 22,
+              "group": "grupo-a",
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 936,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "text-wd4mhfz",
+              "type": "text",
+              "z": 23,
+              "locked": true,
+              "group": "grupo-a",
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 936,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            }
+          ]
+        },
+        {
+          "id": "movimiento",
+          "height": {
+            "desktop": 976,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "text-fqaee07",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "rotate": 12
+              }
+            },
+            {
+              "id": "text-bjuquj4",
+              "type": "text",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "rotate": -45.5
+              }
+            },
+            {
+              "id": "text-xaeoh3u",
+              "type": "text",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "flip_x": true
+              }
+            },
+            {
+              "id": "text-ilwaiyi",
+              "type": "text",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "flip_y": true
+              }
+            },
+            {
+              "id": "text-7zlsanj",
+              "type": "text",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "rotate": 30,
+                "flip_x": true,
+                "flip_y": true
+              }
+            },
+            {
+              "id": "text-4vqrn34",
+              "type": "text",
+              "z": 6,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "hover": "lift"
+              }
+            },
+            {
+              "id": "text-i8juriq",
+              "type": "text",
+              "z": 7,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "rotate": -8,
+                "hover": "lift"
+              }
+            },
+            {
+              "id": "text-nd3sg72",
+              "type": "text",
+              "z": 8,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "hover": "grow"
+              }
+            },
+            {
+              "id": "text-4cmktxp",
+              "type": "text",
+              "z": 9,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "flip_x": true,
+                "hover": "grow"
+              }
+            },
+            {
+              "id": "text-d37xoyv",
+              "type": "text",
+              "z": 10,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 424,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "hover": "fade"
+              }
+            },
+            {
+              "id": "text-2lg20wj",
+              "type": "text",
+              "z": 11,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 424,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "hover": "none"
+              }
+            },
+            {
+              "id": "text-vy8km6l",
+              "type": "text",
+              "z": 12,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 424,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "animation": {
+                  "type": "fade",
+                  "delay": 0,
+                  "duration": 0.7
+                }
+              }
+            },
+            {
+              "id": "text-amqqrlw",
+              "type": "text",
+              "z": 13,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 552,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "animation": {
+                  "type": "up",
+                  "delay": 0.2,
+                  "duration": 1
+                }
+              }
+            },
+            {
+              "id": "text-0vs7anv",
+              "type": "text",
+              "z": 14,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 552,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "animation": {
+                  "type": "down",
+                  "delay": 0.4,
+                  "duration": 0.5
+                }
+              }
+            },
+            {
+              "id": "text-emhk10e",
+              "type": "text",
+              "z": 15,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 552,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "animation": {
+                  "type": "left",
+                  "delay": 0,
+                  "duration": 0.2
+                }
+              }
+            },
+            {
+              "id": "text-5vcv1h8",
+              "type": "text",
+              "z": 16,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 680,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "animation": {
+                  "type": "right",
+                  "delay": 1.25,
+                  "duration": 1.5
+                }
+              }
+            },
+            {
+              "id": "text-cbj0fhy",
+              "type": "text",
+              "z": 17,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 680,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "animation": {
+                  "type": "zoom",
+                  "delay": 2,
+                  "duration": 2
+                }
+              }
+            },
+            {
+              "id": "text-k3fbujp",
+              "type": "text",
+              "z": 18,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 680,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "animation": {
+                  "type": "none",
+                  "delay": 0,
+                  "duration": 0.7
+                }
+              }
+            },
+            {
+              "id": "text-p1ncy6d",
+              "type": "text",
+              "z": 19,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 808,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "visible_on": "desktop"
+              }
+            },
+            {
+              "id": "text-te6uyt2",
+              "type": "text",
+              "z": 20,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 808,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "visible_on": "mobile"
+              }
+            },
+            {
+              "id": "text-1de240j",
+              "type": "text",
+              "z": 21,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 808,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "visible_on": "all"
+              }
+            }
+          ]
+        },
+        {
+          "id": "movil",
+          "height": {
+            "desktop": 464,
+            "mobile": 792
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "text-kapo58i",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": {
+                  "x": 4,
+                  "y": 24,
+                  "w": 90,
+                  "h": 77
+                }
+              },
+              "props": {
+                "text": "Primera línea\nSegunda línea\n\nTras un hueco"
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "text-6aq4pvw",
+              "type": "text",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": {
+                  "x": 6,
+                  "y": 117,
+                  "w": 90,
+                  "h": 77
+                }
+              },
+              "props": {
+                "text": "Escapa <script>alert(1)</script> & \"comillas\""
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "text-qpghc0s",
+              "type": "text",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": {
+                  "x": 4,
+                  "y": 210,
+                  "w": 90,
+                  "h": 77
+                }
+              },
+              "props": {
+                "text": "Limpieza dental en una sola visita",
+                "accent": "una sola visita"
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "accent_color": "secondary"
+              }
+            },
+            {
+              "id": "text-dk581rs",
+              "type": "text",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": {
+                  "x": 6,
+                  "y": 303,
+                  "w": 90,
+                  "h": 77
+                }
+              },
+              "props": {
+                "text": ""
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "text-rh9hhw6",
+              "type": "text",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": {
+                  "x": 4,
+                  "y": 396,
+                  "w": 90,
+                  "h": 77
+                }
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "center",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "text-ijvr75u",
+              "type": "text",
+              "z": 6,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": {
+                  "x": 6,
+                  "y": 489,
+                  "w": 90,
+                  "h": 77
+                }
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 14,
+                "weight": 500,
+                "align": "right",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "text-mobi527",
+              "type": "text",
+              "z": 7,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": {
+                  "x": 4,
+                  "y": 582,
+                  "w": 90,
+                  "h": 77
+                }
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "visible_on": "desktop"
+              }
+            },
+            {
+              "id": "text-jt1ymmt",
+              "type": "text",
+              "z": 8,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": {
+                  "x": 6,
+                  "y": 675,
+                  "w": 90,
+                  "h": 77
+                }
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "visible_on": "mobile"
+              }
+            }
+          ]
+        }
+      ],
+      "modals": [
+        {
+          "id": "ventana",
+          "title": "Información",
+          "size": "md",
+          "show_title": true,
+          "width": 560,
+          "height": {
+            "desktop": 320,
+            "mobile": 420
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "text-5ebkzor",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 10,
+                  "y": 0,
+                  "w": 40,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo Site",
+      "locale": "es",
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+      },
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "favicon": null,
+      "og_image": null
+    }
+  }
+}

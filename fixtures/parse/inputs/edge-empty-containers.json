@@ -1,0 +1,81 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "s1",
+        "height": {
+          "desktop": 400,
+          "mobile": 400
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "e1",
+            "type": "select",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 0,
+                "y": 0,
+                "w": 50,
+                "h": 40
+              },
+              "mobile": null
+            },
+            "props": {
+              "options": {},
+              "action": []
+            },
+            "style": []
+          },
+          {
+            "id": "e2",
+            "type": "navbar",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 0,
+                "y": 0,
+                "w": 50,
+                "h": 40
+              },
+              "mobile": null
+            },
+            "props": {
+              "links": {}
+            },
+            "style": {
+              "gradient": [],
+              "animation": []
+            }
+          },
+          {
+            "id": "e3",
+            "type": "map",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 0,
+                "y": 0,
+                "w": 50,
+                "h": 40
+              },
+              "mobile": null
+            },
+            "props": [],
+            "style": {}
+          }
+        ]
+      }
+    ],
+    "modals": {}
+  },
+  "site": {
+    "name": "Demo",
+    "theme": [],
+    "seo": []
+  }
+}

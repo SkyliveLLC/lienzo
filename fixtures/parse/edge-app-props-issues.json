@@ -1,0 +1,10 @@
+{
+  "document": {
+    "issues": [
+      "sections.0.elements.0.props.limit:range",
+      "sections.0.elements.0.props.columns:type",
+      "sections.0.elements.0.props.variant:enum",
+      "sections.0.elements.0.props.show_duration:type"
+    ]
+  }
+}

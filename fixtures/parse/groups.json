@@ -1,0 +1,721 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "intro",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "heading-ei2envo",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Antes de los grupos",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "limpieza",
+          "group": {
+            "id": "tratamientos",
+            "type": "tabs",
+            "label": "Limpieza"
+          },
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "heading-rm84xo5",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Limpieza",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "ortodoncia",
+          "group": {
+            "id": "tratamientos",
+            "type": "tabs",
+            "label": "Ortodoncia"
+          },
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "heading-2xw3h2i",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Ortodoncia",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "blanqueamiento",
+          "group": {
+            "id": "tratamientos",
+            "type": "tabs",
+            "label": "Blanqueamiento"
+          },
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "heading-11w3igc",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Blanqueamiento",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "datos",
+          "group": {
+            "id": "cita",
+            "type": "steps",
+            "label": "Tus datos"
+          },
+          "height": {
+            "desktop": 188,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "input-dexlemg",
+              "type": "input",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 76
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "button-pfx7neu",
+              "type": "button",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 52
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Siguiente",
+                "action": {
+                  "type": "step_next",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 12
+              }
+            }
+          ]
+        },
+        {
+          "id": "motivo",
+          "group": {
+            "id": "cita",
+            "type": "steps",
+            "label": "Motivo"
+          },
+          "height": {
+            "desktop": 188,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "select-t0f6tfw",
+              "type": "select",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 76
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "",
+                "required": false,
+                "input_type": "text",
+                "options": [
+                  "Opción 1",
+                  "Opción 2"
+                ]
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "button-5lol6sf",
+              "type": "button",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 52
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Anterior",
+                "action": {
+                  "type": "step_prev",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 12
+              }
+            },
+            {
+              "id": "button-pfx7neu",
+              "type": "button",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 52
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Siguiente",
+                "action": {
+                  "type": "step_next",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 12
+              }
+            }
+          ]
+        },
+        {
+          "id": "confirmar",
+          "group": {
+            "id": "cita",
+            "type": "steps",
+            "label": ""
+          },
+          "height": {
+            "desktop": 164,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "checkbox-fejzqnr",
+              "type": "checkbox",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "button-5lol6sf",
+              "type": "button",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 52
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Anterior",
+                "action": {
+                  "type": "step_prev",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 12
+              }
+            },
+            {
+              "id": "button-xc5f3t6",
+              "type": "button",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 52
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Enviar",
+                "action": {
+                  "type": "submit",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 12
+              }
+            }
+          ]
+        },
+        {
+          "id": "solo",
+          "group": {
+            "id": "unico",
+            "type": "tabs",
+            "label": "Única"
+          },
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "heading-l4716tf",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Grupo de una sola sección",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "partido-a",
+          "group": {
+            "id": "partido",
+            "type": "steps",
+            "label": "Uno"
+          },
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "heading-hh7how6",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Partido A",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "partido-b",
+          "group": {
+            "id": "partido",
+            "type": "steps",
+            "label": "Dos"
+          },
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "heading-6x8vczw",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Partido B",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "entre",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "heading-s0kuzrj",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Interrumpe el grupo",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "partido-c",
+          "group": {
+            "id": "partido",
+            "type": "steps",
+            "label": "Tres"
+          },
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "heading-oo9iu5b",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Partido C",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo Site",
+      "locale": "es",
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+      },
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "favicon": null,
+      "og_image": null
+    }
+  }
+}

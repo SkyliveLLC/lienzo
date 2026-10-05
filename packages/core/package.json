@@ -26,7 +26,7 @@
     "build": "tsdown && node scripts/assets.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "golden": "node scripts/golden.ts",
+    "golden": "node scripts/golden.ts && node scripts/parse-golden.ts",
     "runtime": "node scripts/runtime.ts",
     "render-inputs": "node scripts/render-inputs.ts"
   },

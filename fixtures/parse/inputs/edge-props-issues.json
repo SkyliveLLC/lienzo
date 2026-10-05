@@ -1,0 +1,78 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "s1",
+        "height": {
+          "desktop": 400,
+          "mobile": 400
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "e2",
+            "type": "navbar",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 0,
+                "y": 0,
+                "w": 50,
+                "h": 40
+              },
+              "mobile": null
+            },
+            "props": {
+              "links": [
+                {
+                  "label": "",
+                  "action": {
+                    "value": "x"
+                  }
+                },
+                {
+                  "label": "ok",
+                  "action": {
+                    "type": "Bad"
+                  }
+                },
+                "x"
+              ],
+              "action": {
+                "type": "BAD"
+              }
+            },
+            "style": {}
+          },
+          {
+            "id": "e3",
+            "type": "icon",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 0,
+                "y": 0,
+                "w": 50,
+                "h": 40
+              },
+              "mobile": null
+            },
+            "props": {
+              "icon": "star\n",
+              "url": "https://a.test/x\n",
+              "options": [
+                "",
+                "ok"
+              ],
+              "text": 5
+            },
+            "style": {}
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "site": {
+    "name": "Demo",
+    "theme": {
+      "heading_font": "Inter';}body{x:y",
+      "body_font": "Inter&family=Evil",
+      "primary": "primary"
+    }
+  }
+}

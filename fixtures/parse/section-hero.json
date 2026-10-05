@@ -1,0 +1,171 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "seccion-bpyijn9",
+          "height": {
+            "desktop": 680,
+            "mobile": 884
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "shape-koa70qd",
+              "type": "shape",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 52,
+                  "y": 120,
+                  "w": 42,
+                  "h": 400
+                },
+                "mobile": null
+              },
+              "props": {
+                "shape": "blob"
+              },
+              "style": {
+                "background": "surface",
+                "radius": 16,
+                "opacity": 1
+              }
+            },
+            {
+              "id": "image-ldvfwcg",
+              "type": "image",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 50,
+                  "y": 96,
+                  "w": 40,
+                  "h": 380
+                },
+                "mobile": null
+              },
+              "props": {
+                "src": null,
+                "alt": "Foto de la clínica"
+              },
+              "style": {
+                "radius": 22,
+                "shadow": "lg",
+                "object_fit": "cover"
+              }
+            },
+            {
+              "id": "heading-2i31knh",
+              "type": "heading",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 140,
+                  "w": 40,
+                  "h": 180
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Una sonrisa sana empieza por una buena valoración",
+                "level": 1
+              },
+              "style": {
+                "color": "secondary",
+                "font": "heading",
+                "size": 48,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            },
+            {
+              "id": "text-lq5k35x",
+              "type": "text",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 336,
+                  "w": 36,
+                  "h": 90
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Te explicamos qué necesitas, cuánto toma y cuánto cuesta antes de empezar."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "button-b8vcplv",
+              "type": "button",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 456,
+                  "w": 16,
+                  "h": 54
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Pedir cita",
+                "action": {
+                  "type": "whatsapp",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 14
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo Site",
+      "locale": "es",
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+      },
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "favicon": null,
+      "og_image": null
+    }
+  }
+}

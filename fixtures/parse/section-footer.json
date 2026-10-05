@@ -1,0 +1,153 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "seccion-ufqub81",
+          "height": {
+            "desktop": 280,
+            "mobile": 364
+          },
+          "background": {
+            "type": "color",
+            "color": "secondary"
+          },
+          "elements": [
+            {
+              "id": "heading-ycxxrit",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 64,
+                  "w": 26,
+                  "h": 50
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Tu clínica",
+                "level": 3
+              },
+              "style": {
+                "color": "background",
+                "font": "heading",
+                "size": 24,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            },
+            {
+              "id": "text-50ae9yh",
+              "type": "text",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 122,
+                  "w": 26,
+                  "h": 100
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Dirección de la clínica\nTel. 300 000 0000"
+              },
+              "style": {
+                "color": "background",
+                "font": "body",
+                "size": 15,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.7,
+                "opacity": 0.75
+              }
+            },
+            {
+              "id": "text-00tv6ln",
+              "type": "text",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 38,
+                  "y": 64,
+                  "w": 26,
+                  "h": 160
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Horario\nLunes a viernes, 8:00 a 18:00\nSábados, 8:00 a 13:00"
+              },
+              "style": {
+                "color": "background",
+                "font": "body",
+                "size": 15,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.8,
+                "opacity": 0.75
+              }
+            },
+            {
+              "id": "button-yxiqd1v",
+              "type": "button",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 70,
+                  "y": 64,
+                  "w": 24,
+                  "h": 48
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Pedir cita",
+                "action": {
+                  "type": "whatsapp",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 12
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo Site",
+      "locale": "es",
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+      },
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "favicon": null,
+      "og_image": null
+    }
+  }
+}

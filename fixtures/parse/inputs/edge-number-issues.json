@@ -1,0 +1,50 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "s1",
+        "height": {
+          "desktop": 400,
+          "mobile": 400
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "e1",
+            "type": "text",
+            "z": 1.5,
+            "layout": {
+              "desktop": {
+                "x": "5",
+                "y": 0,
+                "w": 0.4,
+                "h": 100000000000000000000
+              },
+              "mobile": null
+            },
+            "props": {
+              "level": 5
+            },
+            "style": {
+              "weight": "400",
+              "size": "12",
+              "opacity": 1.5,
+              "radius": 100000000000000000000,
+              "blur": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "site": {
+    "name": "Demo",
+    "theme": {
+      "radius": 41,
+      "max_width": 1600.5
+    }
+  }
+}

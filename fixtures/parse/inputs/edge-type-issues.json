@@ -1,0 +1,55 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "s1",
+        "height": {
+          "desktop": 400
+        },
+        "background": {
+          "type": "video"
+        },
+        "elements": [
+          {
+            "id": 5,
+            "type": "text",
+            "layout": [],
+            "props": "x",
+            "style": "y",
+            "locked": "yes",
+            "group": 3
+          },
+          {
+            "id": "e2",
+            "type": "text"
+          }
+        ]
+      },
+      "nope"
+    ],
+    "modals": [
+      {
+        "id": "m",
+        "title": "",
+        "width": 10,
+        "height": {
+          "desktop": 300,
+          "mobile": 300
+        },
+        "background": {
+          "type": "image"
+        },
+        "elements": []
+      }
+    ]
+  },
+  "site": {
+    "name": "",
+    "locale": "EN",
+    "theme": "dark",
+    "seo": {
+      "title": 5
+    },
+    "favicon": "http://x.test/i.png"
+  }
+}

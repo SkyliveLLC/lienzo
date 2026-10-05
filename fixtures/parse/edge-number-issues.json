@@ -1,0 +1,22 @@
+{
+  "document": {
+    "issues": [
+      "sections.0.elements.0.z:type",
+      "sections.0.elements.0.layout.desktop.x:type",
+      "sections.0.elements.0.layout.desktop.w:range",
+      "sections.0.elements.0.layout.desktop.h:range",
+      "sections.0.elements.0.style.size:type",
+      "sections.0.elements.0.style.weight:enum",
+      "sections.0.elements.0.style.radius:range",
+      "sections.0.elements.0.style.radius:range",
+      "sections.0.elements.0.style.opacity:range",
+      "sections.0.elements.0.style.blur:type"
+    ]
+  },
+  "site": {
+    "issues": [
+      "theme.radius:range",
+      "theme.max_width:type"
+    ]
+  }
+}

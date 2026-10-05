@@ -1,0 +1,56 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "s1",
+        "height": {
+          "desktop": 400,
+          "mobile": 400
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": []
+      }
+    ],
+    "modals": [
+      {
+        "id": "promo",
+        "title": "Promo",
+        "text": "  Ten percent off  "
+      },
+      {
+        "id": "blank",
+        "text": "   "
+      },
+      {
+        "text": "No id"
+      },
+      [],
+      {
+        "id": "kept",
+        "title": "Kept",
+        "size": "md",
+        "show_title": false,
+        "width": 600,
+        "height": {
+          "desktop": 300,
+          "mobile": 300
+        },
+        "background": {
+          "type": "color",
+          "color": "#112233"
+        },
+        "elements": [],
+        "text": "ignored"
+      },
+      {
+        "id": "nulls",
+        "title": null,
+        "elements": null,
+        "text": "From null"
+      }
+    ]
+  }
+}

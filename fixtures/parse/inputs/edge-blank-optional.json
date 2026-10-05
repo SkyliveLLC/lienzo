@@ -1,0 +1,86 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "s1",
+        "height": {
+          "desktop": 400,
+          "mobile": 400
+        },
+        "background": {
+          "type": "image",
+          "color": "",
+          "image": "",
+          "overlay": "",
+          "parallax": ""
+        },
+        "elements": [
+          {
+            "id": "e1",
+            "type": "text",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 0,
+                "y": 0,
+                "w": 50,
+                "h": 40
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "  ",
+              "alt": "",
+              "level": "",
+              "url": " ",
+              "icon": "\t",
+              "sticky": "",
+              "options": null,
+              "action": {
+                "type": "",
+                "value": ""
+              }
+            },
+            "style": {
+              "color": "  ",
+              "size": "",
+              "weight": " ",
+              "gradient": {
+                "type": "",
+                "from": "",
+                "to": "primary",
+                "angle": ""
+              },
+              "animation": {
+                "type": " "
+              },
+              "shadow_custom": null
+            },
+            "locked": "",
+            "group": ""
+          }
+        ],
+        "group": {
+          "id": "",
+          "type": "",
+          "label": ""
+        }
+      }
+    ]
+  },
+  "site": {
+    "name": "Demo",
+    "locale": "",
+    "theme": {
+      "primary": " ",
+      "radius": "",
+      "heading_font": ""
+    },
+    "seo": {
+      "title": "",
+      "description": null
+    },
+    "favicon": "",
+    "og_image": " "
+  }
+}

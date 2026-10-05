@@ -1,0 +1,1923 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "variantes",
+          "height": {
+            "desktop": 232,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "textarea-7c0dq0m",
+              "type": "textarea",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "textarea-c9wsiwn",
+              "type": "textarea",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": false,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "textarea-sish6yt",
+              "type": "textarea",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Cuéntanos",
+                "placeholder": "Opcional",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "relleno",
+          "height": {
+            "desktop": 1296,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "surface"
+          },
+          "elements": [
+            {
+              "id": "textarea-8y9j1bs",
+              "type": "textarea",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "gradient": {
+                  "type": "linear",
+                  "from": "primary",
+                  "to": "secondary",
+                  "angle": 135
+                }
+              }
+            },
+            {
+              "id": "textarea-7kkktv5",
+              "type": "textarea",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "gradient": {
+                  "type": "radial",
+                  "from": "#f97316",
+                  "to": "background",
+                  "angle": 0
+                },
+                "background_opacity": 0.6
+              }
+            },
+            {
+              "id": "textarea-yjb32ej",
+              "type": "textarea",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "#fde68a",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "background_opacity": 0.4
+              }
+            },
+            {
+              "id": "textarea-55gyqfq",
+              "type": "textarea",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 192,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "#7c3aed",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "textarea-l8459wc",
+              "type": "textarea",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 192,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "shadow": "sm"
+              }
+            },
+            {
+              "id": "textarea-hlfnvs0",
+              "type": "textarea",
+              "z": 6,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 192,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "shadow": "md"
+              }
+            },
+            {
+              "id": "textarea-dsmalgu",
+              "type": "textarea",
+              "z": 7,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 344,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "shadow": "lg"
+              }
+            },
+            {
+              "id": "textarea-54g5xwh",
+              "type": "textarea",
+              "z": 8,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 344,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "shadow": "custom",
+                "shadow_custom": {
+                  "x": 4,
+                  "y": 12,
+                  "blur": 32,
+                  "spread": -4,
+                  "color": "primary",
+                  "opacity": 0.35
+                }
+              }
+            },
+            {
+              "id": "textarea-1gmbjeb",
+              "type": "textarea",
+              "z": 9,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 344,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "shadow": "custom",
+                "shadow_custom": {
+                  "x": 0,
+                  "y": 0,
+                  "blur": 0,
+                  "spread": 0,
+                  "color": "#000000",
+                  "opacity": 1
+                }
+              }
+            },
+            {
+              "id": "textarea-fofog92",
+              "type": "textarea",
+              "z": 10,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 496,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 999,
+                "border_width": 3,
+                "border_color": "#e11d48",
+                "padding": 24
+              }
+            },
+            {
+              "id": "textarea-mupniin",
+              "type": "textarea",
+              "z": 11,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 496,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 0,
+                "border_width": 2,
+                "border_color": "muted",
+                "padding": 0
+              }
+            },
+            {
+              "id": "textarea-j4j8u44",
+              "type": "textarea",
+              "z": 12,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 496,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "heading",
+                "size": 30,
+                "weight": 800,
+                "align": "center",
+                "line_height": 2,
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "textarea-n96uxqt",
+              "type": "textarea",
+              "z": 13,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 648,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "opacity": 0.5
+              }
+            },
+            {
+              "id": "textarea-onrl1j9",
+              "type": "textarea",
+              "z": 14,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 648,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "opacity": 0
+              }
+            },
+            {
+              "id": "textarea-lrdqe0m",
+              "type": "textarea",
+              "z": 15,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 648,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "background",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "background_opacity": 0.5,
+                "blur": 8
+              }
+            },
+            {
+              "id": "textarea-3gl2ta1",
+              "type": "textarea",
+              "z": 16,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 800,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "clip": true
+              }
+            },
+            {
+              "id": "textarea-ng1frhd",
+              "type": "textarea",
+              "z": 17,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 800,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "overflow": "hidden"
+              }
+            },
+            {
+              "id": "textarea-qtkme6h",
+              "type": "textarea",
+              "z": 18,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 800,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "overflow": "scroll-x"
+              }
+            },
+            {
+              "id": "textarea-ox8xoda",
+              "type": "textarea",
+              "z": 19,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 952,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "overflow": "scroll-y"
+              }
+            },
+            {
+              "id": "textarea-1y030t3",
+              "type": "textarea",
+              "z": 20,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 952,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "clip": true,
+                "overflow": "visible"
+              }
+            },
+            {
+              "id": "textarea-gy5pnhv",
+              "type": "textarea",
+              "z": 21,
+              "locked": true,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 952,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "textarea-f2bpa8y",
+              "type": "textarea",
+              "z": 22,
+              "group": "grupo-a",
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 1104,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "textarea-4xudl6w",
+              "type": "textarea",
+              "z": 23,
+              "locked": true,
+              "group": "grupo-a",
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 1104,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "movimiento",
+          "height": {
+            "desktop": 1144,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "textarea-xy3vxnk",
+              "type": "textarea",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "rotate": 12
+              }
+            },
+            {
+              "id": "textarea-4i10laa",
+              "type": "textarea",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "rotate": -45.5
+              }
+            },
+            {
+              "id": "textarea-rrsa7yv",
+              "type": "textarea",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "flip_x": true
+              }
+            },
+            {
+              "id": "textarea-nyobfmf",
+              "type": "textarea",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 192,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "flip_y": true
+              }
+            },
+            {
+              "id": "textarea-natbrlt",
+              "type": "textarea",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 192,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "rotate": 30,
+                "flip_x": true,
+                "flip_y": true
+              }
+            },
+            {
+              "id": "textarea-83mujue",
+              "type": "textarea",
+              "z": 6,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 192,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "hover": "lift"
+              }
+            },
+            {
+              "id": "textarea-xsgsbdi",
+              "type": "textarea",
+              "z": 7,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 344,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "rotate": -8,
+                "hover": "lift"
+              }
+            },
+            {
+              "id": "textarea-ysi5uav",
+              "type": "textarea",
+              "z": 8,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 344,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "hover": "grow"
+              }
+            },
+            {
+              "id": "textarea-8b1655t",
+              "type": "textarea",
+              "z": 9,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 344,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "flip_x": true,
+                "hover": "grow"
+              }
+            },
+            {
+              "id": "textarea-eeul17h",
+              "type": "textarea",
+              "z": 10,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 496,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "hover": "fade"
+              }
+            },
+            {
+              "id": "textarea-x73sjml",
+              "type": "textarea",
+              "z": 11,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 496,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "hover": "none"
+              }
+            },
+            {
+              "id": "textarea-htxz8mp",
+              "type": "textarea",
+              "z": 12,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 496,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "fade",
+                  "delay": 0,
+                  "duration": 0.7
+                }
+              }
+            },
+            {
+              "id": "textarea-7kjcf9k",
+              "type": "textarea",
+              "z": 13,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 648,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "up",
+                  "delay": 0.2,
+                  "duration": 1
+                }
+              }
+            },
+            {
+              "id": "textarea-9hal58a",
+              "type": "textarea",
+              "z": 14,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 648,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "down",
+                  "delay": 0.4,
+                  "duration": 0.5
+                }
+              }
+            },
+            {
+              "id": "textarea-6ibepl7",
+              "type": "textarea",
+              "z": 15,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 648,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "left",
+                  "delay": 0,
+                  "duration": 0.2
+                }
+              }
+            },
+            {
+              "id": "textarea-es7bkk7",
+              "type": "textarea",
+              "z": 16,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 800,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "right",
+                  "delay": 1.25,
+                  "duration": 1.5
+                }
+              }
+            },
+            {
+              "id": "textarea-ssbx96k",
+              "type": "textarea",
+              "z": 17,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 800,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "zoom",
+                  "delay": 2,
+                  "duration": 2
+                }
+              }
+            },
+            {
+              "id": "textarea-7nbj0wy",
+              "type": "textarea",
+              "z": 18,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 800,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "none",
+                  "delay": 0,
+                  "duration": 0.7
+                }
+              }
+            },
+            {
+              "id": "textarea-k8tgoem",
+              "type": "textarea",
+              "z": 19,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 952,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "visible_on": "desktop"
+              }
+            },
+            {
+              "id": "textarea-9mnmmga",
+              "type": "textarea",
+              "z": 20,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 952,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "visible_on": "mobile"
+              }
+            },
+            {
+              "id": "textarea-27qjhfn",
+              "type": "textarea",
+              "z": 21,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 952,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "visible_on": "all"
+              }
+            }
+          ]
+        },
+        {
+          "id": "movil",
+          "height": {
+            "desktop": 384,
+            "mobile": 608
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "textarea-ug89zl1",
+              "type": "textarea",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": {
+                  "x": 4,
+                  "y": 24,
+                  "w": 90,
+                  "h": 96
+                }
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "textarea-i142qts",
+              "type": "textarea",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": {
+                  "x": 6,
+                  "y": 136,
+                  "w": 90,
+                  "h": 96
+                }
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": false,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "textarea-bl1vkha",
+              "type": "textarea",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": {
+                  "x": 4,
+                  "y": 248,
+                  "w": 90,
+                  "h": 96
+                }
+              },
+              "props": {
+                "label": "Cuéntanos",
+                "placeholder": "Opcional",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "textarea-ek4so5z",
+              "type": "textarea",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 192,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": {
+                  "x": 6,
+                  "y": 360,
+                  "w": 90,
+                  "h": 96
+                }
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "visible_on": "desktop"
+              }
+            },
+            {
+              "id": "textarea-07wabns",
+              "type": "textarea",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 192,
+                  "w": 26.666666666666668,
+                  "h": 120
+                },
+                "mobile": {
+                  "x": 4,
+                  "y": 472,
+                  "w": 90,
+                  "h": 96
+                }
+              },
+              "props": {
+                "label": "Nombre",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "visible_on": "mobile"
+              }
+            }
+          ]
+        }
+      ],
+      "modals": [
+        {
+          "id": "ventana",
+          "title": "Información",
+          "size": "md",
+          "show_title": true,
+          "width": 560,
+          "height": {
+            "desktop": 320,
+            "mobile": 420
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "text-49dsegg",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 10,
+                  "y": 0,
+                  "w": 40,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo Site",
+      "locale": "es",
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+      },
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "favicon": null,
+      "og_image": null
+    }
+  }
+}

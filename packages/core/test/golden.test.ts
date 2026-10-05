@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { fixtureNames, goldens, readFixture, renderFixture, renderFixtures } from '../scripts/golden.ts';
+import { parseCases, parseFixtures, parseGolden } from '../scripts/parse-golden.ts';
 import { compileRuntime, generatedModule } from '../scripts/runtime.ts';
 
 describe('render goldens', () => {
@@ -10,6 +11,12 @@ describe('render goldens', () => {
 
         expect(html).toBe(readFileSync(join(renderFixtures, `${name}.html`), 'utf8'));
         expect(css).toBe(readFileSync(join(renderFixtures, `${name}.css`), 'utf8'));
+    });
+});
+
+describe('parse goldens', () => {
+    it.each([...parseCases()])('%s matches its golden (run `pnpm golden` after an intended change)', (name, input) => {
+        expect(parseGolden(input)).toBe(readFileSync(join(parseFixtures, `${name}.json`), 'utf8'));
     });
 });
 

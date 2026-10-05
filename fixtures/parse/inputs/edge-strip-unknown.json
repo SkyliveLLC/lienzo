@@ -1,0 +1,73 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "s1",
+        "height": {
+          "desktop": 400,
+          "mobile": 400
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "e1",
+            "type": "text",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 0,
+                "y": 0,
+                "w": 50,
+                "h": 40
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Hi",
+              "onclick": "x"
+            },
+            "style": {
+              "color": "text",
+              "css": "x",
+              "gradient": {
+                "type": "radial",
+                "from": "primary",
+                "to": "secondary",
+                "bogus": 1
+              }
+            },
+            "extra": 1
+          }
+        ],
+        "junk": true,
+        "group": {
+          "id": "g",
+          "type": "steps",
+          "label": "One",
+          "x": 1
+        }
+      }
+    ],
+    "junk": true
+  },
+  "site": {
+    "name": "Demo",
+    "locale": "es-MX",
+    "theme": {
+      "primary": "#ABCDEF",
+      "body_font": "Open Sans",
+      "css": "x"
+    },
+    "seo": {
+      "title": "T",
+      "description": "D",
+      "x": 1
+    },
+    "favicon": "media:3",
+    "og_image": "https://a.test/og.png",
+    "extra": 1
+  }
+}

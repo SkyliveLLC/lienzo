@@ -1,0 +1,1923 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "variantes",
+          "height": {
+            "desktop": 144,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "checkbox-lxmfs4f",
+              "type": "checkbox",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "checkbox-np0z5i8",
+              "type": "checkbox",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": false,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "checkbox-xnxtgw3",
+              "type": "checkbox",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Quiero recibir recordatorios",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "relleno",
+          "height": {
+            "desktop": 592,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "surface"
+          },
+          "elements": [
+            {
+              "id": "checkbox-t9k0htl",
+              "type": "checkbox",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "gradient": {
+                  "type": "linear",
+                  "from": "primary",
+                  "to": "secondary",
+                  "angle": 135
+                }
+              }
+            },
+            {
+              "id": "checkbox-fyk6lm6",
+              "type": "checkbox",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "gradient": {
+                  "type": "radial",
+                  "from": "#f97316",
+                  "to": "background",
+                  "angle": 0
+                },
+                "background_opacity": 0.6
+              }
+            },
+            {
+              "id": "checkbox-4la0ljp",
+              "type": "checkbox",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "#fde68a",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "background_opacity": 0.4
+              }
+            },
+            {
+              "id": "checkbox-lnlb13g",
+              "type": "checkbox",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 104,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "#7c3aed",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "checkbox-j8o20t5",
+              "type": "checkbox",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 104,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "shadow": "sm"
+              }
+            },
+            {
+              "id": "checkbox-ftd0dd5",
+              "type": "checkbox",
+              "z": 6,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 104,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "shadow": "md"
+              }
+            },
+            {
+              "id": "checkbox-tg2w898",
+              "type": "checkbox",
+              "z": 7,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "shadow": "lg"
+              }
+            },
+            {
+              "id": "checkbox-deteqsu",
+              "type": "checkbox",
+              "z": 8,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "shadow": "custom",
+                "shadow_custom": {
+                  "x": 4,
+                  "y": 12,
+                  "blur": 32,
+                  "spread": -4,
+                  "color": "primary",
+                  "opacity": 0.35
+                }
+              }
+            },
+            {
+              "id": "checkbox-a4wt020",
+              "type": "checkbox",
+              "z": 9,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "shadow": "custom",
+                "shadow_custom": {
+                  "x": 0,
+                  "y": 0,
+                  "blur": 0,
+                  "spread": 0,
+                  "color": "#000000",
+                  "opacity": 1
+                }
+              }
+            },
+            {
+              "id": "checkbox-fsikxzc",
+              "type": "checkbox",
+              "z": 10,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 232,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 999,
+                "border_width": 3,
+                "border_color": "#e11d48",
+                "padding": 24
+              }
+            },
+            {
+              "id": "checkbox-6bvr43e",
+              "type": "checkbox",
+              "z": 11,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 232,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 0,
+                "border_width": 2,
+                "border_color": "muted",
+                "padding": 0
+              }
+            },
+            {
+              "id": "checkbox-7n6tfbi",
+              "type": "checkbox",
+              "z": 12,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 232,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "heading",
+                "size": 30,
+                "weight": 800,
+                "align": "center",
+                "line_height": 2,
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "checkbox-ci63fj8",
+              "type": "checkbox",
+              "z": 13,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "opacity": 0.5
+              }
+            },
+            {
+              "id": "checkbox-vlpnlr3",
+              "type": "checkbox",
+              "z": 14,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "opacity": 0
+              }
+            },
+            {
+              "id": "checkbox-zmyj6yp",
+              "type": "checkbox",
+              "z": 15,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "background",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "background_opacity": 0.5,
+                "blur": 8
+              }
+            },
+            {
+              "id": "checkbox-l6k1tsq",
+              "type": "checkbox",
+              "z": 16,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 360,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "clip": true
+              }
+            },
+            {
+              "id": "checkbox-0nb0oy2",
+              "type": "checkbox",
+              "z": 17,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 360,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "overflow": "hidden"
+              }
+            },
+            {
+              "id": "checkbox-38rxd6q",
+              "type": "checkbox",
+              "z": 18,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 360,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "overflow": "scroll-x"
+              }
+            },
+            {
+              "id": "checkbox-p77lpp9",
+              "type": "checkbox",
+              "z": 19,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 424,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "overflow": "scroll-y"
+              }
+            },
+            {
+              "id": "checkbox-hrire6q",
+              "type": "checkbox",
+              "z": 20,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 424,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "clip": true,
+                "overflow": "visible"
+              }
+            },
+            {
+              "id": "checkbox-eyumop1",
+              "type": "checkbox",
+              "z": 21,
+              "locked": true,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 424,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "checkbox-4b8d3c2",
+              "type": "checkbox",
+              "z": 22,
+              "group": "grupo-a",
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 488,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "checkbox-hmnd1qa",
+              "type": "checkbox",
+              "z": 23,
+              "locked": true,
+              "group": "grupo-a",
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 488,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "movimiento",
+          "height": {
+            "desktop": 528,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "checkbox-sgkqoae",
+              "type": "checkbox",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "rotate": 12
+              }
+            },
+            {
+              "id": "checkbox-vk5u29a",
+              "type": "checkbox",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "rotate": -45.5
+              }
+            },
+            {
+              "id": "checkbox-8v3vllk",
+              "type": "checkbox",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "flip_x": true
+              }
+            },
+            {
+              "id": "checkbox-4vh0dls",
+              "type": "checkbox",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 104,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "flip_y": true
+              }
+            },
+            {
+              "id": "checkbox-6pd0fc1",
+              "type": "checkbox",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 104,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "rotate": 30,
+                "flip_x": true,
+                "flip_y": true
+              }
+            },
+            {
+              "id": "checkbox-yhw4mva",
+              "type": "checkbox",
+              "z": 6,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 104,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "hover": "lift"
+              }
+            },
+            {
+              "id": "checkbox-c52p8wq",
+              "type": "checkbox",
+              "z": 7,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "rotate": -8,
+                "hover": "lift"
+              }
+            },
+            {
+              "id": "checkbox-my4ts2k",
+              "type": "checkbox",
+              "z": 8,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "hover": "grow"
+              }
+            },
+            {
+              "id": "checkbox-ubnnx7m",
+              "type": "checkbox",
+              "z": 9,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 168,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "flip_x": true,
+                "hover": "grow"
+              }
+            },
+            {
+              "id": "checkbox-rtly2wr",
+              "type": "checkbox",
+              "z": 10,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 232,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "hover": "fade"
+              }
+            },
+            {
+              "id": "checkbox-9yw6wrk",
+              "type": "checkbox",
+              "z": 11,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 232,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "hover": "none"
+              }
+            },
+            {
+              "id": "checkbox-d2d3xrn",
+              "type": "checkbox",
+              "z": 12,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 232,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "fade",
+                  "delay": 0,
+                  "duration": 0.7
+                }
+              }
+            },
+            {
+              "id": "checkbox-xv5fgmm",
+              "type": "checkbox",
+              "z": 13,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "up",
+                  "delay": 0.2,
+                  "duration": 1
+                }
+              }
+            },
+            {
+              "id": "checkbox-1bztfgz",
+              "type": "checkbox",
+              "z": 14,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "down",
+                  "delay": 0.4,
+                  "duration": 0.5
+                }
+              }
+            },
+            {
+              "id": "checkbox-k1eddne",
+              "type": "checkbox",
+              "z": 15,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 296,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "left",
+                  "delay": 0,
+                  "duration": 0.2
+                }
+              }
+            },
+            {
+              "id": "checkbox-r46b5r1",
+              "type": "checkbox",
+              "z": 16,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 360,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "right",
+                  "delay": 1.25,
+                  "duration": 1.5
+                }
+              }
+            },
+            {
+              "id": "checkbox-pn6gda9",
+              "type": "checkbox",
+              "z": 17,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 360,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "zoom",
+                  "delay": 2,
+                  "duration": 2
+                }
+              }
+            },
+            {
+              "id": "checkbox-7qk8m1m",
+              "type": "checkbox",
+              "z": 18,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 360,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "animation": {
+                  "type": "none",
+                  "delay": 0,
+                  "duration": 0.7
+                }
+              }
+            },
+            {
+              "id": "checkbox-3wl5vb1",
+              "type": "checkbox",
+              "z": 19,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 424,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "visible_on": "desktop"
+              }
+            },
+            {
+              "id": "checkbox-xi3uw25",
+              "type": "checkbox",
+              "z": 20,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 424,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "visible_on": "mobile"
+              }
+            },
+            {
+              "id": "checkbox-hqxg6ms",
+              "type": "checkbox",
+              "z": 21,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 424,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "visible_on": "all"
+              }
+            }
+          ]
+        },
+        {
+          "id": "movil",
+          "height": {
+            "desktop": 208,
+            "mobile": 258
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "checkbox-5gduufm",
+              "type": "checkbox",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": {
+                  "x": 4,
+                  "y": 24,
+                  "w": 90,
+                  "h": 26
+                }
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "checkbox-bia2cz0",
+              "type": "checkbox",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": {
+                  "x": 6,
+                  "y": 66,
+                  "w": 90,
+                  "h": 26
+                }
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": false,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "checkbox-d41rolp",
+              "type": "checkbox",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333334,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": {
+                  "x": 4,
+                  "y": 108,
+                  "w": 90,
+                  "h": 26
+                }
+              },
+              "props": {
+                "label": "Quiero recibir recordatorios",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "checkbox-nweewk8",
+              "type": "checkbox",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 104,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": {
+                  "x": 6,
+                  "y": 150,
+                  "w": 90,
+                  "h": 26
+                }
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "visible_on": "desktop"
+              }
+            },
+            {
+              "id": "checkbox-yz1oc0h",
+              "type": "checkbox",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 104,
+                  "w": 26.666666666666668,
+                  "h": 32
+                },
+                "mobile": {
+                  "x": 4,
+                  "y": 192,
+                  "w": 90,
+                  "h": 26
+                }
+              },
+              "props": {
+                "label": "Acepto el tratamiento de mis datos",
+                "placeholder": "Escribe aquí",
+                "required": true,
+                "input_type": "text",
+                "options": []
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10,
+                "visible_on": "mobile"
+              }
+            }
+          ]
+        }
+      ],
+      "modals": [
+        {
+          "id": "ventana",
+          "title": "Información",
+          "size": "md",
+          "show_title": true,
+          "width": 560,
+          "height": {
+            "desktop": 320,
+            "mobile": 420
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "text-9fz30f9",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 10,
+                  "y": 0,
+                  "w": 40,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cuenta en una frase qué hace distinta a tu clínica."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo Site",
+      "locale": "es",
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+      },
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "favicon": null,
+      "og_image": null
+    }
+  }
+}

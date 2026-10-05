@@ -1,0 +1,9 @@
+{
+  "site": {
+    "issues": [
+      "theme.primary:pattern",
+      "theme.heading_font:pattern",
+      "theme.body_font:pattern"
+    ]
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "abrir",
+          "height": {
+            "desktop": 164,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "button-ztfm1bw",
+              "type": "button",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 52
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Abrir aviso",
+                "action": {
+                  "type": "modal",
+                  "value": "aviso"
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 12
+              }
+            },
+            {
+              "id": "button-ox6txol",
+              "type": "button",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 34.66666666666667,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 52
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Abrir vacía",
+                "action": {
+                  "type": "modal",
+                  "value": "vacia"
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 12
+              }
+            }
+          ]
+        }
+      ],
+      "modals": [
+        {
+          "id": "aviso",
+          "title": "Aviso",
+          "size": "custom",
+          "show_title": true,
+          "width": 520,
+          "height": {
+            "desktop": 320,
+            "mobile": 420
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "aviso-text",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 56,
+                  "w": 88,
+                  "h": 200
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Texto de una ventana antigua\ncon un salto de línea."
+              },
+              "style": {
+                "color": "text",
+                "font": "body",
+                "size": 16,
+                "line_height": 1.6
+              }
+            }
+          ]
+        },
+        {
+          "id": "vacia",
+          "title": "Vacía",
+          "size": "custom",
+          "show_title": true,
+          "width": 520,
+          "height": {
+            "desktop": 320,
+            "mobile": 420
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": []
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo Site",
+      "locale": "es",
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+      },
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "favicon": null,
+      "og_image": null
+    }
+  }
+}

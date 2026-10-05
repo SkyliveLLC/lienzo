@@ -1,0 +1,61 @@
+{
+  "document": {
+    "sections": [
+      {
+        "id": "s1",
+        "height": {
+          "desktop": 400,
+          "mobile": 400
+        },
+        "background": {
+          "type": "color",
+          "color": "background"
+        },
+        "elements": [
+          {
+            "id": "e1",
+            "type": "text",
+            "z": 3,
+            "layout": {
+              "desktop": {
+                "x": -20,
+                "y": 4000,
+                "w": 0.5,
+                "h": 1
+              },
+              "mobile": {
+                "x": 120,
+                "y": -500,
+                "w": 100,
+                "h": 3000
+              }
+            },
+            "props": {
+              "text": "n",
+              "level": 2,
+              "stroke": 0.5
+            },
+            "style": {
+              "weight": 400,
+              "size": 160,
+              "line_height": 0.8,
+              "opacity": 0,
+              "rotate": -180,
+              "shadow_custom": {
+                "x": -100,
+                "opacity": 1
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "site": {
+    "name": "Demo",
+    "theme": {
+      "radius": 40,
+      "max_width": 900
+    }
+  }
+}

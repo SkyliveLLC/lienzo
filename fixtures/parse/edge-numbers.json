@@ -1,0 +1,77 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "s1",
+          "height": {
+            "desktop": 400,
+            "mobile": 400
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "e1",
+              "type": "text",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": -20,
+                  "y": 4000,
+                  "w": 0.5,
+                  "h": 1
+                },
+                "mobile": {
+                  "x": 120,
+                  "y": -500,
+                  "w": 100,
+                  "h": 3000
+                }
+              },
+              "props": {
+                "text": "n",
+                "level": 2,
+                "stroke": 0.5
+              },
+              "style": {
+                "size": 160,
+                "weight": 400,
+                "line_height": 0.8,
+                "opacity": 0,
+                "shadow_custom": {
+                  "x": -100,
+                  "opacity": 1
+                },
+                "rotate": -180
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo",
+      "locale": "en",
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 40,
+        "max_width": 900
+      },
+      "seo": {},
+      "favicon": null,
+      "og_image": null
+    }
+  }
+}

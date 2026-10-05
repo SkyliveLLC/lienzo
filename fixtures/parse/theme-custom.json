@@ -1,0 +1,608 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "seccion-77qysca",
+          "height": {
+            "desktop": 680,
+            "mobile": 884
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "shape-c48g878",
+              "type": "shape",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 52,
+                  "y": 120,
+                  "w": 42,
+                  "h": 400
+                },
+                "mobile": null
+              },
+              "props": {
+                "shape": "blob"
+              },
+              "style": {
+                "background": "surface",
+                "radius": 16,
+                "opacity": 1
+              }
+            },
+            {
+              "id": "image-v7acm4m",
+              "type": "image",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 50,
+                  "y": 96,
+                  "w": 40,
+                  "h": 380
+                },
+                "mobile": null
+              },
+              "props": {
+                "src": null,
+                "alt": "Foto de la clínica"
+              },
+              "style": {
+                "radius": 22,
+                "shadow": "lg",
+                "object_fit": "cover"
+              }
+            },
+            {
+              "id": "heading-ukqsvs6",
+              "type": "heading",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 140,
+                  "w": 40,
+                  "h": 180
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Una sonrisa sana empieza por una buena valoración",
+                "level": 1
+              },
+              "style": {
+                "color": "secondary",
+                "font": "heading",
+                "size": 48,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            },
+            {
+              "id": "text-7xsmykr",
+              "type": "text",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 336,
+                  "w": 36,
+                  "h": 90
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Te explicamos qué necesitas, cuánto toma y cuánto cuesta antes de empezar."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 18,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "button-0fhuce1",
+              "type": "button",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 456,
+                  "w": 16,
+                  "h": 54
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Pedir cita",
+                "action": {
+                  "type": "whatsapp",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 14
+              }
+            }
+          ]
+        },
+        {
+          "id": "seccion-om9pzm1",
+          "height": {
+            "desktop": 460,
+            "mobile": 598
+          },
+          "background": {
+            "type": "color",
+            "color": "surface"
+          },
+          "elements": [
+            {
+              "id": "shape-sakqo3q",
+              "type": "shape",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 39,
+                  "y": 72,
+                  "w": 56,
+                  "h": 300
+                },
+                "mobile": null
+              },
+              "props": {
+                "shape": "rectangle"
+              },
+              "style": {
+                "background": "background",
+                "radius": 24,
+                "opacity": 1,
+                "shadow": "sm"
+              }
+            },
+            {
+              "id": "heading-hhnyin9",
+              "type": "heading",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 92,
+                  "w": 30,
+                  "h": 70
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Lo que hacemos",
+                "level": 2
+              },
+              "style": {
+                "color": "secondary",
+                "font": "heading",
+                "size": 38,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            },
+            {
+              "id": "text-tt7rwc7",
+              "type": "text",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 172,
+                  "w": 28,
+                  "h": 110
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Cada tratamiento empieza con un diagnóstico claro y un plan por escrito."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 17,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "services-9d6hzpu",
+              "type": "services",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 43,
+                  "y": 104,
+                  "w": 48,
+                  "h": 236
+                },
+                "mobile": null
+              },
+              "props": {
+                "limit": 8,
+                "columns": 1,
+                "variant": "list"
+              },
+              "style": {
+                "color": "secondary",
+                "font": "body",
+                "size": 18
+              }
+            }
+          ]
+        },
+        {
+          "id": "seccion-b0if771",
+          "height": {
+            "desktop": 480,
+            "mobile": 624
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "image-6s6utbd",
+              "type": "image",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 80,
+                  "w": 32,
+                  "h": 320
+                },
+                "mobile": null
+              },
+              "props": {
+                "src": null,
+                "alt": "Consultorio"
+              },
+              "style": {
+                "radius": 22,
+                "object_fit": "cover"
+              }
+            },
+            {
+              "id": "heading-qewgzr9",
+              "type": "heading",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 44,
+                  "y": 90,
+                  "w": 40,
+                  "h": 70
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Quién te atiende",
+                "level": 2
+              },
+              "style": {
+                "color": "secondary",
+                "font": "heading",
+                "size": 38,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            },
+            {
+              "id": "text-zsdm14u",
+              "type": "text",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 44,
+                  "y": 172,
+                  "w": 40,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "El mismo profesional te acompaña de la valoración al control."
+              },
+              "style": {
+                "color": "muted",
+                "font": "body",
+                "size": 17,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6
+              }
+            },
+            {
+              "id": "team-d47enve",
+              "type": "team",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 44,
+                  "y": 268,
+                  "w": 50,
+                  "h": 140
+                },
+                "mobile": null
+              },
+              "props": {
+                "limit": 4,
+                "columns": 2,
+                "variant": "cards"
+              },
+              "style": {
+                "color": "secondary",
+                "font": "body",
+                "size": 17
+              }
+            }
+          ]
+        },
+        {
+          "id": "seccion-lhnriar",
+          "height": {
+            "desktop": 300,
+            "mobile": 390
+          },
+          "background": {
+            "type": "color",
+            "color": "primary"
+          },
+          "elements": [
+            {
+              "id": "heading-tfzzw3p",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 80,
+                  "w": 48,
+                  "h": 110
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "¿Hace más de un año que no te revisan?",
+                "level": 2
+              },
+              "style": {
+                "color": "background",
+                "font": "heading",
+                "size": 34,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.15
+              }
+            },
+            {
+              "id": "text-ll5aeed",
+              "type": "text",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 196,
+                  "w": 40,
+                  "h": 56
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Una valoración toma 45 minutos y te ahorra la mitad de los problemas del año que viene."
+              },
+              "style": {
+                "color": "background",
+                "font": "body",
+                "size": 16,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.6,
+                "opacity": 0.9
+              }
+            },
+            {
+              "id": "button-cc1yukc",
+              "type": "button",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 66,
+                  "y": 110,
+                  "w": 28,
+                  "h": 56
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Escríbenos por WhatsApp",
+                "action": {
+                  "type": "whatsapp",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "primary",
+                "background": "background",
+                "font": "body",
+                "size": 16,
+                "weight": 700,
+                "align": "center",
+                "radius": 14
+              }
+            }
+          ]
+        },
+        {
+          "id": "seccion-df0r2el",
+          "height": {
+            "desktop": 280,
+            "mobile": 364
+          },
+          "background": {
+            "type": "color",
+            "color": "secondary"
+          },
+          "elements": [
+            {
+              "id": "heading-wbsl2yc",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 64,
+                  "w": 26,
+                  "h": 50
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Tu clínica",
+                "level": 3
+              },
+              "style": {
+                "color": "background",
+                "font": "heading",
+                "size": 24,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            },
+            {
+              "id": "text-hy6791s",
+              "type": "text",
+              "z": 2,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 122,
+                  "w": 26,
+                  "h": 100
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Dirección de la clínica\nTel. 300 000 0000"
+              },
+              "style": {
+                "color": "background",
+                "font": "body",
+                "size": 15,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.7,
+                "opacity": 0.75
+              }
+            },
+            {
+              "id": "text-ckacy77",
+              "type": "text",
+              "z": 3,
+              "layout": {
+                "desktop": {
+                  "x": 38,
+                  "y": 64,
+                  "w": 26,
+                  "h": 160
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Horario\nLunes a viernes, 8:00 a 18:00\nSábados, 8:00 a 13:00"
+              },
+              "style": {
+                "color": "background",
+                "font": "body",
+                "size": 15,
+                "weight": 400,
+                "align": "left",
+                "line_height": 1.8,
+                "opacity": 0.75
+              }
+            },
+            {
+              "id": "button-6gpclcu",
+              "type": "button",
+              "z": 4,
+              "layout": {
+                "desktop": {
+                  "x": 70,
+                  "y": 64,
+                  "w": 24,
+                  "h": 48
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Pedir cita",
+                "action": {
+                  "type": "whatsapp",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 12
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo Site",
+      "locale": "es",
+      "theme": {
+        "primary": "#b45309",
+        "secondary": "#1c1917",
+        "background": "#fffbf5",
+        "surface": "#f5eee4",
+        "text": "#1c1917",
+        "muted": "#78716c",
+        "heading_font": "Playfair Display",
+        "body_font": "Source Sans 3",
+        "radius": 4,
+        "max_width": 1000
+      },
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "favicon": "media:4",
+      "og_image": "media:2"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "document": {
+    "issues": [
+      "sections.0.elements.0.style.color:pattern"
+    ]
+  },
+  "site": {
+    "issues": [
+      "locale:pattern",
+      "theme.heading_font:pattern"
+    ]
+  }
+}

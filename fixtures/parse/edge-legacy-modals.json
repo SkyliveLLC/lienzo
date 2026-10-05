@@ -1,0 +1,190 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "s1",
+          "height": {
+            "desktop": 400,
+            "mobile": 400
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": []
+        }
+      ],
+      "modals": [
+        {
+          "id": "promo",
+          "title": "Promo",
+          "size": "custom",
+          "show_title": true,
+          "width": 520,
+          "height": {
+            "desktop": 320,
+            "mobile": 420
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "promo-text",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 56,
+                  "w": 88,
+                  "h": 200
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Ten percent off"
+              },
+              "style": {
+                "color": "text",
+                "font": "body",
+                "size": 16,
+                "line_height": 1.6
+              }
+            }
+          ]
+        },
+        {
+          "id": "blank",
+          "title": "Modal",
+          "size": "custom",
+          "show_title": true,
+          "width": 520,
+          "height": {
+            "desktop": 320,
+            "mobile": 420
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": []
+        },
+        {
+          "id": "modal",
+          "title": "Modal",
+          "size": "custom",
+          "show_title": true,
+          "width": 520,
+          "height": {
+            "desktop": 320,
+            "mobile": 420
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "modal-text",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 56,
+                  "w": 88,
+                  "h": 200
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "No id"
+              },
+              "style": {
+                "color": "text",
+                "font": "body",
+                "size": 16,
+                "line_height": 1.6
+              }
+            }
+          ]
+        },
+        {
+          "id": "modal",
+          "title": "Modal",
+          "size": "custom",
+          "show_title": true,
+          "width": 520,
+          "height": {
+            "desktop": 320,
+            "mobile": 420
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": []
+        },
+        {
+          "id": "kept",
+          "title": "Kept",
+          "size": "md",
+          "show_title": false,
+          "width": 600,
+          "height": {
+            "desktop": 300,
+            "mobile": 300
+          },
+          "background": {
+            "type": "color",
+            "color": "#112233"
+          },
+          "elements": []
+        },
+        {
+          "id": "nulls",
+          "title": "Modal",
+          "size": "custom",
+          "show_title": true,
+          "width": 520,
+          "height": {
+            "desktop": 320,
+            "mobile": 420
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "elements": [
+            {
+              "id": "nulls-text",
+              "type": "text",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 56,
+                  "w": 88,
+                  "h": 200
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "From null"
+              },
+              "style": {
+                "color": "text",
+                "font": "body",
+                "size": 16,
+                "line_height": 1.6
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

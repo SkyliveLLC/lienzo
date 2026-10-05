@@ -1,0 +1,9 @@
+{
+  "document": {
+    "issues": [
+      "sections.0.elements.0.style.color:pattern",
+      "sections.0.elements.0.style.background:enum",
+      "sections.0.elements.0.style.gradient.to:pattern"
+    ]
+  }
+}

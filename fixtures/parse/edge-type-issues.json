@@ -1,0 +1,32 @@
+{
+  "document": {
+    "issues": [
+      "sections.0.height.mobile:required",
+      "sections.0.background.type:enum",
+      "sections.0.elements.0.id:type",
+      "sections.0.elements.0.z:required",
+      "sections.0.elements.0.locked:type",
+      "sections.0.elements.0.group:type",
+      "sections.0.elements.0.layout.desktop:required",
+      "sections.0.elements.0.props:type",
+      "sections.0.elements.0.style:type",
+      "sections.0.elements.1.z:required",
+      "sections.0.elements.1.layout:required",
+      "sections.0.elements.1.props:required",
+      "sections.0.elements.1.style:required",
+      "sections.1:type",
+      "modals.0.title:size",
+      "modals.0.width:range",
+      "modals.0.background.type:enum"
+    ]
+  },
+  "site": {
+    "issues": [
+      "name:size",
+      "locale:pattern",
+      "theme:type",
+      "seo.title:type",
+      "favicon:pattern"
+    ]
+  }
+}

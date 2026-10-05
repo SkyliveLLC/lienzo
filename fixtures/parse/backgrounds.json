@@ -1,0 +1,683 @@
+{
+  "document": {
+    "ok": {
+      "sections": [
+        {
+          "id": "token",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "surface"
+          },
+          "elements": [
+            {
+              "id": "heading-mr0jnz5",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo token",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "hex",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "#fef3c7"
+          },
+          "elements": [
+            {
+              "id": "heading-qjvm2ed",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo hex",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "sin-color",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color"
+          },
+          "elements": [
+            {
+              "id": "heading-yih5ep7",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo sin-color",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "lineal",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "gradient",
+            "gradient": {
+              "type": "linear",
+              "from": "primary",
+              "to": "secondary",
+              "angle": 135
+            }
+          },
+          "elements": [
+            {
+              "id": "heading-tsswjim",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo lineal",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "radial",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "gradient",
+            "color": "muted",
+            "gradient": {
+              "type": "radial",
+              "from": "#f97316",
+              "to": "#ffffff",
+              "angle": 0
+            }
+          },
+          "elements": [
+            {
+              "id": "heading-1s58ifm",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo radial",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "degradado-vacio",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "gradient",
+            "color": "muted"
+          },
+          "elements": [
+            {
+              "id": "heading-tctulcw",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo degradado-vacio",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "color-con-degradado",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "primary",
+            "gradient": {
+              "type": "linear",
+              "from": "primary",
+              "to": "secondary",
+              "angle": 45
+            }
+          },
+          "elements": [
+            {
+              "id": "heading-vnya8f5",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo color-con-degradado",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "imagen-https",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "image",
+            "image": "https://images.example.com/hero.jpg",
+            "overlay": 0
+          },
+          "elements": [
+            {
+              "id": "heading-j0j8ehh",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo imagen-https",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "imagen-biblioteca",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "image",
+            "color": "secondary",
+            "image": "media:1"
+          },
+          "elements": [
+            {
+              "id": "heading-f9i8mfp",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo imagen-biblioteca",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "imagen-sin-miniatura",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "image",
+            "color": "secondary",
+            "image": "media:3"
+          },
+          "elements": [
+            {
+              "id": "heading-35uj13j",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo imagen-sin-miniatura",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "imagen-inexistente",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "image",
+            "color": "secondary",
+            "image": "media:99"
+          },
+          "elements": [
+            {
+              "id": "heading-axqzdb4",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo imagen-inexistente",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "imagen-nula",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "image",
+            "color": "surface",
+            "image": null
+          },
+          "elements": [
+            {
+              "id": "heading-j6psmcl",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo imagen-nula",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "imagen-velo",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "image",
+            "image": "https://images.example.com/hero.jpg",
+            "overlay": 0.5
+          },
+          "elements": [
+            {
+              "id": "heading-18ijvsw",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo imagen-velo",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "imagen-parallax",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "image",
+            "image": "https://images.example.com/hero.jpg",
+            "parallax": true
+          },
+          "elements": [
+            {
+              "id": "heading-qjcx2lv",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo imagen-parallax",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "biblioteca-parallax-velo",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "image",
+            "color": "secondary",
+            "image": "media:2",
+            "overlay": 0.35,
+            "parallax": true
+          },
+          "elements": [
+            {
+              "id": "heading-adas4cv",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo biblioteca-parallax-velo",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "parallax-sin-imagen",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background",
+            "parallax": true
+          },
+          "elements": [
+            {
+              "id": "heading-xd6b5zy",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo parallax-sin-imagen",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "site": {
+    "ok": {
+      "name": "Demo Site",
+      "locale": "es",
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#0f172a",
+        "background": "#ffffff",
+        "surface": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "heading_font": "Inter",
+        "body_font": "Inter",
+        "radius": 12,
+        "max_width": 1200
+      },
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "favicon": null,
+      "og_image": null
+    }
+  }
+}

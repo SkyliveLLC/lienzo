@@ -1,0 +1,14 @@
+{
+  "document": {
+    "issues": [
+      "sections.0.elements.0.props.level:type",
+      "sections.0.elements.0.props.src:pattern",
+      "sections.0.elements.0.props.url:pattern"
+    ]
+  },
+  "site": {
+    "issues": [
+      "locale:pattern"
+    ]
+  }
+}
