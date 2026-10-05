@@ -1,0 +1,8 @@
+/.env
+/composer.lock
+/node_modules
+/public/storage
+/vendor
+/storage/*.key
+/test-results
+/playwright-report
