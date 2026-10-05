@@ -6,6 +6,7 @@ namespace Skylive\Lienzo\Http;
 
 use Illuminate\Routing\Route;
 use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\Route as RouteFacade;
 use Skylive\Lienzo\Http\Controllers\EditorAssetsController;
 use Skylive\Lienzo\Http\Controllers\EditorController;
 use Skylive\Lienzo\Http\Controllers\PublicController;
@@ -13,7 +14,9 @@ use Skylive\Lienzo\Http\Controllers\PublicController;
 /**
  * What `Route::lienzo()` and `Route::lienzoEditor()` register. Route
  * parameters carry a `lienzo` prefix so an app's own `Route::bind('page')`
- * never reaches them.
+ * never reaches them. Either may sit in a group with parameters of its own,
+ * like `Route::domain('{tenant}')`: controllers read parameters by name, and
+ * URLs come from `url()`.
  */
 final class Routes
 {
@@ -67,5 +70,21 @@ final class Routes
                 $router->get('submissions', 'submissions')->name('lienzo.editor.submissions');
             });
         });
+    }
+
+    /**
+     * `route()` for a Lienzo route, with the parameters of its enclosing
+     * group (a `{tenant}` domain) taken from the current route when it has
+     * them. Given parameters win.
+     *
+     * @param  array<string, mixed>  $parameters
+     */
+    public static function url(string $name, array $parameters = []): string
+    {
+        $current = RouteFacade::current();
+        $needs = RouteFacade::getRoutes()->getByName($name)?->parameterNames() ?? [];
+        $inherited = $current === null ? [] : array_intersect_key($current->parameters(), array_flip($needs));
+
+        return route($name, [...$inherited, ...$parameters]);
     }
 }

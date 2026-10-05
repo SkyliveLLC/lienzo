@@ -77,6 +77,8 @@ Lienzo::resolveSiteUsing(function (Request $request): ?Site {
 });
 ```
 
+Both route macros also work inside a group with parameters of its own, such as `Route::domain('{team}.example.com')->group(fn () => Route::lienzo())`. The resolver can read the parameter with `$request->route('team')`, and the URLs Lienzo generates take the parameter from the current request.
+
 `config/lienzo.php` holds the rest: the database connection, the upload disk and limits, how many published versions to keep, the form rate limit, the editor middleware, and a CDN URL for the editor bundle.
 
 ## Other backends

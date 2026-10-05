@@ -19,6 +19,7 @@ use Skylive\Lienzo\Document\ParsedSiteSettings;
 use Skylive\Lienzo\Document\Schema;
 use Skylive\Lienzo\Http\PageHost;
 use Skylive\Lienzo\Http\ProtocolException;
+use Skylive\Lienzo\Http\Routes;
 use Skylive\Lienzo\LienzoManager;
 use Skylive\Lienzo\Models\Asset;
 use Skylive\Lienzo\Models\Page;
@@ -46,15 +47,16 @@ final class EditorController
 
     public function __construct(private readonly LienzoManager $lienzo, private readonly AssetLibrary $library) {}
 
-    public function workspace(Site $lienzoSite): JsonResponse
+    public function workspace(Request $request): JsonResponse
     {
-        return new JsonResponse($this->workspaceOf($lienzoSite));
+        return new JsonResponse($this->workspaceOf(self::siteOf($request)));
     }
 
-    public function updateSite(Request $request, Site $lienzoSite): JsonResponse
+    public function updateSite(Request $request): JsonResponse
     {
+        $site = self::siteOf($request);
         $body = $this->body($request);
-        $current = $lienzoSite->settings()->toArray();
+        $current = $site->settings()->toArray();
         $theme = $body['theme'] ?? [];
 
         try {
@@ -70,38 +72,40 @@ final class EditorController
             throw ProtocolException::document($error);
         }
 
-        $lienzoSite->update([
+        $site->update([
             'locale' => $settings->locale,
             'theme' => $settings->theme,
             'seo' => $settings->seo,
             'favicon' => $settings->favicon,
             'og_image' => $settings->ogImage,
-            'meta' => [...$lienzoSite->meta ?? [], ...$meta],
+            'meta' => [...$site->meta ?? [], ...$meta],
         ]);
 
-        return new JsonResponse($this->workspaceOf($lienzoSite));
+        return new JsonResponse($this->workspaceOf($site));
     }
 
-    public function showPage(Site $lienzoSite, int $lienzoPage): JsonResponse
+    public function showPage(Request $request): JsonResponse
     {
-        return new JsonResponse($this->state($lienzoSite->pages()->findOrFail($lienzoPage)));
+        return new JsonResponse($this->state(self::pageOf($request)));
     }
 
-    public function storePage(Request $request, Site $lienzoSite): JsonResponse
+    public function storePage(Request $request): JsonResponse
     {
+        $site = self::siteOf($request);
         $body = $this->body($request);
         $this->validate($body, ['title' => ['required', 'string', 'max:120'], 'slug' => self::SLUG]);
-        $this->assertFreeSlug($lienzoSite, $body['slug']);
+        $this->assertFreeSlug($site, $body['slug']);
 
         $draft = array_key_exists('draft', $body) ? $this->document($body['draft'], 'draft') : Page::BLANK;
-        $page = self::claimingSlug(fn (): Page => $lienzoSite->pages()->create(['title' => $body['title'], 'slug' => $body['slug'], 'draft' => $draft]));
+        $page = self::claimingSlug(fn (): Page => $site->pages()->create(['title' => $body['title'], 'slug' => $body['slug'], 'draft' => $draft]));
 
         return new JsonResponse($this->state($page), 201);
     }
 
-    public function updatePage(Request $request, Site $lienzoSite, int $lienzoPage): JsonResponse
+    public function updatePage(Request $request): JsonResponse
     {
-        $page = $lienzoSite->pages()->findOrFail($lienzoPage);
+        $site = self::siteOf($request);
+        $page = self::pageOf($request);
         $body = $this->body($request);
         $this->validate($body, [
             'baseRevision' => ['required', 'integer'],
@@ -110,7 +114,7 @@ final class EditorController
         ]);
 
         if (array_key_exists('slug', $body)) {
-            $this->assertFreeSlug($lienzoSite, $body['slug'], $page);
+            $this->assertFreeSlug($site, $body['slug'], $page);
         }
 
         $changes = array_intersect_key($body, array_flip(['title', 'slug']));
@@ -131,9 +135,9 @@ final class EditorController
         return new JsonResponse(['revision' => $page->revision]);
     }
 
-    public function destroyPage(Site $lienzoSite, int $lienzoPage): JsonResponse
+    public function destroyPage(Request $request): JsonResponse
     {
-        $lienzoSite->pages()->findOrFail($lienzoPage)->delete();
+        self::pageOf($request)->delete();
 
         return self::nothing();
     }
@@ -144,9 +148,9 @@ final class EditorController
      * already published changes nothing, and only a changed document is a
      * new version, so a retried request creates none.
      */
-    public function publish(Request $request, Site $lienzoSite, int $lienzoPage): JsonResponse
+    public function publish(Request $request): JsonResponse
     {
-        $page = $lienzoSite->pages()->findOrFail($lienzoPage);
+        $page = self::pageOf($request);
         $body = $this->body($request);
         $this->validate($body, ['revision' => ['required', 'integer']]);
         $user = $request->user();
@@ -179,10 +183,10 @@ final class EditorController
     }
 
     /** Copies a published version back into the draft, as a new revision. */
-    public function restore(Site $lienzoSite, int $lienzoPage, int $lienzoVersion): JsonResponse
+    public function restore(Request $request): JsonResponse
     {
-        $page = $lienzoSite->pages()->findOrFail($lienzoPage);
-        $version = $page->versions()->findOrFail($lienzoVersion);
+        $page = self::pageOf($request);
+        $version = $page->versions()->findOrFail($request->route('lienzoVersion'));
 
         $page = $this->writeAt($page, null, function (Page $page) use ($version): void {
             $page->draft = $version->document;
@@ -192,31 +196,33 @@ final class EditorController
         return new JsonResponse($this->state($page));
     }
 
-    public function storeAsset(Request $request, Site $lienzoSite): JsonResponse
+    public function storeAsset(Request $request): JsonResponse
     {
+        $site = self::siteOf($request);
         $this->validate($request->all(), ['file' => [
             'required', 'file', 'max:'.config('lienzo.upload_max_kb'), 'mimes:jpg,jpeg,png,webp,avif,svg',
         ]]);
 
-        return new JsonResponse($this->asset($lienzoSite, $this->library->store($lienzoSite, $request->file('file'))), 201);
+        return new JsonResponse($this->asset($site, $this->library->store($site, $request->file('file'))), 201);
     }
 
-    public function destroyAsset(Site $lienzoSite, int $lienzoAsset): JsonResponse
+    public function destroyAsset(Request $request): JsonResponse
     {
-        $this->library->delete($lienzoSite->assets()->findOrFail($lienzoAsset));
+        $this->library->delete(self::assetOf($request));
 
         return self::nothing();
     }
 
     /** The editor's own image URLs, behind the same authorization as the rest of the protocol. */
-    public function media(Site $lienzoSite, int $lienzoAsset, ?string $size = null): StreamedResponse
+    public function media(Request $request): StreamedResponse
     {
-        return $this->library->response($lienzoSite->assets()->findOrFail($lienzoAsset), $size === 'thumb', public: false);
+        return $this->library->response(self::assetOf($request), $request->route('size') === 'thumb', public: false);
     }
 
     /** App element markup for the canvas, rendered the way the public page renders it. */
-    public function preview(Request $request, Site $lienzoSite): JsonResponse
+    public function preview(Request $request): JsonResponse
     {
+        $site = self::siteOf($request);
         $body = $this->body($request);
         $this->validate($body, [
             'elements' => ['present', 'array', 'max:200'],
@@ -226,7 +232,7 @@ final class EditorController
         ]);
 
         $specs = array_column($this->lienzo->catalog()['elements'], 'fields', 'type');
-        $host = $this->host($lienzoSite, $body['elements']);
+        $host = $this->host($site, $body['elements']);
         $html = [];
         $issues = [];
 
@@ -250,9 +256,10 @@ final class EditorController
         return new JsonResponse((object) $html);
     }
 
-    public function submissions(Site $lienzoSite): JsonResponse
+    public function submissions(Request $request): JsonResponse
     {
-        $page = $lienzoSite->submissions()->latest('id')->cursorPaginate(20);
+        $site = self::siteOf($request);
+        $page = $site->submissions()->latest('id')->cursorPaginate(20);
 
         return new JsonResponse([
             'data' => array_map(fn (Submission $submission): array => [
@@ -264,6 +271,26 @@ final class EditorController
             ], $page->items()),
             'next' => $page->nextCursor()?->encode(),
         ]);
+    }
+
+    /**
+     * The routes' own parameters, read by name: an app may register them in a
+     * group with parameters of its own (a `{tenant}` domain), which Laravel
+     * would pass first. `lienzoSite` is bound by the service provider.
+     */
+    private static function siteOf(Request $request): Site
+    {
+        return $request->route('lienzoSite');
+    }
+
+    private static function pageOf(Request $request): Page
+    {
+        return self::siteOf($request)->pages()->findOrFail($request->route('lienzoPage'));
+    }
+
+    private static function assetOf(Request $request): Asset
+    {
+        return self::siteOf($request)->assets()->findOrFail($request->route('lienzoAsset'));
     }
 
     /** @return array<string, mixed> */
@@ -308,14 +335,14 @@ final class EditorController
     /** @return array{id: int, ref: string, name: string, url: string, thumb: string, width: ?int, height: ?int} */
     private function asset(Site $site, Asset $asset): array
     {
-        $url = route('lienzo.editor.media', ['lienzoSite' => $site, 'lienzoAsset' => $asset]);
+        $url = Routes::url('lienzo.editor.media', ['lienzoSite' => $site, 'lienzoAsset' => $asset]);
 
         return [
             'id' => $asset->id,
             'ref' => $asset->ref(),
             'name' => $asset->name,
             'url' => $url,
-            'thumb' => $asset->thumb_path === null ? $url : route('lienzo.editor.media', ['lienzoSite' => $site, 'lienzoAsset' => $asset, 'size' => 'thumb']),
+            'thumb' => $asset->thumb_path === null ? $url : Routes::url('lienzo.editor.media', ['lienzoSite' => $site, 'lienzoAsset' => $asset, 'size' => 'thumb']),
             'width' => $asset->width,
             'height' => $asset->height,
         ];
@@ -328,7 +355,7 @@ final class EditorController
             lienzo: $this->lienzo,
             site: $site,
             assets: Asset::referencedBy($site, $elements),
-            url: fn (Asset $asset, bool $thumb): string => route('lienzo.editor.media', ['lienzoSite' => $site, 'lienzoAsset' => $asset, 'size' => $thumb ? 'thumb' : null]),
+            url: fn (Asset $asset, bool $thumb): string => Routes::url('lienzo.editor.media', ['lienzoSite' => $site, 'lienzoAsset' => $asset, 'size' => $thumb ? 'thumb' : null]),
         );
     }
 

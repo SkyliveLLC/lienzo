@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Skylive\Lienzo\Console\InstallCommand;
 use Skylive\Lienzo\Http\Routes;
+use Skylive\Lienzo\Models\Site;
 
 final class LienzoServiceProvider extends ServiceProvider
 {
@@ -32,6 +33,7 @@ final class LienzoServiceProvider extends ServiceProvider
             /** @var Router $this */
             Routes::editor($this, $prefix);
         });
+        $this->app->make(Router::class)->model('lienzoSite', Site::class);
 
         if ($this->app->runningInConsole()) {
             $this->publishes([__DIR__.'/../config/lienzo.php' => config_path('lienzo.php')], 'lienzo-config');

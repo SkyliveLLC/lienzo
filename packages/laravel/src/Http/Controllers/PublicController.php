@@ -11,9 +11,9 @@ use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
 use Skylive\Lienzo\AssetLibrary;
 use Skylive\Lienzo\Document\ParsedDocument;
+use Skylive\Lienzo\Http\Routes;
 use Skylive\Lienzo\Http\SessionForm;
 use Skylive\Lienzo\LienzoManager;
-use Skylive\Lienzo\Models\Asset;
 use Skylive\Lienzo\Models\Page;
 use Skylive\Lienzo\Models\Site;
 use Skylive\Lienzo\Render\Canvas;
@@ -22,7 +22,9 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 /**
  * The public side registered by `Route::lienzo()`: published pages, their
  * forms and images, and the files search engines read. Every route serves
- * the site `Lienzo::resolveSiteUsing()` picks for the request.
+ * the site `Lienzo::resolveSiteUsing()` picks for the request. Route
+ * parameters are read by name, so the routes work inside a group with
+ * parameters of its own (a `{tenant}` domain).
  *
  * @phpstan-import-type FormField from Canvas
  */
@@ -30,9 +32,9 @@ final class PublicController
 {
     public function __construct(private readonly LienzoManager $lienzo) {}
 
-    public function page(Request $request, ?string $slug = null): Response
+    public function page(Request $request): Response
     {
-        return $this->lienzo->page($request, $slug) ?? abort(404);
+        return $this->lienzo->page($request, $request->route('slug')) ?? abort(404);
     }
 
     /**
@@ -84,20 +86,21 @@ final class PublicController
         return $sent;
     }
 
-    public function media(Request $request, AssetLibrary $library, Asset $lienzoAsset, ?string $size = null): StreamedResponse
+    public function media(Request $request, AssetLibrary $library): StreamedResponse
     {
         $site = $this->site($request);
+        $asset = $site->assets()->findOrFail($request->route('lienzoAsset'));
 
-        abort_unless($lienzoAsset->site_id === $site->id && $site->publishes($lienzoAsset), 404);
+        abort_unless($site->publishes($asset), 404);
 
-        return $library->response($lienzoAsset, $size === 'thumb', public: true);
+        return $library->response($asset, $request->route('size') === 'thumb', public: true);
     }
 
     public function sitemap(Request $request): Response
     {
         $site = $this->site($request);
         $urls = $site->pages()->published()->orderBy('published_slug')->get(['published_slug', 'published_at'])->map(fn (Page $page): string => '<url>'
-            .'<loc>'.e(route('lienzo.page', ['slug' => $page->published_slug ?: null])).'</loc>'
+            .'<loc>'.e(Routes::url('lienzo.page', ['slug' => $page->published_slug ?: null])).'</loc>'
             .'<lastmod>'.$page->published_at?->toDateString().'</lastmod>'
             .'</url>');
 
@@ -111,7 +114,7 @@ final class PublicController
     public function robots(Request $request): Response
     {
         $published = $this->lienzo->resolveSite($request)?->pages()->published()->exists() ?? false;
-        $lines = ['User-agent: *', 'Disallow:', ...($published ? ['Sitemap: '.route('lienzo.sitemap')] : [])];
+        $lines = ['User-agent: *', 'Disallow:', ...($published ? ['Sitemap: '.Routes::url('lienzo.sitemap')] : [])];
 
         return new Response(implode("\n", $lines)."\n", 200, ['Content-Type' => 'text/plain; charset=UTF-8']);
     }

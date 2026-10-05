@@ -8,6 +8,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\View\Component;
 use Skylive\Lienzo\Assets;
+use Skylive\Lienzo\Http\Routes;
 use Skylive\Lienzo\Models\Site;
 
 /**
@@ -23,7 +24,7 @@ final class Editor extends Component
     public function render(): View
     {
         return view('lienzo::editor', [
-            'endpoint' => route('lienzo.editor', ['lienzoSite' => $this->site]),
+            'endpoint' => Routes::url('lienzo.editor', ['lienzoSite' => $this->site]),
             'editorLocale' => $this->locale ?? config('lienzo.locale'),
             'script' => $this->bundle(),
             'nonce' => Vite::cspNonce(),
@@ -41,6 +42,6 @@ final class Editor extends Component
 
         $path = Assets::path('editor/lienzo-editor.js');
 
-        return route('lienzo.editor.bundle', ['v' => is_file($path) ? hash_file('xxh3', $path) : null]);
+        return Routes::url('lienzo.editor.bundle', ['v' => is_file($path) ? hash_file('xxh3', $path) : null]);
     }
 }

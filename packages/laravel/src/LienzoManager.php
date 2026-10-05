@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Vite;
 use LogicException;
 use Skylive\Lienzo\Document\ParsedDocument;
 use Skylive\Lienzo\Http\PageHost;
+use Skylive\Lienzo\Http\Routes;
 use Skylive\Lienzo\Http\SessionForm;
 use Skylive\Lienzo\Models\Asset;
 use Skylive\Lienzo\Models\Page;
@@ -199,8 +200,8 @@ final class LienzoManager
                 lienzo: $this,
                 site: $site,
                 assets: Asset::referencedBy($site, [$page->published, $settings->favicon, $settings->ogImage]),
-                url: fn (Asset $asset, bool $thumb): string => route('lienzo.media', ['lienzoAsset' => $asset, 'size' => $thumb ? 'thumb' : null]),
-                form: new SessionForm($request, route('lienzo.submit')),
+                url: fn (Asset $asset, bool $thumb): string => Routes::url('lienzo.media', ['lienzoAsset' => $asset, 'size' => $thumb ? 'thumb' : null]),
+                form: new SessionForm($request, Routes::url('lienzo.submit')),
                 head: $head === null ? null : new TrustedHtml($head->toHtml()),
                 nonce: Vite::cspNonce(),
             ),
@@ -252,7 +253,7 @@ final class LienzoManager
         }
 
         try {
-            return Route::has('lienzo.page') ? route('lienzo.page') : null;
+            return Route::has('lienzo.page') ? Routes::url('lienzo.page', ['slug' => null]) : null;
         } catch (UrlGenerationException) {
             return null;
         }
