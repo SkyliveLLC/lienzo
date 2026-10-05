@@ -232,8 +232,9 @@ export class DocumentError extends Error {
     }
 }
 
-/** Props of a type nobody registered are kept verbatim, so only their size is bounded. */
+/** Props of a type nobody registered are kept verbatim, so only their size is bounded: UTF-8 bytes of their JSON. */
 export const OPAQUE_PROPS_MAX_BYTES = 16384;
+const utf8 = new TextEncoder();
 
 /**
  * The only door into `Parsed<Document>`. Strips unknown keys (like Laravel's
@@ -286,7 +287,7 @@ function parseProps(
             return { ...element, props: check(fieldsSchema(fields), element.props, propsPath) };
         }
 
-        if (JSON.stringify(element.props).length > OPAQUE_PROPS_MAX_BYTES) {
+        if (utf8.encode(JSON.stringify(element.props)).length > OPAQUE_PROPS_MAX_BYTES) {
             issues.push({ path: propsPath.join('.'), code: 'size', message: `Too big: at most ${OPAQUE_PROPS_MAX_BYTES} bytes` });
         }
 

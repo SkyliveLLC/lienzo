@@ -44,8 +44,8 @@ export function assets(): Record<'lienzo.css' | 'runtime.js' | 'schema.json' | '
         $comment: 'Validation contract for Lienzo documents. Unknown keys are stripped, not rejected (additionalProperties:false means "drop"). '
             + 'In a node marked x-blank-as-null, a blank string (only whitespace) means null. '
             + 'An empty JSON array where an object is expected means an empty object, and an empty object where an array is expected means an empty array. '
-            + 'minLength and maxLength count UTF-16 code units (JavaScript string length), not code points. '
-            + 'Element props are checked by type: CoreProps for core types, the app field list for catalog types (built from Image and Action), and only a size limit otherwise.',
+            + 'minLength and maxLength count Unicode code points, as JSON Schema specifies. '
+            + 'Element props are checked by type: CoreProps for core types, the app field list for catalog types (built from Image and Action), and only a size limit (UTF-8 bytes of their JSON) otherwise.',
         ...document,
         $defs: {
             ...documentDefs,

@@ -110,6 +110,7 @@ describe('hostile documents', () => {
         ['too many options', element({ type: 'select', props: { options: Array.from({ length: 31 }, (_, index) => `o${index}`) } }), 'props.options:size'],
         ['too many links', element({ type: 'navbar', props: { links: Array.from({ length: 9 }, () => ({ label: 'a', action: { type: 'top' } })) } }), 'props.links:size'],
         ['oversized opaque props', element({ type: 'map', props: { blob: 'x'.repeat(20000) } }), 'props:size'],
+        ['opaque props over the limit in UTF-8 bytes', element({ type: 'map', props: { blob: 'é'.repeat(9000) } }), 'props:size'],
         ['element type with markup', element({ type: 'x"><b>' }), 'type:pattern'],
     ])('rejects %s', (_, hostile, issue) => {
         expect(issuesOf(page(hostile))).toEqual([`sections.0.elements.0.${issue}`]);
