@@ -1,4 +1,4 @@
-import data from '@skylive/lienzo-core/data.json';
+import { icons as catalog } from '@skylive/lienzo-core/data.json';
 
 /** One stroke of a catalog icon, as core renders it. */
 export type IconNode = readonly [tag: 'path' | 'circle' | 'rect' | 'line', attrs: Readonly<Record<string, string>>];
@@ -16,5 +16,5 @@ function parseIcons(input: unknown): ReadonlyMap<string, readonly IconNode[]> {
 }
 
 /** Lienzo's icon catalog (lucide strokes), the same one public pages draw from. */
-export const icons = parseIcons(data.icons);
+export const icons = parseIcons(catalog);
 export const ICON_NAMES: readonly string[] = [...icons.keys()];

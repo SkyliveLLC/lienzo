@@ -88,7 +88,7 @@ export function createBackend(options: { publicUrl: string; latency?: number }) 
         const home = (parseDocument({ sections: buildPageTemplate('full') }, catalog));
         pages = [
             { id: 1, slug: '', title: 'Home', seo: { title: null, description: null }, draft: home, revision: 1, published: null, publishedAt: null, versions: [] },
-            { id: 2, slug: 'pricing', title: 'Pricing', seo: { title: null, description: null }, draft: { sections: buildPageTemplate('landing') }, revision: 1, published: null, publishedAt: null, versions: [] },
+            { id: 2, slug: 'pricing', title: 'Pricing', seo: { title: null, description: null }, draft: withPluginGone(buildPageTemplate('landing')), revision: 1, published: null, publishedAt: null, versions: [] },
         ];
         assets = [];
     }
@@ -372,6 +372,17 @@ export function createBackend(options: { publicUrl: string; latency?: number }) 
     }
 
     return { handle, publicPage, reset };
+}
+
+/** An element from a plugin that is no longer installed: the editor must keep it, locked. */
+function withPluginGone(sections: Document['sections']): Document {
+    sections[0]?.elements.push({
+        id: 'legacy-countdown', type: 'countdown', z: 9,
+        layout: { desktop: { x: 70, y: 20, w: 24, h: 60 }, mobile: null },
+        props: { until: '2030-01-01' }, style: {},
+    });
+
+    return { sections };
 }
 
 const escape = (value: string) => value.replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);

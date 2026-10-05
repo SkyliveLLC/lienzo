@@ -13,7 +13,8 @@
       "@skylive/lienzo-core/data.json": [
         "./src/core-data.d.ts"
       ]
-    }
+    },
+    "allowImportingTsExtensions": true
   },
   "include": [
     "src"

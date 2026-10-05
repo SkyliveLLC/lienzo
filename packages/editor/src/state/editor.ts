@@ -27,6 +27,7 @@ import {
     MOBILE_WIDTH,
     newId,
     plain,
+    stacksOnMobile,
     writeBox,
     type Canvas,
     type Device,
@@ -159,7 +160,21 @@ export function createEditor({ client, i18n }: EditorDeps) {
     // ── Derived ──────────────────────────────────────────────────────────
 
     const catalog = computed<Catalog>(() => state.workspace.catalog);
-    const site = computed<Parsed<SiteSettings>>(() => parseSiteSettings({ ...state.workspace.site, theme: state.themeDraft ?? state.workspace.site.theme }));
+    /**
+     * Site settings as core renders them, with the theme being edited, if any.
+     * A half-typed color does not parse; the last valid settings stay until it does.
+     */
+    const site = computed<Parsed<SiteSettings>>((previous) => {
+        try {
+            return parseSiteSettings({ ...state.workspace.site, theme: state.themeDraft ?? state.workspace.site.theme });
+        } catch (error) {
+            if (error instanceof DocumentError && previous) {
+                return previous;
+            }
+
+            throw error;
+        }
+    });
     const theme = computed<Theme>(() => site.value.theme);
 
     /** Canvases on screen: the page's sections, or the open modal. */
@@ -240,6 +255,18 @@ export function createEditor({ client, i18n }: EditorDeps) {
             state.load = { kind: 'failed', message: failureText(result.failure) };
 
             return;
+        }
+
+        try {
+            parseSiteSettings(result.value.site);
+        } catch (error) {
+            if (error instanceof DocumentError) {
+                state.load = { kind: 'failed', message: issueText(error.issues[0]) };
+
+                return;
+            }
+
+            throw error;
         }
 
         state.workspace = result.value;
@@ -608,8 +635,14 @@ export function createEditor({ client, i18n }: EditorDeps) {
         commit();
     }
 
-    /** Arrow keys: 1 design pixel (0.5% across), ten times that with Shift. */
+    /** Arrow keys: 1 design pixel (0.5% across), ten times that with Shift. Like dragging, not where phones stack. */
     function nudge(dx: number, dy: number) {
+        const canvas = currentCanvas.value;
+
+        if (!canvas || (state.device === 'mobile' && stacksOnMobile(canvas))) {
+            return;
+        }
+
         const elements = selectedElements.value.filter((element) => !element.locked);
 
         for (const element of elements) {
@@ -1080,5 +1113,5 @@ function isElementLike(value: unknown): value is Element {
 }
 
 function placeholderSite(): SiteSettings {
-    return { name: '', locale: 'en', theme: parseSiteSettings({ name: 'x' }).theme, seo: {}, favicon: null, og_image: null };
+    return parseSiteSettings({ name: 'Lienzo' });
 }

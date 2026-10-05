@@ -9,3 +9,5 @@ composer.lock
 design/
 scripts/parity/out
 !packages/laravel/dist
+playwright-report
+test-results

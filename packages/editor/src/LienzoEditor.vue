@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, provide, ref } from 'vue';
+import { onBeforeUnmount, onMounted, provide, ref, watchEffect } from 'vue';
 import Canvas from './canvas/Canvas.vue';
 import Preview from './canvas/Preview.vue';
 import { createClient } from './client.ts';
@@ -10,6 +10,7 @@ import SiteDialog from './dialogs/SiteDialog.vue';
 import ThemeDialog from './dialogs/ThemeDialog.vue';
 import VersionsDialog from './dialogs/VersionsDialog.vue';
 import { createTranslator, type MessageOverrides } from './i18n/index.ts';
+import { fontsHref } from './model/theme.ts';
 import LeftSidebar from './shell/LeftSidebar.vue';
 import RightPanel from './shell/RightPanel.vue';
 import Toolbar from './shell/Toolbar.vue';
@@ -58,6 +59,23 @@ function onKeyDown(event: KeyboardEvent) {
     }
 }
 
+/**
+ * Theme fonts in the host document too: the theme dialog previews them in the
+ * chrome, and fonts declared inside a shadow root do not load.
+ */
+let fonts: HTMLLinkElement | null = null;
+
+watchEffect(() => {
+    const theme = editor.theme.value;
+
+    if (editor.state.load.kind !== 'ready' || typeof document === 'undefined') {
+        return;
+    }
+
+    fonts ??= document.head.appendChild(Object.assign(document.createElement('link'), { rel: 'stylesheet' }));
+    fonts.href = fontsHref([theme.heading_font, theme.body_font]);
+});
+
 onMounted(() => {
     if (root.value) {
         adoptEditorStyles(root.value);
@@ -69,6 +87,7 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
     window.removeEventListener('keydown', onKeyDown);
+    fonts?.remove();
     editor.dispose();
 });
 </script>
