@@ -69,3 +69,34 @@ export function copyElement(element: Element, offset = 24): Element {
 export function plain<T>(value: T): T {
     return JSON.parse(JSON.stringify(value)) as T;
 }
+
+export function emptySection(): Section {
+    return {
+        id: newId('section'),
+        height: { desktop: 520, mobile: 560 },
+        background: { type: 'color', color: 'background', overlay: 0 },
+        elements: [],
+    };
+}
+
+/** Modal sizes with a fixed width. At full screen the design is made on 1200. */
+export const MODAL_SIZES = [
+    { key: 'sm', width: 420 },
+    { key: 'md', width: 560 },
+    { key: 'lg', width: 760 },
+    { key: 'xl', width: 960 },
+    { key: 'full', width: 1200 },
+] as const;
+
+export function emptyModal(title: string): Modal {
+    return {
+        id: newId('modal'),
+        title,
+        size: 'md',
+        show_title: true,
+        width: MODAL_SIZES[1].width,
+        height: { desktop: 320, mobile: 420 },
+        background: { type: 'color', color: 'background' },
+        elements: [],
+    };
+}

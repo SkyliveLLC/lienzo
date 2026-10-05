@@ -7,14 +7,7 @@ import Dialog from '../ui/Dialog.vue';
 /** Published versions of the open page, newest first as the backend sends them. */
 const editor = useEditor();
 const t = editor.t;
-const open = computed({
-    get: () => editor.state.dialog === 'versions',
-    set: (value) => {
-        if (!value && editor.state.dialog === 'versions') {
-            editor.state.dialog = null;
-        }
-    },
-});
+const open = editor.dialogModel('versions');
 const versions = computed(() => editor.state.page?.versions ?? []);
 const date = new Intl.DateTimeFormat(editor.i18n.locale, { dateStyle: 'medium', timeStyle: 'short' });
 </script>

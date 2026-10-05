@@ -17,6 +17,7 @@ export const en = {
     'toolbar.newPageHint': 'Create another page',
     'toolbar.desktop': 'Desktop',
     'toolbar.mobile': 'Phone',
+    'toolbar.device': 'Device',
     'toolbar.undo': 'Undo (Ctrl+Z)',
     'toolbar.redo': 'Redo (Ctrl+Shift+Z)',
     'toolbar.preview': 'Preview',

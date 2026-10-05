@@ -22,11 +22,20 @@ function sync() {
 }
 
 watch(open, sync);
+
+/** A click closes on the backdrop only if it also started there, not when a text selection ends outside. */
+let downOnBackdrop = false;
+const pressed = (event: PointerEvent) => (downOnBackdrop = event.target === event.currentTarget);
+const clicked = (event: MouseEvent) => {
+    if (downOnBackdrop && event.target === event.currentTarget) {
+        open.value = false;
+    }
+};
 onMounted(sync);
 </script>
 
 <template>
-    <dialog ref="dialog" class="lze-dialog" :data-size="size" :aria-labelledby="heading" @close="open = false" @click.self="open = false">
+    <dialog ref="dialog" class="lze-dialog" :data-size="size" :aria-labelledby="heading" @close="open = false" @pointerdown="pressed" @click="clicked">
         <div class="lze-dialog-body">
             <header class="lze-dialog-head">
                 <div>

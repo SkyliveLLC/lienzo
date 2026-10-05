@@ -19,6 +19,8 @@ const props = defineProps<{
     live: ReadonlyMap<string, Rect>;
     /** Canvases where elements cannot be dragged (stacked on phones). */
     frozen: ReadonlySet<string>;
+    /** An angle being dragged, shown before the document has it. */
+    rotation: { id: string; value: number } | null;
 }>();
 const emit = defineEmits<{
     resize: [event: PointerEvent, handle: Handle];
@@ -34,7 +36,7 @@ const rectOf = (id: string): Rect | undefined => props.live.get(id) ?? props.lay
 const boxes = computed(() => editor.selectedElements.value.flatMap((element) => {
     const rect = rectOf(element.id);
 
-    return rect ? [{ element, rect, rotate: element.style.rotate ?? 0 }] : [];
+    return rect ? [{ element, rect, rotate: props.rotation?.id === element.id ? props.rotation.value : (element.style.rotate ?? 0) }] : [];
 }));
 
 const single = computed(() => {
@@ -135,6 +137,7 @@ const place = (rect: Rect) => ({ left: `${rect.x}px`, top: `${rect.y}px`, width:
                 class="lze-handle"
                 :data-handle="handle"
                 :aria-label="t('canvas.resize', { handle })"
+                tabindex="-1"
                 @pointerdown.stop.prevent="emit('resize', $event, handle)"
             />
             <button

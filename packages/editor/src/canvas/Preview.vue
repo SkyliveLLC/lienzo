@@ -2,7 +2,7 @@
 import { onBeforeUnmount, onMounted, ref, shallowRef, toRaw, watch } from 'vue';
 import { clamp } from '../model/geometry.ts';
 import { useEditor } from '../state/editor.ts';
-import { renderDraft } from './render.ts';
+import { renderContext, renderDraft } from './render.ts';
 
 /**
  * The page as visitors get it: the complete public document from core,
@@ -16,15 +16,7 @@ const size = ref({ width: 0, height: 0 });
 let observer: ResizeObserver | null = null;
 
 async function render() {
-    const result = await renderDraft(toRaw(editor.state.draft), {
-        catalog: editor.catalog.value,
-        site: editor.site.value,
-        assets: editor.state.workspace.assets,
-        slug: editor.state.page?.slug ?? '',
-        publicUrl: editor.state.workspace.publicUrl,
-        preview: (element) => editor.previews.get(element),
-        labels: { loading: editor.t('canvas.loadingPreview'), failed: editor.t('canvas.previewFailed') },
-    }, 'public');
+    const result = await renderDraft(toRaw(editor.state.draft), renderContext(editor), 'public');
 
     if (result.ok) {
         html.value = result.page.html;

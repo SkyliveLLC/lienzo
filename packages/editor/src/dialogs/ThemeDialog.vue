@@ -19,14 +19,7 @@ const t = editor.t;
 const ids = { heading: useId(), body: useId(), width: useId() };
 const HEX = /^#[0-9a-fA-F]{6}$/;
 
-const open = computed({
-    get: () => editor.state.dialog === 'theme',
-    set: (value) => {
-        if (!value && editor.state.dialog === 'theme') {
-            editor.state.dialog = null;
-        }
-    },
-});
+const open = editor.dialogModel('theme');
 
 /** The form keeps what is typed, even a half-written hex; only valid colors reach the canvas. */
 const form = reactive<Theme>(plain(editor.state.workspace.site.theme));

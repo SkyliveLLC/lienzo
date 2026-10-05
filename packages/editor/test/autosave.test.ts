@@ -55,7 +55,7 @@ describe('autosave', () => {
         edit('v1');
         await vi.advanceTimersByTimeAsync(1500);
 
-        expect(autosave.state.value).toEqual({ kind: 'conflict', revision: 7 });
+        expect(autosave.state.value).toEqual({ kind: 'conflict' });
 
         edit('v2');
         await vi.advanceTimersByTimeAsync(5000);
@@ -94,7 +94,7 @@ describe('autosave', () => {
 
     it('saves a change made during a save right after it', async () => {
         let release: (outcome: Outcome) => void = () => undefined;
-        let value = 'v1';
+        let value = 'v0';
         const sent: string[] = [];
         const autosave = createAutosave({
             read: () => value,
@@ -104,7 +104,7 @@ describe('autosave', () => {
                 return sent.length === 1 ? new Promise((resolve) => (release = resolve)) : Promise.resolve({ ok: true });
             },
         });
-        autosave.reset('v0');
+        value = 'v1';
         autosave.changed();
         await vi.advanceTimersByTimeAsync(1500);
         value = 'v2';
@@ -113,6 +113,23 @@ describe('autosave', () => {
         await vi.advanceTimersByTimeAsync(1500);
 
         expect(sent).toEqual(['v1', 'v2']);
+    });
+
+    it('ignores a save that was in flight when it started over', async () => {
+        let release: (outcome: Outcome) => void = () => undefined;
+        let value = 'a1';
+        const autosave = createAutosave({ read: () => value, save: () => new Promise((resolve) => (release = resolve)) });
+        value = 'a2';
+        autosave.changed();
+        await vi.advanceTimersByTimeAsync(1500);
+
+        // Another page loads while the old one is still saving.
+        value = 'b1';
+        autosave.reset();
+        release({ ok: false, failure: { kind: 'conflict', message: 'stale', revision: 3 } });
+        await vi.advanceTimersByTimeAsync(0);
+
+        expect(autosave.state.value).toEqual({ kind: 'saved', at: null });
     });
 
     it('flush resolves only when everything is saved', async () => {

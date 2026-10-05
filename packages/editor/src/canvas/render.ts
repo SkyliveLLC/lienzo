@@ -12,6 +12,7 @@ import {
     type SiteSettings,
 } from '@skylive/lienzo-core';
 import type { Asset } from '@skylive/lienzo-core/protocol';
+import type { Editor } from '../state/editor.ts';
 import type { Preview } from '../state/previews.ts';
 
 export type RenderContext = {
@@ -24,6 +25,19 @@ export type RenderContext = {
     /** Placeholder texts for app elements whose preview is not there yet. */
     labels: { loading: string; failed: string };
 };
+
+/** What rendering needs from the editor: the canvas and the preview read the same. */
+export function renderContext(editor: Editor): RenderContext {
+    return {
+        catalog: editor.catalog.value,
+        site: editor.site.value,
+        assets: editor.state.workspace.assets,
+        slug: editor.state.page?.slug ?? '',
+        publicUrl: editor.state.workspace.publicUrl,
+        preview: (element) => editor.previews.get(element),
+        labels: { loading: editor.t('canvas.loadingPreview'), failed: editor.t('canvas.previewFailed') },
+    };
+}
 
 export type Rendered = { ok: true; page: RenderedPage } | { ok: false; issues: Issue[] };
 

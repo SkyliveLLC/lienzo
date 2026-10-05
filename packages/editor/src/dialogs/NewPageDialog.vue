@@ -11,14 +11,7 @@ import TextInput from '../ui/TextInput.vue';
 const editor = useEditor();
 const t = editor.t;
 const ids = { title: useId(), slug: useId() };
-const open = computed({
-    get: () => editor.state.dialog === 'newPage',
-    set: (value) => {
-        if (!value && editor.state.dialog === 'newPage') {
-            editor.state.dialog = null;
-        }
-    },
-});
+const open = editor.dialogModel('newPage');
 
 const form = reactive({ title: '', slug: '', issues: [] as Issue[], creating: false });
 watch(open, (now) => {

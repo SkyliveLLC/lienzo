@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { Action, FieldValue } from '@skylive/lienzo-core';
+import { CORE_ACTION_TYPES, type Action, type FieldValue } from '@skylive/lienzo-core';
 import { computed, useId } from 'vue';
 import { useEditor } from '../state/editor.ts';
 import SelectInput from '../ui/SelectInput.vue';
 import TextInput from '../ui/TextInput.vue';
-import { CORE_ACTION_TYPES, CORE_ACTIONS, defaultActionValue, isCoreAction } from './actions.ts';
+import { CORE_ACTIONS, defaultActionValue, isCoreAction } from './actions.ts';
 import FieldControl from './FieldControl.vue';
 
 /**
@@ -34,7 +34,8 @@ const options = computed(() => {
 });
 
 const modals = computed(() => (editor.state.draft.modals ?? []).map((modal) => ({ value: modal.id, label: modal.title })));
-const pages = computed(() => editor.state.workspace.pages.map((page) => ({ value: page.slug, label: page.slug ? `${page.title} /${page.slug}` : page.title })));
+// Core turns a page action into `/<slug>`; the home page has no slug, so it is written as `/`.
+const pages = computed(() => editor.state.workspace.pages.map((page) => ({ value: page.slug || '/', label: page.slug ? `${page.title} /${page.slug}` : page.title })));
 
 function setType(next: string) {
     const spec = editor.catalog.value.actions.find((candidate) => candidate.type === next);

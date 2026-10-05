@@ -228,7 +228,6 @@ export function mountFrame(iframe: HTMLIFrameElement) {
         update,
         measure,
         hit,
-        elementNode,
         preview,
         /** Sets one custom property on an element during a gesture (rotation, corners). */
         previewVar: (id: string, name: string, value: number) => elementNode(id)?.style.setProperty(name, String(value)),

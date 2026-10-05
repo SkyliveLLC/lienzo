@@ -38,8 +38,11 @@ const publicUrl = computed(() => {
     return base && page.value ? new URL(page.value.slug, base.endsWith('/') ? base : `${base}/`).href : null;
 });
 
-function choosePage(event: Event) {
-    void editor.openPage(Number((event.target as HTMLSelectElement).value));
+/** When the switch is refused (the pending save failed), the select goes back to the open page. */
+async function choosePage(event: Event) {
+    const select = event.target as HTMLSelectElement;
+    await editor.openPage(Number(select.value));
+    select.value = String(editor.state.page?.id ?? '');
 }
 </script>
 
@@ -53,12 +56,12 @@ function choosePage(event: Event) {
             <Button variant="ghost" :title="t('toolbar.newPageHint')" @click="editor.state.dialog = 'newPage'"><Plus :size="16" aria-hidden="true" />{{ t('toolbar.newPage') }}</Button>
             <span v-if="page" class="lze-badge-status" :data-published="page.publishedAt !== null">{{ page.publishedAt ? t('status.published') : t('status.unpublished') }}</span>
             <span class="lze-save-status" :data-tone="status.tone" data-testid="save-status" aria-live="polite">{{ status.text }}</span>
-            <Button v-if="status.retry" variant="ghost" @click="editor.retrySave()">{{ t('save.retry') }}</Button>
+            <Button v-if="status.retry" variant="ghost" @click="editor.saveNow()">{{ t('save.retry') }}</Button>
             <Button v-if="editor.saveState.value.kind === 'conflict'" variant="primary" @click="editor.reloadPage()">{{ t('conflict.reload') }}</Button>
         </div>
 
         <div class="lze-toolbar-group">
-            <div class="lze-segmented" role="group">
+            <div class="lze-segmented" role="group" :aria-label="t('toolbar.device')">
                 <button
                     v-for="option in (['desktop', 'mobile'] as const)"
                     :key="option"

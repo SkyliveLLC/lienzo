@@ -4,7 +4,7 @@ import { ChevronDown, ChevronUp, Frame, Image as ImageIcon, Layers, Lock, LockOp
 import { computed, ref } from 'vue';
 import { CORE_TYPES, isModal } from '../model/document.ts';
 import { coreSpecs, elementName, type Insertable } from '../model/elements.ts';
-import { SECTION_TEMPLATES } from '../model/templates.ts';
+import { buildSectionTemplate, SECTION_TEMPLATES } from '../model/templates.ts';
 import { useEditor } from '../state/editor.ts';
 import CatalogIcon from '../ui/CatalogIcon.vue';
 import ElementIcon from './ElementIcon.vue';
@@ -27,9 +27,7 @@ const tabs = [
 const contentTypes = CORE_TYPES.filter((type) => coreSpecs[type].group === 'content');
 const formTypes = CORE_TYPES.filter((type) => coreSpecs[type].group === 'form');
 
-// ── Dragging from the palette ────────────────────────────────────────────
 
-/** What is being dragged from the palette, and where the pointer is. */
 const dragging = ref<{ insertable: Insertable; src?: string; label: string; x: number; y: number; moved: boolean } | null>(null);
 
 function startDrag(event: PointerEvent, insertable: Insertable, label: string, src?: string) {
@@ -68,9 +66,15 @@ function drop(event: PointerEvent) {
     editor.addElement(held.insertable, spot ?? undefined, held.src);
 }
 
+/** Keyboard activation (a click with no pointer behind it) adds the element; pointers go through the drag. */
+function pressed(event: MouseEvent, insertable: Insertable, src?: string) {
+    if (event.detail === 0) {
+        editor.addElement(insertable, undefined, src);
+    }
+}
+
 const coreLabel = (type: CoreElementType) => t(coreSpecs[type].label);
 
-// ── Layers ───────────────────────────────────────────────────────────────
 
 const collapsed = ref<string[]>([]);
 
@@ -119,6 +123,7 @@ const modals = computed(() => editor.state.draft.modals ?? []);
                     class="lze-palette-item"
                     :title="t('elements.addHint')"
                     @pointerdown="startDrag($event, { kind: 'core', type }, coreLabel(type))"
+                    @click="pressed($event, { kind: 'core', type })"
                     @pointermove="moveDrag"
                     @pointerup="drop"
                     @pointercancel="dragging = null"
@@ -137,6 +142,7 @@ const modals = computed(() => editor.state.draft.modals ?? []);
                         class="lze-palette-item"
                         :title="t('elements.addHint')"
                         @pointerdown="startDrag($event, { kind: 'app', spec }, editor.i18n.localized(spec.label))"
+                        @click="pressed($event, { kind: 'app', spec })"
                         @pointermove="moveDrag"
                         @pointerup="drop"
                         @pointercancel="dragging = null"
@@ -149,7 +155,7 @@ const modals = computed(() => editor.state.draft.modals ?? []);
 
             <p class="lze-group-title">{{ t('elements.sections') }}</p>
             <div class="lze-list">
-                <button v-for="template in SECTION_TEMPLATES" :key="template.key" type="button" class="lze-list-item" @click="editor.addTemplateSection(template.key)">
+                <button v-for="template in SECTION_TEMPLATES" :key="template.key" type="button" class="lze-list-item" @click="editor.addSection(buildSectionTemplate(template.key))">
                     {{ t(template.name) }}
                 </button>
             </div>
@@ -163,6 +169,7 @@ const modals = computed(() => editor.state.draft.modals ?? []);
                     class="lze-palette-item"
                     :title="t('elements.addHint')"
                     @pointerdown="startDrag($event, { kind: 'core', type }, coreLabel(type))"
+                    @click="pressed($event, { kind: 'core', type })"
                     @pointermove="moveDrag"
                     @pointerup="drop"
                     @pointercancel="dragging = null"
@@ -251,6 +258,7 @@ const modals = computed(() => editor.state.draft.modals ?? []);
                     class="lze-media-item"
                     :title="asset.name"
                     @pointerdown="startDrag($event, { kind: 'core', type: 'image' }, asset.name, asset.ref)"
+                    @click="pressed($event, { kind: 'core', type: 'image' }, asset.ref)"
                     @pointermove="moveDrag"
                     @pointerup="drop"
                     @pointercancel="dragging = null"

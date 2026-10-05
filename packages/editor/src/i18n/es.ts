@@ -12,6 +12,7 @@ export const es: Messages = {
     'toolbar.newPageHint': 'Crear otra página',
     'toolbar.desktop': 'Escritorio',
     'toolbar.mobile': 'Celular',
+    'toolbar.device': 'Dispositivo',
     'toolbar.undo': 'Deshacer, Ctrl+Z',
     'toolbar.redo': 'Rehacer, Ctrl+Shift+Z',
     'toolbar.preview': 'Vista previa',

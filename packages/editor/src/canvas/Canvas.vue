@@ -2,19 +2,19 @@
 import type { Box } from '@skylive/lienzo-core';
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, shallowRef, toRaw, watch } from 'vue';
 import { boxOf, canvasHeight, findCanvas, stacksOnMobile, type Device } from '../model/document.ts';
-import { anchorsOf, clamp, dragBox, snapToAnchors, type Anchors, type Guides, type Handle } from '../model/geometry.ts';
+import { anchorsOf, clamp, clampBox, dragBox, snapToAnchors, type Anchors, type Guides, type Handle } from '../model/geometry.ts';
 import { fontsHref } from '../model/theme.ts';
-import { useEditor } from '../state/editor.ts';
+import { issueText, useEditor } from '../state/editor.ts';
 import { handleShortcut } from '../state/shortcuts.ts';
 import { mountFrame, type CanvasFrame, type CanvasMetrics, type Layout, type Rect } from './frame.ts';
 import Overlay from './Overlay.vue';
-import { domId, renderDraft, type RenderContext } from './render.ts';
+import { domId, renderContext, renderDraft } from './render.ts';
 
 /**
  * The editing canvas: the page rendered by core inside an iframe at its
- * design width (the theme's max width, or 390 on phones), scaled to fit, with
- * the overlay on top. Gestures move elements by setting their custom
- * properties directly and write the document once, when they end.
+ * design width (the theme's max width, 390 on phones, or an open modal's
+ * width), scaled to fit, with the overlay on top. Gestures move elements by
+ * setting their custom properties directly and write the document once, when they end.
  */
 const editor = useEditor();
 const t = editor.t;
@@ -27,6 +27,8 @@ const layout = shallowRef<Layout>({ canvases: new Map(), elements: new Map() });
 const hovered = ref<string | null>(null);
 const guides = shallowRef<{ canvas: string; lines: Guides } | null>(null);
 const live = shallowRef<ReadonlyMap<string, Rect>>(new Map());
+/** The angle a rotate gesture shows before it is written. */
+const rotation = shallowRef<{ id: string; value: number } | null>(null);
 const hint = ref<string | null>(null);
 let frame: CanvasFrame | null = null;
 
@@ -38,17 +40,6 @@ const frozen = computed<ReadonlySet<string>>(() => new Set(editor.state.device =
 
 const empty = computed(() => editor.canvases.value.every((canvas) => canvas.elements.length === 0));
 
-// ── Rendering ────────────────────────────────────────────────────────────
-
-const context = (): RenderContext => ({
-    catalog: editor.catalog.value,
-    site: editor.site.value,
-    assets: editor.state.workspace.assets,
-    slug: editor.state.page?.slug ?? '',
-    publicUrl: editor.state.workspace.publicUrl,
-    preview: (element) => editor.previews.get(element),
-    labels: { loading: t('canvas.loadingPreview'), failed: t('canvas.previewFailed') },
-});
 
 let scheduled = 0;
 let rendering = false;
@@ -64,7 +55,8 @@ function schedule() {
 }
 
 async function render() {
-    if (!frame || rendering || editing) {
+    // A render now would undo a gesture's live custom properties or the text being typed.
+    if (!frame || rendering || editing || gesture) {
         again = true;
 
         return;
@@ -75,7 +67,7 @@ async function render() {
     try {
         // Raw data: parsing walks every value, and the deep watcher already tracks changes.
         const draft = toRaw(editor.state.draft);
-        const result = await renderDraft(draft, context(), 'edit');
+        const result = await renderDraft(draft, renderContext(editor), 'edit');
 
         if (!result.ok) {
             editor.state.renderIssues = result.issues;
@@ -113,7 +105,6 @@ watch(() => editor.state.draft, schedule, { deep: true });
 watch([editor.site, () => editor.state.workspace.assets, editor.previews.version, () => editor.state.view, () => editor.state.panels], schedule);
 watch([() => editor.state.device, () => editor.frameWidth.value], () => nextTick(relayout));
 
-// ── Gestures ─────────────────────────────────────────────────────────────
 
 type Item = { id: string; start: Box };
 
@@ -131,8 +122,8 @@ type Gesture =
         others: Item[];
         boxes: Map<string, Box>;
     }
-    | { kind: 'rotate'; id: string; center: { x: number; y: number }; startAngle: number; from: number }
-    | { kind: 'radius'; id: string; origin: number; factor: number; unit: number; from: number };
+    | { kind: 'rotate'; id: string; center: { x: number; y: number }; startAngle: number; from: number; value: number }
+    | { kind: 'radius'; id: string; origin: number; factor: number; unit: number; from: number; value: number };
 
 let gesture: Gesture | null = null;
 let release: (() => void) | null = null;
@@ -142,13 +133,12 @@ function capture(node: HTMLElement | SVGElement, event: PointerEvent) {
     node.setPointerCapture(event.pointerId);
     const move = (next: Event) => onGestureMove(next as PointerEvent);
     const end = () => finishGesture();
+    const events = ['pointerup', 'pointercancel', 'lostpointercapture'] as const;
     node.addEventListener('pointermove', move);
-    node.addEventListener('pointerup', end);
-    node.addEventListener('pointercancel', end);
+    events.forEach((name) => node.addEventListener(name, end));
     release = () => {
         node.removeEventListener('pointermove', move);
-        node.removeEventListener('pointerup', end);
-        node.removeEventListener('pointercancel', end);
+        events.forEach((name) => node.removeEventListener(name, end));
     };
 }
 
@@ -195,26 +185,19 @@ function onGestureMove(event: PointerEvent) {
 
     if (current.kind === 'rotate') {
         const turned = current.from + (angle(current.center, event) - current.startAngle);
-        const value = clamp(event.shiftKey ? Math.round(turned / 15) * 15 : Math.round(turned), -180, 180);
-        const element = elementById(current.id);
-
-        if (element) {
-            element.style.rotate = value;
-            hint.value = `${value}°`;
-        }
+        current.value = clamp(event.shiftKey ? Math.round(turned / 15) * 15 : Math.round(turned), -180, 180);
+        frame.previewVar(current.id, '--rot', current.value);
+        rotation.value = { id: current.id, value: current.value };
+        hint.value = `${current.value}°`;
 
         return;
     }
 
     if (current.kind === 'radius') {
         const delta = ((event.clientX - current.origin) * current.factor) / current.unit;
-        const value = Math.round(clamp(current.from + delta, 0, 200));
-        const element = elementById(current.id);
-
-        if (element) {
-            element.style.radius = value;
-            hint.value = t('canvas.corners', { n: value });
-        }
+        current.value = Math.round(clamp(current.from + delta, 0, 200));
+        frame.previewVar(current.id, '--r', current.value);
+        hint.value = t('canvas.corners', { n: current.value });
 
         return;
     }
@@ -241,17 +224,13 @@ function onGestureMove(event: PointerEvent) {
     apply(target.id, snapped.box);
 
     for (const other of current.others) {
-        apply(other.id, {
-            ...other.start,
-            x: clamp(other.start.x + snapped.box.x - target.start.x, -10, 110),
-            y: clamp(other.start.y + snapped.box.y - target.start.y, -400, 3000),
-        });
+        apply(other.id, clampBox({ ...other.start, x: other.start.x + snapped.box.x - target.start.x, y: other.start.y + snapped.box.y - target.start.y }));
     }
 
     live.value = rects;
     guides.value = snapped.guides.x.length || snapped.guides.y.length ? { canvas: current.canvas, lines: snapped.guides } : null;
     hint.value = handle
-        ? `${Math.round((snapped.box.w * editor.frameWidth.value) / 100)} × ${Math.round(snapped.box.h)} px`
+        ? `${Math.round((snapped.box.w * metrics.frame.w) / 100)} × ${Math.round(snapped.box.h)} px`
         : `x ${snapped.box.x.toFixed(1)}% · y ${Math.round(snapped.box.y)} px`;
 }
 
@@ -265,11 +244,18 @@ function finishGesture() {
 
     if (finished?.kind === 'box' && finished.boxes.size > 0) {
         editor.placeElements([...finished.boxes].map(([id, box]) => ({ id, box })));
-    } else if (finished && finished.kind !== 'box') {
-        editor.commit();
+    } else if (finished && finished.kind !== 'box' && finished.value !== finished.from) {
+        const element = elementById(finished.id);
+
+        if (element) {
+            element.style[finished.kind === 'rotate' ? 'rotate' : 'radius'] = finished.value;
+            editor.commit();
+        }
     }
 
     live.value = new Map();
+    rotation.value = null;
+    schedule();
 }
 
 function elementById(id: string) {
@@ -292,7 +278,8 @@ function onRotate(event: PointerEvent) {
     }
 
     const center = { x: sheet.left + (rect.x + rect.w / 2) * scale.value, y: sheet.top + (rect.y + rect.h / 2) * scale.value };
-    gesture = { kind: 'rotate', id: element.id, center, startAngle: angle(center, event), from: element.style.rotate ?? 0 };
+    const from = element.style.rotate ?? 0;
+    gesture = { kind: 'rotate', id: element.id, center, startAngle: angle(center, event), from, value: from };
     capture(event.currentTarget as HTMLElement, event);
 }
 
@@ -305,11 +292,11 @@ function onRadius(event: PointerEvent) {
         return;
     }
 
-    gesture = { kind: 'radius', id: element.id, origin: event.clientX, factor: 1 / scale.value, unit: metrics.unit, from: element.style.radius ?? 0 };
+    const from = element.style.radius ?? 0;
+    gesture = { kind: 'radius', id: element.id, origin: event.clientX, factor: 1 / scale.value, unit: metrics.unit, from, value: from };
     capture(event.currentTarget as HTMLElement, event);
 }
 
-// ── Events inside the canvas ─────────────────────────────────────────────
 
 let editing: { node: HTMLElement; canvas: string; id: string; prop: 'text' | 'label' } | null = null;
 
@@ -458,7 +445,6 @@ function dropPoint(clientX: number, clientY: number): { canvas: string; x: numbe
 
 defineExpose({ dropPoint });
 
-// ── Mounting ─────────────────────────────────────────────────────────────
 
 let stageObserver: ResizeObserver | null = null;
 let frameObserver: ResizeObserver | null = null;
@@ -510,7 +496,7 @@ const deviceName = (device: Device) => (device === 'desktop' ? t('toolbar.deskto
 <template>
     <div ref="stage" class="lze-stage" @pointerdown.self="editor.clearSelection()">
         <p v-if="editor.state.renderIssues.length" class="lze-render-issue" role="alert">
-            {{ t('canvas.invalid', { issue: `${editor.state.renderIssues[0]?.path}: ${editor.state.renderIssues[0]?.message}` }) }}
+            {{ t('canvas.invalid', { issue: issueText(editor.state.renderIssues[0]) }) }}
         </p>
         <div v-if="editor.activeModal.value" class="lze-modal-banner">
             <span>{{ t('canvas.editingModal', { title: editor.activeModal.value.title }) }}</span>
@@ -530,6 +516,7 @@ const deviceName = (device: Device) => (device === 'desktop' ? t('toolbar.deskto
                     :hovered="hovered"
                     :guides="guides"
                     :live="live"
+                    :rotation="rotation"
                     :frozen="frozen"
                     @resize="onResize"
                     @rotate="onRotate"

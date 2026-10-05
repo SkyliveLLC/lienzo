@@ -14,7 +14,7 @@ import {
     type Theme,
 } from '@skylive/lienzo-core';
 import type { Asset, PageState, PageSummary, PageVersion, SiteUpdate, Workspace } from '@skylive/lienzo-core/protocol';
-import { computed, inject, reactive, shallowRef, watch, type InjectionKey } from 'vue';
+import { computed, inject, reactive, shallowRef, watch, type InjectionKey, type WritableComputedRef } from 'vue';
 import type { Client, Failure } from '../client.ts';
 import type { Translator } from '../i18n/index.ts';
 import {
@@ -22,6 +22,8 @@ import {
     canvasesOf,
     canvasHeight,
     copyElement,
+    emptyModal,
+    emptySection,
     findCanvas,
     isModal,
     MOBILE_WIDTH,
@@ -46,7 +48,7 @@ import {
     type Alignment,
 } from '../model/geometry.ts';
 import { createHistory } from '../model/history.ts';
-import { buildPageTemplate, buildSectionTemplate, type PageTemplateKey, type SectionTemplateKey } from '../model/templates.ts';
+import { buildPageTemplate, type PageTemplateKey } from '../model/templates.ts';
 import { createAutosave } from './autosave.ts';
 import { createPreviews } from './previews.ts';
 
@@ -89,57 +91,86 @@ export function useEditor(): Editor {
     return editor;
 }
 
+export type EditorState = {
+    load: Load;
+    workspace: Workspace;
+    page: OpenPage | null;
+    draft: Document;
+    revision: number;
+    device: Device;
+    view: View;
+    selection: Selection;
+    previewing: boolean;
+    dialog: Dialog;
+    /** The media library, open on top of anything else; picking calls `onPick`. */
+    library: { onPick: ((ref: string) => void) | null } | null;
+    /** Theme being edited in the theme dialog: the canvas shows it live until saved or cancelled. */
+    themeDraft: Theme | null;
+    /** Visible panel per tab or step group on the canvas. */
+    panels: Record<string, number>;
+    /** Issues of a draft that does not parse, so the canvas shows the last good render. */
+    renderIssues: Issue[];
+    publishing: boolean;
+    toasts: Toast[];
+};
+
 /**
- * All editor state and every operation on it. Components read the state and
- * call these methods; nothing else mutates the draft except panels editing
- * fields of the selected element in place (then calling `commit`).
+ * All editor state and the operations on it. Panels and canvas gestures
+ * edit the draft in place and call `commit` to record an undo step;
+ * structural changes (adding, removing, moving things) go through these methods.
  */
 export function createEditor({ client, i18n }: EditorDeps) {
     const t = i18n.t;
-    const state = reactive({
-        load: { kind: 'loading' } as Load,
-        workspace: { site: placeholderSite(), meta: {}, publicUrl: null, pages: [], catalog: { elements: [], actions: [] }, assets: [], quota: { used: 0, limit: 0 } } as Workspace,
-        page: null as OpenPage | null,
-        draft: { sections: [] } as Document,
+    const state = reactive<EditorState>({
+        load: { kind: 'loading' },
+        workspace: {
+            site: parseSiteSettings({ name: 'Lienzo' }),
+            meta: {},
+            publicUrl: null,
+            pages: [],
+            catalog: { elements: [], actions: [] },
+            assets: [],
+            quota: { used: 0, limit: 0 },
+        },
+        page: null,
+        draft: { sections: [] },
         revision: 0,
-        device: 'desktop' as Device,
-        view: { kind: 'page' } as View,
-        selection: { kind: 'none' } as Selection,
+        device: 'desktop',
+        view: { kind: 'page' },
+        selection: { kind: 'none' },
         previewing: false,
-        dialog: null as Dialog,
-        /** The media library, open on top of anything else; picking calls `onPick`. */
-        library: null as { onPick: ((ref: string) => void) | null } | null,
-        /** Theme being edited in the theme dialog: the canvas shows it live until saved or cancelled. */
-        themeDraft: null as Theme | null,
-        /** Visible panel per tab or step group on the canvas. */
-        panels: {} as Record<string, number>,
-        /** Issues of a draft that does not parse, so the canvas shows the last good render. */
-        renderIssues: [] as Issue[],
+        dialog: null,
+        library: null,
+        themeDraft: null,
+        panels: {},
+        renderIssues: [],
         publishing: false,
-        toasts: [] as Toast[],
+        toasts: [],
     });
 
     const history = createHistory('');
     const historyTick = shallowRef(0);
     const previews = createPreviews(client);
 
-    const snapshot = () => JSON.stringify({ title: state.page?.title ?? '', seo: state.page?.seo ?? {}, draft: state.draft });
+    /** Everything autosaved: the open page's title, SEO and draft. */
     const autosave = createAutosave({
-        read: snapshot,
-        async save(raw) {
-            const page = state.page;
-
-            if (!page) {
+        read: () => plain({ page: state.page?.id ?? null, title: state.page?.title ?? '', seo: state.page?.seo ?? { title: '', description: '' }, draft: state.draft }),
+        async save(value) {
+            if (value.page === null) {
                 return { ok: true };
             }
 
-            const body = JSON.parse(raw) as { title: string; seo: { title: string; description: string }; draft: Document };
-            const result = await client('PUT /pages/:id', { id: page.id }, {
+            const result = await client('PUT /pages/:id', { id: value.page }, {
                 baseRevision: state.revision,
-                title: body.title,
-                seo: blankToNull(body.seo),
-                draft: body.draft,
+                title: value.title,
+                seo: blankToNull(value.seo),
+                draft: value.draft,
             });
+
+            // Another page may have opened meanwhile; its revision is not this one's.
+            if (state.page?.id !== value.page) {
+                return { ok: true };
+            }
 
             if (result.ok) {
                 state.revision = result.value.revision;
@@ -155,9 +186,9 @@ export function createEditor({ client, i18n }: EditorDeps) {
         },
     });
 
-    watch(() => snapshot(), () => autosave.changed());
-
-    // ── Derived ──────────────────────────────────────────────────────────
+    watch(() => [state.page?.title, state.page?.seo, state.draft], () => autosave.changed(), { deep: true });
+    // The page list follows title edits of the open page.
+    watch(() => state.page?.title, syncSummary);
 
     const catalog = computed<Catalog>(() => state.workspace.catalog);
     /**
@@ -229,8 +260,6 @@ export function createEditor({ client, i18n }: EditorDeps) {
         return modal ? modal.width + (modal.size === 'full' ? 0 : 32) : theme.value.max_width;
     });
 
-    // ── Toasts ───────────────────────────────────────────────────────────
-
     let toastId = 0;
 
     function notify(text: string, tone: Toast['tone'] = 'info') {
@@ -244,8 +273,6 @@ export function createEditor({ client, i18n }: EditorDeps) {
     }
 
     const failureText = (failure: Failure): string => (failure.kind === 'offline' ? t('load.offline') : failure.message);
-
-    // ── Loading ──────────────────────────────────────────────────────────
 
     async function load() {
         state.load = { kind: 'loading' };
@@ -326,7 +353,7 @@ export function createEditor({ client, i18n }: EditorDeps) {
         state.load = { kind: 'ready' };
         history.reset(JSON.stringify(draft));
         historyTick.value++;
-        autosave.reset(snapshot());
+        autosave.reset();
         syncSummary();
 
         return true;
@@ -382,8 +409,6 @@ export function createEditor({ client, i18n }: EditorDeps) {
         }
     }
 
-    // ── History ──────────────────────────────────────────────────────────
-
     /** Records the draft after a discrete edit, for undo. Saving follows the draft by itself. */
     function commit() {
         if (history.push(JSON.stringify(state.draft))) {
@@ -427,8 +452,6 @@ export function createEditor({ client, i18n }: EditorDeps) {
             state.view = { kind: 'page' };
         }
     }
-
-    // ── Selection ────────────────────────────────────────────────────────
 
     function selectCanvas(canvasId: string) {
         state.selection = { kind: 'canvas', canvas: canvasId };
@@ -482,8 +505,6 @@ export function createEditor({ client, i18n }: EditorDeps) {
         state.panels = { ...state.panels, [groupId]: index - start };
     }
 
-    // ── Elements ─────────────────────────────────────────────────────────
-
     /** Adds an element to the current canvas, or at a drop point in a given canvas. */
     function addElement(insertable: Insertable, at?: { canvas: string; x: number; y: number }, src?: string) {
         const target = at ? findCanvas(state.draft, at.canvas) : currentCanvas.value;
@@ -535,8 +556,16 @@ export function createEditor({ client, i18n }: EditorDeps) {
         pasteInto(canvas, selectedElements.value);
     }
 
+    /** Copies get new ids, their own groups and the top layers, so they never tie back to the originals. */
     function pasteInto(canvas: Canvas, elements: readonly Element[]) {
-        const copies = elements.map((element) => copyElement(element));
+        const groups = new Map<string, string>();
+        const top = Math.max(0, ...canvas.elements.map((element) => element.z));
+        const copies = elements.map((element, index) => {
+            const copy = copyElement(element);
+            const group = copy.group ? (groups.get(copy.group) ?? groups.set(copy.group, newId('group')).get(copy.group)) : null;
+
+            return { ...copy, group, z: Math.min(999, top + index + 1) };
+        });
         canvas.elements.push(...copies);
         state.selection = { kind: 'elements', canvas: canvas.id, ids: copies.map((copy) => copy.id), active: copies[0]!.id };
         commit();
@@ -564,7 +593,7 @@ export function createEditor({ client, i18n }: EditorDeps) {
 
         try {
             const stored: unknown = JSON.parse(window.localStorage.getItem(CLIPBOARD_KEY) ?? '[]');
-            elements = Array.isArray(stored) ? stored.filter(isElementLike) : [];
+            elements = Array.isArray(stored) ? stored.filter((candidate) => parsesAsElement(candidate, catalog.value)) : [];
         } catch {
             elements = [];
         }
@@ -635,7 +664,7 @@ export function createEditor({ client, i18n }: EditorDeps) {
         commit();
     }
 
-    /** Arrow keys: 1 design pixel (0.5% across), ten times that with Shift. Like dragging, not where phones stack. */
+    /** Arrow keys: 1 design pixel down or up, 0.5% across; callers pass ten steps with Shift. Like dragging, not where phones stack. */
     function nudge(dx: number, dy: number) {
         const canvas = currentCanvas.value;
 
@@ -670,17 +699,11 @@ export function createEditor({ client, i18n }: EditorDeps) {
         commit();
     }
 
-    // ── Sections and modals ──────────────────────────────────────────────
-
     function addSection(section: Section = emptySection()) {
         state.draft.sections.push(section);
         state.view = { kind: 'page' };
         state.selection = { kind: 'canvas', canvas: section.id };
         commit();
-    }
-
-    function addTemplateSection(key: SectionTemplateKey) {
-        addSection(buildSectionTemplate(key));
     }
 
     /** Starts the page from a full template, replacing its sections. */
@@ -717,7 +740,9 @@ export function createEditor({ client, i18n }: EditorDeps) {
 
     /**
      * Chains a section to the one before it as a tab or a step. When the one
-     * before is not grouped yet, the group starts with both.
+     * before is not grouped yet, the group starts with both. A group has one
+     * type, so choosing tabs or steps sets it for the whole group. An empty
+     * label renders as "Tab n" or "Step n" by position.
      */
     function setSectionGroup(section: Section, mode: 'alone' | 'tabs' | 'steps') {
         const sections = state.draft.sections;
@@ -734,10 +759,13 @@ export function createEditor({ client, i18n }: EditorDeps) {
         const id = previous?.group?.id || newId('group');
 
         if (previous && !previous.group?.id) {
-            previous.group = { id, type: mode, label: t('section.stepLabel', { n: 1 }) };
+            previous.group = { id, type: mode, label: '' };
         }
 
-        section.group = { id, type: mode, label: section.group?.label ?? t('section.stepLabel', { n: index + 1 }) };
+        section.group = { id, type: mode, label: section.group?.id === id ? (section.group.label ?? '') : '' };
+        sections.filter((candidate) => candidate.group?.id === id).forEach((member) => {
+            member.group = { ...member.group, id, type: mode };
+        });
         commit();
     }
 
@@ -783,11 +811,10 @@ export function createEditor({ client, i18n }: EditorDeps) {
         commit();
     }
 
-    // ── Undo, save, publish, versions ────────────────────────────────────
-
     const undo = () => restoreFrom(history.undo());
     const redo = () => restoreFrom(history.redo());
 
+    /** Saves now; the toolbar shows how it went. */
     async function saveNow() {
         await autosave.flush();
     }
@@ -808,16 +835,27 @@ export function createEditor({ client, i18n }: EditorDeps) {
                 return;
             }
 
-            const result = await autosave.exclusive(() => client('POST /pages/:id/publish', { id: page.id }, { revision: state.revision }));
+            const result = await autosave.exclusive(async () => {
+                const response = await client('POST /pages/:id/publish', { id: page.id }, { revision: state.revision });
+
+                if (response.ok) {
+                    page.publishedAt = response.value.publishedAt;
+                    page.versions = response.value.versions;
+                }
+
+                return response;
+            });
 
             if (!result.ok) {
-                notify(t('publish.failed', { message: failureText(result.failure) }), 'error');
+                if (result.failure.kind === 'conflict') {
+                    state.dialog = 'conflict';
+                } else {
+                    notify(t('publish.failed', { message: failureText(result.failure) }), 'error');
+                }
 
                 return;
             }
 
-            page.publishedAt = result.value.publishedAt;
-            page.versions = result.value.versions;
             syncSummary();
             notify(t('publish.done'));
         } finally {
@@ -833,35 +871,42 @@ export function createEditor({ client, i18n }: EditorDeps) {
             return;
         }
 
-        const result = await autosave.exclusive(() => client('POST /pages/:id/versions/:version/restore', { id: page.id, version }));
+        // The new draft and revision land before any autosave can run again.
+        const problem = await autosave.exclusive(async (): Promise<string | null> => {
+            const result = await client('POST /pages/:id/versions/:version/restore', { id: page.id, version });
 
-        if (!result.ok) {
-            notify(t('toast.failed', { message: failureText(result.failure) }), 'error');
+            if (!result.ok) {
+                return failureText(result.failure);
+            }
+
+            try {
+                state.draft = plain(parseDocument(result.value.draft, catalog.value));
+            } catch (error) {
+                if (error instanceof DocumentError) {
+                    return issueText(error.issues[0]);
+                }
+
+                throw error;
+            }
+
+            state.revision = result.value.revision;
+            page.versions = result.value.versions;
+            autosave.reset();
+
+            return null;
+        });
+
+        if (problem !== null) {
+            notify(t('toast.failed', { message: problem }), 'error');
 
             return;
         }
 
-        let draft: Document;
-
-        try {
-            draft = plain(parseDocument(result.value.draft, catalog.value));
-        } catch (error) {
-            notify(t('toast.failed', { message: error instanceof DocumentError ? issueText(error.issues[0]) : String(error) }), 'error');
-
-            return;
-        }
-
-        state.revision = result.value.revision;
-        state.draft = draft;
-        page.versions = result.value.versions;
-        autosave.reset(snapshot());
         commit();
         keepSelectionValid();
         state.dialog = null;
         notify(t('versions.restored'));
     }
-
-    // ── Pages ────────────────────────────────────────────────────────────
 
     async function createPage(title: string, slug: string): Promise<Issue[]> {
         if (state.page && !(await autosave.flush())) {
@@ -890,7 +935,16 @@ export function createEditor({ client, i18n }: EditorDeps) {
             return [];
         }
 
-        const result = await autosave.exclusive(() => client('PUT /pages/:id', { id: page.id }, { baseRevision: state.revision, title: page.title, slug }));
+        const result = await autosave.exclusive(async () => {
+            const response = await client('PUT /pages/:id', { id: page.id }, { baseRevision: state.revision, title: page.title, slug });
+
+            if (response.ok) {
+                state.revision = response.value.revision;
+                page.slug = slug;
+            }
+
+            return response;
+        });
 
         if (!result.ok) {
             if (result.failure.kind === 'conflict') {
@@ -900,8 +954,6 @@ export function createEditor({ client, i18n }: EditorDeps) {
             return result.failure.kind === 'invalid' ? result.failure.issues : [{ path: 'slug', code: 'type', message: failureText(result.failure) }];
         }
 
-        state.revision = result.value.revision;
-        page.slug = slug;
         syncSummary();
         notify(t('page.addressSaved'));
 
@@ -915,7 +967,15 @@ export function createEditor({ client, i18n }: EditorDeps) {
             return;
         }
 
-        const result = await autosave.exclusive(() => client('DELETE /pages/:id', { id: page.id }));
+        const result = await autosave.exclusive(async () => {
+            const response = await client('DELETE /pages/:id', { id: page.id });
+
+            if (response.ok) {
+                state.page = null;
+            }
+
+            return response;
+        });
 
         if (!result.ok) {
             notify(t('toast.failed', { message: failureText(result.failure) }), 'error');
@@ -924,7 +984,6 @@ export function createEditor({ client, i18n }: EditorDeps) {
         }
 
         state.workspace.pages = state.workspace.pages.filter((summary) => summary.id !== page.id);
-        state.page = null;
         notify(t('page.deleted'));
         const next = state.workspace.pages[0];
 
@@ -934,8 +993,6 @@ export function createEditor({ client, i18n }: EditorDeps) {
             state.load = { kind: 'empty' };
         }
     }
-
-    // ── Site and assets ──────────────────────────────────────────────────
 
     /** Saves site settings. Returns the problems, if any. */
     async function updateSite(update: SiteUpdate): Promise<Issue[]> {
@@ -989,6 +1046,20 @@ export function createEditor({ client, i18n }: EditorDeps) {
         }
     }
 
+    /** `v-model:open` for a dialog: open while `state.dialog` names it; closing clears it. */
+    function dialogModel(name: Exclude<Dialog, null>): WritableComputedRef<boolean> {
+        return computed({
+            get: () => state.dialog === name,
+            set: (open) => {
+                if (open) {
+                    state.dialog = name;
+                } else if (state.dialog === name) {
+                    state.dialog = null;
+                }
+            },
+        });
+    }
+
     function openLibrary(onPick: ((ref: string) => void) | null = null) {
         state.library = { onPick };
     }
@@ -1013,6 +1084,7 @@ export function createEditor({ client, i18n }: EditorDeps) {
         canRedo,
         kindOf: (element: Element) => kindOf(element, catalog.value),
         notify,
+        failureText,
         dismiss,
         load,
         openPage,
@@ -1037,7 +1109,6 @@ export function createEditor({ client, i18n }: EditorDeps) {
         nudge,
         placeElements,
         addSection,
-        addTemplateSection,
         applyPageTemplate,
         removeSection,
         moveSection,
@@ -1048,7 +1119,6 @@ export function createEditor({ client, i18n }: EditorDeps) {
         openModal,
         removeModal,
         saveNow,
-        retrySave: () => void autosave.flush(),
         publish,
         restoreVersion,
         createPage,
@@ -1058,38 +1128,8 @@ export function createEditor({ client, i18n }: EditorDeps) {
         uploadAsset,
         deleteAsset,
         openLibrary,
+        dialogModel,
         dispose: () => autosave.dispose(),
-    };
-}
-
-export function emptySection(): Section {
-    return {
-        id: newId('section'),
-        height: { desktop: 520, mobile: 560 },
-        background: { type: 'color', color: 'background', overlay: 0 },
-        elements: [],
-    };
-}
-
-/** Modal sizes with a fixed width. At full screen the design is made on 1200. */
-export const MODAL_SIZES = [
-    { key: 'sm', width: 420 },
-    { key: 'md', width: 560 },
-    { key: 'lg', width: 760 },
-    { key: 'xl', width: 960 },
-    { key: 'full', width: 1200 },
-] as const;
-
-export function emptyModal(title: string): Modal {
-    return {
-        id: newId('modal'),
-        title,
-        size: 'md',
-        show_title: true,
-        width: 560,
-        height: { desktop: 320, mobile: 420 },
-        background: { type: 'color', color: 'background' },
-        elements: [],
     };
 }
 
@@ -1100,18 +1140,21 @@ const blankToNull = (seo: { title: string; description: string }): Seo => ({
     description: seo.description.trim() === '' ? null : seo.description,
 });
 
-/** Pasted data comes from local storage, which anything could have written. */
-function isElementLike(value: unknown): value is Element {
-    if (typeof value !== 'object' || value === null) {
-        return false;
+/**
+ * Pasted data comes from local storage, which anything could have written,
+ * possibly another site with other app elements: only what this catalog parses goes in.
+ */
+function parsesAsElement(value: unknown, catalog: Catalog): value is Element {
+    try {
+        parseDocument({ sections: [{ ...emptySection(), elements: [value] }] }, catalog);
+
+        return true;
+    } catch (error) {
+        if (error instanceof DocumentError) {
+            return false;
+        }
+
+        throw error;
     }
-
-    const candidate = value as Partial<Record<keyof Element, unknown>>;
-
-    return typeof candidate.id === 'string' && typeof candidate.type === 'string' && typeof candidate.layout === 'object' && candidate.layout !== null
-        && typeof candidate.props === 'object' && typeof candidate.style === 'object';
 }
 
-function placeholderSite(): SiteSettings {
-    return parseSiteSettings({ name: 'Lienzo' });
-}

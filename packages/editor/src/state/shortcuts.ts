@@ -17,12 +17,12 @@ function typing(event: KeyboardEvent): boolean {
 
 /**
  * Editor shortcuts: Escape, Delete, arrows, and Ctrl/Cmd with C, V, D, Z,
- * Shift+Z and S. Keys typed into a field are left alone. Returns whether the
- * event was handled, so the canvas iframe and the host page share one map.
+ * Shift+Z and S. Keys typed into a field are left alone. The canvas iframe and the host
+ * page both send their key events here.
  */
-export function handleShortcut(editor: Editor, event: KeyboardEvent): boolean {
+export function handleShortcut(editor: Editor, event: KeyboardEvent): void {
     if (typing(event) || editor.state.dialog !== null || editor.state.library !== null || editor.state.previewing) {
-        return false;
+        return;
     }
 
     const selected = editor.state.selection.kind === 'elements';
@@ -34,23 +34,23 @@ export function handleShortcut(editor: Editor, event: KeyboardEvent): boolean {
             case 'Escape':
                 editor.clearSelection();
 
-                return true;
+                return;
             case 'Delete':
             case 'Backspace':
                 if (!selected) {
-                    return false;
+                    return;
                 }
 
                 event.preventDefault();
                 editor.removeSelected();
 
-                return true;
+                return;
             case 'ArrowLeft':
             case 'ArrowRight':
             case 'ArrowUp':
             case 'ArrowDown': {
                 if (!selected) {
-                    return false;
+                    return;
                 }
 
                 const step = event.shiftKey ? 10 : 1;
@@ -60,10 +60,10 @@ export function handleShortcut(editor: Editor, event: KeyboardEvent): boolean {
                     event.key === 'ArrowUp' ? -step : event.key === 'ArrowDown' ? step : 0,
                 );
 
-                return true;
+                return;
             }
             default:
-                return false;
+                return;
         }
     }
 
@@ -71,16 +71,16 @@ export function handleShortcut(editor: Editor, event: KeyboardEvent): boolean {
         case 'c':
             editor.copySelected();
 
-            return true;
+            return;
         case 'v':
             editor.paste();
 
-            return true;
+            return;
         case 'd':
             event.preventDefault();
             editor.duplicateSelected();
 
-            return true;
+            return;
         case 'z':
             event.preventDefault();
             if (event.shiftKey) {
@@ -89,18 +89,18 @@ export function handleShortcut(editor: Editor, event: KeyboardEvent): boolean {
                 editor.undo();
             }
 
-            return true;
+            return;
         case 'y':
             event.preventDefault();
             editor.redo();
 
-            return true;
+            return;
         case 's':
             event.preventDefault();
             void editor.saveNow();
 
-            return true;
+            return;
         default:
-            return false;
+            return;
     }
 }

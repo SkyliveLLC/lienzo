@@ -10,14 +10,7 @@ import Dialog from '../ui/Dialog.vue';
 /** Form submissions, read through the protocol a page of results at a time. */
 const editor = useEditor();
 const t = editor.t;
-const open = computed({
-    get: () => editor.state.dialog === 'submissions',
-    set: (value) => {
-        if (!value && editor.state.dialog === 'submissions') {
-            editor.state.dialog = null;
-        }
-    },
-});
+const open = editor.dialogModel('submissions');
 const submissions = ref<Submission[]>([]);
 const next = ref<string | null>(null);
 const loading = ref(false);
@@ -29,7 +22,7 @@ async function load(cursor: string | null) {
     loading.value = false;
 
     if (!result.ok) {
-        editor.notify(t('submissions.failed', { message: result.failure.kind === 'offline' ? t('load.offline') : result.failure.message }), 'error');
+        editor.notify(t('submissions.failed', { message: editor.failureText(result.failure) }), 'error');
 
         return;
     }

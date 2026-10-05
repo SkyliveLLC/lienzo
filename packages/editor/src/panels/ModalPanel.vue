@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { Modal } from '@skylive/lienzo-core';
 import { useId } from 'vue';
-import { MODAL_SIZES, useEditor } from '../state/editor.ts';
+import { MODAL_SIZES } from '../model/document.ts';
+import { useEditor } from '../state/editor.ts';
 import Button from '../ui/Button.vue';
 import ColorPicker from '../ui/ColorPicker.vue';
 import Field from '../ui/Field.vue';

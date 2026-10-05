@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { FieldValue, Issue } from '@skylive/lienzo-core';
-import type { SiteMeta } from '@skylive/lienzo-core/protocol';
 import { computed, reactive, useId, watch } from 'vue';
 import { plain } from '../model/document.ts';
 import FieldControl from '../panels/FieldControl.vue';
@@ -18,14 +17,7 @@ import TextInput from '../ui/TextInput.vue';
 const editor = useEditor();
 const t = editor.t;
 const ids = { seoTitle: useId(), seoDescription: useId(), locale: useId() };
-const open = computed({
-    get: () => editor.state.dialog === 'site',
-    set: (value) => {
-        if (!value && editor.state.dialog === 'site') {
-            editor.state.dialog = null;
-        }
-    },
-});
+const open = editor.dialogModel('site');
 
 const blank = () => {
     const site = editor.state.workspace.site;
@@ -36,7 +28,7 @@ const blank = () => {
         ogImage: site.og_image,
         favicon: site.favicon,
         locale: site.locale,
-        meta: plain(editor.state.workspace.meta) as SiteMeta,
+        meta: plain(editor.state.workspace.meta),
         issues: [] as Issue[],
         saving: false,
     };

@@ -1,4 +1,4 @@
-import { CORE_ACTION_TYPES, type CoreActionType, type Field } from '@skylive/lienzo-core';
+import type { CoreActionType, Field } from '@skylive/lienzo-core';
 import type { MessageKey } from '../i18n/index.ts';
 
 /** How the value of a core action is edited, by what core does with it. */
@@ -27,7 +27,6 @@ export const CORE_ACTIONS = {
     step_prev: { kind: 'none' },
 } as const satisfies Record<CoreActionType, ValueControl>;
 
-export { CORE_ACTION_TYPES };
 export const isCoreAction = (type: string): type is CoreActionType => Object.hasOwn(CORE_ACTIONS, type);
 
 /** An app action's value is stored as a string in `action.value`; this is its starting value. */

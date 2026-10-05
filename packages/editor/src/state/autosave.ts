@@ -14,15 +14,15 @@ export type SaveState =
     /** The server rejected some values; retries on the next change. */
     | { kind: 'invalid'; issues: Issue[]; message: string }
     /** Someone else saved first. Nothing is saved again until the page reloads. */
-    | { kind: 'conflict'; revision: number };
+    | { kind: 'conflict' };
 
 export type Outcome = { ok: true } | { ok: false; failure: Failure };
 
-export type AutosaveOptions = {
-    /** The current state of everything autosaved, serialized. */
-    read(): string;
-    /** Sends a snapshot taken by `read`. */
-    save(snapshot: string): Promise<Outcome>;
+export type AutosaveOptions<T> = {
+    /** A detached copy of everything autosaved, as plain data. */
+    read(): T;
+    /** Sends a copy taken by `read`. */
+    save(value: T): Promise<Outcome>;
     delay?: number;
     offlineRetry?: number;
 };
@@ -35,8 +35,8 @@ export type Autosave = {
     flush(): Promise<boolean>;
     /** Flushes, then runs `task` while no autosave can start, so writes never interleave. */
     exclusive<T>(task: () => Promise<T>): Promise<T>;
-    /** Starts over from a snapshot that is known to be on the server (after a load or a reload). */
-    reset(snapshot: string): void;
+    /** Starts over from what `read` gives now, known to be on the server (after a load or a reload). A save still in flight no longer counts. */
+    reset(): void;
     dispose(): void;
 };
 
@@ -45,9 +45,12 @@ export type Autosave = {
  * save is saved right after it. A failure keeps the draft and says why;
  * offline retries every few seconds, a conflict stops for good.
  */
-export function createAutosave({ read, save, delay = 1500, offlineRetry = 5000 }: AutosaveOptions): Autosave {
+export function createAutosave<T>({ read, save, delay = 1500, offlineRetry = 5000 }: AutosaveOptions<T>): Autosave {
     const state = shallowRef<SaveState>({ kind: 'saved', at: null });
-    let saved = read();
+    const key = () => JSON.stringify(read());
+    let saved = key();
+    /** Bumped by `reset`, so the outcome of a save sent before it is ignored. */
+    let generation = 0;
     let timer: ReturnType<typeof setTimeout> | undefined;
     let running: Promise<unknown> | null = null;
 
@@ -67,7 +70,8 @@ export function createAutosave({ read, save, delay = 1500, offlineRetry = 5000 }
             return false;
         }
 
-        const snapshot = read();
+        const value = read();
+        const snapshot = JSON.stringify(value);
 
         if (snapshot === saved) {
             if (state.value.kind !== 'saved') {
@@ -78,16 +82,21 @@ export function createAutosave({ read, save, delay = 1500, offlineRetry = 5000 }
         }
 
         state.value = { kind: 'saving' };
-        const attempt = save(snapshot);
+        const sentIn = generation;
+        const attempt = save(value);
         running = attempt;
         const outcome = await attempt.finally(() => {
             running = null;
         });
 
+        if (sentIn !== generation) {
+            return false;
+        }
+
         if (outcome.ok) {
             saved = snapshot;
 
-            if (read() === saved) {
+            if (key() === saved) {
                 state.value = { kind: 'saved', at: new Date() };
 
                 return true;
@@ -125,7 +134,7 @@ export function createAutosave({ read, save, delay = 1500, offlineRetry = 5000 }
                 return;
             }
 
-            if (read() === saved) {
+            if (key() === saved) {
                 clearTimeout(timer);
                 if (state.value.kind !== 'saved') {
                     state.value = { kind: 'saved', at: new Date() };
@@ -156,9 +165,10 @@ export function createAutosave({ read, save, delay = 1500, offlineRetry = 5000 }
                 running = null;
             }
         },
-        reset(snapshot) {
+        reset() {
             clearTimeout(timer);
-            saved = snapshot;
+            generation++;
+            saved = key();
             state.value = { kind: 'saved', at: null };
         },
         dispose() {
@@ -175,7 +185,7 @@ function failed(failure: Failure): SaveState {
         case 'offline':
             return { kind: 'offline' };
         case 'conflict':
-            return { kind: 'conflict', revision: failure.revision };
+            return { kind: 'conflict' };
         case 'invalid':
             return { kind: 'invalid', issues: failure.issues, message: failure.message };
         case 'http':
