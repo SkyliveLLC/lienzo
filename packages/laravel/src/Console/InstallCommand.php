@@ -24,6 +24,8 @@ final class InstallCommand extends Command
             $this->callSilently('vendor:publish', ['--tag' => 'lienzo-migrations']);
         }
 
+        $this->unshadowRobots($files);
+
         $this->components->info('Lienzo is installed. Next:');
         $this->components->bulletList([
             'Run <comment>php artisan migrate</comment>.',
@@ -33,5 +35,28 @@ final class InstallCommand extends Command
         ]);
 
         return self::SUCCESS;
+    }
+
+    /**
+     * Web servers answer for files in public/ before Laravel runs, so the
+     * skeleton's robots.txt would hide the one `Route::lienzo()` serves.
+     * Laravel's stock file allows everything, as Lienzo's does, so it goes;
+     * a customized one stays.
+     */
+    private function unshadowRobots(Filesystem $files): void
+    {
+        $path = public_path('robots.txt');
+
+        if (! $files->exists($path)) {
+            return;
+        }
+
+        if (preg_split('/\R/', trim($files->get($path))) === ['User-agent: *', 'Disallow:']) {
+            $files->delete($path);
+
+            return;
+        }
+
+        $this->components->warn('public/robots.txt is served instead of Lienzo\'s robots.txt route. Add a Sitemap line to it, or delete it.');
     }
 }
