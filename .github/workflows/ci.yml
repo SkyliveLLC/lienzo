@@ -26,6 +26,7 @@ jobs:
     strategy:
       matrix:
         php: ['8.3', '8.4']
+        laravel: ['12', '13']
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
@@ -41,6 +42,7 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: mbstring, dom, gd, pdo_sqlite
           coverage: none
-      - run: composer install --no-interaction --no-progress
-      - run: vendor/bin/pint --test
+      # No lock file is committed, so this resolves Testbench and Pest for the Laravel major under test.
+      - run: composer update --no-interaction --no-progress --with "laravel/framework:^${{ matrix.laravel }}.0"
+      - run: vendor/bin/pint --test packages/laravel
       - run: composer test
