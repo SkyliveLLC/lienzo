@@ -1,0 +1,9 @@
+node_modules
+dist
+vendor
+.DS_Store
+decisions.tsv
+todo.md
+.phpunit.cache
+composer.lock
+design/

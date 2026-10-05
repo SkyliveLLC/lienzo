@@ -1,0 +1,27 @@
+{
+  "name": "@skylive/lienzo-core",
+  "version": "0.0.0",
+  "description": "Document schema and renderer for Lienzo landing pages. No framework required.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./schema.json": "./dist/schema.json"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "tsdown": "^0.23.0"
+  }
+}
