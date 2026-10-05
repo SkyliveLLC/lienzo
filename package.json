@@ -10,7 +10,8 @@
     "parity": "node scripts/parity/run.ts",
     "golden": "pnpm --filter @skylive/lienzo-core golden",
     "sync:php": "node scripts/sync-php-assets.ts",
-    "e2e": "pnpm --filter @skylive/lienzo-editor e2e"
+    "e2e": "pnpm -r --workspace-concurrency=1 e2e",
+    "e2e:examples": "pnpm --filter './examples/*' --workspace-concurrency=1 e2e"
   },
   "devDependencies": {
     "@types/node": "^24.19.1",
