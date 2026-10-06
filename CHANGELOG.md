@@ -2,6 +2,21 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.2.0 (2026-10-05)
+
+### Editor
+
+- Zoom and pan the canvas on its own, without zooming the page: ctrl or command with the wheel, the zoom bar, and `⌘+`, `⌘-`, `⌘0` and `⌘1`. Hold the space bar or the middle button to move the view.
+- A right-click menu on the canvas with copy, paste, duplicate, order, group, lock, align, distribute and delete, so the right panel is free for the element's own settings.
+- A style change with several elements selected reaches all of them, and so does a change of order.
+- A pinned element stays in place while the page scrolls, keeping the spot it has inside the frame.
+
+### Rendering
+
+- Five looks for the navigation bar: plain, pill, card, underline and divided, with a ready-made menu for each.
+- A dropdown can take several answers. It is then a list of checkboxes, and every answer is checked against the options and stored.
+- A `choice` field an app declares takes `->multiple()`, which keeps every value picked as a list.
+
 ## 0.1.1 (2026-10-05)
 
 The first release on npm. The npm packages are published under the `@skylivellc` scope as `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`. Version 0.1.0 was only released on Packagist. For Composer users, 0.1.1 is the same as 0.1.0.

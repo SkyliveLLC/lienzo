@@ -1,6 +1,6 @@
 {
   "name": "@skylivellc/lienzo-core",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Document schema and renderer for Lienzo landing pages. No framework required.",
   "keywords": [
     "landing-page",
