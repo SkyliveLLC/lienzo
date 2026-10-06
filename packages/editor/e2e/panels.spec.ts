@@ -145,3 +145,29 @@ test('reads form messages a page at a time', async ({ editor, page }) => {
     await expect(dialog.locator('.lze-submission')).toHaveCount(3);
     await expect(dialog.getByRole('button', { name: 'Load more' })).toBeHidden();
 });
+
+test('a style change with several selected reaches all of them', async ({ editor, page }) => {
+    const heading = editor.canvas.locator('h1.lz-el');
+    const text = editor.canvas.locator('section.lz-section').first().locator('p.lz-el');
+
+    await heading.click();
+    await text.click({ modifiers: ['Shift'] });
+
+    // Only what both understand is offered, and it writes to both.
+    await page.getByRole('button', { name: 'Right', exact: true }).click();
+    await editor.waitForSave();
+
+    const styled = (await editor.draft()).sections[0]!.elements;
+    expect(styled.find((element) => element.type === 'heading')?.style.align).toBe('right');
+    expect(styled.find((element) => element.type === 'text')?.style.align).toBe('right');
+
+    // Order applies to the whole selection too, keeping how they sat between them.
+    await heading.click({ button: 'right' });
+    await page.locator('.lze-context').getByRole('menuitem', { name: 'Bring to front' }).click();
+    await editor.waitForSave();
+
+    const layered = (await editor.draft()).sections[0]!.elements;
+    const top = Math.max(...layered.filter((element) => element.type !== 'heading' && element.type !== 'text').map((element) => element.z));
+    expect(layered.find((element) => element.type === 'heading')!.z).toBeGreaterThan(top);
+    expect(layered.find((element) => element.type === 'text')!.z).toBeGreaterThan(top);
+});

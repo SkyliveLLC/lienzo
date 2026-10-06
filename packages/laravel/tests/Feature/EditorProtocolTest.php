@@ -197,6 +197,23 @@ it('keeps the live address and tags until the page is published again', function
     $this->get('/team')->assertOk()->assertSee('<title>Our team</title>', false);
 });
 
+it('keeps every value a site field that takes several was given', function (): void {
+    Lienzo::siteFields(Field::choice('services', 'Services', ['cleaning' => 'Cleaning', 'braces' => 'Braces'])->multiple());
+    [$site, $endpoint] = signedIn();
+
+    $this->putJson("{$endpoint}/site", ['meta' => ['services' => ['cleaning', 'braces']]])
+        ->assertOk()
+        ->assertJsonPath('meta.services', ['cleaning', 'braces'])
+        ->assertJsonPath('catalog.siteFields.0.multiple', true)
+        ->assertJsonPath('catalog.siteFields.0.default', []);
+
+    $this->putJson("{$endpoint}/site", ['meta' => ['services' => ['cleaning', 'implants']]])
+        ->assertUnprocessable()
+        ->assertJsonPath('issues.*.path', ['meta.services.1']);
+
+    expect($site->fresh()->meta['services'])->toBe(['cleaning', 'braces']);
+});
+
 it('updates the theme, seo and site fields, checked like the document', function (): void {
     Lienzo::siteFields(Field::text('phone', 'Phone', max: 30), Field::toggle('chat', 'Show chat'));
     [$site, $endpoint] = signedIn();

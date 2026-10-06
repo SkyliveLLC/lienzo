@@ -89,6 +89,16 @@ final class Field
         return new self('action', $key, self::localized($label));
     }
 
+    /** A choice field that keeps every value picked, not just one. */
+    public function multiple(bool $multiple = true): self
+    {
+        $this->expect('choice', 'multiple');
+        $this->spec['multiple'] = $multiple;
+        $this->spec['default'] = $multiple ? [] : $this->spec['options'][0]['value'];
+
+        return $this;
+    }
+
     /** A text field edited in a textarea. */
     public function multiline(bool $multiline = true): self
     {
@@ -106,8 +116,21 @@ final class Field
         return $this;
     }
 
-    public function default(string|int|float|bool $value): self
+    public function default(string|int|float|bool|array $value): self
     {
+        if ($this->kind === 'choice' && ($this->spec['multiple'] ?? false) === true) {
+            $options = array_column($this->spec['options'], 'value');
+            $values = is_array($value) ? array_values($value) : [$value];
+
+            if (array_diff($values, $options) !== []) {
+                throw new LogicException("Field [{$this->key}] cannot default to ".var_export($value, true).'.');
+            }
+
+            $this->spec['default'] = $values;
+
+            return $this;
+        }
+
         $valid = match ($this->kind) {
             'text' => is_string($value) && mb_strlen($value) <= $this->spec['max'],
             'number' => (is_int($value) || is_float($value)) && $value >= $this->spec['min'] && $value <= $this->spec['max'],
@@ -125,8 +148,8 @@ final class Field
         return $this;
     }
 
-    /** What an element's `render` receives when the field is not set. */
-    public function defaultValue(): string|int|float|bool|null
+    /** What an element's `render` receives when the field is not set. @return string|int|float|bool|list<string>|null */
+    public function defaultValue(): string|int|float|bool|array|null
     {
         return $this->spec['default'] ?? null;
     }

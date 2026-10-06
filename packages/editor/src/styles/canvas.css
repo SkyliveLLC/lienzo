@@ -1,4 +1,52 @@
-.lze-stage { position: relative; overflow: auto; padding: 24px; }
+.lze-stage { position: relative; overflow: auto; padding: 24px; overscroll-behavior: contain; }
+.lze-stage[data-space], .lze-stage[data-space] * { cursor: grab !important; }
+.lze-stage[data-space='panning'], .lze-stage[data-space='panning'] * { cursor: grabbing !important; }
+.lze-context {
+    position: fixed; z-index: 2147483100; min-width: 208px; padding: 6px; border: 1px solid var(--lze-border);
+    border-radius: 10px; background: var(--lze-panel); box-shadow: 0 12px 32px rgb(15 23 42 / .18); font-size: 13px;
+}
+.lze-context:focus { outline: none; }
+.lze-context > button {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; padding: 7px 10px;
+    border: 0; border-radius: 6px; background: transparent; color: var(--lze-fg); font: inherit; text-align: left; cursor: pointer;
+}
+.lze-context > button:hover, .lze-context > button:focus-visible { background: var(--lze-hover); }
+.lze-context .lze-context-danger { color: var(--lze-danger); }
+.lze-context kbd { color: var(--lze-muted); font: inherit; font-size: 11px; }
+.lze-context hr { margin: 5px 6px; border: 0; border-top: 1px solid var(--lze-border); }
+.lze-context-label { margin: 6px 10px 2px; color: var(--lze-muted); font-size: 11px; }
+.lze-context-row { display: flex; gap: 2px; padding: 0 6px 4px; }
+.lze-context-row button {
+    display: grid; place-items: center; width: 32px; height: 28px; border: 0; border-radius: 6px;
+    background: transparent; color: var(--lze-fg); cursor: pointer;
+}
+.lze-context-row button:hover { background: var(--lze-hover); }
+/* Cada icono de alinear es una línea y una caja contra ella. */
+.lze-context-align { position: relative; display: block; width: 16px; height: 16px; }
+.lze-context-align::before { content: ''; position: absolute; background: var(--lze-fg); }
+.lze-context-align::after { content: ''; position: absolute; background: var(--lze-muted); border-radius: 1px; }
+.lze-context-align[data-align='left']::before { left: 0; top: 0; bottom: 0; width: 1.5px; }
+.lze-context-align[data-align='left']::after { left: 3px; top: 4px; width: 11px; height: 8px; }
+.lze-context-align[data-align='hcenter']::before { left: 7.25px; top: 0; bottom: 0; width: 1.5px; }
+.lze-context-align[data-align='hcenter']::after { left: 2.5px; top: 4px; width: 11px; height: 8px; }
+.lze-context-align[data-align='right']::before { right: 0; top: 0; bottom: 0; width: 1.5px; }
+.lze-context-align[data-align='right']::after { right: 3px; top: 4px; width: 11px; height: 8px; }
+.lze-context-align[data-align='top']::before { top: 0; left: 0; right: 0; height: 1.5px; }
+.lze-context-align[data-align='top']::after { top: 3px; left: 4px; height: 11px; width: 8px; }
+.lze-context-align[data-align='vmiddle']::before { top: 7.25px; left: 0; right: 0; height: 1.5px; }
+.lze-context-align[data-align='vmiddle']::after { top: 2.5px; left: 4px; height: 11px; width: 8px; }
+.lze-context-align[data-align='bottom']::before { bottom: 0; left: 0; right: 0; height: 1.5px; }
+.lze-context-align[data-align='bottom']::after { bottom: 3px; left: 4px; height: 11px; width: 8px; }
+
+.lze-zoom {
+    position: sticky; z-index: 25; bottom: 0; float: right; display: inline-flex; align-items: center; gap: 2px;
+    margin-top: 12px; padding: 4px; border: 1px solid var(--lze-border); border-radius: 999px;
+    background: var(--lze-panel); box-shadow: 0 6px 18px rgb(15 23 42 / .12);
+}
+.lze-zoom button { border: 0; border-radius: 999px; background: transparent; color: var(--lze-fg); cursor: pointer; font: inherit; }
+.lze-zoom-btn { width: 28px; height: 28px; font-size: 15px; line-height: 1; }
+.lze-zoom-value { min-width: 54px; height: 28px; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.lze-zoom button:hover { background: var(--lze-hover); }
 .lze-sheet { position: relative; margin: 0 auto; border-radius: 10px; background: var(--lze-panel); box-shadow: 0 1px 3px rgb(15 23 42 / .08), 0 12px 40px rgb(15 23 42 / .08); }
 .lze-sheet[data-device='mobile'] { border-radius: 18px; }
 .lze-scaler { position: absolute; top: 0; left: 0; transform-origin: 0 0; }

@@ -6,7 +6,8 @@ export type Field =
     | { kind: 'text'; key: string; label: Localized; max: number; multiline?: boolean; default?: string }
     | { kind: 'number'; key: string; label: Localized; min: number; max: number; step?: number; default: number }
     | { kind: 'toggle'; key: string; label: Localized; default: boolean }
-    | { kind: 'choice'; key: string; label: Localized; options: { value: string; label: Localized }[]; default: string }
+    /** `multiple` stores a list of chosen values instead of one, and defaults to a list. */
+    | { kind: 'choice'; key: string; label: Localized; options: { value: string; label: Localized }[]; default: string | string[]; multiple?: boolean }
     | { kind: 'image'; key: string; label: Localized }
     | { kind: 'action'; key: string; label: Localized };
 

@@ -52,7 +52,8 @@
                 }
               ],
               "sticky": true,
-              "scroll_style": "same"
+              "scroll_style": "same",
+              "template": "pill"
             },
             "style": {
               "background": "surface",
@@ -143,7 +144,8 @@
                 }
               ],
               "sticky": true,
-              "scroll_style": "shadow"
+              "scroll_style": "shadow",
+              "template": "card"
             },
             "style": {
               "background": "surface",
@@ -234,7 +236,8 @@
                 }
               ],
               "sticky": true,
-              "scroll_style": "solid"
+              "scroll_style": "solid",
+              "template": "underline"
             },
             "style": {
               "background": "surface",
@@ -325,7 +328,8 @@
                 }
               ],
               "sticky": true,
-              "scroll_style": "compact"
+              "scroll_style": "compact",
+              "template": "divided"
             },
             "style": {
               "background": "surface",

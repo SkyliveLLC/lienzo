@@ -692,6 +692,13 @@
                 "null"
               ]
             },
+            "pinned": {
+              "x-blank-as-null": true,
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
             "overflow": {
               "anyOf": [
                 {
@@ -1231,6 +1238,13 @@
             }
           ]
         },
+        "multiple": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
         "brand": {
           "anyOf": [
             {
@@ -1250,6 +1264,24 @@
                 "split",
                 "left",
                 "center"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "template": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "plain",
+                "pill",
+                "card",
+                "underline",
+                "divided"
               ]
             },
             {
@@ -1880,6 +1912,13 @@
           ]
         },
         "clip": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "pinned": {
           "x-blank-as-null": true,
           "type": [
             "boolean",

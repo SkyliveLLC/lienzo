@@ -110,6 +110,26 @@ export function navbarPresets(t: Translate): { name: MessageKey; props: CoreElem
             props: { brand: t('default.brand'), layout: 'split', links: [anchor('default.link.features'), { label: t('default.link.start'), action: { type: 'anchor', value: '' } }] },
             style: { background: 'secondary', color: 'background', font: 'heading', size: 16, weight: 600, padding: 20 },
         },
+        {
+            name: 'navbar.preset.pill',
+            props: { brand: t('default.brand'), layout: 'split', template: 'pill', links: [anchor('default.link.features'), anchor('default.link.about'), anchor('default.link.contact')] },
+            style: { background: 'surface', color: 'text', font: 'body', size: 15, weight: 600, padding: 16 },
+        },
+        {
+            name: 'navbar.preset.card',
+            props: { brand: t('default.brand'), layout: 'split', template: 'card', links: [anchor('default.link.home'), anchor('default.link.features'), anchor('default.link.contact')] },
+            style: { background: 'background', color: 'text', font: 'heading', size: 16, weight: 600, padding: 18 },
+        },
+        {
+            name: 'navbar.preset.underline',
+            props: { brand: t('default.brand'), layout: 'split', template: 'underline', links: [anchor('default.link.home'), anchor('default.link.features'), anchor('default.link.about'), anchor('default.link.contact')] },
+            style: { background: 'background', color: 'text', font: 'body', size: 16, weight: 500, padding: 20 },
+        },
+        {
+            name: 'navbar.preset.divided',
+            props: { brand: '', layout: 'center', template: 'divided', links: [anchor('default.link.home'), anchor('default.link.features'), anchor('default.link.about'), anchor('default.link.contact')] },
+            style: { background: 'surface', color: 'text', font: 'body', size: 15, weight: 500, padding: 16 },
+        },
     ];
 }
 

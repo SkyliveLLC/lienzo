@@ -662,7 +662,8 @@
               "Limpieza",
               "Dolor o urgencia",
               "Otro"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "textarea",

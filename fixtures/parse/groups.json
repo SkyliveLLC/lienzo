@@ -712,7 +712,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "checkbox",

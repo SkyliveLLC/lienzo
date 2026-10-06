@@ -13,7 +13,7 @@ use Skylive\Lienzo\Support\Js;
  * A canvas is a section or a modal; elements are parsed element arrays.
  *
  * @phpstan-type Group array{kind: 'single', section: array<string, mixed>}|array{kind: 'stack', id: string, type: string, sections: non-empty-list<array<string, mixed>>}
- * @phpstan-type FormField array{kind: 'input', name: string, label: string, required: bool, inputType: string}|array{kind: 'textarea'|'checkbox', name: string, label: string, required: bool}|array{kind: 'select', name: string, label: string, required: bool, options: list<string>}
+ * @phpstan-type FormField array{kind: 'input', name: string, label: string, required: bool, inputType: string}|array{kind: 'textarea'|'checkbox', name: string, label: string, required: bool}|array{kind: 'select', name: string, label: string, required: bool, options: list<string>, multiple: bool}
  * @phpstan-type FormSpec array{source: string, fields: list<FormField>}
  */
 final class Canvas
@@ -167,7 +167,7 @@ final class Canvas
         $base = ['name' => self::safeId($element['id']), 'label' => Js::trim($props['label'] ?? ''), 'required' => ($props['required'] ?? null) === true];
 
         return match ($element['type']) {
-            'select' => ['kind' => 'select', ...$base, 'options' => $props['options'] ?? []],
+            'select' => ['kind' => 'select', ...$base, 'options' => $props['options'] ?? [], 'multiple' => ($props['multiple'] ?? null) === true],
             'textarea', 'checkbox' => ['kind' => $element['type'], ...$base],
             default => ['kind' => 'input', ...$base, 'inputType' => $props['input_type'] ?? 'text'],
         };

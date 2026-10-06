@@ -129,3 +129,65 @@ test('a locked element does not move, and rotating follows the handle', async ({
     await editor.waitForSave();
     expect((await editor.draft()).sections[0]!.elements.find((element) => element.type === 'heading')?.style.rotate).toBe(90);
 });
+
+test('zooms the canvas without zooming the page, and pans it without moving anything', async ({ editor, page }) => {
+    const stage = page.locator('.lze-stage');
+    const zoom = page.locator('.lze-zoom-value');
+    const fit = await zoom.textContent();
+
+    await page.getByRole('button', { name: 'Zoom in' }).click();
+    await expect(zoom).not.toHaveText(fit ?? '');
+
+    // The wheel with Ctrl zooms over the page itself, whose events never leave the frame.
+    const heading = editor.canvas.locator('h1.lz-el');
+    const before = await editor.draft();
+    await page.mouse.move(...Object.values(await editor.center(heading)) as [number, number]);
+    await page.keyboard.down('Control');
+    await page.mouse.wheel(0, -400);
+    await page.keyboard.up('Control');
+    await expect(zoom).toHaveText(/\d+%/);
+    const zoomed = Number((await zoom.textContent())!.replace('%', ''));
+    expect(zoomed).toBeGreaterThan(Number((fit ?? '0%').replace('%', '')));
+
+    // Space and drag scroll the stage; the document stays as it was.
+    const start = await stage.evaluate((node) => [node.scrollLeft, node.scrollTop]);
+    await page.keyboard.down('Space');
+    await page.mouse.move(700, 500);
+    await page.mouse.down();
+    await page.mouse.move(560, 360, { steps: 8 });
+    await page.mouse.up();
+    await page.keyboard.up('Space');
+
+    const end = await stage.evaluate((node) => [node.scrollLeft, node.scrollTop]);
+    expect(end).not.toEqual(start);
+    expect(await editor.draft()).toEqual(before);
+
+    await page.getByTitle('Fit to the window').click();
+    await expect(zoom).toHaveText(fit ?? '');
+});
+
+test('right-clicking a selection opens the menu that groups and deletes', async ({ editor, page }) => {
+    const heading = editor.canvas.locator('h1.lz-el');
+    const text = editor.canvas.locator('section.lz-section').first().locator('p.lz-el');
+
+    await heading.click();
+    await text.click({ modifiers: ['Shift'] });
+    await heading.click({ button: 'right' });
+
+    const menu = page.locator('.lze-context');
+    await expect(menu).toBeVisible();
+
+    await menu.getByRole('menuitem', { name: 'Group' }).click();
+    await expect(menu).toBeHidden();
+    await editor.waitForSave();
+
+    const grouped = (await editor.draft()).sections[0]!.elements.filter((element) => element.group);
+    expect(grouped).toHaveLength(2);
+    expect(grouped[0]!.group).toBe(grouped[1]!.group);
+
+    // The same menu deletes what is selected.
+    await heading.click({ button: 'right' });
+    await page.locator('.lze-context').getByRole('menuitem', { name: 'Delete' }).click();
+    await editor.waitForSave();
+    await expect(editor.canvas.locator('h1.lz-el')).toHaveCount(0);
+});

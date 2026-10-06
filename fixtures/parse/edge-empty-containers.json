@@ -83,7 +83,8 @@
             "name": "e1",
             "label": "",
             "required": false,
-            "options": []
+            "options": [],
+            "multiple": false
           }
         ]
       }

@@ -255,7 +255,8 @@
             "required": false,
             "options": [
               "x"
-            ]
+            ],
+            "multiple": false
           }
         ]
       }

@@ -31,6 +31,7 @@
                 "scroll_style": "same",
                 "brand": "Fijo same",
                 "layout": "split",
+                "template": "pill",
                 "links": [
                   {
                     "label": "Servicios",
@@ -122,6 +123,7 @@
                 "scroll_style": "shadow",
                 "brand": "Fijo shadow",
                 "layout": "split",
+                "template": "card",
                 "links": [
                   {
                     "label": "Servicios",
@@ -213,6 +215,7 @@
                 "scroll_style": "solid",
                 "brand": "Fijo solid",
                 "layout": "split",
+                "template": "underline",
                 "links": [
                   {
                     "label": "Servicios",
@@ -304,6 +307,7 @@
                 "scroll_style": "compact",
                 "brand": "Fijo compact",
                 "layout": "split",
+                "template": "divided",
                 "links": [
                   {
                     "label": "Servicios",

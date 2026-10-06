@@ -53,7 +53,7 @@ export function stackOrder(elements: readonly Element[]): Map<Element, number> {
 export type FormField =
     | { kind: 'input'; name: string; label: string; required: boolean; inputType: 'text' | 'email' | 'tel' | 'number' | 'date' }
     | { kind: 'textarea' | 'checkbox'; name: string; label: string; required: boolean }
-    | { kind: 'select'; name: string; label: string; required: boolean; options: string[] };
+    | { kind: 'select'; name: string; label: string; required: boolean; options: string[]; multiple: boolean };
 
 /** `source` is posted with the form: a section id, a modal id, or a steps group id. */
 export type FormSpec = { source: string; fields: FormField[] };
@@ -86,7 +86,7 @@ function field(element: CoreElement): FormField {
 
     switch (element.type) {
         case 'select':
-            return { kind: 'select', ...base, options: element.props.options ?? [] };
+            return { kind: 'select', ...base, options: element.props.options ?? [], multiple: element.props.multiple === true };
         case 'textarea':
         case 'checkbox':
             return { kind: element.type, ...base };

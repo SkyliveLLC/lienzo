@@ -98,6 +98,7 @@ export const styleSchema = object({
     flip_x: optional(z.boolean()),
     flip_y: optional(z.boolean()),
     clip: optional(z.boolean()),
+    pinned: optional(z.boolean()),
     overflow: optional(z.enum(['visible', 'hidden', 'scroll-x', 'scroll-y'])),
     visible_on: optional(z.enum(['all', 'desktop', 'mobile'])),
     accent_color: optional(color),
@@ -127,8 +128,10 @@ export const corePropsSchema = object({
     required: optional(z.boolean()),
     input_type: optional(z.enum(['text', 'email', 'tel', 'number', 'date'])),
     options: list(z.array(z.string().min(1).max(120)).max(30)).nullish(),
+    multiple: optional(z.boolean()),
     brand: z.string().max(60).nullish(),
     layout: optional(z.enum(['split', 'left', 'center'])),
+    template: optional(z.enum(['plain', 'pill', 'card', 'underline', 'divided'])),
     links: list(z.array(object({
         label: z.string().min(1).max(40),
         action: object({ type: actionType, value: z.string().max(300).nullish() }),
@@ -194,7 +197,7 @@ export type Gradient = z.output<typeof gradient>;
 type Envelope = z.output<typeof elementEnvelope>;
 type ElementBase = Omit<Envelope, 'type' | 'props'>;
 
-export type FieldValue = string | number | boolean | Action | null;
+export type FieldValue = string | number | boolean | string[] | Action | null;
 export type CoreElement = ElementBase & { type: CoreElementType; props: CoreProps };
 /** A type the app registered in its catalog. Props were checked against its fields. */
 export type AppElement = ElementBase & { type: string; props: Readonly<Record<string, FieldValue | undefined>> };
@@ -328,8 +331,11 @@ function fieldSchema(field: Field) {
             return between(field.min, field.max);
         case 'toggle':
             return z.boolean();
-        case 'choice':
-            return z.enum(field.options.map((option) => option.value) as [string, ...string[]]);
+        case 'choice': {
+            const values = z.enum(field.options.map((option) => option.value) as [string, ...string[]]);
+
+            return field.multiple === true ? z.array(values).max(field.options.length) : values;
+        }
         case 'image':
             return image;
         case 'action':

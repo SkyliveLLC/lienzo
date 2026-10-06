@@ -179,6 +179,16 @@ describe('parseFields', () => {
         expect(parseFields(fields, { phone: '+1 555 0100', chat: true, admin: true })).toEqual({ phone: '+1 555 0100', chat: true });
     });
 
+    it('keeps every value a choice field that takes several was given, and refuses one that is not an option', () => {
+        const several: Field[] = [
+            { kind: 'choice', key: 'services', label: { en: 'Services' }, options: [{ value: 'a', label: { en: 'A' } }, { value: 'b', label: { en: 'B' } }], default: [], multiple: true },
+        ];
+
+        expect(parseFields(several, { services: ['a', 'b'] })).toEqual({ services: ['a', 'b'] });
+        expect(() => parseFields(several, { services: ['a', 'c'] })).toThrow(DocumentError);
+        expect(() => parseFields(several, { services: 'a' })).toThrow(DocumentError);
+    });
+
     it('reports each value that breaks its field, by key', () => {
         expect(issues({ phone: 'x'.repeat(21), chat: 'yes' })).toEqual(['phone:size', 'chat:type']);
         expect(issues('phone')).toEqual([':type']);

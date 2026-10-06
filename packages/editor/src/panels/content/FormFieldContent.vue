@@ -35,7 +35,8 @@ function setOptions(text: string | null | undefined) {
     <Field v-if="element.type === 'select'" :id="ids.options" :label="t('el.options')" :hint="t('el.optionsHint')">
         <TextInput :id="ids.options" :model-value="optionsText" :rows="4" @update:model-value="setOptions" @commit="editor.commit()" />
     </Field>
-    <Field v-if="element.type !== 'checkbox'" :id="ids.placeholder" :label="t('el.placeholder')">
+    <Toggle v-if="element.type === 'select'" v-model="element.props.multiple" :label="t('el.multiple')" @commit="editor.commit()" />
+    <Field v-if="element.type !== 'checkbox' && !(element.type === 'select' && element.props.multiple)" :id="ids.placeholder" :label="t('el.placeholder')">
         <TextInput :id="ids.placeholder" v-model="element.props.placeholder" :maxlength="120" @commit="editor.commit()" />
     </Field>
     <Toggle v-model="element.props.required" :label="t('el.required')" @commit="editor.commit()" />

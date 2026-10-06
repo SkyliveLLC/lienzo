@@ -6,6 +6,7 @@ import { clampBox } from '../../model/geometry.ts';
 import { useEditor } from '../../state/editor.ts';
 import NumberInput from '../../ui/NumberInput.vue';
 import PanelSection from '../../ui/PanelSection.vue';
+import Toggle from '../../ui/Toggle.vue';
 import AlignButtons from '../AlignButtons.vue';
 
 /** Where the element sits on the device being edited. On a phone it may follow the desktop box. */
@@ -36,6 +37,8 @@ function inherit() {
             <NumberInput :model-value="box.w" :label="t('position.width')" suffix="%" :step="0.5" @update:model-value="set('w', $event)" @commit="editor.commit()" />
             <NumberInput :model-value="box.h" :label="t('position.height')" @update:model-value="set('h', $event)" @commit="editor.commit()" />
         </div>
+        <Toggle v-model="element.style.pinned" :label="t('position.pinned')" @commit="editor.commit()" />
+        <p class="lze-hint">{{ t('position.pinnedHint') }}</p>
         <p v-if="device === 'mobile'" class="lze-hint">
             <template v-if="element.layout.mobile">
                 {{ t('position.own') }}

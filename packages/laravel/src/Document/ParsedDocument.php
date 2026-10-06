@@ -131,7 +131,9 @@ final readonly class ParsedDocument
                 'text' => ['type' => 'string', 'maxLength' => $field['max']],
                 'number' => ['type' => 'number', 'minimum' => $field['min'], 'maximum' => $field['max']],
                 'toggle' => ['type' => 'boolean'],
-                'choice' => ['type' => 'string', 'enum' => array_column($field['options'], 'value')],
+                'choice' => ($field['multiple'] ?? false) === true
+                    ? ['type' => 'array', 'items' => ['type' => 'string', 'enum' => array_column($field['options'], 'value')], 'maxItems' => count($field['options'])]
+                    : ['type' => 'string', 'enum' => array_column($field['options'], 'value')],
                 'image' => Schema::ref('Image'),
                 'action' => Schema::ref('Action'),
             };
