@@ -1,6 +1,6 @@
 {
   "name": "@skylivellc/lienzo-editor",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Visual editor for Lienzo landing pages. A Vue 3 component and a <lienzo-editor> custom element that talk to any backend over the Lienzo protocol.",
   "keywords": [
     "landing-page",
