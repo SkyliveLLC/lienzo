@@ -16,9 +16,10 @@ const MAX_LINKS = 8;
 const props = defineProps<{ element: CoreElement }>();
 const editor = useEditor();
 const t = editor.t;
-const ids = { brand: useId(), scroll: useId(), layout: useId() };
+const ids = { brand: useId(), scroll: useId(), layout: useId(), template: useId() };
 const presets = navbarPresets(t);
 const scrollStyles = (['same', 'shadow', 'solid', 'compact'] as const).map((value) => ({ value, label: t(`el.scroll.${value}`) }));
+const templates = (['plain', 'pill', 'card', 'underline', 'divided'] as const).map((value) => ({ value, label: t(`el.navbarTemplate.${value}`) }));
 const layouts = (['split', 'left', 'center'] as const).map((value) => ({ value, label: t(`el.layout.${value}`) }));
 const links = computed(() => props.element.props.links ?? []);
 
@@ -57,6 +58,9 @@ function removeLink(index: number) {
     <p v-else class="lze-hint">{{ t('el.notSticky') }}</p>
     <Field :id="ids.layout" :label="t('el.layout')">
         <SelectInput :id="ids.layout" :model-value="element.props.layout ?? 'split'" :options="layouts" @update:model-value="element.props.layout = $event" @commit="editor.commit()" />
+    </Field>
+    <Field :id="ids.template" :label="t('el.navbarTemplate')">
+        <SelectInput :id="ids.template" :model-value="element.props.template ?? 'plain'" :options="templates" @update:model-value="element.props.template = $event" @commit="editor.commit()" />
     </Field>
     <div class="lze-field">
         <div class="lze-heading">

@@ -1,15 +1,48 @@
 <script setup lang="ts">
+import type { StyleGroup } from '@skylivellc/lienzo-core';
 import { AlignHorizontalDistributeCenter, AlignVerticalDistributeCenter } from '@lucide/vue';
-import { computed } from 'vue';
+import { computed, type Component } from 'vue';
 import { useEditor } from '../state/editor.ts';
-import Button from '../ui/Button.vue';
 import IconButton from '../ui/IconButton.vue';
 import AlignButtons from './AlignButtons.vue';
+import FillStyle from './style/FillStyle.vue';
+import FrameStyle from './style/FrameStyle.vue';
+import MotionStyle from './style/MotionStyle.vue';
+import TextStyle from './style/TextStyle.vue';
+import TransformStyle from './style/TransformStyle.vue';
 
-/** Settings of several selected elements at once. */
+/**
+ * Settings of several selected elements at once. Only what is visual lives
+ * here; grouping, locking, order, duplicating and deleting are in the menu a
+ * right click opens on the canvas.
+ */
 const editor = useEditor();
 const t = editor.t;
 const count = computed(() => editor.selectedElements.value.length);
+
+const stylePanels = {
+    fill: FillStyle,
+    text: TextStyle,
+    border: FrameStyle,
+    effects: TransformStyle,
+    motion: MotionStyle,
+} satisfies Record<StyleGroup, Component>;
+
+/** What every selected element understands: changing it changes all of them. */
+const shared = computed(() => {
+    const groups = editor.selectedElements.value.map((element) => {
+        const kind = editor.kindOf(element);
+
+        return kind.kind === 'opaque' ? [] : kind.spec.styles;
+    });
+
+    return (Object.keys(stylePanels) as StyleGroup[])
+        .filter((group) => groups.length > 0 && groups.every((declared) => declared.includes(group)))
+        .map((group) => ({ group, panel: stylePanels[group] }));
+});
+
+/** One object that writes to the whole selection. */
+const target = computed(() => editor.sharedTarget());
 </script>
 
 <template>
@@ -31,13 +64,10 @@ const count = computed(() => editor.selectedElements.value.length);
             </div>
             <p class="lze-hint">{{ t('multi.distributeHint') }}</p>
         </div>
-        <div class="lze-row">
-            <Button @click="editor.groupSelected()">{{ t('multi.group') }}</Button>
-            <Button @click="editor.ungroupSelected()">{{ t('multi.ungroup') }}</Button>
-            <Button @click="editor.toggleLock()">{{ t('multi.lock') }}</Button>
-            <Button @click="editor.duplicateSelected()">{{ t('common.duplicate') }}</Button>
-            <Button variant="danger" @click="editor.removeSelected()">{{ t('common.delete') }}</Button>
-        </div>
+        <template v-if="target">
+            <component :is="style.panel" v-for="style in shared" :key="style.group" :element="target" />
+        </template>
+        <p class="lze-hint">{{ t('multi.menuHint') }}</p>
         <p class="lze-hint">{{ t('multi.hint') }}</p>
     </div>
 </template>

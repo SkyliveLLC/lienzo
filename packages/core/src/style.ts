@@ -56,6 +56,7 @@ export const styleTable = {
     flip_x: { attr: 'flip-x', kind: 'flag' },
     flip_y: { attr: 'flip-y', kind: 'flag' },
     clip: { attr: 'clip', kind: 'flag' },
+    pinned: { attr: 'pin', kind: 'flag' },
     overflow: { attr: 'overflow', kind: 'enum' },
     visible_on: { attr: 'visible', kind: 'enum', skip: 'all' },
     accent_color: { var: 'ac', kind: 'color' },

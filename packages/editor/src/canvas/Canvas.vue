@@ -7,6 +7,7 @@ import { fontsHref } from '../model/theme.ts';
 import { issueText, useEditor } from '../state/editor.ts';
 import { handleShortcut } from '../state/shortcuts.ts';
 import { mountFrame, type CanvasFrame, type CanvasMetrics, type Layout, type Rect } from './frame.ts';
+import ContextMenu from './ContextMenu.vue';
 import Overlay from './Overlay.vue';
 import { domId, renderContext, renderDraft } from './render.ts';
 
@@ -19,6 +20,7 @@ import { domId, renderContext, renderDraft } from './render.ts';
 const editor = useEditor();
 const t = editor.t;
 const stage = ref<HTMLElement>();
+const sheet = ref<HTMLElement>();
 const scaler = ref<HTMLElement>();
 const iframe = ref<HTMLIFrameElement>();
 const stageWidth = ref(0);
@@ -33,7 +35,172 @@ const hint = ref<string | null>(null);
 let frame: CanvasFrame | null = null;
 
 const PADDING = 24;
-const scale = computed(() => clamp((stageWidth.value - PADDING * 2) / editor.frameWidth.value, 0.1, 1));
+const MIN_ZOOM = 0.1;
+const MAX_ZOOM = 4;
+/** Zoom that fits the stage, used until someone zooms by hand. */
+const fitScale = computed(() => clamp((stageWidth.value - PADDING * 2) / editor.frameWidth.value, MIN_ZOOM, 1));
+const scale = computed(() => editor.state.zoom ?? fitScale.value);
+const zoomPercent = computed(() => Math.round(scale.value * 100));
+
+/**
+ * Zooms around a point of the stage, so what is under the pointer stays
+ * under it. Without a point, around the middle of what is visible.
+ */
+async function zoomTo(value: number, at?: { x: number; y: number }) {
+    const stageEl = stage.value;
+    const sheetEl = sheet.value;
+    const next = clamp(value, MIN_ZOOM, MAX_ZOOM);
+
+    if (!stageEl || !sheetEl) {
+        editor.state.zoom = next;
+
+        return;
+    }
+
+    const box = stageEl.getBoundingClientRect();
+    const point = at ?? { x: box.left + box.width / 2, y: box.top + box.height / 2 };
+    const before = sheetEl.getBoundingClientRect();
+    const frameX = (point.x - before.left) / scale.value;
+    const frameY = (point.y - before.top) / scale.value;
+
+    editor.state.zoom = next;
+    await nextTick();
+
+    const after = sheetEl.getBoundingClientRect();
+    stageEl.scrollLeft += after.left + frameX * next - point.x;
+    stageEl.scrollTop += after.top + frameY * next - point.y;
+}
+
+const zoomBy = (factor: number, at?: { x: number; y: number }) => zoomTo(scale.value * factor, at);
+const fitToStage = () => (editor.state.zoom = null);
+
+/** Ctrl or Cmd with the wheel zooms; the wheel alone scrolls the stage. */
+function onWheel(event: WheelEvent) {
+    if (!event.ctrlKey && !event.metaKey) {
+        return;
+    }
+
+    event.preventDefault();
+    void zoomBy(Math.exp(-event.deltaY / 400), { x: event.clientX, y: event.clientY });
+}
+
+/** The same gesture over the page itself: its events never leave the iframe. */
+function onFrameWheel(event: WheelEvent) {
+    const box = iframe.value?.getBoundingClientRect();
+
+    if ((!event.ctrlKey && !event.metaKey) || !box) {
+        return;
+    }
+
+    event.preventDefault();
+    void zoomBy(Math.exp(-event.deltaY / 400), {
+        x: box.left + event.clientX * scale.value,
+        y: box.top + event.clientY * scale.value,
+    });
+}
+
+/** Space held, or the middle button, drags the view without moving anything. */
+const spaceHeld = ref(false);
+const panning = ref(false);
+let pan: { pointer: number; x: number; y: number; left: number; top: number; factor: number } | null = null;
+
+/**
+ * Starts a pan. `factor` turns the event's pixels into stage pixels: 1 over
+ * the stage, and the zoom over the page, whose events carry frame pixels.
+ */
+function startPan(event: PointerEvent, factor = 1): boolean {
+    const stageEl = stage.value;
+
+    if (!stageEl || (!spaceHeld.value && event.button !== 1)) {
+        return false;
+    }
+
+    event.preventDefault();
+    pan = {
+        pointer: event.pointerId,
+        x: event.clientX * factor,
+        y: event.clientY * factor,
+        left: stageEl.scrollLeft,
+        top: stageEl.scrollTop,
+        factor,
+    };
+    panning.value = true;
+    (event.currentTarget as Element | null)?.setPointerCapture?.(event.pointerId);
+
+    return true;
+}
+
+function movePan(event: PointerEvent) {
+    const stageEl = stage.value;
+
+    if (!pan || !stageEl || pan.pointer !== event.pointerId) {
+        return;
+    }
+
+    stageEl.scrollLeft = pan.left - (event.clientX * pan.factor - pan.x);
+    stageEl.scrollTop = pan.top - (event.clientY * pan.factor - pan.y);
+}
+
+function endPan(event: PointerEvent) {
+    if (pan && pan.pointer === event.pointerId) {
+        pan = null;
+        panning.value = false;
+    }
+}
+
+function onStageKeyDown(event: KeyboardEvent) {
+    if (event.code === 'Space' && !spaceHeld.value) {
+        const target = event.target as HTMLElement | null;
+
+        if (target?.closest('input, textarea, select, [contenteditable="true"]')) {
+            return;
+        }
+
+        spaceHeld.value = true;
+        event.preventDefault();
+    }
+}
+
+const onStageKeyUp = (event: KeyboardEvent) => {
+    if (event.code === 'Space') {
+        spaceHeld.value = false;
+    }
+};
+
+const releaseSpace = () => {
+    spaceHeld.value = false;
+};
+
+function onWindowKeyDown(event: KeyboardEvent) {
+    if (onZoomShortcut(event)) {
+        return;
+    }
+
+    onStageKeyDown(event);
+}
+
+/** Ctrl o Cmd con +, -, 0 y 1, como en las herramientas de diseño. */
+function onZoomShortcut(event: KeyboardEvent): boolean {
+    if (!event.ctrlKey && !event.metaKey) {
+        return false;
+    }
+
+    if (event.key === '+' || event.key === '=') {
+        void zoomBy(1.25);
+    } else if (event.key === '-') {
+        void zoomBy(0.8);
+    } else if (event.key === '0') {
+        fitToStage();
+    } else if (event.key === '1') {
+        void zoomTo(1);
+    } else {
+        return false;
+    }
+
+    event.preventDefault();
+
+    return true;
+}
 
 /** On phones, a canvas where some element has no phone box stacks: its elements cannot be dragged there. */
 const frozen = computed<ReadonlySet<string>>(() => new Set(editor.state.device === 'mobile' ? editor.canvases.value.filter(stacksOnMobile).map((canvas) => canvas.id) : []));
@@ -317,6 +484,10 @@ function switchPanel(target: EventTarget | null): boolean {
 }
 
 function onPointerDown(event: PointerEvent) {
+    if (startPan(event, scale.value)) {
+        return;
+    }
+
     if (!frame || event.button !== 0) {
         return;
     }
@@ -401,7 +572,38 @@ function onKeyDown(event: KeyboardEvent) {
         return;
     }
 
+    if (onZoomShortcut(event)) {
+        return;
+    }
+
     handleShortcut(editor, event);
+}
+
+/** Where the context menu is open, in window coordinates. */
+const menuAt = ref<{ x: number; y: number } | null>(null);
+
+/**
+ * A right click opens the menu for what is under it, selecting it first when
+ * it was not part of the selection, the way design tools do.
+ */
+function onContextMenu(event: MouseEvent, inFrame: boolean) {
+    const hit = inFrame ? frame?.hit(event.target) : null;
+
+    if (inFrame) {
+        const selected = editor.state.selection.kind === 'elements' ? editor.state.selection.ids : [];
+
+        if (hit?.element && !selected.includes(hit.element)) {
+            editor.select(hit.canvas, hit.element, false);
+        } else if (hit && !hit.element) {
+            editor.selectCanvas(hit.canvas);
+        }
+    }
+
+    event.preventDefault();
+    const box = inFrame ? iframe.value?.getBoundingClientRect() : null;
+    menuAt.value = box
+        ? { x: box.left + event.clientX * scale.value, y: box.top + event.clientY * scale.value }
+        : { x: event.clientX, y: event.clientY };
 }
 
 function onPointerOver(event: PointerEvent) {
@@ -460,6 +662,11 @@ onMounted(() => {
     doc.addEventListener('dblclick', onDoubleClick);
     doc.addEventListener('keydown', onKeyDown);
     doc.addEventListener('pointerover', onPointerOver);
+    doc.addEventListener('contextmenu', (event) => onContextMenu(event as MouseEvent, true));
+    doc.addEventListener('wheel', onFrameWheel, { passive: false });
+    doc.addEventListener('pointermove', movePan);
+    doc.addEventListener('pointerup', endPan);
+    doc.addEventListener('pointercancel', endPan);
     doc.documentElement.addEventListener('pointerleave', () => (hovered.value = null));
     doc.addEventListener('click', inert, true);
     doc.addEventListener('submit', inert, true);
@@ -468,14 +675,21 @@ onMounted(() => {
     const observer = new FrameObserver(() => relayout());
     observer.observe(doc.body);
     frameObserver = observer;
+    doc.addEventListener('keyup', onStageKeyUp);
     stageObserver = new ResizeObserver(([entry]) => {
         stageWidth.value = entry?.contentRect.width ?? 0;
     });
     stageObserver.observe(stage.value);
+    window.addEventListener('keydown', onWindowKeyDown);
+    window.addEventListener('keyup', onStageKeyUp);
+    window.addEventListener('blur', releaseSpace);
     schedule();
 });
 
 onBeforeUnmount(() => {
+    window.removeEventListener('keydown', onWindowKeyDown);
+    window.removeEventListener('keyup', onStageKeyUp);
+    window.removeEventListener('blur', releaseSpace);
     cancelAnimationFrame(scheduled);
     stageObserver?.disconnect();
     frameObserver?.disconnect();
@@ -494,7 +708,18 @@ const deviceName = (device: Device) => (device === 'desktop' ? t('toolbar.deskto
 </script>
 
 <template>
-    <div ref="stage" class="lze-stage" @pointerdown.self="editor.clearSelection()">
+    <div
+        ref="stage"
+        class="lze-stage"
+        :data-space="panning ? 'panning' : spaceHeld ? 'on' : undefined"
+        @pointerdown="startPan($event)"
+        @pointerdown.self="editor.clearSelection()"
+        @pointermove="movePan"
+        @pointerup="endPan"
+        @pointercancel="endPan"
+        @wheel="onWheel"
+        @contextmenu="onContextMenu($event, false)"
+    >
         <p v-if="editor.state.renderIssues.length" class="lze-render-issue" role="alert">
             {{ t('canvas.invalid', { issue: issueText(editor.state.renderIssues[0]) }) }}
         </p>
@@ -503,6 +728,7 @@ const deviceName = (device: Device) => (device === 'desktop' ? t('toolbar.deskto
             <button type="button" class="lze-btn" @click="editor.openModal(null)">{{ t('canvas.backToPage') }}</button>
         </div>
         <div
+            ref="sheet"
             class="lze-sheet"
             :data-device="editor.state.device"
             :aria-label="deviceName(editor.state.device)"
@@ -527,5 +753,14 @@ const deviceName = (device: Device) => (device === 'desktop' ? t('toolbar.deskto
         </div>
         <p v-if="empty" class="lze-empty-hint">{{ editor.activeModal.value ? t('canvas.emptyModal') : t('canvas.emptyPage') }}</p>
         <p v-if="hint" class="lze-hint-bubble" aria-live="polite">{{ hint }}</p>
+
+        <ContextMenu v-if="menuAt" :at="menuAt" @close="menuAt = null" />
+
+        <div class="lze-zoom" role="group" :aria-label="t('zoom.label')">
+            <button type="button" class="lze-zoom-btn" :title="t('zoom.out')" :aria-label="t('zoom.out')" @click="zoomBy(0.8)">−</button>
+            <button type="button" class="lze-zoom-value" :title="t('zoom.fit')" @click="fitToStage()">{{ zoomPercent }}%</button>
+            <button type="button" class="lze-zoom-btn" :title="t('zoom.in')" :aria-label="t('zoom.in')" @click="zoomBy(1.25)">+</button>
+            <button type="button" class="lze-zoom-btn" :title="t('zoom.actual')" :aria-label="t('zoom.actual')" @click="zoomTo(1)">1:1</button>
+        </div>
     </div>
 </template>

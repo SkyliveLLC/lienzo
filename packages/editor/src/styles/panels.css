@@ -70,3 +70,6 @@
 .lze-submission dl { display: grid; grid-template-columns: minmax(96px, max-content) 1fr; gap: 4px 12px; margin: 0; }
 .lze-submission dt { color: var(--lze-muted); }
 .lze-submission dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* A choice field that takes several values: one box per option. */
+.lze-choices { display: grid; gap: 6px; }

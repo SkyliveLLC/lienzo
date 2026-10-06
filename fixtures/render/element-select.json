@@ -4,7 +4,7 @@
       {
         "id": "variantes",
         "height": {
-          "desktop": 296,
+          "desktop": 320,
           "mobile": 560
         },
         "background": {
@@ -139,6 +139,43 @@
                 "Ortodoncia",
                 "Otro"
               ]
+            },
+            "style": {
+              "color": "text",
+              "background": "surface",
+              "border_color": "muted",
+              "border_width": 1,
+              "font": "body",
+              "size": 15,
+              "align": "left",
+              "radius": 10,
+              "padding": 10
+            }
+          },
+          {
+            "id": "select-multi01",
+            "type": "select",
+            "z": 5,
+            "layout": {
+              "desktop": {
+                "x": 65.33333333333333,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 96
+              },
+              "mobile": null
+            },
+            "props": {
+              "label": "Servicios",
+              "placeholder": "Elige un motivo",
+              "required": true,
+              "input_type": "text",
+              "options": [
+                "Limpieza",
+                "Blanqueamiento",
+                "Ortodoncia"
+              ],
+              "multiple": true
             },
             "style": {
               "color": "text",

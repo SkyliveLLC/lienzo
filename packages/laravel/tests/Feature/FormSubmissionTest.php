@@ -159,3 +159,37 @@ it('collects every step of a steps form in one submission', function (): void {
 
     expect(array_column(Submission::query()->sole()->fields, 'value', 'name'))->toBe(['name' => 'Ana', 'service' => 'Cleaning', 'agree' => true]);
 });
+
+it('stores every answer of a field that takes several, and refuses one that is not an option', function (): void {
+    publishedPage(Site::default(), document(section('contact', [
+        field('select', 'services', 'Services', ['multiple' => true, 'required' => true, 'options' => ['Cleaning', 'Whitening', 'Braces']]),
+        element('button', 'send', ['label' => 'Send', 'action' => ['type' => 'submit', 'value' => null]]),
+    ])));
+
+    $this->from('/')->post('/lienzo/submit', ['slug' => '', 'source' => 'contact', 'fields' => ['services' => ['Cleaning', 'Braces']]])
+        ->assertRedirect('/')
+        ->assertSessionHasNoErrors();
+
+    expect(Submission::query()->sole()->fields)->toBe([
+        ['name' => 'services', 'label' => 'Services', 'value' => 'Cleaning, Braces'],
+    ]);
+
+    $this->from('/')->post('/lienzo/submit', ['slug' => '', 'source' => 'contact', 'fields' => ['services' => ['Cleaning', 'Implants']]])
+        ->assertSessionHasErrors('fields.services.1');
+    expect(Submission::query()->count())->toBe(1);
+});
+
+it('keeps the answers a refused submission had, checkbox by checkbox', function (): void {
+    publishedPage(Site::default(), document(section('contact', [
+        field('input', 'name', 'Your name', ['required' => true]),
+        field('select', 'services', 'Services', ['multiple' => true, 'options' => ['Cleaning', 'Whitening', 'Braces']]),
+        element('button', 'send', ['label' => 'Send', 'action' => ['type' => 'submit', 'value' => null]]),
+    ])));
+
+    $this->from('/')->post('/lienzo/submit', ['slug' => '', 'source' => 'contact', 'fields' => ['name' => '', 'services' => ['Whitening']]])
+        ->assertSessionHasErrors('fields.name');
+
+    $this->followingRedirects()->get('/')
+        ->assertSee('<input checked name="fields[services][]" type="checkbox" value="Whitening">', false)
+        ->assertSee('<input name="fields[services][]" type="checkbox" value="Cleaning">', false);
+});

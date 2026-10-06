@@ -179,6 +179,10 @@
       "attr": "clip",
       "kind": "flag"
     },
+    "pinned": {
+      "attr": "pin",
+      "kind": "flag"
+    },
     "overflow": {
       "attr": "overflow",
       "kind": "enum"

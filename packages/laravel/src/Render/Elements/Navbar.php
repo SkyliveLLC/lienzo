@@ -14,6 +14,7 @@ final class Navbar implements ElementRenderer
         $props = $element['props'];
         $sticky = ($props['sticky'] ?? null) === true;
         $scroll = $props['scroll_style'] ?? null;
+        $template = $props['template'] ?? null;
         $anchors = array_map(
             fn (array $link) => Html::h('a', $context->action($link['action']) ?? ['href' => '#'], [Html::text($link['label'])]),
             $props['links'] ?? [],
@@ -21,6 +22,7 @@ final class Navbar implements ElementRenderer
 
         return new ElementNode('nav', 'lz-navbar', [
             'data-layout' => $props['layout'] ?? 'split',
+            'data-template' => $template !== null && $template !== 'plain' ? $template : null,
             'data-sticky' => $sticky,
             'data-scroll' => $sticky && $scroll !== null && $scroll !== 'same' ? $scroll : null,
         ], [

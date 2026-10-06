@@ -5,7 +5,7 @@
         {
           "id": "variantes",
           "height": {
-            "desktop": 296,
+            "desktop": 320,
             "mobile": 560
           },
           "background": {
@@ -140,6 +140,43 @@
                   "Ortodoncia",
                   "Otro"
                 ]
+              },
+              "style": {
+                "color": "text",
+                "background": "surface",
+                "font": "body",
+                "size": 15,
+                "align": "left",
+                "radius": 10,
+                "border_width": 1,
+                "border_color": "muted",
+                "padding": 10
+              }
+            },
+            {
+              "id": "select-multi01",
+              "type": "select",
+              "z": 5,
+              "layout": {
+                "desktop": {
+                  "x": 65.33333333333333,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Servicios",
+                "placeholder": "Elige un motivo",
+                "required": true,
+                "input_type": "text",
+                "options": [
+                  "Limpieza",
+                  "Blanqueamiento",
+                  "Ortodoncia"
+                ],
+                "multiple": true
               },
               "style": {
                 "color": "text",
@@ -2138,7 +2175,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2148,14 +2186,16 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
             "name": "select-cscsk8k",
             "label": "Nombre",
             "required": false,
-            "options": []
+            "options": [],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2168,7 +2208,20 @@
               "Dolor o urgencia",
               "Ortodoncia",
               "Otro"
-            ]
+            ],
+            "multiple": false
+          },
+          {
+            "kind": "select",
+            "name": "select-multi01",
+            "label": "Servicios",
+            "required": true,
+            "options": [
+              "Limpieza",
+              "Blanqueamiento",
+              "Ortodoncia"
+            ],
+            "multiple": true
           }
         ]
       },
@@ -2183,7 +2236,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2193,7 +2247,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2203,7 +2258,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2213,7 +2269,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2223,7 +2280,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2233,7 +2291,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2243,7 +2302,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2253,7 +2313,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2263,7 +2324,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2273,7 +2335,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2283,7 +2346,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2293,7 +2357,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2303,7 +2368,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2313,7 +2379,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2323,7 +2390,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2333,7 +2401,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2343,7 +2412,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2353,7 +2423,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2363,7 +2434,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2373,7 +2445,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2383,7 +2456,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2393,7 +2467,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2403,7 +2478,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           }
         ]
       },
@@ -2418,7 +2494,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2428,7 +2505,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2438,7 +2516,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2448,7 +2527,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2458,7 +2538,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2468,7 +2549,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2478,7 +2560,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2488,7 +2571,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2498,7 +2582,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2508,7 +2593,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2518,7 +2604,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2528,7 +2615,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2538,7 +2626,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2548,7 +2637,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2558,7 +2648,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2568,7 +2659,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2578,7 +2670,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2588,7 +2681,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2598,7 +2692,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2608,7 +2703,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2618,7 +2714,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           }
         ]
       },
@@ -2633,7 +2730,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2643,14 +2741,16 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
             "name": "select-au0vil2",
             "label": "Nombre",
             "required": false,
-            "options": []
+            "options": [],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2663,7 +2763,8 @@
               "Dolor o urgencia",
               "Ortodoncia",
               "Otro"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2673,7 +2774,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "select",
@@ -2683,7 +2785,8 @@
             "options": [
               "Opción 1",
               "Opción 2"
-            ]
+            ],
+            "multiple": false
           }
         ]
       }

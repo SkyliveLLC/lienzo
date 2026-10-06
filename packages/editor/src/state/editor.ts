@@ -108,6 +108,8 @@ export type EditorState = {
     themeDraft: Theme | null;
     /** Visible panel per tab or step group on the canvas. */
     panels: Record<string, number>;
+    /** Canvas zoom, or null to fit the stage width. */
+    zoom: number | null;
     /** Issues of a draft that does not parse, so the canvas shows the last good render. */
     renderIssues: Issue[];
     publishing: boolean;
@@ -143,6 +145,7 @@ export function createEditor({ client, i18n }: EditorDeps) {
         library: null,
         themeDraft: null,
         panels: {},
+        zoom: null,
         renderIssues: [],
         publishing: false,
         toasts: [],
@@ -606,16 +609,23 @@ export function createEditor({ client, i18n }: EditorDeps) {
         notify(t('toast.pasted'));
     }
 
+    /** Everything selected moves, keeping the order it had between them. */
     function layer(step: 'front' | 'back') {
-        const element = activeElement.value;
+        const elements = selectedElements.value;
         const canvas = currentCanvas.value;
 
-        if (!element || !canvas) {
+        if (elements.length === 0 || !canvas) {
             return;
         }
 
-        const others = canvas.elements.filter((other) => other.id !== element.id).map((other) => other.z);
-        element.z = step === 'front' ? frontLayer(others) : backLayer(others);
+        const moving = new Set(elements.map((element) => element.id));
+        const others = canvas.elements.filter((element) => !moving.has(element.id)).map((element) => element.z);
+        const ordered = [...elements].sort((a, b) => a.z - b.z);
+
+        ordered.forEach((element, index) => {
+            element.z = step === 'front' ? frontLayer(others) + index : backLayer(others) - (ordered.length - 1 - index);
+        });
+
         commit();
     }
 
@@ -644,6 +654,44 @@ export function createEditor({ client, i18n }: EditorDeps) {
         distribute(elements.map((element) => boxOf(element, state.device)), axis)
             .forEach((box, index) => writeBox(elements[index]!, state.device, box));
         commit();
+    }
+
+    /**
+     * The active element, with its style and props writing to every selected
+     * element. A panel bound to it edits one or many without knowing which.
+     */
+    function sharedTarget(): Element | null {
+        const elements = selectedElements.value;
+        const first = activeElement.value ?? elements[0] ?? null;
+
+        if (!first || elements.length < 2) {
+            return first;
+        }
+
+        const fanOut = <T extends object>(key: 'style' | 'props') => new Proxy(first[key] as T, {
+            set(_target, property, value) {
+                elements.forEach((element) => Reflect.set(element[key] as object, property, value));
+
+                return true;
+            },
+            deleteProperty(_target, property) {
+                elements.forEach((element) => Reflect.deleteProperty(element[key] as object, property));
+
+                return true;
+            },
+        });
+
+        const style = fanOut('style');
+        const props = fanOut('props');
+
+        return new Proxy(first, {
+            get: (target, property) => (property === 'style' ? style : property === 'props' ? props : Reflect.get(target, property)),
+            set(_target, property, value) {
+                elements.forEach((element) => Reflect.set(element, property, value));
+
+                return true;
+            },
+        });
     }
 
     function groupSelected() {
@@ -1103,6 +1151,7 @@ export function createEditor({ client, i18n }: EditorDeps) {
         layer,
         align,
         distributeSelected,
+        sharedTarget,
         groupSelected,
         ungroupSelected,
         toggleLock,

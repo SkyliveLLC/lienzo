@@ -622,7 +622,8 @@
             "options": [
               "A",
               "B"
-            ]
+            ],
+            "multiple": false
           },
           {
             "kind": "textarea",

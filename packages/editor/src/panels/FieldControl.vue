@@ -26,6 +26,7 @@ type Control =
     | { kind: 'number'; field: Of<'number'>; value: number }
     | { kind: 'toggle'; field: Of<'toggle'>; value: boolean }
     | { kind: 'choice'; field: Of<'choice'>; value: string }
+    | { kind: 'choices'; field: Of<'choice'>; value: string[] }
     | { kind: 'image'; field: Of<'image'>; value: string | null }
     | { kind: 'action'; field: Of<'action'>; value: Action | null };
 
@@ -43,8 +44,15 @@ const control = computed((): Control => {
             return { kind: 'number', field, value: typeof value === 'number' ? value : field.default };
         case 'toggle':
             return { kind: 'toggle', field, value: typeof value === 'boolean' ? value : field.default };
-        case 'choice':
-            return { kind: 'choice', field, value: typeof value === 'string' ? value : field.default };
+        case 'choice': {
+            if (field.multiple === true) {
+                const chosen = Array.isArray(value) ? value : Array.isArray(field.default) ? field.default : [];
+
+                return { kind: 'choices', field, value: chosen.filter((item) => field.options.some((option) => option.value === item)) };
+            }
+
+            return { kind: 'choice', field, value: typeof value === 'string' ? value : typeof field.default === 'string' ? field.default : '' };
+        }
         case 'image':
             return { kind: 'image', field, value: typeof value === 'string' && value !== '' ? value : null };
         case 'action':
@@ -56,6 +64,13 @@ const control = computed((): Control => {
         }
     }
 });
+
+/** One box per option; the stored value keeps the order the options are declared in. */
+function toggleChoice(field: Of<'choice'>, chosen: readonly string[], option: string, on: boolean) {
+    const next = on ? [...chosen, option] : chosen.filter((item) => item !== option);
+
+    update(field.options.map((candidate) => candidate.value).filter((value) => next.includes(value)));
+}
 
 function update(value: FieldValue | undefined) {
     if (value !== undefined) {
@@ -87,6 +102,18 @@ function update(value: FieldValue | undefined) {
             @update:model-value="update($event ?? undefined)"
             @commit="emit('commit')"
         />
+    </FieldShell>
+    <FieldShell v-else-if="control.kind === 'choices'" :label="label">
+        <div class="lze-choices">
+            <Toggle
+                v-for="option in control.field.options"
+                :key="option.value"
+                :model-value="control.value.includes(option.value)"
+                :label="editor.i18n.localized(option.label)"
+                @update:model-value="toggleChoice(control.field, control.value, option.value, $event === true)"
+                @commit="emit('commit')"
+            />
+        </div>
     </FieldShell>
     <ImageField v-else-if="control.kind === 'image'" :model-value="control.value" :label="label" url @update:model-value="update($event ?? null)" @commit="emit('commit')" />
     <FieldShell v-else :label="label">

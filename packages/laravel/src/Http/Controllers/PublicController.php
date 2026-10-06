@@ -66,7 +66,7 @@ final class PublicController
 
         $fields = $form['fields'];
         $answers = $request->validate(
-            array_merge(...array_map(fn (array $field): array => ["fields.{$field['name']}" => self::rules($field)], $fields)),
+            array_merge(...array_map(self::rules(...), $fields)),
             [],
             array_merge(...array_map(fn (array $field): array => ["fields.{$field['name']}" => $field['label']], $fields)),
         )['fields'] ?? [];
@@ -77,9 +77,11 @@ final class PublicController
             'fields' => array_map(fn (array $field): array => [
                 'name' => $field['name'],
                 'label' => $field['label'],
-                'value' => $field['kind'] === 'checkbox'
-                    ? filled($answers[$field['name']] ?? null)
-                    : (string) ($answers[$field['name']] ?? ''),
+                'value' => match (true) {
+                    $field['kind'] === 'checkbox' => filled($answers[$field['name']] ?? null),
+                    is_array($answers[$field['name']] ?? null) => implode(', ', $answers[$field['name']]),
+                    default => (string) ($answers[$field['name']] ?? ''),
+                },
             ], $fields),
             'ip' => $request->ip(),
         ]);
@@ -126,14 +128,22 @@ final class PublicController
     }
 
     /**
+     * Rules by input key. A field with several answers posts an array, so it
+     * takes one rule for the list and one for every value in it.
+     *
      * @param  FormField  $field
-     * @return list<mixed>
+     * @return array<string, list<mixed>>
      */
     private static function rules(array $field): array
     {
         $presence = $field['required'] ? 'required' : 'nullable';
+        $key = "fields.{$field['name']}";
 
-        return match ($field['kind']) {
+        if ($field['kind'] === 'select' && $field['multiple']) {
+            return [$key => [$presence, 'array'], "{$key}.*" => [Rule::in($field['options'])]];
+        }
+
+        return [$key => match ($field['kind']) {
             'checkbox' => [$field['required'] ? 'accepted' : 'nullable'],
             'select' => [$presence, Rule::in($field['options'])],
             'textarea' => [$presence, 'string', 'max:2000'],
@@ -144,6 +154,6 @@ final class PublicController
                 'date' => ['date'],
                 default => ['string', 'max:500'],
             }],
-        };
+        }];
     }
 }
