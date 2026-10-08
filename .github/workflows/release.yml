@@ -1,7 +1,8 @@
 name: Release
 
 # Publishes @skylivellc/lienzo-core and @skylivellc/lienzo-editor to npm when a
-# vX.Y.Z tag is pushed. Publishing from Actions lets npm attach provenance.
+# vX.Y.Z tag is pushed. Publishing from Actions lets npm attach provenance;
+# pnpm only generates it with --provenance, publishConfig.provenance is ignored.
 # Packagist picks up the same tag for skylive/lienzo on its own.
 on:
   push:
@@ -32,6 +33,18 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm test
       - run: pnpm build
-      - run: pnpm -r --filter './packages/*' publish --access public --no-git-checks
+      - run: pnpm -r --filter './packages/*' publish --access public --no-git-checks --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # Fails the release if npm stored a package without its provenance attestation.
+      - name: Check provenance was attached
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          for package in core editor; do
+            url="https://registry.npmjs.org/-/npm/v1/attestations/@skylivellc%2flienzo-$package@$version"
+            for attempt in 1 2 3 4 5 6; do
+              curl -sf "$url" > /dev/null && continue 2
+              sleep 10
+            done
+            echo "No provenance attestation for @skylivellc/lienzo-$package@$version"; exit 1
+          done
