@@ -18,13 +18,8 @@ final class LienzoServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/lienzo.php', 'lienzo');
         $this->app->singleton(LienzoManager::class);
-    }
 
-    public function boot(): void
-    {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'lienzo');
-        Blade::componentNamespace('Skylive\\Lienzo\\View', 'lienzo');
-
+        // Not in boot(): a package that boots first may load routes calling these while it boots (Filament panels do).
         Router::macro('lienzo', function (string $prefix = ''): Route {
             /** @var Router $this */
             return Routes::public($this, $prefix);
@@ -33,6 +28,12 @@ final class LienzoServiceProvider extends ServiceProvider
             /** @var Router $this */
             Routes::editor($this, $prefix);
         });
+    }
+
+    public function boot(): void
+    {
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'lienzo');
+        Blade::componentNamespace('Skylive\\Lienzo\\View', 'lienzo');
         $this->app->make(Router::class)->model('lienzoSite', Site::class);
 
         if ($this->app->runningInConsole()) {
