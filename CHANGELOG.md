@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.6.1 (2026-10-20)
+
+### Rendering
+
+- A sticky navigation bar stays where it belongs on phones. The phone layout turned every element absolute, which left the bar shifted half its width off the screen.
+
 ## 0.6.0 (2026-10-20)
 
 ### Rendering

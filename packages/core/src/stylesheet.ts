@@ -198,6 +198,8 @@ export const stylesheet = [
         + '.lz-frame[data-stack] .lz-el{position:static;width:auto;height:auto;order:var(--ord)}'
         + `.lz-el[data-${t.visible_on.attr}=desktop]{display:none}`
         + '.lz-parallax>.lz-bg{position:absolute}'
+        /* The phone rule above turns every element absolute; a sticky bar stays fixed, and keeps its own offsets. */
+        + '.lz-frame:not([data-stack]) .lz-navbar[data-sticky]{position:fixed;left:50%;translate:-50% 0;width:min(100%,var(--max-width))}'
         + '.lz-navbar-links{display:none}'
         + '.lz-navbar-menu{display:block}'
         + '.lz-el{max-width:100%;min-width:0}'
