@@ -177,6 +177,12 @@ test('a style change with several selected reaches all of them', async ({ editor
 test('a section can lay itself out, and then nothing is dragged in it', async ({ editor, page }) => {
     const panel = page.locator('.lze-right');
 
+    // With a phone layout of its own, the section still has to flow on phones.
+    await page.getByRole('button', { name: 'Phone', exact: true }).click();
+    await page.locator('.lze-stacked').first().getByRole('button', { name: 'Generate phone layout' }).click();
+    await editor.waitForSave();
+    await page.getByRole('button', { name: 'Desktop', exact: true }).click();
+
     await editor.canvas.locator('section.lz-section').first().click({ position: { x: 4, y: 4 } });
     await panel.getByLabel('Lay it out').selectOption({ label: 'Side by side' });
 
@@ -203,6 +209,23 @@ test('a section can lay itself out, and then nothing is dragged in it', async ({
 
     await editor.drag(await editor.center(heading), { x: 120, y: 60 });
     expect(await editor.draft()).toEqual(before);
+
+    // Published and seen on a phone, it keeps laying itself out: one column, nothing piled up.
+    await page.getByRole('button', { name: 'Publish' }).click();
+    await expect(page.locator('.lze-badge-status')).toHaveText('Published');
+    await page.setViewportSize({ width: 390, height: 800 });
+    await page.goto('/site/');
+
+    const published = page.locator('.lz-frame[data-flow]').first();
+
+    await expect(published).toHaveCSS('flex-direction', 'column');
+
+    const tops = await published.locator('> .lz-el').evaluateAll(
+        (nodes) => nodes.map((node) => Math.round(node.getBoundingClientRect().top)),
+    );
+
+    expect(tops.length).toBeGreaterThan(1);
+    expect(new Set(tops).size).toBe(tops.length);
 });
 
 test('a gallery takes pictures from the library and shows them in a row', async ({ editor, page }) => {

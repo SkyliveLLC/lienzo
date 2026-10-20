@@ -231,6 +231,9 @@ export const stylesheet = [
         + `.lz-el{font-size:${u(`var(${v(t.size_mobile)},var(${v(t.size)}))`)}}`
         + `.lz-frame:not([data-stack]) .lz-el[data-${t.auto_height.attr}]{height:auto}`
         + '.lz-frame[data-stack] .lz-el{position:static;width:auto;height:auto;order:var(--ord)}'
+        /* A section that lays itself out keeps doing it on phones, in one column. */
+        + `.lz-frame[data-flow]{height:auto;min-height:${u('var(--fmh)')};flex-direction:column;padding:32px 20px}`
+        + '.lz-frame[data-flow] .lz-el{position:static;width:auto;height:auto;order:var(--ord)}'
         + `.lz-el[data-${t.visible_on.attr}=desktop]{display:none}`
         + '.lz-parallax>.lz-bg{position:absolute}'
         /* The phone rule above turns every element absolute; a sticky bar stays fixed, and keeps its own offsets. */

@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.10.1 (2026-10-20)
+
+### Fixed
+
+- A section that lays itself out kept its phone layout from working: its elements piled up on top of each other. It now flows in one column on phones too.
+
 ## 0.10.0 (2026-10-20)
 
 ### Editor
