@@ -163,13 +163,17 @@ const sectionSchema = object({
     }).nullish(),
     height: object({ desktop: intBetween(80, 3000), mobile: intBetween(80, 4000) }),
     background: object({
-        type: z.enum(['color', 'image', 'gradient']),
+        type: z.enum(['color', 'image', 'gradient', 'video']),
         color: optional(color),
         gradient: gradient.nullish(),
         image: optional(image),
+        /** A background video: muted, looping, with the image as its poster. */
+        video: optional(z.string().max(500).regex(/^https:\/\/\S+$/)),
         overlay: optional(between(0, 1)),
         parallax: optional(z.boolean()),
     }),
+    /** Edge to edge, instead of inside the theme's width. */
+    wide: optional(z.boolean()),
     elements: list(z.array(elementEnvelope).max(60)),
 });
 

@@ -38,6 +38,8 @@ export const stylesheet = [
     // Parallax: the image is fixed to the viewport and clipped to its own box, not the section's, so a fixed navbar in the section stays visible.
     '.lz-parallax{position:absolute;inset:0;clip-path:inset(0)}',
     '.lz-parallax>.lz-bg{position:fixed}',
+    /* Edge to edge: the frame drops the theme's width and spans the screen. */
+    '.lz-section[data-wide]>.lz-frame{max-width:none}',
     '.lz-overlay{position:absolute;inset:0;background:rgb(0 0 0 / calc(var(--ov) * 100%))}',
     `.lz-frame{position:relative;height:${u('var(--fh)')}}`,
     '.lz-section>.lz-frame{margin:0 auto;max-width:var(--max-width);container-type:inline-size;--u:calc(min(100cqw,var(--ref) * 1px) / var(--ref))}',

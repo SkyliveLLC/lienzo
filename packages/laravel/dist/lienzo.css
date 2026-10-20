@@ -10,6 +10,7 @@ html:has(.lz-page){scroll-behavior:smooth}
 .lz-bg::before{content:'';position:absolute;inset:0;background:var(--background)}
 .lz-parallax{position:absolute;inset:0;clip-path:inset(0)}
 .lz-parallax>.lz-bg{position:fixed}
+.lz-section[data-wide]>.lz-frame{max-width:none}
 .lz-overlay{position:absolute;inset:0;background:rgb(0 0 0 / calc(var(--ov) * 100%))}
 .lz-frame{position:relative;height:calc(var(--fh) * var(--u))}
 .lz-section>.lz-frame{margin:0 auto;max-width:var(--max-width);container-type:inline-size;--u:calc(min(100cqw,var(--ref) * 1px) / var(--ref))}

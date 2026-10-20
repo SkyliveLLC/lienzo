@@ -20,14 +20,14 @@ import GradientEditor from './GradientEditor.vue';
 const props = defineProps<{ section: Section }>();
 const editor = useEditor();
 const t = editor.t;
-const ids = { group: useId(), label: useId(), anchor: useId(), background: useId() };
+const ids = { group: useId(), label: useId(), anchor: useId(), background: useId(), video: useId() };
 
 const groupModes = [
     { value: 'alone', label: t('section.alone') },
     { value: 'tabs', label: t('section.tab') },
     { value: 'steps', label: t('section.step') },
 ] as const;
-const backgrounds = (['color', 'gradient', 'image'] as const).map((value) => ({ value, label: t(`fill.${value}`) }));
+const backgrounds = (['color', 'gradient', 'image', 'video'] as const).map((value) => ({ value, label: t(`fill.${value}`) }));
 
 /**
  * The id is what selection and anchor links point at, so it changes when the
@@ -69,7 +69,11 @@ function setBackground(type: Section['background']['type'] | null | undefined) {
 
 function setImage(image: string | null | undefined) {
     props.section.background.image = image ?? null;
-    props.section.background.type = image ? 'image' : 'color';
+
+    // The image is the poster of a video background, so that one stays as it is.
+    if (props.section.background.type !== 'video') {
+        props.section.background.type = image ? 'image' : 'color';
+    }
 }
 </script>
 
@@ -110,14 +114,25 @@ function setImage(image: string | null | undefined) {
                 @commit="editor.commit()"
             />
         </div>
+        <Toggle v-model="section.wide" :label="t('section.wide')" @commit="editor.commit()" />
+        <p class="lze-hint">{{ t('section.wideHint') }}</p>
         <Field :id="ids.background" :label="t('section.background')">
             <SelectInput :id="ids.background" :model-value="section.background.type" :options="backgrounds" @update:model-value="setBackground" />
         </Field>
         <ColorPicker v-if="section.background.type === 'color'" v-model="section.background.color" :label="t('section.color')" @commit="editor.commit()" />
         <GradientEditor v-else-if="section.background.type === 'gradient'" v-model="section.background.gradient" @commit="editor.commit()" />
         <template v-else>
-            <ImageField :model-value="section.background.image" :label="t('section.image')" :choose="t('section.chooseImage')" @update:model-value="setImage" @commit="editor.commit()" />
-            <Toggle v-model="section.background.parallax" :label="t('section.parallax')" @commit="editor.commit()" />
+            <Field v-if="section.background.type === 'video'" :id="ids.video" :label="t('section.video')" :hint="t('section.videoHint')">
+                <TextInput :id="ids.video" v-model="section.background.video" :maxlength="500" placeholder="https://…/video.mp4" @commit="editor.commit()" />
+            </Field>
+            <ImageField
+                :model-value="section.background.image"
+                :label="section.background.type === 'video' ? t('section.poster') : t('section.image')"
+                :choose="t('section.chooseImage')"
+                @update:model-value="setImage"
+                @commit="editor.commit()"
+            />
+            <Toggle v-if="section.background.type === 'image'" v-model="section.background.parallax" :label="t('section.parallax')" @commit="editor.commit()" />
             <RangeInput
                 v-model="section.background.overlay"
                 :label="t('section.overlay')"

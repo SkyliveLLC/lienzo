@@ -651,6 +651,166 @@
             }
           }
         ]
+      },
+      {
+        "id": "video",
+        "height": {
+          "desktop": 192,
+          "mobile": 560
+        },
+        "background": {
+          "type": "video",
+          "video": "https://media.example.com/taller.mp4"
+        },
+        "elements": [
+          {
+            "id": "video-texto",
+            "type": "heading",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 80
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Fondo token",
+              "level": 2
+            },
+            "style": {
+              "color": "text",
+              "font": "heading",
+              "size": 44,
+              "weight": 700,
+              "align": "left",
+              "line_height": 1.1
+            }
+          }
+        ]
+      },
+      {
+        "id": "video-con-cartel",
+        "height": {
+          "desktop": 192,
+          "mobile": 560
+        },
+        "background": {
+          "type": "video",
+          "video": "https://media.example.com/taller.mp4",
+          "image": "media:1",
+          "color": "secondary",
+          "overlay": 0.4
+        },
+        "elements": [
+          {
+            "id": "video-con-cartel-texto",
+            "type": "heading",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 80
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Fondo token",
+              "level": 2
+            },
+            "style": {
+              "color": "text",
+              "font": "heading",
+              "size": 44,
+              "weight": 700,
+              "align": "left",
+              "line_height": 1.1
+            }
+          }
+        ]
+      },
+      {
+        "id": "video-sin-direccion",
+        "height": {
+          "desktop": 192,
+          "mobile": 560
+        },
+        "background": {
+          "type": "video",
+          "color": "surface"
+        },
+        "elements": [
+          {
+            "id": "video-sin-direccion-texto",
+            "type": "heading",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 80
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Fondo token",
+              "level": 2
+            },
+            "style": {
+              "color": "text",
+              "font": "heading",
+              "size": 44,
+              "weight": 700,
+              "align": "left",
+              "line_height": 1.1
+            }
+          }
+        ]
+      },
+      {
+        "id": "borde-a-borde",
+        "height": {
+          "desktop": 192,
+          "mobile": 560
+        },
+        "background": {
+          "type": "color",
+          "color": "secondary"
+        },
+        "elements": [
+          {
+            "id": "borde-a-borde-texto",
+            "type": "heading",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 4,
+                "y": 40,
+                "w": 26.666666666666668,
+                "h": 80
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Fondo token",
+              "level": 2
+            },
+            "style": {
+              "color": "text",
+              "font": "heading",
+              "size": 44,
+              "weight": 700,
+              "align": "left",
+              "line_height": 1.1
+            }
+          }
+        ],
+        "wide": true
       }
     ]
   },

@@ -31,3 +31,11 @@
 #e-heading-adas4cv{--x:4;--y:40;--w:26.667;--h:80;--ord:1;--z:1;--c:var(--text);--fs:44;--fw:700;--lh:1.1}
 #s-parallax-sin-imagen{--fh:192;--fmh:560;--sbg:var(--background)}
 #e-heading-xd6b5zy{--x:4;--y:40;--w:26.667;--h:80;--ord:1;--z:1;--c:var(--text);--fs:44;--fw:700;--lh:1.1}
+#s-video{--fh:192;--fmh:560}
+#e-video-texto{--x:4;--y:40;--w:26.667;--h:80;--ord:1;--z:1;--c:var(--text);--fs:44;--fw:700;--lh:1.1}
+#s-video-con-cartel{--fh:192;--fmh:560;--sbg:var(--secondary);--ov:0.4}
+#e-video-con-cartel-texto{--x:4;--y:40;--w:26.667;--h:80;--ord:1;--z:1;--c:var(--text);--fs:44;--fw:700;--lh:1.1}
+#s-video-sin-direccion{--fh:192;--fmh:560;--sbg:var(--surface)}
+#e-video-sin-direccion-texto{--x:4;--y:40;--w:26.667;--h:80;--ord:1;--z:1;--c:var(--text);--fs:44;--fw:700;--lh:1.1}
+#s-borde-a-borde{--fh:192;--fmh:560;--sbg:var(--secondary)}
+#e-borde-a-borde-texto{--x:4;--y:40;--w:26.667;--h:80;--ord:1;--z:1;--c:var(--text);--fs:44;--fw:700;--lh:1.1}

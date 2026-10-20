@@ -115,7 +115,8 @@
               "enum": [
                 "color",
                 "image",
-                "gradient"
+                "gradient",
+                "video"
               ]
             },
             "color": {
@@ -152,6 +153,19 @@
               ],
               "x-blank-as-null": true
             },
+            "video": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 500,
+                  "pattern": "^https:\\/\\/\\S+$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "x-blank-as-null": true
+            },
             "overlay": {
               "anyOf": [
                 {
@@ -177,6 +191,13 @@
             "type"
           ],
           "additionalProperties": false
+        },
+        "wide": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
         },
         "elements": {
           "maxItems": 60,

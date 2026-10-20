@@ -2,6 +2,13 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.5.0 (2026-10-20)
+
+### Rendering
+
+- A section can play a video as its background: muted, looping, with its image as the poster while it loads.
+- A section can run edge to edge, dropping the theme's width, for the full-bleed pages this makes possible.
+
 ## 0.4.0 (2026-10-19)
 
 ### Editor

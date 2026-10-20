@@ -2,7 +2,6 @@
   "document": {
     "issues": [
       "sections.0.height.mobile:required",
-      "sections.0.background.type:enum",
       "sections.0.elements.0.id:type",
       "sections.0.elements.0.z:required",
       "sections.0.elements.0.locked:type",

@@ -268,7 +268,8 @@ final class Renderer
         $id = Canvas::safeId($section['id']);
         $background = $section['background'];
         $type = $background['type'];
-        $image = $type === 'image' ? $this->resolveMedia($background['image'] ?? null) : null;
+        // A video background takes the same image as its poster.
+        $image = $type === 'image' || $type === 'video' ? $this->resolveMedia($background['image'] ?? null) : null;
         $gradient = $background['gradient'] ?? null;
         $gradient = $type === 'gradient' && ($gradient['from'] ?? '') !== '' && ($gradient['to'] ?? '') !== '' ? $gradient : null;
         $vars = [['fh', Html::num($section['height']['desktop'])], ['fmh', Html::num($section['height']['mobile'])]];
@@ -301,9 +302,21 @@ final class Renderer
             array_push($spaced, ...($index === 0 ? [$element] : [Html::text(' '), $element]));
         }
 
+        $video = $type === 'video' ? ($background['video'] ?? null) : null;
         $backdrop = null;
 
-        if ($image !== null) {
+        if ($video !== null) {
+            $backdrop = Html::h('video', [
+                'class' => 'lz-bg',
+                'src' => $video,
+                'poster' => $image?->url,
+                'autoplay' => true,
+                'loop' => true,
+                'muted' => true,
+                'playsinline' => true,
+                'preload' => 'metadata',
+            ]);
+        } elseif ($image !== null) {
             $img = Html::h('img', ['class' => 'lz-bg', 'src' => $image->url, 'alt' => '', 'decoding' => 'async']);
             $backdrop = ($background['parallax'] ?? null) === true ? Html::h('div', ['class' => 'lz-parallax'], [$img]) : $img;
         }
@@ -312,6 +325,7 @@ final class Renderer
             'id' => "s-{$id}",
             'class' => 'lz-section',
             'data-fill' => $gradient !== null ? $gradient['type'] ?? 'linear' : null,
+            'data-wide' => ($section['wide'] ?? null) === true,
         ], [
             $backdrop,
             $overlay > 0 ? Html::h('div', ['class' => 'lz-overlay']) : null,

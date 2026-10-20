@@ -236,7 +236,10 @@ async function renderGroup(group: Group, state: State): Promise<TrustedHtml> {
 async function renderSection(section: Section, state: State, wrap: 'form' | 'div' | null): Promise<TrustedHtml> {
     const id = safeId(section.id);
     const { background } = section;
-    const image = background.type === 'image' ? resolveMedia(background.image, state.input.host) : null;
+    // A video background takes the same image as its poster.
+    const image = background.type === 'image' || background.type === 'video'
+        ? resolveMedia(background.image, state.input.host)
+        : null;
     const gradient = background.type === 'gradient' && background.gradient?.from && background.gradient.to ? background.gradient : null;
     const vars: Vars = [['fh', num(section.height.desktop)], ['fmh', num(section.height.mobile)]];
 
@@ -262,12 +265,25 @@ async function renderSection(section: Section, state: State, wrap: 'form' | 'div
     // Stacked on mobile, a form's elements flow inline in its block, where the space between them shows.
     const spaced = elements.flatMap((element, index) => (index === 0 ? [element] : [text(' '), element]));
 
+    const video = background.type === 'video' ? background.video ?? null : null;
+
     return h('section', {
         id: `s-${id}`,
         class: 'lz-section',
         'data-fill': gradient ? gradient.type ?? 'linear' : null,
+        'data-wide': section.wide === true,
     }, [
-        image && (parallax
+        video !== null && h('video', {
+            class: 'lz-bg',
+            src: video,
+            poster: image?.url ?? null,
+            autoplay: true,
+            loop: true,
+            muted: true,
+            playsinline: true,
+            preload: 'metadata',
+        }),
+        video === null && image && (parallax
             ? h('div', { class: 'lz-parallax' }, [h('img', { class: 'lz-bg', src: image.url, alt: '', decoding: 'async' })])
             : h('img', { class: 'lz-bg', src: image.url, alt: '', decoding: 'async' })),
         overlay > 0 && h('div', { class: 'lz-overlay' }),
