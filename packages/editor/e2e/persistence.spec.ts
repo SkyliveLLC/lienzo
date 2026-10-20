@@ -1,4 +1,4 @@
-import { desktopBox, expect, test } from './fixtures.ts';
+import { desktopBox, expect, test, type EditorPage } from './fixtures.ts';
 
 test('autosaves, and a reload shows the change', async ({ editor, page }) => {
     const button = editor.canvas.locator('section.lz-section').first().locator('a.lz-el');
@@ -49,4 +49,55 @@ test('shows when it cannot save while offline and catches up after', async ({ ed
     await context.setOffline(false);
     await editor.waitForSave();
     expect(desktopBox(await editor.draft(), 0, 'heading')?.y).toBe(141);
+});
+
+test.describe('an edit made just before leaving is kept', () => {
+    async function nudgeHeading(editor: EditorPage) {
+        await editor.canvas.locator('h1.lz-el').click();
+        await editor.page.keyboard.press('ArrowDown');
+        await expect(editor.page.getByTestId('save-status')).toHaveText(/Unsaved changes|Cambios sin guardar/);
+        await editor.page.waitForTimeout(300);
+    }
+
+    const headingY = async (editor: EditorPage) => desktopBox(await editor.draft(), 0, 'heading')?.y;
+
+    test('when the host removes the editor', async ({ editor, page }) => {
+        await page.goto('/standalone.html');
+        await expect(editor.canvas.locator('h1.lz-el')).toBeVisible();
+        await nudgeHeading(editor);
+        await page.locator('lienzo-editor').evaluate((node) => node.remove());
+
+        await expect.poll(() => headingY(editor)).toBe(141);
+    });
+
+    test('when the page navigates away', async ({ editor, page }) => {
+        await nudgeHeading(editor);
+        await page.goto('about:blank');
+
+        await expect.poll(() => headingY(editor)).toBe(141);
+    });
+
+    test('when the tab closes, without asking first', async ({ editor, page }) => {
+        await nudgeHeading(editor);
+        await page.close({ runBeforeUnload: true });
+
+        await expect.poll(() => page.isClosed()).toBe(true);
+        await expect.poll(() => headingY(editor)).toBe(141);
+    });
+
+    test('asks first when the draft is too big to send on the way out', async ({ editor, page, request }) => {
+        await request.put('/api/pages/1', { data: { baseRevision: 1, seo: { title: null, description: 'x'.repeat(70_000) } } });
+        await page.reload();
+        await expect(editor.canvas.locator('h1.lz-el')).toBeVisible();
+        await nudgeHeading(editor);
+
+        const dialog = page.waitForEvent('dialog');
+        await page.close({ runBeforeUnload: true });
+        expect((await dialog).type()).toBe('beforeunload');
+        await (await dialog).dismiss();
+
+        expect(page.isClosed()).toBe(false);
+        await editor.waitForSave();
+        expect(await headingY(editor)).toBe(141);
+    });
 });

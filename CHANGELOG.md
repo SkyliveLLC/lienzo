@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## Unreleased
+
+### Editor
+
+- An edit made just before leaving the editor is kept. Autosave waits 1.5 seconds after the last change, and leaving inside that window dropped the edit, whether the host swapped pages, the browser navigated or the tab closed. The editor now sends it on the way out. A draft too big for that last request (about 60 KB) makes the browser ask before leaving.
+
 ## 0.13.2 (2026-10-20)
 
 ### Fixed

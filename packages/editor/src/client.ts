@@ -38,6 +38,7 @@ export type ClientOptions = {
 /**
  * Typed fetch over the protocol. Never retries writes and never throws:
  * a 409 becomes `conflict`, a 422 `invalid`, a network error `offline`.
+ * JSON writes that fit go `keepalive`, so they outlive the page.
  * Laravel's `XSRF-TOKEN` cookie is echoed as `X-XSRF-TOKEN`, like axios does,
  * so session-authenticated backends need no extra setup.
  */
@@ -50,18 +51,20 @@ export function createClient({ endpoint, headers = {}, fetch: fetcher = globalTh
             ? [isRecord(args[0]) ? args[0] : {}, args[1]]
             : [{}, args[0]];
         const path = template.replace(/:([a-z]+)/g, (_, name: string) => encodeURIComponent(String(params[name] ?? '')));
-        const isForm = typeof FormData !== 'undefined' && body instanceof FormData;
-        const query = method === 'GET' && body && typeof body === 'object' && !isForm ? searchParams(body) : '';
+        const form = typeof FormData !== 'undefined' && body instanceof FormData ? body : null;
+        const query = method === 'GET' && body && typeof body === 'object' && !form ? searchParams(body) : '';
+        const payload = body === undefined || method === 'GET' ? undefined : (form ?? JSON.stringify(body));
         const init: RequestInit = {
             method,
             credentials: 'same-origin',
             headers: {
                 Accept: 'application/json',
-                ...(body !== undefined && method !== 'GET' && !isForm ? { 'Content-Type': 'application/json' } : {}),
+                ...(typeof payload === 'string' ? { 'Content-Type': 'application/json' } : {}),
                 ...xsrfHeader(),
                 ...headers,
             },
-            ...(body !== undefined && method !== 'GET' ? { body: isForm ? body : JSON.stringify(body) } : {}),
+            ...(payload === undefined ? {} : { body: payload }),
+            keepalive: typeof payload === 'string' && fitsKeepalive(payload),
         };
 
         let response: globalThis.Response;
@@ -82,6 +85,13 @@ export function createClient({ endpoint, headers = {}, fetch: fetcher = globalTh
         return { ok: false, failure: failureOf(response.status, json) };
     };
 }
+
+/**
+ * Whether a JSON body can go `keepalive`, so a write sent as the page goes away
+ * still arrives. Browsers cap the bodies of all keepalive requests in flight
+ * together at 64 KiB.
+ */
+export const fitsKeepalive = (payload: string): boolean => new TextEncoder().encode(payload).byteLength < 60_000;
 
 function failureOf(status: number, json: unknown): Failure {
     const message = isRecord(json) && typeof json.message === 'string' ? json.message : `HTTP ${status}`;

@@ -140,4 +140,30 @@ describe('autosave', () => {
         expect(autosave.state.value).toEqual({ kind: 'failed', message: 'Boom' });
         expect(await autosave.flush()).toBe(true);
     });
+
+    it('dispose sends the pending save at once', () => {
+        const { autosave, sent, edit } = setup();
+        edit('v1');
+        autosave.dispose();
+
+        expect(sent).toEqual(['v1']);
+    });
+
+    it('dispose sends nothing when everything is saved', async () => {
+        const { autosave, sent, edit } = setup();
+        edit('v1');
+        await vi.advanceTimersByTimeAsync(1500);
+        autosave.dispose();
+
+        expect(sent).toEqual(['v1']);
+    });
+
+    it('does not retry after dispose', async () => {
+        const { autosave, sent, edit } = setup([failure({ kind: 'offline' })]);
+        edit('v1');
+        autosave.dispose();
+        await vi.advanceTimersByTimeAsync(20_000);
+
+        expect(sent).toEqual(['v1']);
+    });
 });

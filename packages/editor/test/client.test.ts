@@ -50,4 +50,13 @@ describe('client', () => {
 
         expect(server.calls[0]?.url).toBe('/api/submissions?cursor=abc');
     });
+
+    it('lets writes small enough outlive the page', async () => {
+        const server = recorder(200, { revision: 2 });
+        const client = createClient({ endpoint: '/api', fetch: server.fetch });
+        await client('PUT /pages/:id', { id: 1 }, { baseRevision: 1, title: 'Small' });
+        await client('PUT /pages/:id', { id: 1 }, { baseRevision: 1, title: 'é'.repeat(30_000) });
+
+        expect(server.calls.map((call) => call.init.keepalive)).toEqual([true, false]);
+    });
 });

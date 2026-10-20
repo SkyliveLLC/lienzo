@@ -16,7 +16,7 @@ import {
 } from '@skylivellc/lienzo-core';
 import type { Asset, PageState, PageSummary, PageVersion, SiteUpdate, Workspace } from '@skylivellc/lienzo-core/protocol';
 import { computed, inject, reactive, shallowRef, toRaw, watch, type InjectionKey, type WritableComputedRef } from 'vue';
-import type { Client, Failure } from '../client.ts';
+import { fitsKeepalive, type Client, type Failure } from '../client.ts';
 import type { Translator } from '../i18n/index.ts';
 import {
     boxOf,
@@ -157,19 +157,16 @@ export function createEditor({ client, i18n }: EditorDeps) {
     const previews = createPreviews(client);
 
     /** Everything autosaved: the open page's title, SEO and draft. */
+    const autosaved = () => plain({ page: state.page?.id ?? null, title: state.page?.title ?? '', seo: state.page?.seo ?? { title: '', description: '' }, draft: state.draft });
+    const pageWrite = (value: ReturnType<typeof autosaved>) => ({ baseRevision: state.revision, title: value.title, seo: blankToNull(value.seo), draft: value.draft });
     const autosave = createAutosave({
-        read: () => plain({ page: state.page?.id ?? null, title: state.page?.title ?? '', seo: state.page?.seo ?? { title: '', description: '' }, draft: state.draft }),
+        read: autosaved,
         async save(value) {
             if (value.page === null) {
                 return { ok: true };
             }
 
-            const result = await client('PUT /pages/:id', { id: value.page }, {
-                baseRevision: state.revision,
-                title: value.title,
-                seo: blankToNull(value.seo),
-                draft: value.draft,
-            });
+            const result = await client('PUT /pages/:id', { id: value.page }, pageWrite(value));
 
             // Another page may have opened meanwhile; its revision is not this one's.
             if (state.page?.id !== value.page) {
@@ -1007,6 +1004,13 @@ export function createEditor({ client, i18n }: EditorDeps) {
         await autosave.flush();
     }
 
+    /** True when leaving the page now loses edits: they are not saved yet and too big to send on the way out. */
+    function leavingLosesEdits(): boolean {
+        const value = autosaved();
+
+        return autosave.state.value.kind !== 'saved' && value.page !== null && !fitsKeepalive(JSON.stringify(pageWrite(value)));
+    }
+
     async function publish() {
         const page = state.page;
 
@@ -1312,6 +1316,7 @@ export function createEditor({ client, i18n }: EditorDeps) {
         openModal,
         removeModal,
         saveNow,
+        leavingLosesEdits,
         publish,
         restoreVersion,
         createPage,

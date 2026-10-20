@@ -57,6 +57,8 @@ On the custom element, `endpoint` and `locale` are attributes. `messages`, `head
 
 Requests send cookies for the same origin. If the page has Laravel's `XSRF-TOKEN` cookie, the editor sends it back as the `X-XSRF-TOKEN` header, so session-authenticated Laravel backends need no extra setup.
 
+When the editor leaves the page, it sends the edits it has not saved yet. It sends writes under about 60 KB with `keepalive`, so they still arrive after the page is gone. A custom `fetch` must pass that option on. If the unsaved draft is bigger, the browser asks the user before leaving.
+
 ## License
 
 MIT. The standalone file includes Vue, Zod and Lucide icons. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

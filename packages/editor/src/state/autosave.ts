@@ -37,6 +37,7 @@ export type Autosave = {
     exclusive<T>(task: () => Promise<T>): Promise<T>;
     /** Starts over from what `read` gives now, known to be on the server (after a load or a reload). A save still in flight no longer counts. */
     reset(): void;
+    /** Stops for good, sending what is not saved yet first. Nothing is retried after. */
     dispose(): void;
 };
 
@@ -53,10 +54,14 @@ export function createAutosave<T>({ read, save, delay = 1500, offlineRetry = 500
     let generation = 0;
     let timer: ReturnType<typeof setTimeout> | undefined;
     let running: Promise<unknown> | null = null;
+    let disposed = false;
 
     const schedule = (wait: number) => {
         clearTimeout(timer);
-        timer = setTimeout(() => void run(), wait);
+
+        if (!disposed) {
+            timer = setTimeout(() => void run(), wait);
+        }
     };
 
     async function run(): Promise<boolean> {
@@ -172,10 +177,11 @@ export function createAutosave<T>({ read, save, delay = 1500, offlineRetry = 500
             state.value = { kind: 'saved', at: null };
         },
         dispose() {
-            clearTimeout(timer);
+            disposed = true;
             if (typeof window !== 'undefined') {
                 window.removeEventListener('online', online);
             }
+            void run();
         },
     };
 }

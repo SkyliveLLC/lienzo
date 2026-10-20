@@ -85,17 +85,30 @@ watchEffect(() => {
     fonts.href = fontsHref([theme.heading_font, theme.body_font]);
 });
 
+const onPageHide = () => void editor.saveNow();
+
+/** The browser asks before leaving only when the save sent on pagehide could not outlive the page. */
+function onBeforeUnload(event: BeforeUnloadEvent) {
+    if (editor.leavingLosesEdits()) {
+        event.preventDefault();
+    }
+}
+
 onMounted(() => {
     if (root.value) {
         adoptEditorStyles(root.value);
     }
 
     window.addEventListener('keydown', onKeyDown);
+    window.addEventListener('pagehide', onPageHide);
+    window.addEventListener('beforeunload', onBeforeUnload);
     void editor.load();
 });
 
 onBeforeUnmount(() => {
     window.removeEventListener('keydown', onKeyDown);
+    window.removeEventListener('pagehide', onPageHide);
+    window.removeEventListener('beforeunload', onBeforeUnload);
     fonts?.remove();
     editor.dispose();
 });
