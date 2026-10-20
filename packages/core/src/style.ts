@@ -65,6 +65,8 @@ export const styleTable = {
     overflow: { attr: 'overflow', kind: 'enum' },
     visible_on: { attr: 'visible', kind: 'enum', skip: 'all' },
     accent_color: { var: 'ac', kind: 'color' },
+    scroll_background: { var: 'sbgc', kind: 'color' },
+    scroll_color: { var: 'sfgc', kind: 'color' },
     hover: { attr: 'hover', kind: 'enum', skip: 'none' },
     scroll: { attr: 'scroll', kind: 'enum', skip: 'none' },
     animation: {

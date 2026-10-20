@@ -142,7 +142,8 @@ export const stylesheet = [
     '.lz-section[data-wide] .lz-navbar[data-sticky]{width:100%}',
     '.lz-navbar[data-scrolled]{box-shadow:0 8px 24px rgba(15,23,42,.1)}',
     '.lz-navbar[data-scrolled][data-scroll]{box-shadow:0 10px 30px rgba(15,23,42,.12)}',
-    `.lz-navbar[data-scrolled]:is([data-scroll=solid],[data-scroll=compact]){background:var(${v(t.background)},var(--background));-webkit-backdrop-filter:none;backdrop-filter:none}`,
+    `.lz-navbar[data-scrolled]:is([data-scroll=solid],[data-scroll=compact]){background:var(${v(t.scroll_background)},var(${v(t.background)},var(--background)));`
+        + `color:var(${v(t.scroll_color)},var(${v(t.color)},var(--text)));-webkit-backdrop-filter:none;backdrop-filter:none}`,
     `.lz-navbar[data-scrolled][data-scroll=compact]{height:calc(var(--h) * .78 * var(--u))}`,
     '.lz-navbar-brand{font-family:var(--font-heading);font-weight:700;font-size:1.15em;white-space:nowrap}',
     /* Templates: the same markup with a different look. */

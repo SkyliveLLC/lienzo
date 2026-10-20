@@ -5,6 +5,7 @@ import { plain } from '../../model/document.ts';
 import { navbarPresets } from '../../model/elements.ts';
 import { useEditor } from '../../state/editor.ts';
 import Button from '../../ui/Button.vue';
+import ColorPicker from '../../ui/ColorPicker.vue';
 import Field from '../../ui/Field.vue';
 import SelectInput from '../../ui/SelectInput.vue';
 import TextInput from '../../ui/TextInput.vue';
@@ -55,6 +56,11 @@ function removeLink(index: number) {
     <Field v-if="element.props.sticky" :id="ids.scroll" :label="t('el.scrollStyle')">
         <SelectInput :id="ids.scroll" :model-value="element.props.scroll_style ?? 'same'" :options="scrollStyles" @update:model-value="element.props.scroll_style = $event" @commit="editor.commit()" />
     </Field>
+    <template v-if="element.props.sticky">
+        <ColorPicker v-model="element.style.scroll_background" :label="t('el.scrollBackground')" @commit="editor.commit()" />
+        <ColorPicker v-model="element.style.scroll_color" :label="t('el.scrollColor')" @commit="editor.commit()" />
+        <p class="lze-hint">{{ t('el.scrollColorsHint') }}</p>
+    </template>
     <p v-else class="lze-hint">{{ t('el.notSticky') }}</p>
     <Field :id="ids.layout" :label="t('el.layout')">
         <SelectInput :id="ids.layout" :model-value="element.props.layout ?? 'split'" :options="layouts" @update:model-value="element.props.layout = $event" @commit="editor.commit()" />

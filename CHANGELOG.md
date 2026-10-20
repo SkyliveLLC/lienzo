@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.8.0 (2026-10-20)
+
+### Rendering
+
+- A sticky navigation bar can take its own colors once the page scrolls. A bar that starts transparent over a photo used to keep its light text when it turned solid, which left an invisible band over the content.
+
 ## 0.7.0 (2026-10-20)
 
 ### Rendering

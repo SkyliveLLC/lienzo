@@ -764,6 +764,28 @@
               ],
               "x-blank-as-null": true
             },
+            "scroll_background": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/__schema2"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "x-blank-as-null": true
+            },
+            "scroll_color": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/__schema2"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "x-blank-as-null": true
+            },
             "size_mobile": {
               "anyOf": [
                 {
@@ -2071,6 +2093,60 @@
           "x-blank-as-null": true
         },
         "accent_color": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "primary",
+                    "secondary",
+                    "background",
+                    "surface",
+                    "text",
+                    "muted"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "pattern": "^#[0-9a-fA-F]{6}$"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "scroll_background": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "primary",
+                    "secondary",
+                    "background",
+                    "surface",
+                    "text",
+                    "muted"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "pattern": "^#[0-9a-fA-F]{6}$"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "scroll_color": {
           "anyOf": [
             {
               "anyOf": [

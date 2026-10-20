@@ -218,6 +218,14 @@
       "var": "ac",
       "kind": "color"
     },
+    "scroll_background": {
+      "var": "sbgc",
+      "kind": "color"
+    },
+    "scroll_color": {
+      "var": "sfgc",
+      "kind": "color"
+    },
     "hover": {
       "attr": "hover",
       "kind": "enum",

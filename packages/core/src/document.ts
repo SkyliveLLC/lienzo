@@ -102,6 +102,9 @@ export const styleSchema = object({
     overflow: optional(z.enum(['visible', 'hidden', 'scroll-x', 'scroll-y'])),
     visible_on: optional(z.enum(['all', 'desktop', 'mobile'])),
     accent_color: optional(color),
+    /** Colors a sticky navigation bar takes once the page scrolls. */
+    scroll_background: optional(color),
+    scroll_color: optional(color),
     /** Type size on phones, when the desktop one would be too loud there. */
     size_mobile: optional(intBetween(8, 240)),
     /** Space between letters, in ems. */
