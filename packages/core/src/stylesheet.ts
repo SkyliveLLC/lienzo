@@ -53,9 +53,18 @@ export const stylesheet = [
         + `--_p:${u(`var(${v(t.padding)})`)};`
         + `color:var(${v(t.color)});background:var(--_fill);-webkit-backdrop-filter:var(--_blur);backdrop-filter:var(--_blur);`
         + `font-family:var(--font-body);font-size:${u(`var(${v(t.size)})`)};font-weight:var(${v(t.weight)});line-height:var(${v(t.line_height)});`
+        + `letter-spacing:calc(var(${v(t.tracking)},0) * 1em);`
         + `border:var(--_border,0);border-radius:${u(`var(${v(t.radius)})`)};padding:var(--_p,0);opacity:var(${v(t.opacity)});`
         + 'transform:var(--_rot,) var(--_flip,) var(--_anim,)}',
     `.lz-el[data-${t.font.attr}=heading]{font-family:var(--font-heading)}`,
+    /* Display type: the shape of the letters themselves. */
+    `.lz-el[data-${t.text_case.attr}=upper]{text-transform:uppercase}`,
+    `.lz-el[data-${t.text_case.attr}=lower]{text-transform:lowercase}`,
+    `.lz-el[data-${t.text_case.attr}=title]{text-transform:capitalize}`,
+    `.lz-el[data-${t.text_style.attr}=outline]{-webkit-text-stroke:${u('1.5')} currentColor;-webkit-text-fill-color:transparent}`,
+    `.lz-el[data-${t.text_style.attr}=glow]{text-shadow:0 0 ${u('12')} color-mix(in srgb,currentColor 70%,transparent),0 0 ${u('44')} color-mix(in srgb,currentColor 45%,transparent)}`,
+    /* A box that grows with its text, instead of cropping what does not fit. */
+    `.lz-el[data-${t.auto_height.attr}]{height:auto}`,
     ...['left', 'center', 'right'].map((align) => `.lz-el[data-${t.align.attr}=${align}]{text-align:${align}}`),
     `.lz-el[data-${g.type.attr}=linear]{background:linear-gradient(calc(var(${v(g.angle)},135) * 1deg),${fade(v(g.from))},${fade(v(g.to))})}`,
     `.lz-el[data-${g.type.attr}=radial]{background:radial-gradient(circle at 50% 50%,${fade(v(g.from))},${fade(v(g.to))})}`,
@@ -195,6 +204,8 @@ export const stylesheet = [
         + `.lz-frame{height:${u('var(--fmh)')}}`
         + '.lz-frame[data-stack]{height:auto;padding:32px 20px;display:flex;flex-direction:column;gap:20px}'
         + `.lz-frame:not([data-stack]) .lz-el{position:absolute;left:calc(var(--mx) * 1%);top:${u('var(--my)')};width:calc(var(--mw) * 1%);height:${u('var(--mh)')}}`
+        + `.lz-el{font-size:${u(`var(${v(t.size_mobile)},var(${v(t.size)}))`)}}`
+        + `.lz-frame:not([data-stack]) .lz-el[data-${t.auto_height.attr}]{height:auto}`
         + '.lz-frame[data-stack] .lz-el{position:static;width:auto;height:auto;order:var(--ord)}'
         + `.lz-el[data-${t.visible_on.attr}=desktop]{display:none}`
         + '.lz-parallax>.lz-bg{position:absolute}'

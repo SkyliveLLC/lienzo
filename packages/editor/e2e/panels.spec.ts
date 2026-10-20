@@ -14,8 +14,10 @@ test('edits text and styles from the panel', async ({ editor, page }) => {
     await panel.getByRole('textbox', { name: 'Text', exact: true }).fill('A sharper headline');
     await expect(heading).toHaveText('A sharper headline');
 
-    await panel.getByLabel('Size').fill('60');
-    await panel.getByLabel('Size').blur();
+    const size = panel.getByRole('spinbutton', { name: /^Size\b/ }).first();
+
+    await size.fill('60');
+    await size.blur();
     await expect.poll(() => heading.evaluate(cssVar, '--fs')).toBe('60');
 
     await panel.getByRole('group', { name: 'Color', exact: true }).getByRole('button', { name: 'Primary' }).click();

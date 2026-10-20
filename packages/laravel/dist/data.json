@@ -58,6 +58,28 @@
       "var": "fs",
       "kind": "num"
     },
+    "size_mobile": {
+      "var": "fms",
+      "kind": "num"
+    },
+    "tracking": {
+      "var": "ls",
+      "kind": "num"
+    },
+    "text_case": {
+      "attr": "case",
+      "kind": "enum",
+      "skip": "none"
+    },
+    "text_style": {
+      "attr": "text",
+      "kind": "enum",
+      "skip": "solid"
+    },
+    "auto_height": {
+      "attr": "auto",
+      "kind": "flag"
+    },
     "weight": {
       "var": "fw",
       "kind": "num"

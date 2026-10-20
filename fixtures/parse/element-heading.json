@@ -5,7 +5,7 @@
         {
           "id": "variantes",
           "height": {
-            "desktop": 528,
+            "desktop": 856,
             "mobile": 560
           },
           "background": {
@@ -304,6 +304,98 @@
                 "weight": 700,
                 "align": "right",
                 "line_height": 1.1
+              }
+            },
+            {
+              "id": "tipo-0",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 496,
+                  "w": 88,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Hueco",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1,
+                "tracking": 0.08,
+                "text_case": "upper",
+                "text_style": "outline",
+                "auto_height": true
+              }
+            },
+            {
+              "id": "tipo-1",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 606,
+                  "w": 88,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Resplandor",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1,
+                "size_mobile": 36,
+                "tracking": 0,
+                "text_case": "none",
+                "text_style": "glow",
+                "auto_height": false
+              }
+            },
+            {
+              "id": "tipo-2",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 716,
+                  "w": 88,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Espaciado",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1,
+                "size_mobile": 24,
+                "tracking": 0.3,
+                "text_case": "upper",
+                "text_style": "solid",
+                "auto_height": true
               }
             }
           ]

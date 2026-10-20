@@ -2,6 +2,14 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.7.0 (2026-10-20)
+
+### Rendering
+
+- Type can be set to a second size for phones, so a headline can be loud on a screen and still fit in a hand.
+- Letters gain spacing, case (uppercase, lowercase, title case) and a face: solid, hollow or glowing.
+- A box can grow with its text instead of cropping what does not fit.
+
 ## 0.6.1 (2026-10-20)
 
 ### Rendering

@@ -4,7 +4,7 @@
       {
         "id": "variantes",
         "height": {
-          "desktop": 528,
+          "desktop": 856,
           "mobile": 560
         },
         "background": {
@@ -303,6 +303,98 @@
               "weight": 700,
               "align": "right",
               "line_height": 1.1
+            }
+          },
+          {
+            "id": "tipo-0",
+            "type": "heading",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 6,
+                "y": 496,
+                "w": 88,
+                "h": 80
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Hueco",
+              "level": 2
+            },
+            "style": {
+              "color": "text",
+              "font": "heading",
+              "size": 44,
+              "weight": 700,
+              "align": "left",
+              "line_height": 1.1,
+              "text_style": "outline",
+              "text_case": "upper",
+              "tracking": 0.08,
+              "auto_height": true
+            }
+          },
+          {
+            "id": "tipo-1",
+            "type": "heading",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 6,
+                "y": 606,
+                "w": 88,
+                "h": 80
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Resplandor",
+              "level": 2
+            },
+            "style": {
+              "color": "text",
+              "font": "heading",
+              "size": 44,
+              "weight": 700,
+              "align": "left",
+              "line_height": 1.1,
+              "text_style": "glow",
+              "text_case": "none",
+              "tracking": 0.0,
+              "auto_height": false,
+              "size_mobile": 36
+            }
+          },
+          {
+            "id": "tipo-2",
+            "type": "heading",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 6,
+                "y": 716,
+                "w": 88,
+                "h": 80
+              },
+              "mobile": null
+            },
+            "props": {
+              "text": "Espaciado",
+              "level": 2
+            },
+            "style": {
+              "color": "text",
+              "font": "heading",
+              "size": 44,
+              "weight": 700,
+              "align": "left",
+              "line_height": 1.1,
+              "text_style": "solid",
+              "text_case": "upper",
+              "tracking": 0.3,
+              "auto_height": true,
+              "size_mobile": 24
             }
           }
         ]

@@ -764,6 +764,72 @@
               ],
               "x-blank-as-null": true
             },
+            "size_mobile": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 8,
+                  "maximum": 240
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "x-blank-as-null": true
+            },
+            "tracking": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": -0.05,
+                  "maximum": 0.5
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "x-blank-as-null": true
+            },
+            "text_case": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "upper",
+                    "lower",
+                    "title"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "x-blank-as-null": true
+            },
+            "text_style": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "solid",
+                    "outline",
+                    "glow"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "x-blank-as-null": true
+            },
+            "auto_height": {
+              "x-blank-as-null": true,
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
             "hover": {
               "anyOf": [
                 {
@@ -2030,6 +2096,72 @@
             }
           ],
           "x-blank-as-null": true
+        },
+        "size_mobile": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 8,
+              "maximum": 240
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "tracking": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": -0.05,
+              "maximum": 0.5
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "text_case": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "none",
+                "upper",
+                "lower",
+                "title"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "text_style": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "solid",
+                "outline",
+                "glow"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "auto_height": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
         },
         "hover": {
           "anyOf": [

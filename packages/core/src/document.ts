@@ -102,6 +102,15 @@ export const styleSchema = object({
     overflow: optional(z.enum(['visible', 'hidden', 'scroll-x', 'scroll-y'])),
     visible_on: optional(z.enum(['all', 'desktop', 'mobile'])),
     accent_color: optional(color),
+    /** Type size on phones, when the desktop one would be too loud there. */
+    size_mobile: optional(intBetween(8, 240)),
+    /** Space between letters, in ems. */
+    tracking: optional(between(-0.05, 0.5)),
+    text_case: optional(z.enum(['none', 'upper', 'lower', 'title'])),
+    /** Hollow letters, or letters that glow, for display type. */
+    text_style: optional(z.enum(['solid', 'outline', 'glow'])),
+    /** The box grows with its text instead of cropping it. */
+    auto_height: optional(z.boolean()),
     hover: optional(z.enum(['none', 'lift', 'grow', 'fade', 'tilt', 'glow', 'sink'])),
     /** Moves with the scroll while the element crosses the screen. */
     scroll: optional(z.enum(['none', 'rise', 'drift', 'zoom'])),
