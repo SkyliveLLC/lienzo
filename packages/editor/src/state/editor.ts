@@ -14,7 +14,7 @@ import {
     type Theme,
 } from '@skylivellc/lienzo-core';
 import type { Asset, PageState, PageSummary, PageVersion, SiteUpdate, Workspace } from '@skylivellc/lienzo-core/protocol';
-import { computed, inject, reactive, shallowRef, watch, type InjectionKey, type WritableComputedRef } from 'vue';
+import { computed, inject, reactive, shallowRef, toRaw, watch, type InjectionKey, type WritableComputedRef } from 'vue';
 import type { Client, Failure } from '../client.ts';
 import type { Translator } from '../i18n/index.ts';
 import {
@@ -770,6 +770,23 @@ export function createEditor({ client, i18n }: EditorDeps) {
         commit();
     }
 
+    /** A copy of the section right below it, with fresh ids so nothing collides. */
+    function duplicateSection(id: string) {
+        const section = state.draft.sections.find((item) => item.id === id);
+
+        if (!section) {
+            return;
+        }
+
+        const copy: Section = {
+            ...structuredClone(toRaw(section)),
+            id: newId('section'),
+            elements: structuredClone(toRaw(section.elements)).map((element) => ({ ...element, id: newId(element.type) })),
+        };
+
+        addSection(copy, id);
+    }
+
     function removeSection(id: string) {
         if (state.draft.sections.length <= 1) {
             return;
@@ -1166,6 +1183,7 @@ export function createEditor({ client, i18n }: EditorDeps) {
         nudge,
         placeElements,
         addSection,
+        duplicateSection,
         applyPageTemplate,
         removeSection,
         moveSection,

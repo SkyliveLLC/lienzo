@@ -208,4 +208,16 @@ test('adds a section right below another, and deletes one, from the edge between
     await page.locator('.lze-edge').nth(2).getByRole('button', { name: 'Delete section' }).click();
     await editor.waitForSave();
     expect((await editor.draft()).sections.map((section) => section.id)).toEqual(before);
+
+    // The chip of each section selects it, and a duplicate lands right below.
+    await page.locator('.lze-section-chip').first().click();
+    expect(await editor.draft()).toBeTruthy();
+    await page.locator('.lze-edge').first().getByRole('button', { name: 'Duplicate section' }).click();
+    await editor.waitForSave();
+
+    const copied = (await editor.draft()).sections;
+    expect(copied).toHaveLength(before.length + 1);
+    expect(copied[1]!.id).not.toBe(copied[0]!.id);
+    expect(copied[1]!.elements.map((element) => element.type)).toEqual(copied[0]!.elements.map((element) => element.type));
+    expect(copied[1]!.elements.every((element, index) => element.id !== copied[0]!.elements[index]!.id)).toBe(true);
 });

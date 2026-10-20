@@ -165,6 +165,8 @@ export const es: Messages = {
 
     'section.heading': 'Sección',
     'section.addAfter': 'Agregar una sección debajo',
+    'section.duplicate': 'Duplicar la sección',
+    'canvas.emptySection': 'Esta sección está vacía: arrastra un elemento aquí.',
     'section.delete': 'Eliminar sección',
     'section.shownAs': 'Se muestra como',
     'section.alone': 'Sección normal',

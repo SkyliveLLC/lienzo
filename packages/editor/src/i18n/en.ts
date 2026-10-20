@@ -178,6 +178,8 @@ export const en = {
     // Section settings
     'section.heading': 'Section',
     'section.addAfter': 'Add a section below',
+    'section.duplicate': 'Duplicate section',
+    'canvas.emptySection': 'This section is empty: drag an element here.',
     'section.delete': 'Delete section',
     'section.shownAs': 'Shown as',
     'section.alone': 'Regular section',

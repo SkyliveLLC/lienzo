@@ -2,6 +2,14 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.4.0 (2026-10-19)
+
+### Editor
+
+- The canvas scrolls again in apps that style `<lienzo-editor>` themselves. The host's `style` and classes landed on the editor's own root, where an inherited `display: block` replaced its grid, and the body grew to the height of the page instead of scrolling.
+- Each section carries a chip with its name or anchor; clicking it selects the section.
+- The control between sections also duplicates one, and a section with nothing in it says so on the canvas.
+
 ## 0.3.0 (2026-10-19)
 
 ### Rendering

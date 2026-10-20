@@ -100,6 +100,24 @@
 .lze-guide[data-axis='x'] { width: var(--line); }
 .lze-guide[data-axis='y'] { height: var(--line); }
 .lze-badge { transform: translateY(-100%) scale(var(--inv)); transform-origin: 0 100%; margin-top: -4px; padding: 2px 6px; border-radius: 4px; background: var(--lze-select); color: #fff; font-size: 11px; font-weight: 600; white-space: nowrap; }
+/* Each section says which one it is, and a click selects it. */
+.lze-section-chip {
+    position: absolute; z-index: 5; transform: scale(var(--inv)) translateY(-100%); transform-origin: 0 100%;
+    margin-top: -4px; padding: 2px 8px; border: 1px solid var(--lze-border); border-radius: 999px;
+    background: var(--lze-panel); color: var(--lze-muted); font: 600 11px/1.6 var(--lze-font);
+    white-space: nowrap; cursor: pointer; pointer-events: auto; opacity: .5; transition: opacity .15s ease;
+}
+
+.lze-section-chip:hover, .lze-section-chip[data-current='true'] { opacity: 1; color: var(--lze-fg); }
+.lze-section-chip[data-current='true'] { border-color: var(--lze-select); color: var(--lze-select); }
+
+/* A section with nothing in it says so, where the eye already is. */
+.lze-section-empty {
+    position: absolute; z-index: 4; transform: scale(var(--inv)) translate(-50%, -50%); transform-origin: 0 0;
+    margin: 0; padding: 6px 14px; border-radius: 999px; background: rgb(255 255 255 / .82);
+    color: var(--lze-muted); font: 500 12px/1.4 var(--lze-font); white-space: nowrap;
+}
+
 /* El control del borde entre secciones: discreto, y claro al pasar por encima. */
 .lze-edge {
     position: absolute; z-index: 6; display: flex; gap: 4px; padding: 3px;

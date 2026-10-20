@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowDownToLine, ArrowUpToLine, Copy, Lock, Plus, RotateCw, Trash2 } from '@lucide/vue';
+import { ArrowDownToLine, ArrowUpToLine, Copy, CopyPlus, Lock, Plus, RotateCw, Trash2 } from '@lucide/vue';
 import { computed } from 'vue';
 import { HANDLES, type Guides, type Handle } from '../model/geometry.ts';
 import { useEditor } from '../state/editor.ts';
@@ -93,7 +93,14 @@ const stacked = computed(() => [...props.frozen].flatMap((id) => {
 const edges = computed(() => (editor.activeModal.value ? [] : editor.state.draft.sections.flatMap((section) => {
     const metrics = props.layout.canvases.get(section.id);
 
-    return metrics ? [{ id: section.id, rect: metrics.outer }] : [];
+    return metrics
+        ? [{
+            id: section.id,
+            rect: metrics.outer,
+            label: (section.group?.label ?? '').trim() || `#${section.id}`,
+            empty: section.elements.length === 0,
+        }]
+        : [];
 })));
 
 const place = (rect: Rect) => ({ left: `${rect.x}px`, top: `${rect.y}px`, width: `${rect.w}px`, height: `${rect.h}px` });
@@ -112,6 +119,28 @@ const place = (rect: Rect) => ({ left: `${rect.x}px`, top: `${rect.y}px`, width:
             <button type="button" class="lze-btn" @pointerdown.stop @click="emit('generateMobile', item.id)">{{ t('section.generateMobile') }}</button>
         </div>
 
+        <button
+            v-for="edge in edges"
+            :key="`chip-${edge.id}`"
+            type="button"
+            class="lze-section-chip"
+            :data-current="editor.state.selection.kind === 'canvas' && editor.state.selection.canvas === edge.id"
+            :style="{ left: `${edge.rect.x}px`, top: `${edge.rect.y}px` }"
+            @pointerdown.stop
+            @click="editor.selectCanvas(edge.id)"
+        >
+            {{ edge.label }}
+        </button>
+
+        <p
+            v-for="edge in edges.filter((item) => item.empty)"
+            :key="`empty-${edge.id}`"
+            class="lze-section-empty"
+            :style="{ left: `${edge.rect.x + edge.rect.w / 2}px`, top: `${edge.rect.y + edge.rect.h / 2}px` }"
+        >
+            {{ t('canvas.emptySection') }}
+        </p>
+
         <div
             v-for="edge in edges"
             :key="`edge-${edge.id}`"
@@ -121,6 +150,9 @@ const place = (rect: Rect) => ({ left: `${rect.x}px`, top: `${rect.y}px`, width:
         >
             <button type="button" class="lze-icon-btn" :title="t('section.addAfter')" :aria-label="t('section.addAfter')" @click="editor.addSection(undefined, edge.id)">
                 <Plus :size="15" aria-hidden="true" />
+            </button>
+            <button type="button" class="lze-icon-btn" :title="t('section.duplicate')" :aria-label="t('section.duplicate')" @click="editor.duplicateSection(edge.id)">
+                <CopyPlus :size="15" aria-hidden="true" />
             </button>
             <button
                 v-if="editor.state.draft.sections.length > 1"

@@ -26,6 +26,14 @@ import Toasts from './ui/Toasts.vue';
  * `@skylivellc/lienzo-core/protocol`); everything else is optional. Props are
  * read once, when the editor mounts.
  */
+/**
+ * Hosts give the element a `style` or classes of their own, as the README
+ * asks. Without this, Vue would copy them onto the editor's root, where an
+ * inherited `display: block` replaces its grid: the body then grows to the
+ * height of its content and the canvas can no longer scroll.
+ */
+defineOptions({ inheritAttrs: false });
+
 const props = defineProps<{
     /** Base URL of the protocol, for example `/admin/site/lienzo`. */
     endpoint: string;
