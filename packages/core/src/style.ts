@@ -61,6 +61,7 @@ export const styleTable = {
     visible_on: { attr: 'visible', kind: 'enum', skip: 'all' },
     accent_color: { var: 'ac', kind: 'color' },
     hover: { attr: 'hover', kind: 'enum', skip: 'none' },
+    scroll: { attr: 'scroll', kind: 'enum', skip: 'none' },
     animation: {
         group: {
             type: { attr: 'anim', kind: 'enum', skip: 'none' },

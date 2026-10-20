@@ -273,7 +273,7 @@ async function renderSection(section: Section, state: State, wrap: 'form' | 'div
         'data-fill': gradient ? gradient.type ?? 'linear' : null,
         'data-wide': section.wide === true,
     }, [
-        video !== null && h('video', {
+        video !== null && backdrop(h('video', {
             class: 'lz-bg',
             src: video,
             poster: image?.url ?? null,
@@ -282,16 +282,18 @@ async function renderSection(section: Section, state: State, wrap: 'form' | 'div
             muted: true,
             playsinline: true,
             preload: 'metadata',
-        }),
-        video === null && image && (parallax
-            ? h('div', { class: 'lz-parallax' }, [h('img', { class: 'lz-bg', src: image.url, alt: '', decoding: 'async' })])
-            : h('img', { class: 'lz-bg', src: image.url, alt: '', decoding: 'async' })),
+        }), parallax),
+        video === null && image && backdrop(h('img', { class: 'lz-bg', src: image.url, alt: '', decoding: 'async' }), parallax),
         overlay > 0 && h('div', { class: 'lz-overlay' }),
         h('div', { class: 'lz-frame', 'data-stack': stacks(section) }, [
             wrap === 'form' ? form({}, section.id, state, spaced) : wrap === 'div' ? h('div', {}, spaced) : fragment(elements),
         ]),
     ]);
 }
+
+/** A background that stays put while the section scrolls over it. */
+const backdrop = (media: TrustedHtml, parallax: boolean): TrustedHtml =>
+    (parallax ? h('div', { class: 'lz-parallax' }, [media]) : media);
 
 async function renderModal(modal: Modal, state: State): Promise<TrustedHtml> {
     const id = safeId(modal.id);

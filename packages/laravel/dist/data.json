@@ -201,6 +201,11 @@
       "kind": "enum",
       "skip": "none"
     },
+    "scroll": {
+      "attr": "scroll",
+      "kind": "enum",
+      "skip": "none"
+    },
     "animation": {
       "group": {
         "type": {

@@ -19,7 +19,7 @@ const t = editor.t;
 const ids = { brand: useId(), scroll: useId(), layout: useId(), template: useId() };
 const presets = navbarPresets(t);
 const scrollStyles = (['same', 'shadow', 'solid', 'compact'] as const).map((value) => ({ value, label: t(`el.scroll.${value}`) }));
-const templates = (['plain', 'pill', 'card', 'underline', 'divided'] as const).map((value) => ({ value, label: t(`el.navbarTemplate.${value}`) }));
+const templates = (['plain', 'pill', 'card', 'underline', 'divided', 'floating', 'boxed', 'tracked'] as const).map((value) => ({ value, label: t(`el.navbarTemplate.${value}`) }));
 const layouts = (['split', 'left', 'center'] as const).map((value) => ({ value, label: t(`el.layout.${value}`) }));
 const links = computed(() => props.element.props.links ?? []);
 

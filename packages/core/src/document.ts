@@ -102,9 +102,11 @@ export const styleSchema = object({
     overflow: optional(z.enum(['visible', 'hidden', 'scroll-x', 'scroll-y'])),
     visible_on: optional(z.enum(['all', 'desktop', 'mobile'])),
     accent_color: optional(color),
-    hover: optional(z.enum(['none', 'lift', 'grow', 'fade'])),
+    hover: optional(z.enum(['none', 'lift', 'grow', 'fade', 'tilt', 'glow', 'sink'])),
+    /** Moves with the scroll while the element crosses the screen. */
+    scroll: optional(z.enum(['none', 'rise', 'drift', 'zoom'])),
     animation: object({
-        type: optional(z.enum(['none', 'fade', 'up', 'down', 'left', 'right', 'zoom'])),
+        type: optional(z.enum(['none', 'fade', 'up', 'down', 'left', 'right', 'zoom', 'blur', 'reveal'])),
         delay: optional(between(0, 2)),
         duration: optional(between(0.2, 2)),
     }).nullish(),
@@ -131,7 +133,7 @@ export const corePropsSchema = object({
     multiple: optional(z.boolean()),
     brand: z.string().max(60).nullish(),
     layout: optional(z.enum(['split', 'left', 'center'])),
-    template: optional(z.enum(['plain', 'pill', 'card', 'underline', 'divided'])),
+    template: optional(z.enum(['plain', 'pill', 'card', 'underline', 'divided', 'floating', 'boxed', 'tracked'])),
     links: list(z.array(object({
         label: z.string().min(1).max(40),
         action: object({ type: actionType, value: z.string().max(300).nullish() }),

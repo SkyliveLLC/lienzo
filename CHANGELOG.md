@@ -2,6 +2,15 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.6.0 (2026-10-20)
+
+### Rendering
+
+- A video background can hold still while the section scrolls over it, the way an image background already could.
+- Three more looks for the navigation bar: floating, boxed links and spaced out.
+- Two more entrances, coming into focus and wiping across, and three more pointer gestures: press in, tilt and glow.
+- An element can move while it crosses the screen (rise, drift or zoom), driven by the scroll itself. Browsers without view timelines show it still.
+
 ## 0.5.0 (2026-10-20)
 
 ### Rendering

@@ -12,10 +12,11 @@ type Animation = NonNullable<Style['animation']>;
 const props = defineProps<{ element: Element }>();
 const editor = useEditor();
 const t = editor.t;
-const ids = { entrance: useId(), hover: useId() };
+const ids = { entrance: useId(), hover: useId(), scroll: useId() };
 
-const entrances = (['none', 'fade', 'up', 'down', 'left', 'right', 'zoom'] as const).map((value) => ({ value, label: t(`style.anim.${value}`) }));
-const hovers = (['none', 'lift', 'grow', 'fade'] as const).map((value) => ({ value, label: t(`style.hover.${value}`) }));
+const entrances = (['none', 'fade', 'up', 'down', 'left', 'right', 'zoom', 'blur', 'reveal'] as const).map((value) => ({ value, label: t(`style.anim.${value}`) }));
+const scrolls = (['none', 'rise', 'drift', 'zoom'] as const).map((value) => ({ value, label: t(`style.scroll.${value}`) }));
+const hovers = (['none', 'lift', 'grow', 'fade', 'sink', 'tilt', 'glow'] as const).map((value) => ({ value, label: t(`style.hover.${value}`) }));
 const seconds = (value: number) => `${value} s`;
 
 /** What the entrance starts as the first time it is edited. */
@@ -46,6 +47,9 @@ function setAnimation<K extends keyof Animation>(key: K, value: Animation[K]) {
                 @commit="editor.commit()"
             />
         </div>
+        <Field :id="ids.scroll" :label="t('style.scroll')" :hint="t('style.scrollHint')">
+            <SelectInput :id="ids.scroll" :model-value="element.style.scroll ?? 'none'" :options="scrolls" @update:model-value="element.style.scroll = $event" @commit="editor.commit()" />
+        </Field>
         <Field :id="ids.hover" :label="t('style.hover')">
             <SelectInput :id="ids.hover" :model-value="element.style.hover ?? 'none'" :options="hovers" @update:model-value="element.style.hover = $event" @commit="editor.commit()" />
         </Field>

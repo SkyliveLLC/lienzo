@@ -39,3 +39,5 @@
 #e-video-sin-direccion-texto{--x:4;--y:40;--w:26.667;--h:80;--ord:1;--z:1;--c:var(--text);--fs:44;--fw:700;--lh:1.1}
 #s-borde-a-borde{--fh:192;--fmh:560;--sbg:var(--secondary)}
 #e-borde-a-borde-texto{--x:4;--y:40;--w:26.667;--h:80;--ord:1;--z:1;--c:var(--text);--fs:44;--fw:700;--lh:1.1}
+#s-video-parallax{--fh:192;--fmh:560;--ov:0.3}
+#e-video-parallax-texto{--x:4;--y:40;--w:26.667;--h:80;--ord:1;--z:1;--c:var(--text);--fs:44;--fw:700;--lh:1.1}

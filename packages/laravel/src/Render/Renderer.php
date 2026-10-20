@@ -303,6 +303,7 @@ final class Renderer
         }
 
         $video = $type === 'video' ? ($background['video'] ?? null) : null;
+        $parallax = ($background['parallax'] ?? null) === true;
         $backdrop = null;
 
         if ($video !== null) {
@@ -317,8 +318,12 @@ final class Renderer
                 'preload' => 'metadata',
             ]);
         } elseif ($image !== null) {
-            $img = Html::h('img', ['class' => 'lz-bg', 'src' => $image->url, 'alt' => '', 'decoding' => 'async']);
-            $backdrop = ($background['parallax'] ?? null) === true ? Html::h('div', ['class' => 'lz-parallax'], [$img]) : $img;
+            $backdrop = Html::h('img', ['class' => 'lz-bg', 'src' => $image->url, 'alt' => '', 'decoding' => 'async']);
+        }
+
+        // A background that stays put while the section scrolls over it.
+        if ($backdrop !== null && $parallax) {
+            $backdrop = Html::h('div', ['class' => 'lz-parallax'], [$backdrop]);
         }
 
         return Html::h('section', [

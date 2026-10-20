@@ -84,13 +84,31 @@ export const stylesheet = [
         + `.lz-el[data-${an.type.attr}=left]{--_anim:translateX(-32px)}`
         + `.lz-el[data-${an.type.attr}=right]{--_anim:translateX(32px)}`
         + `.lz-el[data-${an.type.attr}=zoom]{--_anim:scale(.94)}`
+        + `.lz-el[data-${an.type.attr}=blur]{filter:blur(${u('10')});transition-property:opacity,transform,filter}`
+        + `.lz-el[data-${an.type.attr}=reveal]{clip-path:inset(0 100% 0 0);transition-property:opacity,transform,clip-path}`
+        + `.lz-el[data-${an.type.attr}=blur].is-in{filter:none}`
+        + `.lz-el[data-${an.type.attr}=reveal].is-in{clip-path:inset(0)}`
         + `.lz-el[data-${an.type.attr}].is-in{opacity:var(${v(t.opacity)},1);--_anim:initial}}`,
     `@media (scripting:none){.lz-el[data-${an.type.attr}]{opacity:var(${v(t.opacity)},1)!important;--_anim:initial!important}}`,
     `.lz-el[data-${t.hover.attr}]{transition:transform .25s ease,box-shadow .25s ease,opacity .25s ease}`,
     '@media (hover:hover){'
         + `.lz-el[data-${t.hover.attr}=lift]:hover{transform:var(--_rot,) var(--_flip,) translateY(${u('-6')});box-shadow:0 18px 40px rgba(15,23,42,.18)}`
         + `.lz-el[data-${t.hover.attr}=grow]:hover{transform:var(--_rot,) var(--_flip,) scale(1.04)}`
-        + `.lz-el[data-${t.hover.attr}=fade]:hover{opacity:.82}}`,
+        + `.lz-el[data-${t.hover.attr}=fade]:hover{opacity:.82}`
+        + `.lz-el[data-${t.hover.attr}=sink]:hover{transform:var(--_rot,) var(--_flip,) translateY(${u('4')}) scale(.98)}`
+        + `.lz-el[data-${t.hover.attr}=tilt]:hover{transform:var(--_rot,) var(--_flip,) perspective(600px) rotateX(6deg) rotateY(-6deg)}`
+        + `.lz-el[data-${t.hover.attr}=glow]:hover{box-shadow:0 0 0 ${u('2')} color-mix(in srgb,var(--primary) 55%,transparent),0 18px 44px color-mix(in srgb,var(--primary) 28%,transparent)}}`,
+
+    /* Scroll-driven motion: the element moves while it crosses the screen. Browsers without
+       a view timeline simply show it still, which is the same page without the flourish. */
+    '@keyframes lz-rise{from{translate:0 7cqh}to{translate:0 -7cqh}}',
+    '@keyframes lz-drift{from{translate:-4cqw 0}to{translate:4cqw 0}}',
+    '@keyframes lz-zoom{from{scale:1}to{scale:1.12}}',
+    '@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){'
+        + `.lz-el[data-${t.scroll.attr}]{animation:linear both;animation-timeline:view();animation-range:entry 0% exit 100%}`
+        + `.lz-el[data-${t.scroll.attr}=rise]{animation-name:lz-rise}`
+        + `.lz-el[data-${t.scroll.attr}=drift]{animation-name:lz-drift}`
+        + `.lz-el[data-${t.scroll.attr}=zoom]{animation-name:lz-zoom}}}`,
 
     `img.lz-el{object-fit:cover}`,
     `img.lz-el[data-${t.object_fit.attr}=contain]{object-fit:contain}`,
@@ -125,6 +143,12 @@ export const stylesheet = [
     '.lz-navbar[data-template=divided] .lz-navbar-links{gap:0}',
     `.lz-navbar[data-template=divided] .lz-navbar-links a{padding:0 ${u('18')};border-left:${u('1')} solid color-mix(in srgb,currentColor 20%,transparent)}`,
     '.lz-navbar[data-template=divided] .lz-navbar-links a:first-child{border-left:0}',
+    `.lz-navbar[data-template=floating]{width:calc(100% - ${u('48')});margin:${u('14')} auto;border-radius:${u('14')};`
+        + `padding:0 ${u('24')};background:var(${v(t.background)},var(--surface));box-shadow:0 14px 38px rgba(15,23,42,.16)}`,
+    `.lz-navbar[data-template=boxed] .lz-navbar-links a{padding:${u('8')} ${u('14')};border:${u('1')} solid color-mix(in srgb,currentColor 22%,transparent);border-radius:${u('6')}}`,
+    '.lz-navbar[data-template=boxed] .lz-navbar-links a:hover{opacity:1;background:color-mix(in srgb,currentColor 10%,transparent)}',
+    `.lz-navbar[data-template=tracked] .lz-navbar-links{gap:${u('30')}}`,
+    '.lz-navbar[data-template=tracked] .lz-navbar-links a{text-transform:uppercase;letter-spacing:.14em;font-size:.82em}',
     `.lz-navbar-links{display:flex;align-items:center;gap:${u('22')};margin-left:auto}`,
     '.lz-navbar[data-layout=left] .lz-navbar-links,.lz-navbar[data-layout=center] .lz-navbar-links{margin-left:0}',
     '.lz-navbar[data-layout=center]{justify-content:center}',

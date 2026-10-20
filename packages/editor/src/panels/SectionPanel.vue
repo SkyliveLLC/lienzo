@@ -132,7 +132,7 @@ function setImage(image: string | null | undefined) {
                 @update:model-value="setImage"
                 @commit="editor.commit()"
             />
-            <Toggle v-if="section.background.type === 'image'" v-model="section.background.parallax" :label="t('section.parallax')" @commit="editor.commit()" />
+            <Toggle v-model="section.background.parallax" :label="t('section.parallax')" @commit="editor.commit()" />
             <RangeInput
                 v-model="section.background.overlay"
                 :label="t('section.overlay')"

@@ -812,6 +812,48 @@
               }
             }
           ]
+        },
+        {
+          "id": "video-parallax",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "video",
+            "image": "media:1",
+            "video": "https://media.example.com/taller.mp4",
+            "overlay": 0.3,
+            "parallax": true
+          },
+          "elements": [
+            {
+              "id": "video-parallax-texto",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Fondo token",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
         }
       ]
     },

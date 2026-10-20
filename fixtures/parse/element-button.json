@@ -5,7 +5,7 @@
         {
           "id": "variantes",
           "height": {
-            "desktop": 248,
+            "desktop": 336,
             "mobile": 560
           },
           "background": {
@@ -163,6 +163,117 @@
                 "radius": 12,
                 "border_width": 2,
                 "border_color": "primary"
+              }
+            },
+            {
+              "id": "efecto-0",
+              "type": "button",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 216,
+                  "w": 24,
+                  "h": 52
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Efecto 1",
+                "action": {
+                  "type": "whatsapp",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 12,
+                "hover": "tilt",
+                "scroll": "rise",
+                "animation": {
+                  "type": "blur",
+                  "delay": 0.1,
+                  "duration": 0.6
+                }
+              }
+            },
+            {
+              "id": "efecto-1",
+              "type": "button",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 36,
+                  "y": 216,
+                  "w": 24,
+                  "h": 52
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Efecto 2",
+                "action": {
+                  "type": "whatsapp",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 12,
+                "hover": "glow",
+                "scroll": "drift",
+                "animation": {
+                  "type": "reveal",
+                  "delay": 0.1,
+                  "duration": 0.6
+                }
+              }
+            },
+            {
+              "id": "efecto-2",
+              "type": "button",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 66,
+                  "y": 216,
+                  "w": 24,
+                  "h": 52
+                },
+                "mobile": null
+              },
+              "props": {
+                "label": "Efecto 3",
+                "action": {
+                  "type": "whatsapp",
+                  "value": ""
+                }
+              },
+              "style": {
+                "color": "background",
+                "background": "primary",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "align": "center",
+                "radius": 12,
+                "hover": "sink",
+                "scroll": "zoom",
+                "animation": {
+                  "type": "fade",
+                  "delay": 0.1,
+                  "duration": 0.6
+                }
               }
             }
           ]

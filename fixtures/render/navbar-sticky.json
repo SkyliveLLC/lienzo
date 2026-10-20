@@ -53,7 +53,7 @@
               ],
               "sticky": true,
               "scroll_style": "same",
-              "template": "pill"
+              "template": "floating"
             },
             "style": {
               "background": "surface",
@@ -145,7 +145,7 @@
               ],
               "sticky": true,
               "scroll_style": "shadow",
-              "template": "card"
+              "template": "boxed"
             },
             "style": {
               "background": "surface",
@@ -237,7 +237,7 @@
               ],
               "sticky": true,
               "scroll_style": "solid",
-              "template": "underline"
+              "template": "tracked"
             },
             "style": {
               "background": "surface",

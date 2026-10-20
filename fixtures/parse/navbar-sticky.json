@@ -31,7 +31,7 @@
                 "scroll_style": "same",
                 "brand": "Fijo same",
                 "layout": "split",
-                "template": "pill",
+                "template": "floating",
                 "links": [
                   {
                     "label": "Servicios",
@@ -123,7 +123,7 @@
                 "scroll_style": "shadow",
                 "brand": "Fijo shadow",
                 "layout": "split",
-                "template": "card",
+                "template": "boxed",
                 "links": [
                   {
                     "label": "Servicios",
@@ -215,7 +215,7 @@
                 "scroll_style": "solid",
                 "brand": "Fijo solid",
                 "layout": "split",
-                "template": "underline",
+                "template": "tracked",
                 "links": [
                   {
                     "label": "Servicios",
