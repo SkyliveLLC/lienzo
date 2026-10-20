@@ -46,14 +46,18 @@ jobs:
             if npm view "$name@$version" version > /dev/null 2>&1; then
               echo "$name@$version is already on npm"; continue
             fi
+            # From inside the package: a workspace filter has published nothing
+            # and still exited 0, which is how the two drifted apart.
             for attempt in 1 2 3; do
-              if pnpm --filter "$name" publish --access public --no-git-checks --provenance; then
-                published=yes; break
-              fi
-              echo "publish of $name failed, retrying in 15s"; sleep 15
+              (cd "packages/$package" && pnpm publish --access public --no-git-checks --provenance) || true
+              for wait in $(seq 1 10); do
+                npm view "$name@$version" version > /dev/null 2>&1 && break 2
+                sleep 6
+              done
+              echo "$name@$version is not on npm yet, trying again"
             done
-            test "$published" = yes || { echo "could not publish $name@$version"; exit 1; }
-            unset published
+            npm view "$name@$version" version > /dev/null 2>&1 \
+              || { echo "::error::$name@$version never reached npm"; exit 1; }
           done
       # Fails the release if npm stored a package without its provenance attestation.
       - name: Check provenance was attached
