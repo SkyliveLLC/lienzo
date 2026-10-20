@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.10.0 (2026-10-20)
+
+### Editor
+
+- A gallery element: pictures from the library or by address, shown as a grid of one to six columns or as a strip that scrolls sideways and snaps. A picture whose upload is gone is skipped instead of leaving a broken frame.
+
 ## 0.9.1 (2026-10-20)
 
 ### Release

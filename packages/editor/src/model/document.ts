@@ -10,7 +10,8 @@ export const MOBILE_WIDTH = 390;
 export type Canvas = Section | Modal;
 
 export const CORE_TYPES = [
-    'heading', 'text', 'image', 'button', 'divider', 'video', 'shape', 'icon', 'navbar', 'input', 'textarea', 'select', 'checkbox',
+    'heading', 'text', 'image', 'button', 'divider', 'video', 'shape', 'icon', 'navbar', 'gallery',
+    'input', 'textarea', 'select', 'checkbox',
 ] as const satisfies readonly CoreElementType[];
 
 const coreTypes: ReadonlySet<string> = new Set(CORE_TYPES);

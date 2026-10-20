@@ -134,6 +134,15 @@ export const stylesheet = [
         + `.lz-el[data-${t.scroll.attr}=zoom]{animation-name:lz-zoom}}}`,
 
     `img.lz-el{object-fit:cover}`,
+    /* A gallery: a grid that wraps, or a strip that scrolls sideways and snaps. */
+    `.lz-gallery{display:grid;gap:${u('14')};width:100%;height:100%;overflow:auto}`,
+    '.lz-gallery[data-layout=grid]{grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));align-content:start}',
+    ...[1, 2, 3, 4, 5, 6].map((n) => `.lz-gallery[data-cols="${n}"]{--cols:${n}}`),
+    '.lz-gallery[data-layout=strip]{grid-auto-flow:column;grid-auto-columns:minmax(42%,1fr);grid-template-columns:none;'
+        + 'overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain}',
+    '.lz-gallery[data-layout=strip] .lz-gallery-item{scroll-snap-align:start}',
+    `.lz-gallery-item{width:100%;height:100%;min-height:0;object-fit:cover;border-radius:${u(`var(${v(t.radius)})`)}}`,
+    '.lz-gallery[data-layout=grid] .lz-gallery-item{aspect-ratio:4 / 3;height:auto}',
     `img.lz-el[data-${t.object_fit.attr}=contain]{object-fit:contain}`,
     'a.lz-el,button.lz-el{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}',
     // Chrome's own button padding, kept when the document sets none.

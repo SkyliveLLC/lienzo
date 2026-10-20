@@ -1415,6 +1415,35 @@
             }
           ]
         },
+        "images": {
+          "anyOf": [
+            {
+              "maxItems": 24,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 500,
+                "pattern": "^(https:\\/\\/[^\\s\"'<>]+|media:[0-9]+)$"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "columns": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 6
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
         "multiple": {
           "x-blank-as-null": true,
           "type": [
@@ -1440,7 +1469,9 @@
               "enum": [
                 "split",
                 "left",
-                "center"
+                "center",
+                "grid",
+                "strip"
               ]
             },
             {

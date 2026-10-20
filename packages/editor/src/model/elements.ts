@@ -84,6 +84,10 @@ export const coreSpecs = {
         label: 'type.navbar', group: 'content', styles: ALL, inline: null,
         create: (t) => ({ box: { x: 0, w: 100, h: 72 }, ...navbarPresets(t)[0]! }),
     },
+    gallery: {
+        label: 'type.gallery', group: 'content', styles: ALL, inline: null,
+        create: () => ({ box: { x: 6, w: 88, h: 320 }, props: { images: [], layout: 'grid', columns: 3 }, style: { radius: 8 } }),
+    },
     input: { label: 'type.input', group: 'form', styles: ALL, inline: null, create: field('input') },
     textarea: { label: 'type.textarea', group: 'form', styles: ALL, inline: null, create: field('textarea') },
     select: { label: 'type.select', group: 'form', styles: ALL, inline: null, create: field('select') },

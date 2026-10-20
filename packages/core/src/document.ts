@@ -7,7 +7,7 @@ export type ThemeToken = (typeof THEME_TOKENS)[number];
 
 export const CORE_ELEMENT_TYPES = [
     'heading', 'text', 'image', 'button', 'divider', 'video', 'shape', 'icon',
-    'navbar', 'input', 'textarea', 'select', 'checkbox',
+    'navbar', 'gallery', 'input', 'textarea', 'select', 'checkbox',
 ] as const;
 export type CoreElementType = (typeof CORE_ELEMENT_TYPES)[number];
 
@@ -142,9 +142,12 @@ export const corePropsSchema = object({
     required: optional(z.boolean()),
     input_type: optional(z.enum(['text', 'email', 'tel', 'number', 'date'])),
     options: list(z.array(z.string().min(1).max(120)).max(30)).nullish(),
+    /** The pictures of a gallery, in the order they are shown. */
+    images: list(z.array(image).max(24)).nullish(),
+    columns: optional(intBetween(1, 6)),
     multiple: optional(z.boolean()),
     brand: z.string().max(60).nullish(),
-    layout: optional(z.enum(['split', 'left', 'center'])),
+    layout: optional(z.enum(['split', 'left', 'center', 'grid', 'strip'])),
     template: optional(z.enum(['plain', 'pill', 'card', 'underline', 'divided', 'floating', 'boxed', 'tracked'])),
     links: list(z.array(object({
         label: z.string().min(1).max(40),

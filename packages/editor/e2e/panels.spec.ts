@@ -204,3 +204,33 @@ test('a section can lay itself out, and then nothing is dragged in it', async ({
     await editor.drag(await editor.center(heading), { x: 120, y: 60 });
     expect(await editor.draft()).toEqual(before);
 });
+
+test('a gallery takes pictures from the library and shows them in a row', async ({ editor, page }) => {
+    await page.locator('.lze-palette-item', { hasText: /^Gallery$/ }).click();
+
+    const panel = page.locator('.lze-right');
+
+    for (const [index, address] of ['https://images.example.com/una.jpg', 'https://images.example.com/otra.jpg'].entries()) {
+        await panel.getByRole('button', { name: 'Add a picture' }).click();
+
+        const slot = panel.getByRole('group', { name: `Picture ${index + 1}` }).getByLabel('or paste an https:// address');
+
+        await slot.fill(address);
+        await slot.blur();
+    }
+    await editor.waitForSave();
+
+    const gallery = editor.canvas.locator('div.lz-gallery').first();
+
+    await expect(gallery.locator('img.lz-gallery-item')).toHaveCount(2);
+    await expect(gallery).toHaveAttribute('data-layout', 'grid');
+
+    await panel.getByLabel('Shown as').selectOption({ label: 'Strip that scrolls' });
+    await expect(gallery).toHaveAttribute('data-layout', 'strip');
+    await editor.waitForSave();
+
+    const element = (await editor.draft()).sections[0]!.elements.find((item) => item.type === 'gallery');
+
+    expect(element?.props.images).toEqual(['https://images.example.com/una.jpg', 'https://images.example.com/otra.jpg']);
+    expect(element?.props.layout).toBe('strip');
+});

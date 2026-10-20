@@ -4,7 +4,7 @@
       {
         "id": "variantes",
         "height": {
-          "desktop": 1248,
+          "desktop": 1816,
           "mobile": 560
         },
         "background": {
@@ -232,6 +232,59 @@
             "style": {
               "radius": 16,
               "object_fit": "cover"
+            }
+          },
+          {
+            "id": "galeria-grid",
+            "type": "gallery",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 6,
+                "y": 1216,
+                "w": 88,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "images": [
+                "media:1",
+                "media:2",
+                "https://images.example.com/hero.jpg"
+              ],
+              "layout": "grid",
+              "columns": 3,
+              "alt": "Piezas del taller"
+            },
+            "style": {
+              "radius": 10
+            }
+          },
+          {
+            "id": "galeria-strip",
+            "type": "gallery",
+            "z": 1,
+            "layout": {
+              "desktop": {
+                "x": 6,
+                "y": 1496,
+                "w": 88,
+                "h": 240
+              },
+              "mobile": null
+            },
+            "props": {
+              "images": [
+                "media:1",
+                "media:99"
+              ],
+              "layout": "strip",
+              "columns": 3,
+              "alt": "Piezas del taller"
+            },
+            "style": {
+              "radius": 10
             }
           }
         ]
