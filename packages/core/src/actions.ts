@@ -32,7 +32,8 @@ export const coreActions = {
     phone: { kind: 'link', prefix: 'tel:', keep: '0-9+' },
     email: { kind: 'link', prefix: 'mailto:' },
     url: { kind: 'link', prefix: '', requires: 'https://' },
-    anchor: { kind: 'link', prefix: '#', keep: 'a-zA-Z0-9_-' },
+    // Las secciones se renderizan con el id `s-<id>`, así que el ancla lo lleva.
+    anchor: { kind: 'link', prefix: '#s-', keep: 'a-zA-Z0-9_-' },
     page: { kind: 'link', prefix: '/', keep: 'a-z0-9-', lower: true, trim: '-', base: true },
     modal: { kind: 'behavior', attr: 'modal', value: 'id' },
     top: { kind: 'behavior', attr: 'top', value: null },

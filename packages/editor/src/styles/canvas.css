@@ -100,6 +100,16 @@
 .lze-guide[data-axis='x'] { width: var(--line); }
 .lze-guide[data-axis='y'] { height: var(--line); }
 .lze-badge { transform: translateY(-100%) scale(var(--inv)); transform-origin: 0 100%; margin-top: -4px; padding: 2px 6px; border-radius: 4px; background: var(--lze-select); color: #fff; font-size: 11px; font-weight: 600; white-space: nowrap; }
+/* El control del borde entre secciones: discreto, y claro al pasar por encima. */
+.lze-edge {
+    position: absolute; z-index: 6; display: flex; gap: 4px; padding: 3px;
+    transform: scale(var(--inv)) translate(-50%, -50%); transform-origin: 0 0;
+    border: 1px solid var(--lze-border); border-radius: 999px; background: var(--lze-surface);
+    box-shadow: 0 6px 18px rgb(15 23 42 / .14); pointer-events: auto; opacity: .22; transition: opacity .15s ease;
+}
+
+.lze-edge:hover, .lze-edge:focus-within { opacity: 1; }
+
 .lze-stacked {
     display: flex; align-items: center; gap: 8px; justify-content: space-between; padding: 6px 8px; pointer-events: auto;
     transform: scale(var(--inv)); transform-origin: 0 0; width: auto !important; max-width: none;

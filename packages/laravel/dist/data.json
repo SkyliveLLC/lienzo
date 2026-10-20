@@ -247,7 +247,7 @@
     },
     "anchor": {
       "kind": "link",
-      "prefix": "#",
+      "prefix": "#s-",
       "keep": "a-zA-Z0-9_-"
     },
     "page": {

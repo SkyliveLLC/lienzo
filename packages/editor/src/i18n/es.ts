@@ -164,6 +164,7 @@ export const es: Messages = {
     'modal.background': 'Color de fondo',
 
     'section.heading': 'Sección',
+    'section.addAfter': 'Agregar una sección debajo',
     'section.delete': 'Eliminar sección',
     'section.shownAs': 'Se muestra como',
     'section.alone': 'Sección normal',

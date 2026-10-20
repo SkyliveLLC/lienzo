@@ -2,6 +2,16 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.3.0 (2026-10-19)
+
+### Rendering
+
+- A link to a section now reaches it. The anchor action pointed at `#<id>` while sections render as `#s-<id>`, so every menu link did nothing. Pages keep the section identifiers they already have; only the links change.
+
+### Editor
+
+- The edge between two sections carries a floating control: add a section right below that one, or delete it, without leaving the canvas.
+
 ## 0.2.0 (2026-10-05)
 
 ### Editor

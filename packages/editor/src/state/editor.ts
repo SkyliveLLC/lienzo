@@ -747,8 +747,16 @@ export function createEditor({ client, i18n }: EditorDeps) {
         commit();
     }
 
-    function addSection(section: Section = emptySection()) {
-        state.draft.sections.push(section);
+    /** `after` inserta la nueva sección justo debajo de esa; sin él, al final. */
+    function addSection(section: Section = emptySection(), after?: string) {
+        const at = after === undefined ? -1 : state.draft.sections.findIndex((item) => item.id === after);
+
+        if (at === -1) {
+            state.draft.sections.push(section);
+        } else {
+            state.draft.sections.splice(at + 1, 0, section);
+        }
+
         state.view = { kind: 'page' };
         state.selection = { kind: 'canvas', canvas: section.id };
         commit();

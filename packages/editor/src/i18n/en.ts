@@ -177,6 +177,7 @@ export const en = {
 
     // Section settings
     'section.heading': 'Section',
+    'section.addAfter': 'Add a section below',
     'section.delete': 'Delete section',
     'section.shownAs': 'Shown as',
     'section.alone': 'Regular section',

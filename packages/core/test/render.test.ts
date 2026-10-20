@@ -90,7 +90,7 @@ describe('actions', () => {
         ['whatsapp', '+57 300 111', { href: 'https://wa.me/57300111', target: '_blank', rel: 'noopener noreferrer' }],
         ['phone', '+57 (300) 111', { href: 'tel:+57300111' }],
         ['page', '--Sobre Nosotros!', { href: '/site/sobrenosotros' }],
-        ['anchor', 'con tacto', { href: '#contacto' }],
+        ['anchor', 'con tacto', { href: '#s-contacto' }],
         ['url', 'http://insecure.test', null],
         ['modal', 'pro mo', { href: '#', 'data-modal': 'promo' }],
         ['modal', '', null],

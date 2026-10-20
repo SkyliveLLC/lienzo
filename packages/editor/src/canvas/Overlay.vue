@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowDownToLine, ArrowUpToLine, Copy, Lock, RotateCw, Trash2 } from '@lucide/vue';
+import { ArrowDownToLine, ArrowUpToLine, Copy, Lock, Plus, RotateCw, Trash2 } from '@lucide/vue';
 import { computed } from 'vue';
 import { HANDLES, type Guides, type Handle } from '../model/geometry.ts';
 import { useEditor } from '../state/editor.ts';
@@ -86,6 +86,16 @@ const stacked = computed(() => [...props.frozen].flatMap((id) => {
     return metrics ? [{ id, rect: metrics.outer }] : [];
 }));
 
+/**
+ * El borde de cada sección de la página: ahí aparece el control para meter
+ * otra debajo o quitar esta. No se dibuja dentro de una ventana.
+ */
+const edges = computed(() => (editor.activeModal.value ? [] : editor.state.draft.sections.flatMap((section) => {
+    const metrics = props.layout.canvases.get(section.id);
+
+    return metrics ? [{ id: section.id, rect: metrics.outer }] : [];
+})));
+
 const place = (rect: Rect) => ({ left: `${rect.x}px`, top: `${rect.y}px`, width: `${rect.w}px`, height: `${rect.h}px` });
 </script>
 
@@ -100,6 +110,29 @@ const place = (rect: Rect) => ({ left: `${rect.x}px`, top: `${rect.y}px`, width:
         <div v-for="item in stacked" :key="item.id" class="lze-stacked" :style="{ left: `${item.rect.x}px`, top: `${item.rect.y}px` }">
             <span>{{ t('canvas.stacked') }}</span>
             <button type="button" class="lze-btn" @pointerdown.stop @click="emit('generateMobile', item.id)">{{ t('section.generateMobile') }}</button>
+        </div>
+
+        <div
+            v-for="edge in edges"
+            :key="`edge-${edge.id}`"
+            class="lze-edge"
+            :style="{ left: `${edge.rect.x + edge.rect.w / 2}px`, top: `${edge.rect.y + edge.rect.h}px` }"
+            @pointerdown.stop
+        >
+            <button type="button" class="lze-icon-btn" :title="t('section.addAfter')" :aria-label="t('section.addAfter')" @click="editor.addSection(undefined, edge.id)">
+                <Plus :size="15" aria-hidden="true" />
+            </button>
+            <button
+                v-if="editor.state.draft.sections.length > 1"
+                type="button"
+                class="lze-icon-btn"
+                data-tone="danger"
+                :title="t('section.delete')"
+                :aria-label="t('section.delete')"
+                @click="editor.removeSection(edge.id)"
+            >
+                <Trash2 :size="15" aria-hidden="true" />
+            </button>
         </div>
 
         <template v-if="guides && guideFrame">

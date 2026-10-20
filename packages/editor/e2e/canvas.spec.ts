@@ -191,3 +191,21 @@ test('right-clicking a selection opens the menu that groups and deletes', async 
     await editor.waitForSave();
     await expect(editor.canvas.locator('h1.lz-el')).toHaveCount(0);
 });
+
+test('adds a section right below another, and deletes one, from the edge between them', async ({ editor, page }) => {
+    const before = (await editor.draft()).sections.map((section) => section.id);
+    const edges = page.locator('.lze-edge');
+
+    await expect(edges).toHaveCount(before.length);
+    await edges.nth(1).getByRole('button', { name: 'Add a section below' }).click();
+    await editor.waitForSave();
+
+    const added = (await editor.draft()).sections.map((section) => section.id);
+    expect(added).toHaveLength(before.length + 1);
+    expect(added.slice(0, 2)).toEqual(before.slice(0, 2));
+    expect(added.slice(3)).toEqual(before.slice(2));
+
+    await page.locator('.lze-edge').nth(2).getByRole('button', { name: 'Delete section' }).click();
+    await editor.waitForSave();
+    expect((await editor.draft()).sections.map((section) => section.id)).toEqual(before);
+});
