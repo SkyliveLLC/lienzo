@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Section } from '@skylivellc/lienzo-core';
 import { Trash2 } from '@lucide/vue';
-import { ref, useId, watch } from 'vue';
+import { computed, ref, useId, watch } from 'vue';
 import { findCanvas } from '../model/document.ts';
 import { useEditor } from '../state/editor.ts';
 import Button from '../ui/Button.vue';
@@ -20,13 +20,16 @@ import GradientEditor from './GradientEditor.vue';
 const props = defineProps<{ section: Section }>();
 const editor = useEditor();
 const t = editor.t;
-const ids = { group: useId(), label: useId(), anchor: useId(), background: useId(), video: useId() };
+const ids = { group: useId(), label: useId(), anchor: useId(), background: useId(), video: useId(), flow: useId() };
 
 const groupModes = [
     { value: 'alone', label: t('section.alone') },
     { value: 'tabs', label: t('section.tab') },
     { value: 'steps', label: t('section.step') },
 ] as const;
+const flows = (['free', 'column', 'row'] as const).map((value) => ({ value, label: t(`section.flow.${value}`) }));
+const aligns = (['start', 'center', 'end', 'between'] as const).map((value) => ({ value, label: t(`section.align.${value}`) }));
+const flowing = computed(() => (props.section.flow ?? 'free') !== 'free');
 const backgrounds = (['color', 'gradient', 'image', 'video'] as const).map((value) => ({ value, label: t(`fill.${value}`) }));
 
 /**
@@ -113,6 +116,21 @@ function setImage(image: string | null | undefined) {
                 @update:model-value="section.height.mobile = $event ?? section.height.mobile"
                 @commit="editor.commit()"
             />
+        </div>
+        <Field :id="ids.flow" :label="t('section.flow')" :hint="t('section.flowHint')">
+            <SelectInput :id="ids.flow" :model-value="section.flow ?? 'free'" :options="flows" @update:model-value="section.flow = $event" @commit="editor.commit()" />
+        </Field>
+        <div v-if="flowing" class="lze-grid-2">
+            <NumberInput
+                :model-value="section.flow_gap ?? 24"
+                :label="t('section.flowGap')"
+                :min="0"
+                :max="160"
+                suffix="px"
+                @update:model-value="section.flow_gap = $event ?? 24"
+                @commit="editor.commit()"
+            />
+            <SelectInput :model-value="section.flow_align ?? 'start'" :options="aligns" :label="t('section.flowAlign')" @update:model-value="section.flow_align = $event" @commit="editor.commit()" />
         </div>
         <Toggle v-model="section.wide" :label="t('section.wide')" @commit="editor.commit()" />
         <p class="lze-hint">{{ t('section.wideHint') }}</p>

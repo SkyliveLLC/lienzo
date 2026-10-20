@@ -690,6 +690,90 @@
               }
             }
           ]
+        },
+        {
+          "id": "flujo-column",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "flow": "column",
+          "flow_gap": 32,
+          "flow_align": "center",
+          "elements": [
+            {
+              "id": "flujo-column-0",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Antes de los grupos",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
+        },
+        {
+          "id": "flujo-row",
+          "height": {
+            "desktop": 192,
+            "mobile": 560
+          },
+          "background": {
+            "type": "color",
+            "color": "background"
+          },
+          "flow": "row",
+          "flow_gap": 18,
+          "flow_align": "between",
+          "elements": [
+            {
+              "id": "flujo-row-0",
+              "type": "heading",
+              "z": 1,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 40,
+                  "w": 26.666666666666668,
+                  "h": 80
+                },
+                "mobile": null
+              },
+              "props": {
+                "text": "Antes de los grupos",
+                "level": 2
+              },
+              "style": {
+                "color": "text",
+                "font": "heading",
+                "size": 44,
+                "weight": 700,
+                "align": "left",
+                "line_height": 1.1
+              }
+            }
+          ]
         }
       ]
     },

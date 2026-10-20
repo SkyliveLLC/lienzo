@@ -243,6 +243,10 @@ async function renderSection(section: Section, state: State, wrap: 'form' | 'div
     const gradient = background.type === 'gradient' && background.gradient?.from && background.gradient.to ? background.gradient : null;
     const vars: Vars = [['fh', num(section.height.desktop)], ['fmh', num(section.height.mobile)]];
 
+    if (flowOf(section) !== null) {
+        vars.push(['fg', num(section.flow_gap ?? 24)]);
+    }
+
     if (gradient) {
         vars.push(['sg1', cssColor(gradient.from ?? '')], ['sg2', cssColor(gradient.to ?? '')]);
         if (gradient.angle !== null && gradient.angle !== undefined) {
@@ -285,7 +289,12 @@ async function renderSection(section: Section, state: State, wrap: 'form' | 'div
         }), parallax),
         video === null && image && backdrop(h('img', { class: 'lz-bg', src: image.url, alt: '', decoding: 'async' }), parallax),
         overlay > 0 && h('div', { class: 'lz-overlay' }),
-        h('div', { class: 'lz-frame', 'data-stack': stacks(section) }, [
+        h('div', {
+            class: 'lz-frame',
+            'data-stack': stacks(section),
+            'data-flow': flowOf(section),
+            'data-flow-align': flowOf(section) === null ? null : section.flow_align ?? 'start',
+        }, [
             wrap === 'form' ? form({}, section.id, state, spaced) : wrap === 'div' ? h('div', {}, spaced) : fragment(elements),
         ]),
     ]);
@@ -340,8 +349,12 @@ function form(attrs: Attrs, source: string, state: State, children: readonly Chi
     ]);
 }
 
+/** The layout a section runs on its own, or null when its elements keep their own places. */
+export const flowOf = (canvas: Section | Modal): 'column' | 'row' | null =>
+    ('flow' in canvas && canvas.flow && canvas.flow !== 'free' ? canvas.flow : null);
+
 async function renderCanvas(canvas: Section | Modal, state: State): Promise<TrustedHtml[]> {
-    const stacked = stacks(canvas);
+    const stacked = stacks(canvas) || flowOf(canvas) !== null;
     const order = stacked ? stackOrder(canvas.elements) : null;
     const live = isForm(canvas) && state.input.host.form !== null ? state.input.host.form : null;
     const context = elementContext(state, live);

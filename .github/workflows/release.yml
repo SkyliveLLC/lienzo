@@ -33,16 +33,35 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm test
       - run: pnpm build
-      - run: pnpm -r --filter './packages/*' publish --access public --no-git-checks --provenance
+      # One package at a time: a recursive publish hides which one failed, and
+      # has left the two packages on different versions more than once. npm
+      # answers 409 when a version is already there, which is not a failure.
+      - name: Publish each package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          for package in core editor; do
+            name="@skylivellc/lienzo-$package"
+            if npm view "$name@$version" version > /dev/null 2>&1; then
+              echo "$name@$version is already on npm"; continue
+            fi
+            for attempt in 1 2 3; do
+              if pnpm --filter "$name" publish --access public --no-git-checks --provenance; then
+                published=yes; break
+              fi
+              echo "publish of $name failed, retrying in 15s"; sleep 15
+            done
+            test "$published" = yes || { echo "could not publish $name@$version"; exit 1; }
+            unset published
+          done
       # Fails the release if npm stored a package without its provenance attestation.
       - name: Check provenance was attached
         run: |
           version="${GITHUB_REF_NAME#v}"
           for package in core editor; do
             url="https://registry.npmjs.org/-/npm/v1/attestations/@skylivellc%2flienzo-$package@$version"
-            for attempt in 1 2 3 4 5 6; do
+            for attempt in $(seq 1 18); do
               curl -sf "$url" > /dev/null && continue 2
               sleep 10
             done

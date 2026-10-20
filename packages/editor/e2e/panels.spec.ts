@@ -173,3 +173,34 @@ test('a style change with several selected reaches all of them', async ({ editor
     expect(layered.find((element) => element.type === 'heading')!.z).toBeGreaterThan(top);
     expect(layered.find((element) => element.type === 'text')!.z).toBeGreaterThan(top);
 });
+
+test('a section can lay itself out, and then nothing is dragged in it', async ({ editor, page }) => {
+    const panel = page.locator('.lze-right');
+
+    await editor.canvas.locator('section.lz-section').first().click({ position: { x: 4, y: 4 } });
+    await panel.getByLabel('Lay it out').selectOption({ label: 'Side by side' });
+
+    const gap = panel.getByRole('spinbutton', { name: /^Space between/ });
+
+    await gap.fill('40');
+    await gap.blur();
+    await editor.waitForSave();
+
+    const section = (await editor.draft()).sections[0]!;
+
+    expect(section.flow).toBe('row');
+    expect(section.flow_gap).toBe(40);
+
+    const frame = editor.canvas.locator('section.lz-section').first().locator('.lz-frame');
+
+    await expect(frame).toHaveAttribute('data-flow', 'row');
+    await expect(frame).toHaveCSS('flex-direction', 'row');
+
+    // The canvas says so, and a drag inside it changes nothing.
+    await expect(page.locator('.lze-stacked')).toBeVisible();
+    const before = await editor.draft();
+    const heading = editor.canvas.locator('h1.lz-el, h2.lz-el').first();
+
+    await editor.drag(await editor.center(heading), { x: 120, y: 60 });
+    expect(await editor.draft()).toEqual(before);
+});

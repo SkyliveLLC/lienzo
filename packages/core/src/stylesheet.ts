@@ -42,6 +42,20 @@ export const stylesheet = [
     '.lz-section[data-wide]>.lz-frame{max-width:none}',
     '.lz-overlay{position:absolute;inset:0;background:rgb(0 0 0 / calc(var(--ov) * 100%))}',
     `.lz-frame{position:relative;height:${u('var(--fh)')}}`,
+    /* A section that lays itself out: its elements flow, and its height follows them. */
+    `.lz-frame[data-flow]{height:auto;min-height:${u('var(--fh)')};display:flex;gap:${u('var(--fg,24)')};`
+        + `padding:${u('56')} ${u('24')};box-sizing:border-box}`,
+    '.lz-frame[data-flow=column]{flex-direction:column}',
+    '.lz-frame[data-flow=row]{flex-direction:row;flex-wrap:wrap;align-items:flex-start}',
+    '.lz-frame[data-flow=column][data-flow-align=center]{align-items:center}',
+    '.lz-frame[data-flow=column][data-flow-align=end]{align-items:flex-end}',
+    '.lz-frame[data-flow=column][data-flow-align=between]{justify-content:space-between}',
+    '.lz-frame[data-flow=row][data-flow-align=center]{justify-content:center}',
+    '.lz-frame[data-flow=row][data-flow-align=end]{justify-content:flex-end}',
+    '.lz-frame[data-flow=row][data-flow-align=between]{justify-content:space-between}',
+    '.lz-frame[data-flow] .lz-el{position:static;order:var(--ord);height:auto;max-width:100%}',
+    '.lz-frame[data-flow=column] .lz-el{width:calc(var(--w) * 1%)}',
+    '.lz-frame[data-flow=row] .lz-el{width:calc(var(--w) * 1%);flex:0 1 auto}',
     '.lz-section>.lz-frame{margin:0 auto;max-width:var(--max-width);container-type:inline-size;--u:calc(min(100cqw,var(--ref) * 1px) / var(--ref))}',
 
     '.lz-el{position:absolute;margin:0;display:block;overflow-wrap:break-word;'

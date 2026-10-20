@@ -274,6 +274,10 @@ final class Renderer
         $gradient = $type === 'gradient' && ($gradient['from'] ?? '') !== '' && ($gradient['to'] ?? '') !== '' ? $gradient : null;
         $vars = [['fh', Html::num($section['height']['desktop'])], ['fmh', Html::num($section['height']['mobile'])]];
 
+        if (Canvas::flow($section) !== null) {
+            $vars[] = ['fg', Html::num($section['flow_gap'] ?? 24)];
+        }
+
         // An image background keeps its old color only as editor state; a deleted image leaves the section bare.
         if ($gradient !== null) {
             $vars[] = ['sg1', Style::color($gradient['from'])];
@@ -334,7 +338,12 @@ final class Renderer
         ], [
             $backdrop,
             $overlay > 0 ? Html::h('div', ['class' => 'lz-overlay']) : null,
-            Html::h('div', ['class' => 'lz-frame', 'data-stack' => Canvas::stacks($section)], [match ($wrap) {
+            Html::h('div', [
+                'class' => 'lz-frame',
+                'data-stack' => Canvas::stacks($section),
+                'data-flow' => Canvas::flow($section),
+                'data-flow-align' => Canvas::flow($section) === null ? null : ($section['flow_align'] ?? 'start'),
+            ], [match ($wrap) {
                 'form' => $this->form([], $section['id'], $spaced),
                 'div' => Html::h('div', [], $spaced),
                 null => Html::fragment($elements),
@@ -400,7 +409,7 @@ final class Renderer
      */
     private function canvas(array $canvas): array
     {
-        $order = Canvas::stacks($canvas) ? Canvas::stackOrder($canvas['elements']) : [];
+        $order = Canvas::stacks($canvas) || Canvas::flow($canvas) !== null ? Canvas::stackOrder($canvas['elements']) : [];
         $live = Canvas::isForm($canvas) ? $this->form : null;
         $appActions = array_column($this->catalog['actions'], 'type');
         $context = new ElementContext(

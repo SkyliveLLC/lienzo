@@ -199,6 +199,52 @@
             "null"
           ]
         },
+        "flow": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "free",
+                "column",
+                "row"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "flow_gap": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 160
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "flow_align": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "start",
+                "center",
+                "end",
+                "between"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
         "elements": {
           "maxItems": 60,
           "type": "array",

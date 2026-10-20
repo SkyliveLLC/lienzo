@@ -97,6 +97,19 @@ final class Canvas
      *
      * @param  array<string, mixed>  $canvas
      */
+    /**
+     * The layout a section runs on its own, or null when its elements keep
+     * their own places.
+     *
+     * @param  array<string, mixed>  $canvas
+     */
+    public static function flow(array $canvas): ?string
+    {
+        $flow = $canvas['flow'] ?? null;
+
+        return $flow === 'column' || $flow === 'row' ? $flow : null;
+    }
+
     public static function stacks(array $canvas): bool
     {
         return array_filter($canvas['elements'], fn (array $element): bool => ($element['layout']['mobile'] ?? null) === null) !== [];

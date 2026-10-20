@@ -203,7 +203,10 @@ function onZoomShortcut(event: KeyboardEvent): boolean {
 }
 
 /** On phones, a canvas where some element has no phone box stacks: its elements cannot be dragged there. */
-const frozen = computed<ReadonlySet<string>>(() => new Set(editor.state.device === 'mobile' ? editor.canvases.value.filter(stacksOnMobile).map((canvas) => canvas.id) : []));
+/** A canvas nobody can drag in: stacked on phones, or laying itself out. */
+const frozen = computed<ReadonlySet<string>>(() => new Set(editor.canvases.value
+    .filter((canvas) => ('flow' in canvas && canvas.flow && canvas.flow !== 'free') || (editor.state.device === 'mobile' && stacksOnMobile(canvas)))
+    .map((canvas) => canvas.id)));
 
 const empty = computed(() => editor.canvases.value.every((canvas) => canvas.elements.length === 0));
 

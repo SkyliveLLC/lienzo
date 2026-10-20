@@ -2,6 +2,16 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.9.0 (2026-10-20)
+
+### Rendering
+
+- A section can lay itself out: its elements go one under the other or side by side, with a space between them and an alignment, and the section grows with what it holds. Nothing is placed by hand there, and nothing overlaps when the text gets longer.
+
+### Release
+
+- The npm packages are published one at a time, with a retry, and a version already on the registry is not an error. Publishing them in one recursive command hid which one failed and left the two on different versions.
+
 ## 0.8.0 (2026-10-20)
 
 ### Rendering

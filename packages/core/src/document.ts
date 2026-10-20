@@ -188,6 +188,10 @@ const sectionSchema = object({
     }),
     /** Edge to edge, instead of inside the theme's width. */
     wide: optional(z.boolean()),
+    /** Lays its elements out on its own, in a column or a row, instead of by hand. */
+    flow: optional(z.enum(['free', 'column', 'row'])),
+    flow_gap: optional(intBetween(0, 160)),
+    flow_align: optional(z.enum(['start', 'center', 'end', 'between'])),
     elements: list(z.array(elementEnvelope).max(60)),
 });
 

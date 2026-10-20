@@ -13,6 +13,18 @@ html:has(.lz-page){scroll-behavior:smooth}
 .lz-section[data-wide]>.lz-frame{max-width:none}
 .lz-overlay{position:absolute;inset:0;background:rgb(0 0 0 / calc(var(--ov) * 100%))}
 .lz-frame{position:relative;height:calc(var(--fh) * var(--u))}
+.lz-frame[data-flow]{height:auto;min-height:calc(var(--fh) * var(--u));display:flex;gap:calc(var(--fg,24) * var(--u));padding:calc(56 * var(--u)) calc(24 * var(--u));box-sizing:border-box}
+.lz-frame[data-flow=column]{flex-direction:column}
+.lz-frame[data-flow=row]{flex-direction:row;flex-wrap:wrap;align-items:flex-start}
+.lz-frame[data-flow=column][data-flow-align=center]{align-items:center}
+.lz-frame[data-flow=column][data-flow-align=end]{align-items:flex-end}
+.lz-frame[data-flow=column][data-flow-align=between]{justify-content:space-between}
+.lz-frame[data-flow=row][data-flow-align=center]{justify-content:center}
+.lz-frame[data-flow=row][data-flow-align=end]{justify-content:flex-end}
+.lz-frame[data-flow=row][data-flow-align=between]{justify-content:space-between}
+.lz-frame[data-flow] .lz-el{position:static;order:var(--ord);height:auto;max-width:100%}
+.lz-frame[data-flow=column] .lz-el{width:calc(var(--w) * 1%)}
+.lz-frame[data-flow=row] .lz-el{width:calc(var(--w) * 1%);flex:0 1 auto}
 .lz-section>.lz-frame{margin:0 auto;max-width:var(--max-width);container-type:inline-size;--u:calc(min(100cqw,var(--ref) * 1px) / var(--ref))}
 .lz-el{position:absolute;margin:0;display:block;overflow-wrap:break-word;left:calc(var(--x) * 1%);top:calc(var(--y) * var(--u));width:calc(var(--w) * 1%);height:calc(var(--h) * var(--u));z-index:var(--z);--_border:calc(var(--bw) * var(--u)) solid var(--bc,var(--text));--_fill:color-mix(in srgb,var(--bg) calc(var(--ba,1) * 100%),transparent);--_rot:rotate(calc(var(--rot) * 1deg));--_blur:blur(calc(var(--blur) * var(--u)));--_p:calc(var(--p) * var(--u));color:var(--c);background:var(--_fill);-webkit-backdrop-filter:var(--_blur);backdrop-filter:var(--_blur);font-family:var(--font-body);font-size:calc(var(--fs) * var(--u));font-weight:var(--fw);line-height:var(--lh);letter-spacing:calc(var(--ls,0) * 1em);border:var(--_border,0);border-radius:calc(var(--r) * var(--u));padding:var(--_p,0);opacity:var(--op);transform:var(--_rot,) var(--_flip,) var(--_anim,)}
 .lz-el[data-font=heading]{font-family:var(--font-heading)}
