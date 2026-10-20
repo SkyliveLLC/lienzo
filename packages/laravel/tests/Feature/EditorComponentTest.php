@@ -18,6 +18,15 @@ it('renders the editor element pointed at the site', function (): void {
         ->not->toContain('headers=');
 });
 
+it('puts its content inside the element, for the toolbar-start slot', function (): void {
+    $html = (string) $this->blade(
+        '<x-lienzo::editor :site="$site"><a slot="toolbar-start" href="/admin">Back</a></x-lienzo::editor>',
+        ['site' => Site::default()],
+    );
+
+    expect($html)->toContain('><a slot="toolbar-start" href="/admin">Back</a></lienzo-editor>');
+});
+
 it('loads the bundle from the configured URL instead', function (): void {
     config(['lienzo.editor_url' => 'https://cdn.example/lienzo/']);
 

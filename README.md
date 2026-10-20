@@ -63,6 +63,14 @@ Lienzo supports Laravel 12 and 13 on PHP 8.3 or later, with the `gd`, `dom`, and
     <x-lienzo::editor :site="$site" style="display:block;height:100vh" />
     ```
 
+    To give the editor a way back to your admin, put a link in its `toolbar-start` slot. The link shows at the start of the toolbar:
+
+    ```blade
+    <x-lienzo::editor :site="$site" style="display:block;height:100vh">
+        <a slot="toolbar-start" href="/admin">Back</a>
+    </x-lienzo::editor>
+    ```
+
 Open the admin page. The editor asks for a first page. Leave its address empty to make it the home page, then click **Publish**.
 
 ### Inertia or a single-page app

@@ -49,6 +49,7 @@ async function choosePage(event: Event) {
 <template>
     <header class="lze-toolbar">
         <div class="lze-toolbar-group">
+            <slot name="start" />
             <strong class="lze-site-name">{{ editor.state.workspace.site.name }}</strong>
             <select v-if="page" class="lze-select lze-page-select" :aria-label="t('toolbar.pageSelect')" :value="page.id" @change="choosePage">
                 <option v-for="item in editor.state.workspace.pages" :key="item.id" :value="item.id">{{ item.title }}{{ item.slug ? ` /${item.slug}` : '' }}</option>

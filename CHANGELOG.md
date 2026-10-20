@@ -7,6 +7,11 @@ All notable changes to Lienzo are listed here. The three packages (`skylive/lien
 ### Editor
 
 - An edit made just before leaving the editor is kept. Autosave waits 1.5 seconds after the last change, and leaving inside that window dropped the edit, whether the host swapped pages, the browser navigated or the tab closed. The editor now sends it on the way out. A draft too big for that last request (about 60 KB) makes the browser ask before leaving.
+- The host can put its own controls, such as a link back to its admin, at the start of the toolbar through the `toolbar-start` slot. They show while the editor loads, when it fails to load, and once it is ready.
+
+### Laravel
+
+- `<x-lienzo::editor>` puts its content inside the element, so a Blade page can fill the `toolbar-start` slot.
 
 ## 0.13.2 (2026-10-20)
 

@@ -15,7 +15,8 @@ use Skylive\Lienzo\Models\Site;
  * `<x-lienzo::editor :site="$site" locale="en" />`: the editor for one site,
  * as the `<lienzo-editor>` custom element talking to `Route::lienzoEditor()`.
  * The editor echoes Laravel's XSRF-TOKEN cookie, so no CSRF header is passed.
- * Extra attributes (class, style) land on the element.
+ * Extra attributes (class, style) land on the element, and the component's
+ * content goes inside it, such as a link in the `toolbar-start` slot.
  */
 final class Editor extends Component
 {

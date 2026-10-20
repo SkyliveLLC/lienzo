@@ -47,6 +47,11 @@ const props = defineProps<{
     fetch?: typeof fetch;
 }>();
 
+defineSlots<{
+    /** The host's own controls, such as a way back, at the start of the toolbar in every load state. On the custom element, a native slot. */
+    'toolbar-start'?: () => unknown;
+}>();
+
 const i18n = createTranslator(props.locale ?? 'en', props.messages);
 const editor = createEditor({
     client: createClient({ endpoint: props.endpoint, headers: props.headers, fetch: props.fetch }),
@@ -116,6 +121,7 @@ onBeforeUnmount(() => {
 
 <template>
     <div ref="root" class="lze-root" :lang="i18n.locale">
+        <div v-if="editor.state.load.kind !== 'ready'" class="lze-toolbar-start"><slot name="toolbar-start" /></div>
         <div v-if="editor.state.load.kind === 'loading'" class="lze-center">{{ editor.t('load.loading') }}</div>
         <div v-else-if="editor.state.load.kind === 'failed'" class="lze-center" role="alert">
             <p>{{ editor.t('load.failed', { message: editor.state.load.message }) }}</p>
@@ -125,7 +131,9 @@ onBeforeUnmount(() => {
             <Button variant="primary" @click="editor.state.dialog = 'newPage'">{{ editor.t('newPage.title') }}</Button>
         </div>
         <template v-else>
-            <Toolbar />
+            <Toolbar>
+                <template #start><slot name="toolbar-start" /></template>
+            </Toolbar>
             <div class="lze-body">
                 <LeftSidebar :drop-point="dropPoint" />
                 <main class="lze-main">
