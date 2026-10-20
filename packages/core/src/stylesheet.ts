@@ -129,6 +129,8 @@ export const stylesheet = [
 
     `.lz-navbar{display:flex;align-items:center;gap:${u('24')}}`,
     '.lz-navbar[data-sticky]{position:fixed;left:50%;translate:-50% 0;width:min(100%,var(--max-width));top:0;transition:background .25s ease,box-shadow .25s ease,height .25s ease,backdrop-filter .25s ease}',
+    /* In an edge-to-edge section the bar follows the section, not the theme's width. */
+    '.lz-section[data-wide] .lz-navbar[data-sticky]{width:100%}',
     '.lz-navbar[data-scrolled]{box-shadow:0 8px 24px rgba(15,23,42,.1)}',
     '.lz-navbar[data-scrolled][data-scroll]{box-shadow:0 10px 30px rgba(15,23,42,.12)}',
     `.lz-navbar[data-scrolled]:is([data-scroll=solid],[data-scroll=compact]){background:var(${v(t.background)},var(--background));-webkit-backdrop-filter:none;backdrop-filter:none}`,
