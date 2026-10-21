@@ -286,6 +286,15 @@ test('a slider takes pictures, and says how the reader moves it', async ({ edito
     await panel.getByRole('spinbutton', { name: 'Seconds on each picture' }).blur();
     await editor.waitForSave();
 
+    // It keeps the height its box gives it, instead of filling the whole section.
+    const measured = await slider.evaluate((node) => ({
+        height: Math.round(node.getBoundingClientRect().height),
+        frame: Math.round(node.closest('.lz-frame')!.getBoundingClientRect().height),
+    }));
+
+    expect(measured.height).toBeGreaterThan(0);
+    expect(measured.height).toBeLessThan(measured.frame * 0.9);
+
     const element = (await editor.draft()).sections[0]!.elements.find((item) => item.type === 'slider');
 
     expect(element?.props.images).toHaveLength(2);

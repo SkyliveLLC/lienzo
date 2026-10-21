@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.11.3 (2026-10-20)
+
+### Fixed
+
+- A gallery or a slider ignored the height it was given and stretched to the whole section, covering whatever came next. Both keep their own box now; inside a self-laying section the slider takes a height of its own.
+
 ## 0.11.2 (2026-10-20)
 
 ### Fixed

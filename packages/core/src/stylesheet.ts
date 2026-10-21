@@ -137,12 +137,13 @@ export const stylesheet = [
 
     `img.lz-el{object-fit:cover}`,
     /* A gallery: a grid that wraps, or a strip that scrolls sideways and snaps. */
-    `.lz-gallery{display:grid;gap:${u('14')};width:100%;height:100%;overflow:auto}`,
+    `.lz-gallery{display:grid;gap:${u('14')};overflow:auto}`,
     '.lz-gallery[data-layout=grid]{grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));align-content:start}',
     ...[1, 2, 3, 4, 5, 6].map((n) => `.lz-gallery[data-cols="${n}"]{--cols:${n}}`),
 
     /* Pictures one at a time: a track that snaps, with arrows and dots over it. */
-    '.lz-slider{position:relative;width:100%;height:100%;overflow:hidden}',
+    '.lz-slider{position:relative;overflow:hidden}',
+    `.lz-frame[data-flow] .lz-slider{height:${u('380')}}`,
     '.lz-slider-track{display:flex;width:100%;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;'
         + 'scrollbar-width:none;border-radius:inherit}',
     '.lz-slider-track::-webkit-scrollbar{display:none}',
