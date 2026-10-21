@@ -297,6 +297,7 @@ test('a slider takes pictures, and says how the reader moves it', async ({ edito
 test('the block library is grouped, and a block lands as a real section', async ({ editor, page }) => {
     const sidebar = page.locator('.lze-left');
 
+    await sidebar.getByRole('tab', { name: 'Blocks' }).click();
     await expect(sidebar.locator('.lze-group-label')).toHaveCount(4);
     await expect(sidebar.getByRole('button', { name: 'Plans' })).toBeVisible();
 

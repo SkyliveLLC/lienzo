@@ -61,12 +61,14 @@ export const en = {
 
     // Left sidebar
     'tabs.elements': 'Elements',
+    'tabs.blocks': 'Blocks',
     'tabs.layers': 'Layers',
     'tabs.modals': 'Modals',
     'tabs.media': 'Media',
     'elements.addHint': 'Click to add it, or drag it onto the canvas',
     'elements.app': 'From your app',
     'elements.appHint': 'These elements show live data from your app.',
+    'elements.sectionsHint': 'A whole section, ready to edit. It lands at the end of the page.',
     'elements.sections': 'Ready-made sections',
     'elements.form': 'Form',
     'elements.formHint': 'Fields are sent by a button whose action is "Submit the form". They must be in the same section or modal as the button.',

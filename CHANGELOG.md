@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.11.1 (2026-10-20)
+
+### Fixed
+
+- The left sidebar made you scroll past everything to reach the form fields. The ready-made blocks moved to a tab of their own, and the palette keeps two columns whatever the panel's width.
+
 ## 0.11.0 (2026-10-20)
 
 ### Editor

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { CoreElementType } from '@skylivellc/lienzo-core';
-import { ChevronDown, ChevronUp, Frame, Image as ImageIcon, Layers, Lock, LockOpen, PanelTop, Plus, Trash2 } from '@lucide/vue';
+import { ChevronDown, ChevronUp, Frame, Image as ImageIcon, Layers, LayoutTemplate, Lock, LockOpen, PanelTop, Plus, Trash2 } from '@lucide/vue';
 import { computed, ref } from 'vue';
 import { CORE_TYPES, isModal } from '../model/document.ts';
 import { coreSpecs, elementName, type Insertable } from '../model/elements.ts';
@@ -15,10 +15,11 @@ const props = defineProps<{ dropPoint: (clientX: number, clientY: number) => { c
 const editor = useEditor();
 const t = editor.t;
 
-type Tab = 'elements' | 'layers' | 'modals' | 'media';
+type Tab = 'elements' | 'blocks' | 'layers' | 'modals' | 'media';
 const tab = ref<Tab>('elements');
 const tabs = [
     { key: 'elements', label: 'tabs.elements', icon: Plus },
+    { key: 'blocks', label: 'tabs.blocks', icon: LayoutTemplate },
     { key: 'layers', label: 'tabs.layers', icon: Layers },
     { key: 'modals', label: 'tabs.modals', icon: PanelTop },
     { key: 'media', label: 'tabs.media', icon: ImageIcon },
@@ -153,22 +154,6 @@ const modals = computed(() => editor.state.draft.modals ?? []);
                 <p class="lze-hint">{{ t('elements.appHint') }}</p>
             </template>
 
-            <p class="lze-group-title">{{ t('elements.sections') }}</p>
-            <div class="lze-list">
-                <template v-for="group in TEMPLATE_GROUPS" :key="group.key">
-                    <p class="lze-group-label">{{ t(group.name) }}</p>
-                    <button
-                        v-for="template in SECTION_TEMPLATES.filter((item) => item.group === group.key)"
-                        :key="template.key"
-                        type="button"
-                        class="lze-list-item"
-                        @click="editor.addSection(buildSectionTemplate(template.key))"
-                    >
-                        {{ t(template.name) }}
-                    </button>
-                </template>
-            </div>
-
             <p class="lze-group-title">{{ t('elements.form') }}</p>
             <div class="lze-palette">
                 <button
@@ -187,6 +172,22 @@ const modals = computed(() => editor.state.draft.modals ?? []);
                 </button>
             </div>
             <p class="lze-hint">{{ t('elements.formHint') }}</p>
+        </div>
+
+        <div v-else-if="tab === 'blocks'" class="lze-scroll lze-stack" role="tabpanel">
+            <p class="lze-hint">{{ t('elements.sectionsHint') }}</p>
+            <div v-for="group in TEMPLATE_GROUPS" :key="group.key" class="lze-list">
+                <p class="lze-group-label">{{ t(group.name) }}</p>
+                <button
+                    v-for="template in SECTION_TEMPLATES.filter((item) => item.group === group.key)"
+                    :key="template.key"
+                    type="button"
+                    class="lze-list-item"
+                    @click="editor.addSection(buildSectionTemplate(template.key))"
+                >
+                    {{ t(template.name) }}
+                </button>
+            </div>
         </div>
 
         <div v-else-if="tab === 'layers'" class="lze-scroll" role="tabpanel">
