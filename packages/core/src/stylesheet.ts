@@ -58,6 +58,8 @@ export const stylesheet = [
     '.lz-frame[data-flow=row] .lz-el{width:calc(var(--w) * 1%);flex:0 1 auto}',
     '.lz-section>.lz-frame{margin:0 auto;max-width:var(--max-width);container-type:inline-size;--u:calc(min(100cqw,var(--ref) * 1px) / var(--ref))}',
 
+    /* Written text keeps the line breaks its author typed, and nothing else. */
+    '.lz-el:is(h1,h2,h3,h4,p){white-space:pre-line}',
     '.lz-el{position:absolute;margin:0;display:block;overflow-wrap:break-word;'
         + `left:calc(var(--x) * 1%);top:${u('var(--y)')};width:calc(var(--w) * 1%);height:${u('var(--h)')};z-index:var(--z);`
         + `--_border:${u(`var(${v(t.border_width)})`)} solid var(${v(t.border_color)},var(--text));`

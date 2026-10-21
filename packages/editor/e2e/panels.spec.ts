@@ -316,3 +316,15 @@ test('the block library is grouped, and a block lands as a real section', async 
 
     expect((await editor.draft()).sections.at(-1)!.flow).toBe('row');
 });
+
+test('a text keeps the line breaks its author typed', async ({ editor, page }) => {
+    await page.locator('.lze-palette-item', { hasText: /^Text$/ }).click();
+    await page.locator('.lze-right').getByRole('textbox', { name: 'Text', exact: true }).fill('Una\nDos');
+    await editor.waitForSave();
+
+    const paragraph = editor.canvas.locator('p.lz-el', { hasText: 'Una' }).first();
+
+    // The rule is what keeps the break: without it the browser folds both lines into one.
+    await expect(paragraph).toHaveCSS('white-space', 'pre-line');
+    expect((await editor.draft()).sections[0]!.elements.at(-1)!.props.text).toBe('Una\nDos');
+});

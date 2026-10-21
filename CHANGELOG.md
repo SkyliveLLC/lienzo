@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.11.2 (2026-10-20)
+
+### Fixed
+
+- A heading or a text lost the line breaks its author typed: two lines came out as one. They now read on the page exactly as they were written.
+
 ## 0.11.1 (2026-10-20)
 
 ### Fixed

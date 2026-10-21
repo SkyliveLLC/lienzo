@@ -26,6 +26,7 @@ html:has(.lz-page){scroll-behavior:smooth}
 .lz-frame[data-flow=column] .lz-el{width:calc(var(--w) * 1%)}
 .lz-frame[data-flow=row] .lz-el{width:calc(var(--w) * 1%);flex:0 1 auto}
 .lz-section>.lz-frame{margin:0 auto;max-width:var(--max-width);container-type:inline-size;--u:calc(min(100cqw,var(--ref) * 1px) / var(--ref))}
+.lz-el:is(h1,h2,h3,h4,p){white-space:pre-line}
 .lz-el{position:absolute;margin:0;display:block;overflow-wrap:break-word;left:calc(var(--x) * 1%);top:calc(var(--y) * var(--u));width:calc(var(--w) * 1%);height:calc(var(--h) * var(--u));z-index:var(--z);--_border:calc(var(--bw) * var(--u)) solid var(--bc,var(--text));--_fill:color-mix(in srgb,var(--bg) calc(var(--ba,1) * 100%),transparent);--_rot:rotate(calc(var(--rot) * 1deg));--_blur:blur(calc(var(--blur) * var(--u)));--_p:calc(var(--p) * var(--u));color:var(--c);background:var(--_fill);-webkit-backdrop-filter:var(--_blur);backdrop-filter:var(--_blur);font-family:var(--font-body);font-size:calc(var(--fs) * var(--u));font-weight:var(--fw);line-height:var(--lh);letter-spacing:calc(var(--ls,0) * 1em);border:var(--_border,0);border-radius:calc(var(--r) * var(--u));padding:var(--_p,0);opacity:var(--op);transform:var(--_rot,) var(--_flip,) var(--_anim,)}
 .lz-el[data-font=heading]{font-family:var(--font-heading)}
 .lz-el[data-case=upper]{text-transform:uppercase}
