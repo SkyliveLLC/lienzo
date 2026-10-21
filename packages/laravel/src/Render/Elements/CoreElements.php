@@ -19,6 +19,7 @@ final class CoreElements
         'icon' => Icon::class,
         'navbar' => Navbar::class,
         'gallery' => Gallery::class,
+        'slider' => Slider::class,
         'input' => Input::class,
         'textarea' => Textarea::class,
         'select' => Select::class,

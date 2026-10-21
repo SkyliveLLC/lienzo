@@ -2,7 +2,7 @@ import { h, text } from '../html.ts';
 import type { ElementRenderer } from './context.ts';
 
 export const navbar: ElementRenderer = (element, context) => {
-    const { brand, links = [], layout, template, sticky, scroll_style: scroll } = element.props;
+    const { brand, links = [], layout, template, sticky, scroll_style: scroll, position } = element.props;
     const anchors = (links ?? []).map((link) => h('a', context.action(link.action) ?? { href: '#' }, [text(link.label)]));
 
     return {
@@ -12,6 +12,7 @@ export const navbar: ElementRenderer = (element, context) => {
             'data-layout': layout ?? 'split',
             'data-template': template && template !== 'plain' ? template : null,
             'data-sticky': sticky === true,
+            'data-at': sticky === true && position === 'bottom' ? 'bottom' : null,
             'data-scroll': sticky && scroll && scroll !== 'same' ? scroll : null,
         },
         children: [

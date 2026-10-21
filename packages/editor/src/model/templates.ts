@@ -42,6 +42,37 @@ const feature = (y: number, icon: string, title: string, text: string): Part[] =
     { type: 'text', box: { x: 49, y: y + 32, w: 42, h: 44 }, props: { text }, style: { color: 'muted', size: 15, line_height: 1.5 } },
 ];
 
+
+const plan = (x: number, name: string, price: string, lines: string, featured: boolean): Part[] => [
+    { type: 'shape', box: { x: x - 1.5, y: 150, w: 29, h: 330 }, props: { shape: 'rectangle' }, style: { background: featured ? 'secondary' : 'surface', radius: 18 } },
+    { type: 'heading', box: { x, y: 182, w: 26, h: 34 }, props: { text: name, level: 3 }, style: { color: featured ? 'background' : 'secondary', font: 'heading', size: 19, weight: 700 } },
+    { type: 'heading', box: { x, y: 220, w: 26, h: 56 }, props: { text: price, level: 3 }, style: { color: featured ? 'background' : 'secondary', font: 'heading', size: 40, weight: 700 } },
+    { type: 'text', box: { x, y: 288, w: 26, h: 120 }, props: { text: lines }, style: { color: featured ? 'background' : 'muted', size: 15, line_height: 1.8, opacity: featured ? 0.85 : 1 } },
+    {
+        type: 'button', box: { x, y: 414, w: 26, h: 48 },
+        props: { label: 'Choose this one', action: { type: 'anchor', value: '' } },
+        style: { background: featured ? 'background' : 'primary', color: featured ? 'secondary' : 'background', radius: 12, weight: 600, size: 15 },
+    },
+];
+
+const step = (x: number, number: string, title: string, text: string): Part[] => [
+    { type: 'heading', box: { x, y: 150, w: 26, h: 60 }, props: { text: number, level: 3 }, style: { color: 'primary', font: 'heading', size: 46, weight: 700 } },
+    { type: 'heading', box: { x, y: 216, w: 26, h: 34 }, props: { text: title, level: 3 }, style: { color: 'secondary', font: 'heading', size: 19, weight: 700 } },
+    { type: 'text', box: { x, y: 254, w: 26, h: 90 }, props: { text }, style: { color: 'muted', size: 15, line_height: 1.6 } },
+];
+
+const person = (x: number, name: string, role: string): Part[] => [
+    { type: 'image', box: { x, y: 150, w: 20, h: 200 }, props: { src: '', alt: name }, style: { radius: 16, object_fit: 'cover' } },
+    { type: 'heading', box: { x, y: 362, w: 20, h: 30 }, props: { text: name, level: 3 }, style: { color: 'secondary', font: 'heading', size: 17, weight: 700 } },
+    { type: 'text', box: { x, y: 394, w: 20, h: 28 }, props: { text: role }, style: { color: 'muted', size: 14 } },
+];
+
+const question = (y: number, ask: string, answer: string): Part[] => [
+    { type: 'heading', box: { x: 6, y, w: 42, h: 32 }, props: { text: ask, level: 3 }, style: { color: 'secondary', font: 'heading', size: 18, weight: 700 } },
+    { type: 'text', box: { x: 52, y, w: 42, h: 76 }, props: { text: answer }, style: { color: 'muted', size: 15, line_height: 1.6 } },
+    { type: 'divider', box: { x: 6, y: y + 88, w: 88, h: 2 }, props: {}, style: { color: 'muted', opacity: 0.25 } },
+];
+
 const sections = {
     hero: () => build(680, color('background'), [
         { type: 'shape', box: { x: 52, y: 120, w: 42, h: 400 }, props: { shape: 'blob' }, style: { background: 'surface' } },
@@ -144,17 +175,174 @@ const sections = {
             style: { background: 'primary', color: 'background', radius: 12, weight: 600 },
         },
     ]),
+
+    heroCentered: () => build(620, color('background'), [
+        {
+            type: 'heading', box: { x: 18, y: 170, w: 64, h: 150 },
+            props: { text: 'One line that says what you do', level: 1 },
+            style: { color: 'secondary', font: 'heading', size: 52, weight: 700, align: 'center', line_height: 1.1 },
+        },
+        {
+            type: 'text', box: { x: 26, y: 336, w: 48, h: 80 },
+            props: { text: 'A second line for who it is for and what they get.' },
+            style: { color: 'muted', size: 18, align: 'center', line_height: 1.6 },
+        },
+        {
+            type: 'button', box: { x: 34, y: 440, w: 15, h: 54 },
+            props: { label: 'Get started', action: { type: 'anchor', value: '' } },
+            style: { background: 'primary', color: 'background', radius: 14, weight: 700, size: 16 },
+        },
+        {
+            type: 'button', box: { x: 51, y: 440, w: 15, h: 54 },
+            props: { label: 'See how it works', action: { type: 'anchor', value: '' } },
+            style: { background: '', color: 'secondary', border_width: 1, border_color: 'muted', radius: 14, weight: 600, size: 16 },
+        },
+    ]),
+    heroSlider: () => build(640, color('surface'), [
+        {
+            type: 'heading', box: { x: 6, y: 180, w: 38, h: 160 },
+            props: { text: 'Show the work, not a promise', level: 1 },
+            style: { color: 'secondary', font: 'heading', size: 46, weight: 700, line_height: 1.1 },
+        },
+        {
+            type: 'text', box: { x: 6, y: 356, w: 32, h: 80 },
+            props: { text: 'Pictures move by themselves, or the reader moves them.' },
+            style: { color: 'muted', size: 17, line_height: 1.6 },
+        },
+        { type: 'slider', box: { x: 46, y: 120, w: 48, h: 400 }, props: { images: [], autoplay: true, interval: 5 }, style: { radius: 20, object_fit: 'cover' } },
+    ]),
+    logos: () => build(300, color('background'), [
+        {
+            type: 'text', box: { x: 6, y: 72, w: 88, h: 34 },
+            props: { text: 'Teams that work with us' },
+            style: { color: 'muted', size: 15, align: 'center' },
+        },
+        { type: 'gallery', box: { x: 6, y: 128, w: 88, h: 110 }, props: { images: [], layout: 'strip' }, style: { radius: 8 } },
+    ]),
+    testimonial: () => build(460, color('secondary'), [
+        {
+            type: 'heading', box: { x: 12, y: 130, w: 76, h: 170 },
+            props: { text: '"They shipped in three weeks what we had been postponing for a year."', level: 2 },
+            style: { color: 'background', font: 'heading', size: 36, weight: 700, align: 'center', line_height: 1.3 },
+        },
+        {
+            type: 'text', box: { x: 26, y: 326, w: 48, h: 60 },
+            props: { text: 'Name Surname, role at Company' },
+            style: { color: 'background', size: 15, align: 'center', opacity: 0.75 },
+        },
+    ]),
+    stats: () => ({
+        ...build(340, color('surface'), [
+            { type: 'heading', box: { x: 6, y: 0, w: 100, h: 44 }, props: { text: 'Three numbers worth knowing', level: 2 }, style: { color: 'secondary', font: 'heading', size: 30, weight: 700 } },
+            { type: 'heading', box: { x: 6, y: 80, w: 28, h: 80 }, props: { text: '600', level: 3 }, style: { color: 'primary', font: 'heading', size: 54, weight: 700 } },
+            { type: 'heading', box: { x: 36, y: 80, w: 28, h: 80 }, props: { text: '23 %', level: 3 }, style: { color: 'primary', font: 'heading', size: 54, weight: 700 } },
+            { type: 'heading', box: { x: 66, y: 80, w: 28, h: 80 }, props: { text: '0', level: 3 }, style: { color: 'primary', font: 'heading', size: 54, weight: 700 } },
+        ]),
+        flow: 'row' as const,
+        flow_gap: 32,
+        flow_align: 'between' as const,
+    }),
+    gallery: () => ({
+        ...build(520, color('background'), [
+            { type: 'heading', box: { x: 6, y: 0, w: 60, h: 46 }, props: { text: 'A look at the work', level: 2 }, style: { color: 'secondary', font: 'heading', size: 32, weight: 700 } },
+            { type: 'gallery', box: { x: 6, y: 80, w: 88, h: 320 }, props: { images: [], layout: 'grid', columns: 3 }, style: { radius: 12 } },
+        ]),
+        flow: 'column' as const,
+        flow_gap: 24,
+    }),
+    steps: () => build(440, color('background'), [
+        { type: 'heading', box: { x: 6, y: 72, w: 60, h: 46 }, props: { text: 'How it works', level: 2 }, style: { color: 'secondary', font: 'heading', size: 32, weight: 700 } },
+        ...step(6, '1', 'You write to us', 'Tell us what you need and when you need it.'),
+        ...step(37, '2', 'We answer with a plan', 'A date, a price and what is included.'),
+        ...step(68, '3', 'We start', 'You see progress every week, not at the end.'),
+    ]),
+    pricing: () => build(560, color('background'), [
+        { type: 'heading', box: { x: 6, y: 72, w: 60, h: 46 }, props: { text: 'Plans', level: 2 }, style: { color: 'secondary', font: 'heading', size: 32, weight: 700 } },
+        ...plan(8, 'Start', '$19', 'One site\nOne editor\nEmail support', false),
+        ...plan(38, 'Studio', '$49', 'Five sites\nFive editors\nSupport in a day', true),
+        ...plan(68, 'Agency', '$99', 'Sites without a limit\nYour own domain\nSupport in an hour', false),
+    ]),
+    team: () => build(500, color('surface'), [
+        { type: 'heading', box: { x: 6, y: 72, w: 60, h: 46 }, props: { text: 'Who you will work with', level: 2 }, style: { color: 'secondary', font: 'heading', size: 32, weight: 700 } },
+        ...person(6, 'Name Surname', 'What they do'),
+        ...person(29, 'Name Surname', 'What they do'),
+        ...person(52, 'Name Surname', 'What they do'),
+        ...person(75, 'Name Surname', 'What they do'),
+    ]),
+    faq: () => build(620, color('background'), [
+        { type: 'heading', box: { x: 6, y: 72, w: 60, h: 46 }, props: { text: 'Questions people ask', level: 2 }, style: { color: 'secondary', font: 'heading', size: 32, weight: 700 } },
+        ...question(160, 'How long does it take?', 'Two to four weeks, counted from the day the content is ready.'),
+        ...question(270, 'What do you need from me?', 'Texts, pictures and someone who can decide.'),
+        ...question(380, 'Can I edit it later?', 'Yes. The site is yours and it is edited here, without us.'),
+        ...question(490, 'What if I do not like it?', 'You see it before it is published, and we change it.'),
+    ]),
+    newsletter: () => build(360, color('primary'), [
+        {
+            type: 'heading', box: { x: 6, y: 110, w: 42, h: 90 },
+            props: { text: 'News, once a month', level: 2 },
+            style: { color: 'background', font: 'heading', size: 34, weight: 700, line_height: 1.2 },
+        },
+        {
+            type: 'text', box: { x: 6, y: 208, w: 36, h: 60 },
+            props: { text: 'What we made, what we learned. Nothing else.' },
+            style: { color: 'background', size: 16, opacity: 0.85 },
+        },
+        {
+            type: 'input', box: { x: 52, y: 140, w: 28, h: 78 },
+            props: { label: 'Email', placeholder: 'you@example.com', required: true, input_type: 'email' },
+            style: { color: 'background', background: '', border_width: 1, border_color: 'background', radius: 12, padding: 14 },
+        },
+        {
+            type: 'button', box: { x: 82, y: 156, w: 12, h: 50 },
+            props: { label: 'Sign up', action: { type: 'submit', value: '' } },
+            style: { background: 'background', color: 'primary', radius: 12, weight: 700, size: 15 },
+        },
+    ]),
+    footerBig: () => build(420, color('secondary'), [
+        { type: 'heading', box: { x: 6, y: 72, w: 24, h: 46 }, props: { text: 'Your brand', level: 3 }, style: { color: 'background', font: 'heading', size: 26, weight: 700 } },
+        {
+            type: 'text', box: { x: 6, y: 128, w: 24, h: 90 },
+            props: { text: 'One line about what you do and where you are.' },
+            style: { color: 'background', size: 15, line_height: 1.6, opacity: 0.7 },
+        },
+        { type: 'text', box: { x: 38, y: 72, w: 18, h: 150 }, props: { text: 'Site\nHome\nWork\nPrices\nContact' }, style: { color: 'background', size: 15, line_height: 2, opacity: 0.8 } },
+        { type: 'text', box: { x: 58, y: 72, w: 18, h: 150 }, props: { text: 'Company\nAbout us\nTeam\nNews' }, style: { color: 'background', size: 15, line_height: 2, opacity: 0.8 } },
+        { type: 'text', box: { x: 78, y: 72, w: 18, h: 150 }, props: { text: 'Write to us\nhello@example.com\n+00 000 000 0000' }, style: { color: 'background', size: 15, line_height: 2, opacity: 0.8 } },
+        { type: 'divider', box: { x: 6, y: 300, w: 88, h: 2 }, props: {}, style: { color: 'background', opacity: 0.25 } },
+        { type: 'text', box: { x: 6, y: 324, w: 50, h: 40 }, props: { text: 'All rights reserved' }, style: { color: 'background', size: 13, opacity: 0.6 } },
+    ]),
 } satisfies Record<string, () => Section>;
 
 export type SectionTemplateKey = keyof typeof sections;
 
-export const SECTION_TEMPLATES: readonly { key: SectionTemplateKey; name: MessageKey }[] = [
-    { key: 'hero', name: 'template.hero' },
-    { key: 'features', name: 'template.features' },
-    { key: 'about', name: 'template.about' },
-    { key: 'cta', name: 'template.cta' },
-    { key: 'contact', name: 'template.contact' },
-    { key: 'footer', name: 'template.footer' },
+export type TemplateGroup = 'open' | 'tell' | 'convince' | 'close';
+
+export const SECTION_TEMPLATES: readonly { key: SectionTemplateKey; name: MessageKey; group: TemplateGroup }[] = [
+    { key: 'hero', name: 'template.hero', group: 'open' },
+    { key: 'heroCentered', name: 'template.heroCentered', group: 'open' },
+    { key: 'heroSlider', name: 'template.heroSlider', group: 'open' },
+    { key: 'features', name: 'template.features', group: 'tell' },
+    { key: 'about', name: 'template.about', group: 'tell' },
+    { key: 'steps', name: 'template.steps', group: 'tell' },
+    { key: 'gallery', name: 'template.gallery', group: 'tell' },
+    { key: 'faq', name: 'template.faq', group: 'tell' },
+    { key: 'logos', name: 'template.logos', group: 'convince' },
+    { key: 'testimonial', name: 'template.testimonial', group: 'convince' },
+    { key: 'stats', name: 'template.stats', group: 'convince' },
+    { key: 'team', name: 'template.team', group: 'convince' },
+    { key: 'pricing', name: 'template.pricing', group: 'convince' },
+    { key: 'cta', name: 'template.cta', group: 'close' },
+    { key: 'newsletter', name: 'template.newsletter', group: 'close' },
+    { key: 'contact', name: 'template.contact', group: 'close' },
+    { key: 'footer', name: 'template.footer', group: 'close' },
+    { key: 'footerBig', name: 'template.footerBig', group: 'close' },
+];
+
+export const TEMPLATE_GROUPS: readonly { key: TemplateGroup; name: MessageKey }[] = [
+    { key: 'open', name: 'template.group.open' },
+    { key: 'tell', name: 'template.group.tell' },
+    { key: 'convince', name: 'template.group.convince' },
+    { key: 'close', name: 'template.group.close' },
 ];
 
 const pages = {

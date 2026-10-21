@@ -4,7 +4,7 @@ import { ChevronDown, ChevronUp, Frame, Image as ImageIcon, Layers, Lock, LockOp
 import { computed, ref } from 'vue';
 import { CORE_TYPES, isModal } from '../model/document.ts';
 import { coreSpecs, elementName, type Insertable } from '../model/elements.ts';
-import { buildSectionTemplate, SECTION_TEMPLATES } from '../model/templates.ts';
+import { buildSectionTemplate, SECTION_TEMPLATES, TEMPLATE_GROUPS } from '../model/templates.ts';
 import { useEditor } from '../state/editor.ts';
 import CatalogIcon from '../ui/CatalogIcon.vue';
 import ElementIcon from './ElementIcon.vue';
@@ -155,9 +155,18 @@ const modals = computed(() => editor.state.draft.modals ?? []);
 
             <p class="lze-group-title">{{ t('elements.sections') }}</p>
             <div class="lze-list">
-                <button v-for="template in SECTION_TEMPLATES" :key="template.key" type="button" class="lze-list-item" @click="editor.addSection(buildSectionTemplate(template.key))">
-                    {{ t(template.name) }}
-                </button>
+                <template v-for="group in TEMPLATE_GROUPS" :key="group.key">
+                    <p class="lze-group-label">{{ t(group.name) }}</p>
+                    <button
+                        v-for="template in SECTION_TEMPLATES.filter((item) => item.group === group.key)"
+                        :key="template.key"
+                        type="button"
+                        class="lze-list-item"
+                        @click="editor.addSection(buildSectionTemplate(template.key))"
+                    >
+                        {{ t(template.name) }}
+                    </button>
+                </template>
             </div>
 
             <p class="lze-group-title">{{ t('elements.form') }}</p>

@@ -5,7 +5,7 @@
         {
           "id": "variantes",
           "height": {
-            "desktop": 1816,
+            "desktop": 2136,
             "mobile": 560
           },
           "background": {
@@ -286,6 +286,59 @@
               },
               "style": {
                 "radius": 10
+              }
+            },
+            {
+              "id": "deslizador",
+              "type": "slider",
+              "z": 11,
+              "layout": {
+                "desktop": {
+                  "x": 6,
+                  "y": 1776,
+                  "w": 52,
+                  "h": 320
+                },
+                "mobile": null
+              },
+              "props": {
+                "alt": "La tanda",
+                "images": [
+                  "media:1",
+                  "media:2",
+                  "https://images.example.com/hero.jpg"
+                ],
+                "autoplay": true,
+                "interval": 6
+              },
+              "style": {
+                "radius": 12,
+                "object_fit": "cover"
+              }
+            },
+            {
+              "id": "deslizador-pelado",
+              "type": "slider",
+              "z": 12,
+              "layout": {
+                "desktop": {
+                  "x": 62,
+                  "y": 1776,
+                  "w": 32,
+                  "h": 320
+                },
+                "mobile": null
+              },
+              "props": {
+                "alt": "Sola",
+                "images": [
+                  "media:2"
+                ],
+                "arrows": false,
+                "dots": false
+              },
+              "style": {
+                "radius": 0
               }
             }
           ]

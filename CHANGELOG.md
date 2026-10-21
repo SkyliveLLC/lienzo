@@ -2,6 +2,15 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.11.0 (2026-10-20)
+
+### Editor
+
+- A slider element: pictures one at a time, with arrows, dots and a turn by itself every few seconds. Without JavaScript it is still a strip that scrolls and snaps.
+- Five more menus (ribbon, outlined, minimal, brand above the links, and a rail down the side), links that can go before the brand, and a sticky bar that can live at the foot of the screen instead of its head.
+- The block library now holds eighteen ready-made sections in four groups: openings, telling it, backing it up and closing it. New blocks: centered opening, opening with a slider, how it works, gallery, questions, logos, what they said, numbers, team, plans, sign-up and a footer with columns.
+- The panels grow with the screen and everything in them has more room, so the editor stops feeling narrow.
+
 ## 0.10.1 (2026-10-20)
 
 ### Fixed

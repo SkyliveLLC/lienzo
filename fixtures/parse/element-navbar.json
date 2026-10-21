@@ -5,7 +5,7 @@
         {
           "id": "variantes",
           "height": {
-            "desktop": 808,
+            "desktop": 1496,
             "mobile": 560
           },
           "background": {
@@ -321,6 +321,313 @@
                     "action": {
                       "type": "anchor",
                       "value": "variantes"
+                    }
+                  }
+                ]
+              },
+              "style": {
+                "color": "text",
+                "background": "background",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "padding": 20
+              }
+            },
+            {
+              "id": "nav-ribbon",
+              "type": "navbar",
+              "z": 8,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 766,
+                  "w": 92,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "sticky": false,
+                "brand": "Tu clínica",
+                "layout": "split",
+                "template": "ribbon",
+                "links": [
+                  {
+                    "label": "Servicios",
+                    "action": {
+                      "type": "anchor",
+                      "value": ""
+                    }
+                  },
+                  {
+                    "label": "Equipo",
+                    "action": {
+                      "type": "anchor",
+                      "value": ""
+                    }
+                  },
+                  {
+                    "label": "Contacto",
+                    "action": {
+                      "type": "whatsapp",
+                      "value": ""
+                    }
+                  }
+                ]
+              },
+              "style": {
+                "color": "text",
+                "background": "background",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "padding": 20
+              }
+            },
+            {
+              "id": "nav-outline",
+              "type": "navbar",
+              "z": 9,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 876,
+                  "w": 92,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "sticky": false,
+                "brand": "Tu clínica",
+                "layout": "split",
+                "template": "outline",
+                "links": [
+                  {
+                    "label": "Servicios",
+                    "action": {
+                      "type": "anchor",
+                      "value": ""
+                    }
+                  },
+                  {
+                    "label": "Equipo",
+                    "action": {
+                      "type": "anchor",
+                      "value": ""
+                    }
+                  },
+                  {
+                    "label": "Contacto",
+                    "action": {
+                      "type": "whatsapp",
+                      "value": ""
+                    }
+                  }
+                ]
+              },
+              "style": {
+                "color": "text",
+                "background": "background",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "padding": 20
+              }
+            },
+            {
+              "id": "nav-minimal",
+              "type": "navbar",
+              "z": 10,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 986,
+                  "w": 92,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "sticky": false,
+                "brand": "Tu clínica",
+                "layout": "split",
+                "template": "minimal",
+                "links": [
+                  {
+                    "label": "Servicios",
+                    "action": {
+                      "type": "anchor",
+                      "value": ""
+                    }
+                  },
+                  {
+                    "label": "Equipo",
+                    "action": {
+                      "type": "anchor",
+                      "value": ""
+                    }
+                  },
+                  {
+                    "label": "Contacto",
+                    "action": {
+                      "type": "whatsapp",
+                      "value": ""
+                    }
+                  }
+                ]
+              },
+              "style": {
+                "color": "text",
+                "background": "background",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "padding": 20
+              }
+            },
+            {
+              "id": "nav-stack",
+              "type": "navbar",
+              "z": 11,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 1096,
+                  "w": 92,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "sticky": false,
+                "brand": "Tu clínica",
+                "layout": "split",
+                "template": "stack",
+                "links": [
+                  {
+                    "label": "Servicios",
+                    "action": {
+                      "type": "anchor",
+                      "value": ""
+                    }
+                  },
+                  {
+                    "label": "Equipo",
+                    "action": {
+                      "type": "anchor",
+                      "value": ""
+                    }
+                  },
+                  {
+                    "label": "Contacto",
+                    "action": {
+                      "type": "whatsapp",
+                      "value": ""
+                    }
+                  }
+                ]
+              },
+              "style": {
+                "color": "text",
+                "background": "background",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "padding": 20
+              }
+            },
+            {
+              "id": "nav-rail",
+              "type": "navbar",
+              "z": 12,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 1206,
+                  "w": 92,
+                  "h": 96
+                },
+                "mobile": null
+              },
+              "props": {
+                "sticky": false,
+                "brand": "Tu clínica",
+                "layout": "split",
+                "template": "rail",
+                "links": [
+                  {
+                    "label": "Servicios",
+                    "action": {
+                      "type": "anchor",
+                      "value": ""
+                    }
+                  },
+                  {
+                    "label": "Equipo",
+                    "action": {
+                      "type": "anchor",
+                      "value": ""
+                    }
+                  },
+                  {
+                    "label": "Contacto",
+                    "action": {
+                      "type": "whatsapp",
+                      "value": ""
+                    }
+                  }
+                ]
+              },
+              "style": {
+                "color": "text",
+                "background": "background",
+                "font": "body",
+                "size": 16,
+                "weight": 600,
+                "padding": 20
+              }
+            },
+            {
+              "id": "nav-abajo",
+              "type": "navbar",
+              "z": 17,
+              "layout": {
+                "desktop": {
+                  "x": 4,
+                  "y": 1336,
+                  "w": 92,
+                  "h": 86
+                },
+                "mobile": null
+              },
+              "props": {
+                "sticky": true,
+                "brand": "Tu clínica",
+                "layout": "right",
+                "template": "ribbon",
+                "position": "bottom",
+                "links": [
+                  {
+                    "label": "Servicios",
+                    "action": {
+                      "type": "anchor",
+                      "value": ""
+                    }
+                  },
+                  {
+                    "label": "Equipo",
+                    "action": {
+                      "type": "anchor",
+                      "value": ""
+                    }
+                  },
+                  {
+                    "label": "Contacto",
+                    "action": {
+                      "type": "whatsapp",
+                      "value": ""
                     }
                   }
                 ]

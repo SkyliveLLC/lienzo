@@ -148,6 +148,69 @@
         window.addEventListener('scroll', mark, { passive: true });
     }
 
+    // Sliders: the arrows and the dots move the track, and autoplay waits for the reader.
+    const sliders = document.querySelectorAll<HTMLElement>('.lz-slider');
+
+    if (sliders.length > 0) {
+        const trackOf = (slider: Element) => slider.querySelector<HTMLElement>('.lz-slider-track');
+        const slidesOf = (slider: Element) => Array.from(slider.querySelectorAll('.lz-slide'));
+        const at = (track: HTMLElement) => Math.round(track.scrollLeft / Math.max(track.clientWidth, 1));
+
+        const mark = (slider: Element) => {
+            const track = trackOf(slider);
+            const dots = Array.from(slider.querySelectorAll('.lz-slider-dots button'));
+
+            if (track) {
+                dots.forEach((dot, index) => dot.toggleAttribute('data-on', index === at(track)));
+            }
+        };
+
+        const move = (slider: Element, to: number) => {
+            const track = trackOf(slider);
+            const count = slidesOf(slider).length;
+
+            if (track && count > 0) {
+                track.scrollTo({ left: ((to % count) + count) % count * track.clientWidth });
+            }
+        };
+
+        document.addEventListener('click', (event) => {
+            const button = event.target instanceof Element ? event.target.closest<HTMLElement>('.lz-slider-arrow,.lz-slider-dots button') : null;
+            const slider = button?.closest('.lz-slider');
+            const track = slider ? trackOf(slider) : null;
+
+            if (!button || !slider || !track) {
+                return;
+            }
+
+            const step = button.dataset.to === 'next' ? 1 : button.dataset.to === 'previous' ? -1 : 0;
+
+            move(slider, step === 0 ? Number(button.dataset.at ?? 0) : at(track) + step);
+        });
+
+        sliders.forEach((slider) => {
+            mark(slider);
+            trackOf(slider)?.addEventListener('scroll', () => mark(slider), { passive: true });
+
+            if (!slider.hasAttribute('data-autoplay') || window.matchMedia('(prefers-reduced-motion:reduce)').matches) {
+                return;
+            }
+
+            const every = Math.max(Number(slider.dataset.interval ?? 5), 2) * 1000;
+            let timer = setInterval(() => move(slider, at(trackOf(slider)!) + 1), every);
+            const stop = () => clearInterval(timer);
+            const start = () => {
+                stop();
+                timer = setInterval(() => move(slider, at(trackOf(slider)!) + 1), every);
+            };
+
+            slider.addEventListener('pointerenter', stop);
+            slider.addEventListener('focusin', stop);
+            slider.addEventListener('pointerleave', start);
+            slider.addEventListener('focusout', start);
+        });
+    }
+
     const animated = document.querySelectorAll('[data-anim]');
     const show = (node: Element) => node.classList.add('is-in');
 

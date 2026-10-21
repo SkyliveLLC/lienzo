@@ -24,6 +24,7 @@ final class Navbar implements ElementRenderer
             'data-layout' => $props['layout'] ?? 'split',
             'data-template' => $template !== null && $template !== 'plain' ? $template : null,
             'data-sticky' => $sticky,
+            'data-at' => $sticky && ($props['position'] ?? null) === 'bottom' ? 'bottom' : null,
             'data-scroll' => $sticky && $scroll !== null && $scroll !== 'same' ? $scroll : null,
         ], [
             Js::trim($props['brand'] ?? '') !== '' ? Html::h('span', ['class' => 'lz-navbar-brand'], [Html::text($props['brand'])]) : null,

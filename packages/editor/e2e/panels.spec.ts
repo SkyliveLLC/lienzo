@@ -257,3 +257,61 @@ test('a gallery takes pictures from the library and shows them in a row', async 
     expect(element?.props.images).toEqual(['https://images.example.com/una.jpg', 'https://images.example.com/otra.jpg']);
     expect(element?.props.layout).toBe('strip');
 });
+
+test('a slider takes pictures, and says how the reader moves it', async ({ editor, page }) => {
+    await page.locator('.lze-palette-item', { hasText: /^Slider$/ }).click();
+
+    const panel = page.locator('.lze-right');
+
+    for (const [index, address] of ['https://images.example.com/una.jpg', 'https://images.example.com/otra.jpg'].entries()) {
+        await panel.getByRole('button', { name: 'Add a picture' }).click();
+
+        const slot = panel.getByRole('group', { name: `Picture ${index + 1}` }).getByLabel('or paste an https:// address');
+
+        await slot.fill(address);
+        await slot.blur();
+    }
+
+    const slider = editor.canvas.locator('div.lz-slider').first();
+
+    await expect(slider.locator('img.lz-slide')).toHaveCount(2);
+    await expect(slider.locator('.lz-slider-arrow')).toHaveCount(2);
+    await expect(slider.locator('.lz-slider-dots button')).toHaveCount(2);
+
+    await panel.getByLabel('Dots under it').uncheck();
+    await expect(slider.locator('.lz-slider-dots')).toHaveCount(0);
+
+    await panel.getByLabel('Move by itself').check();
+    await panel.getByRole('spinbutton', { name: 'Seconds on each picture' }).fill('8');
+    await panel.getByRole('spinbutton', { name: 'Seconds on each picture' }).blur();
+    await editor.waitForSave();
+
+    const element = (await editor.draft()).sections[0]!.elements.find((item) => item.type === 'slider');
+
+    expect(element?.props.images).toHaveLength(2);
+    expect(element?.props.dots).toBe(false);
+    expect(element?.props.autoplay).toBe(true);
+    expect(element?.props.interval).toBe(8);
+});
+
+test('the block library is grouped, and a block lands as a real section', async ({ editor, page }) => {
+    const sidebar = page.locator('.lze-left');
+
+    await expect(sidebar.locator('.lze-group-label')).toHaveCount(4);
+    await expect(sidebar.getByRole('button', { name: 'Plans' })).toBeVisible();
+
+    const before = (await editor.draft()).sections.length;
+
+    await sidebar.getByRole('button', { name: 'Plans' }).click();
+    await editor.waitForSave();
+
+    const sections = (await editor.draft()).sections;
+
+    expect(sections).toHaveLength(before + 1);
+    expect(sections.at(-1)!.elements.filter((element) => element.type === 'button')).toHaveLength(3);
+
+    await sidebar.getByRole('button', { name: 'Numbers' }).click();
+    await editor.waitForSave();
+
+    expect((await editor.draft()).sections.at(-1)!.flow).toBe('row');
+});

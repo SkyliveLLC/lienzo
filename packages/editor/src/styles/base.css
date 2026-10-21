@@ -66,7 +66,7 @@
 .lze-icon-btn[data-tone='danger'] { color: var(--lze-danger); }
 .lze-icon-btn:disabled { opacity: .4; cursor: default; }
 
-.lze-field { display: grid; gap: 6px; }
+.lze-field { display: grid; gap: 7px; }
 .lze-label { font-size: 12px; font-weight: 600; color: var(--lze-fg); }
 .lze-input, .lze-select {
     width: 100%; min-height: 32px; padding: 6px 8px; border: 1px solid var(--lze-border); border-radius: 6px;
@@ -130,9 +130,9 @@ textarea.lze-input { resize: vertical; line-height: 1.4; }
 .lze-toast .lze-icon-btn { color: inherit; width: 26px; height: 26px; }
 .lze-toast .lze-icon-btn:hover { background: rgb(255 255 255 / .15); color: inherit; }
 
-.lze-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.lze-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .lze-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-.lze-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
-.lze-stack { display: grid; gap: 12px; }
+.lze-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.lze-stack { display: grid; gap: 16px; }
 .lze-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 650; }
 .lze-link { padding: 0; border: 0; background: none; color: inherit; text-decoration: underline; cursor: pointer; }

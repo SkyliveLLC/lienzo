@@ -1,6 +1,7 @@
 import type { CoreElementType } from '@skylivellc/lienzo-core';
 import {
     AlignLeft,
+    GalleryHorizontalEnd,
     Image,
     Images,
     ListFilter,
@@ -29,6 +30,7 @@ export const typeIcons: Record<CoreElementType, Component> = {
     icon: Sparkles,
     navbar: Menu,
     gallery: Images,
+    slider: GalleryHorizontalEnd,
     input: TextCursorInput,
     textarea: Pilcrow,
     select: ListFilter,

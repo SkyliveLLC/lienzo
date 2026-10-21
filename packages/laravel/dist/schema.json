@@ -1444,6 +1444,40 @@
           ],
           "x-blank-as-null": true
         },
+        "autoplay": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "interval": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 2,
+              "maximum": 12
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "arrows": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "dots": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
         "multiple": {
           "x-blank-as-null": true,
           "type": [
@@ -1470,6 +1504,7 @@
                 "split",
                 "left",
                 "center",
+                "right",
                 "grid",
                 "strip"
               ]
@@ -1492,7 +1527,27 @@
                 "divided",
                 "floating",
                 "boxed",
-                "tracked"
+                "tracked",
+                "ribbon",
+                "outline",
+                "minimal",
+                "stack",
+                "rail"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "position": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "top",
+                "bottom"
               ]
             },
             {

@@ -17,11 +17,12 @@ const MAX_LINKS = 8;
 const props = defineProps<{ element: CoreElement }>();
 const editor = useEditor();
 const t = editor.t;
-const ids = { brand: useId(), scroll: useId(), layout: useId(), template: useId() };
+const ids = { brand: useId(), scroll: useId(), layout: useId(), template: useId(), position: useId() };
 const presets = navbarPresets(t);
 const scrollStyles = (['same', 'shadow', 'solid', 'compact'] as const).map((value) => ({ value, label: t(`el.scroll.${value}`) }));
-const templates = (['plain', 'pill', 'card', 'underline', 'divided', 'floating', 'boxed', 'tracked'] as const).map((value) => ({ value, label: t(`el.navbarTemplate.${value}`) }));
-const layouts = (['split', 'left', 'center'] as const).map((value) => ({ value, label: t(`el.layout.${value}`) }));
+const templates = (['plain', 'pill', 'card', 'underline', 'divided', 'floating', 'boxed', 'tracked', 'ribbon', 'outline', 'minimal', 'stack', 'rail'] as const).map((value) => ({ value, label: t(`el.navbarTemplate.${value}`) }));
+const layouts = (['split', 'left', 'center', 'right'] as const).map((value) => ({ value, label: t(`el.layout.${value}`) }));
+const positions = (['top', 'bottom'] as const).map((value) => ({ value, label: t(`el.navbarPosition.${value}`) }));
 const links = computed(() => props.element.props.links ?? []);
 
 /** A preset replaces the menu's content and look, never its position or size. */
@@ -57,6 +58,9 @@ function removeLink(index: number) {
         <SelectInput :id="ids.scroll" :model-value="element.props.scroll_style ?? 'same'" :options="scrollStyles" @update:model-value="element.props.scroll_style = $event" @commit="editor.commit()" />
     </Field>
     <template v-if="element.props.sticky">
+        <Field :id="ids.position" :label="t('el.navbarPosition')">
+            <SelectInput :id="ids.position" :model-value="element.props.position ?? 'top'" :options="positions" @update:model-value="element.props.position = $event" @commit="editor.commit()" />
+        </Field>
         <ColorPicker v-model="element.style.scroll_background" :label="t('el.scrollBackground')" @commit="editor.commit()" />
         <ColorPicker v-model="element.style.scroll_color" :label="t('el.scrollColor')" @commit="editor.commit()" />
         <p class="lze-hint">{{ t('el.scrollColorsHint') }}</p>

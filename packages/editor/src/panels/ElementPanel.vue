@@ -9,6 +9,7 @@ import FormFieldContent from './content/FormFieldContent.vue';
 import IconContent from './content/IconContent.vue';
 import ImageContent from './content/ImageContent.vue';
 import GalleryContent from './content/GalleryContent.vue';
+import SliderContent from './content/SliderContent.vue';
 import NavbarContent from './content/NavbarContent.vue';
 import ShapeContent from './content/ShapeContent.vue';
 import TextContent from './content/TextContent.vue';
@@ -37,6 +38,7 @@ const coreContent = {
     icon: IconContent,
     navbar: NavbarContent,
     gallery: GalleryContent,
+    slider: SliderContent,
     input: FormFieldContent,
     textarea: FormFieldContent,
     select: FormFieldContent,

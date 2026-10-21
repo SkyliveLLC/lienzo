@@ -7,7 +7,7 @@ export type ThemeToken = (typeof THEME_TOKENS)[number];
 
 export const CORE_ELEMENT_TYPES = [
     'heading', 'text', 'image', 'button', 'divider', 'video', 'shape', 'icon',
-    'navbar', 'gallery', 'input', 'textarea', 'select', 'checkbox',
+    'navbar', 'gallery', 'slider', 'input', 'textarea', 'select', 'checkbox',
 ] as const;
 export type CoreElementType = (typeof CORE_ELEMENT_TYPES)[number];
 
@@ -145,10 +145,20 @@ export const corePropsSchema = object({
     /** The pictures of a gallery, in the order they are shown. */
     images: list(z.array(image).max(24)).nullish(),
     columns: optional(intBetween(1, 6)),
+    /** A slider's own behaviour: it moves by itself, and what it shows to move by hand. */
+    autoplay: optional(z.boolean()),
+    interval: optional(between(2, 12)),
+    arrows: optional(z.boolean()),
+    dots: optional(z.boolean()),
     multiple: optional(z.boolean()),
     brand: z.string().max(60).nullish(),
-    layout: optional(z.enum(['split', 'left', 'center', 'grid', 'strip'])),
-    template: optional(z.enum(['plain', 'pill', 'card', 'underline', 'divided', 'floating', 'boxed', 'tracked'])),
+    layout: optional(z.enum(['split', 'left', 'center', 'right', 'grid', 'strip'])),
+    template: optional(z.enum([
+        'plain', 'pill', 'card', 'underline', 'divided', 'floating', 'boxed', 'tracked',
+        'ribbon', 'outline', 'minimal', 'stack', 'rail',
+    ])),
+    /** Where a sticky bar lives: the top of the screen, or the bottom. */
+    position: optional(z.enum(['top', 'bottom'])),
     links: list(z.array(object({
         label: z.string().min(1).max(40),
         action: object({ type: actionType, value: z.string().max(300).nullish() }),

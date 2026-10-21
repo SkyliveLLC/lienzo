@@ -9,6 +9,9 @@ const en = {
     submit: 'Send',
     icon: 'Icon',
     video: 'Video',
+    previous: 'Previous',
+    next: 'Next',
+    slide: 'Picture {n}',
     unavailable: 'This element needs a plugin that is not installed',
 };
 
@@ -24,6 +27,9 @@ const es: Messages = {
     submit: 'Enviar',
     icon: 'Icono',
     video: 'Video',
+    previous: 'Anterior',
+    next: 'Siguiente',
+    slide: 'Imagen {n}',
     unavailable: 'Este elemento necesita un complemento que no está instalado',
 };
 
