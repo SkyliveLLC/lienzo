@@ -18,6 +18,7 @@ final class CoreElements
         'shape' => Shape::class,
         'icon' => Icon::class,
         'navbar' => Navbar::class,
+        'box' => Box::class,
         'gallery' => Gallery::class,
         'slider' => Slider::class,
         'input' => Input::class,

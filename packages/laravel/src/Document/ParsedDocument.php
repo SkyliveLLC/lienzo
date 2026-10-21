@@ -86,6 +86,13 @@ final readonly class ParsedDocument
         $propsPath = [...$path, 'props'];
         $type = $element['type'];
 
+        // What a box holds is checked the same way, one level down.
+        if (array_key_exists('children', $element) && is_array($element['children'])) {
+            foreach ($element['children'] as $index => $child) {
+                $element['children'][$index] = self::parseProps($child, $appFields, [...$path, 'children', $index], $issues);
+            }
+        }
+
         $schema = match (true) {
             in_array($type, Assets::data()['elementTypes'], true) => Schema::ref('CoreProps'),
             isset($appFields[$type]) => self::fieldsSchema($appFields[$type]),

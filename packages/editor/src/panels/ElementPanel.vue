@@ -8,6 +8,7 @@ import ButtonContent from './content/ButtonContent.vue';
 import FormFieldContent from './content/FormFieldContent.vue';
 import IconContent from './content/IconContent.vue';
 import ImageContent from './content/ImageContent.vue';
+import BoxContent from './content/BoxContent.vue';
 import GalleryContent from './content/GalleryContent.vue';
 import SliderContent from './content/SliderContent.vue';
 import NavbarContent from './content/NavbarContent.vue';
@@ -37,6 +38,7 @@ const coreContent = {
     shape: ShapeContent,
     icon: IconContent,
     navbar: NavbarContent,
+    box: BoxContent,
     gallery: GalleryContent,
     slider: SliderContent,
     input: FormFieldContent,
@@ -78,6 +80,10 @@ const styles = computed(() => {
                 <Button v-if="kind.kind !== 'opaque'" @click="editor.duplicateSelected()">{{ t('common.duplicate') }}</Button>
                 <Button variant="danger" @click="editor.removeSelected()">{{ t('common.delete') }}</Button>
             </div>
+        </div>
+        <div class="lze-row">
+            <Button v-if="element.type === 'box'" @click="editor.ungroupBox()">{{ t('el.ungroup') }}</Button>
+            <Button v-else-if="!editor.isInsideBox(element.id)" @click="editor.groupIntoBox()">{{ t('el.group') }}</Button>
         </div>
         <p v-if="kind.kind === 'opaque'" class="lze-hint">{{ t('el.unknown') }}</p>
         <template v-else>

@@ -211,23 +211,38 @@ const modals = computed(() => editor.state.draft.modals ?? []);
                     </span>
                 </div>
                 <div v-show="!collapsed.includes(canvas.id)" class="lze-layer-children">
-                    <div v-for="element in canvas.elements" :key="element.id" class="lze-layer-row" :data-selected="selectedIds.includes(element.id)">
-                        <button type="button" class="lze-layer-name" @click="editor.select(canvas.id, element.id, $event.shiftKey)">
-                            <ElementIcon :element="element" />
-                            <span>{{ layerLabel(element) }}</span>
-                        </button>
-                        <button
-                            type="button"
-                            class="lze-icon-btn lze-lock-toggle"
-                            :data-locked="element.locked === true"
-                            :title="element.locked ? t('layers.unlock') : t('layers.lock')"
-                            :aria-label="element.locked ? t('layers.unlock') : t('layers.lock')"
-                            @click="toggleLocked(element)"
-                        >
-                            <Lock v-if="element.locked" :size="12" aria-hidden="true" />
-                            <LockOpen v-else :size="12" aria-hidden="true" />
-                        </button>
-                    </div>
+                    <template v-for="element in canvas.elements" :key="element.id">
+                        <div class="lze-layer-row" :data-selected="selectedIds.includes(element.id)">
+                            <button type="button" class="lze-layer-name" @click="editor.select(canvas.id, element.id, $event.shiftKey)">
+                                <ElementIcon :element="element" />
+                                <span>{{ layerLabel(element) }}</span>
+                            </button>
+                            <button
+                                type="button"
+                                class="lze-icon-btn lze-lock-toggle"
+                                :data-locked="element.locked === true"
+                                :title="element.locked ? t('layers.unlock') : t('layers.lock')"
+                                :aria-label="element.locked ? t('layers.unlock') : t('layers.lock')"
+                                @click="toggleLocked(element)"
+                            >
+                                <Lock v-if="element.locked" :size="12" aria-hidden="true" />
+                                <LockOpen v-else :size="12" aria-hidden="true" />
+                            </button>
+                        </div>
+                        <div v-if="element.children?.length" class="lze-layer-children">
+                            <div
+                                v-for="child in element.children"
+                                :key="child.id"
+                                class="lze-layer-row"
+                                :data-selected="selectedIds.includes(child.id)"
+                            >
+                                <button type="button" class="lze-layer-name" @click="editor.select(canvas.id, child.id, $event.shiftKey)">
+                                    <ElementIcon :element="child" />
+                                    <span>{{ layerLabel(child) }}</span>
+                                </button>
+                            </div>
+                        </div>
+                    </template>
                     <p v-if="canvas.elements.length === 0" class="lze-hint lze-pad">{{ t('layers.empty') }}</p>
                 </div>
             </div>

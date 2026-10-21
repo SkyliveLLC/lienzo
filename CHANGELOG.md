@@ -2,7 +2,11 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
-## Unreleased
+## 0.13.0 (2026-10-20)
+
+### Editor
+
+- A box element that lays out what it holds, the way a hand-written page does: one under the other or side by side, with a gap, and it stacks on phones. Select what you already placed and group it, or add elements into the box with it selected. Nothing inside a box is dragged any more, because the box decides.
 
 ### Laravel
 

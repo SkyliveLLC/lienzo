@@ -67,13 +67,34 @@ final class Canvas
     }
 
     /**
+     * Every element of a canvas, boxes included, with what each box holds.
+     *
+     * @param  list<array<string, mixed>>  $elements
+     * @return list<array<string, mixed>>
+     */
+    public static function flatten(array $elements): array
+    {
+        $flat = [];
+
+        foreach ($elements as $element) {
+            $flat[] = $element;
+
+            foreach ($element['children'] ?? [] as $child) {
+                $flat[] = $child;
+            }
+        }
+
+        return $flat;
+    }
+
+    /**
      * A canvas with fields or a submit button is published inside a form.
      *
      * @param  array<string, mixed>  $canvas
      */
     public static function isForm(array $canvas): bool
     {
-        foreach ($canvas['elements'] as $element) {
+        foreach (self::flatten($canvas['elements']) as $element) {
             if (self::isField($element) || (self::isCore($element) && ($element['props']['action']['type'] ?? null) === 'submit')) {
                 return true;
             }
@@ -143,7 +164,7 @@ final class Canvas
         $spec = fn (string $source, array $canvases): array => [
             'source' => $source,
             'fields' => array_merge(...array_map(
-                fn (array $canvas): array => array_map(self::field(...), array_values(array_filter($canvas['elements'], self::isField(...)))),
+                fn (array $canvas): array => array_map(self::field(...), array_values(array_filter(self::flatten($canvas['elements']), self::isField(...)))),
                 $canvases,
             )),
         ];

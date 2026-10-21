@@ -1,5 +1,6 @@
 import {
     DocumentError,
+    flatten,
     parseDocument,
     parseSiteSettings,
     type Catalog,
@@ -243,7 +244,9 @@ export function createEditor({ client, i18n }: EditorDeps) {
             return [];
         }
 
-        return findCanvas(state.draft, selection.canvas)?.elements.filter((element) => selection.ids.includes(element.id)) ?? [];
+        const canvas = findCanvas(state.draft, selection.canvas);
+
+        return canvas ? flatten(canvas.elements).filter((element) => selection.ids.includes(element.id)) : [];
     });
 
     const activeElement = computed<Element | null>(() => {
@@ -445,7 +448,7 @@ export function createEditor({ client, i18n }: EditorDeps) {
         if (!canvas) {
             state.selection = { kind: 'none' };
         } else if (selection.kind === 'elements') {
-            const ids = selection.ids.filter((id) => canvas.elements.some((element) => element.id === id));
+            const ids = selection.ids.filter((id) => flatten(canvas.elements).some((element) => element.id === id));
             state.selection = ids.length === 0
                 ? { kind: 'canvas', canvas: canvas.id }
                 : { kind: 'elements', canvas: canvas.id, ids, active: ids.includes(selection.active) ? selection.active : ids[0]! };
@@ -464,13 +467,13 @@ export function createEditor({ client, i18n }: EditorDeps) {
     /** Selects an element (and its group). With `additive`, toggles it in the current selection. */
     function select(canvasId: string, elementId: string, additive = false) {
         const canvas = findCanvas(state.draft, canvasId);
-        const clicked = canvas?.elements.find((element) => element.id === elementId);
+        const clicked = canvas ? flatten(canvas.elements).find((element) => element.id === elementId) : undefined;
 
         if (!canvas || !clicked) {
             return;
         }
 
-        const family = clicked.group ? canvas.elements.filter((element) => element.group === clicked.group).map((element) => element.id) : [elementId];
+        const family = clicked.group ? flatten(canvas.elements).filter((element) => element.group === clicked.group).map((element) => element.id) : [elementId];
         const current = state.selection.kind === 'elements' && state.selection.canvas === canvasId ? state.selection.ids : [];
         const ids = !additive
             ? family
@@ -508,6 +511,31 @@ export function createEditor({ client, i18n }: EditorDeps) {
         state.panels = { ...state.panels, [groupId]: index - start };
     }
 
+    /** The box that holds an element, when it is inside one. */
+    function boxHolding(canvas: Section | Modal | undefined, id: string): Element | undefined {
+        return canvas?.elements.find((element) => (element.children ?? []).some((child) => child.id === id));
+    }
+
+    /** An element a box lays out keeps no place of its own, so it is never dragged. */
+    function isInsideBox(id: string): boolean {
+        const selection = state.selection;
+
+        return selection.kind === 'elements' && boxHolding(findCanvas(state.draft, selection.canvas), id) !== undefined;
+    }
+
+    /** The box an insert would land in: the selected one, or the one holding the selection. */
+    function openBox(canvas: Section | Modal): Element | undefined {
+        const selection = state.selection;
+
+        if (selection.kind !== 'elements' || selection.active === null) {
+            return undefined;
+        }
+
+        const active = flatten(canvas.elements).find((element) => element.id === selection.active);
+
+        return active?.type === 'box' ? active : boxHolding(canvas, selection.active);
+    }
+
     /** Adds an element to the current canvas, or at a drop point in a given canvas. */
     function addElement(insertable: Insertable, at?: { canvas: string; x: number; y: number }, src?: string) {
         const target = at ? findCanvas(state.draft, at.canvas) : currentCanvas.value;
@@ -522,6 +550,18 @@ export function createEditor({ client, i18n }: EditorDeps) {
             element.props = { ...element.props, src };
         }
 
+        const box = at ? undefined : openBox(target);
+
+        if (box && element.type !== 'box') {
+            element.layout.desktop = { ...element.layout.desktop, x: 0, y: 0, w: box.props.flow === 'row' ? 48 : 100 };
+            element.z = (box.children?.length ?? 0) + 1;
+            box.children = [...(box.children ?? []), element];
+            state.selection = { kind: 'elements', canvas: target.id, ids: [element.id], active: element.id };
+            commit();
+
+            return;
+        }
+
         if (at) {
             element.layout.desktop = { ...element.layout.desktop, x: Math.round(at.x * 2) / 2, y: snap(at.y) };
         }
@@ -529,6 +569,77 @@ export function createEditor({ client, i18n }: EditorDeps) {
         element.z = target.elements.length + 1;
         target.elements.push(element);
         state.selection = { kind: 'elements', canvas: target.id, ids: [element.id], active: element.id };
+        commit();
+    }
+
+    /** Wraps the selected elements in a box that lays them out from then on. */
+    function groupIntoBox() {
+        const selection = state.selection;
+        const canvas = selection.kind === 'elements' ? findCanvas(state.draft, selection.canvas) : undefined;
+        const chosen = canvas?.elements.filter((element) => selection.kind === 'elements' && selection.ids.includes(element.id)) ?? [];
+
+        if (!canvas || chosen.length === 0 || chosen.some((element) => element.type === 'box' || element.children)) {
+            return;
+        }
+
+        const boxes = chosen.map((element) => element.layout.desktop);
+        const left = Math.min(...boxes.map((box) => box.x));
+        const top = Math.min(...boxes.map((box) => box.y));
+        const right = Math.max(...boxes.map((box) => box.x + box.w));
+        const bottom = Math.max(...boxes.map((box) => box.y + box.h));
+        const row = right - left > 60 && bottom - top < 200;
+        const order = [...chosen].sort((a, b) => a.layout.desktop.y - b.layout.desktop.y || a.layout.desktop.x - b.layout.desktop.x);
+
+        const box: Element = {
+            id: newId('box'),
+            type: 'box',
+            z: Math.max(...chosen.map((element) => element.z)),
+            layout: { desktop: { x: left, y: top, w: Math.min(100 - left, right - left), h: bottom - top }, mobile: null },
+            props: { flow: row ? 'row' : 'column', flow_gap: 16, flow_align: 'start' },
+            style: {},
+            children: order.map((element, index) => ({
+                ...element,
+                z: index + 1,
+                layout: {
+                    desktop: { ...element.layout.desktop, x: 0, y: 0, w: Math.min(100, (element.layout.desktop.w / Math.max(right - left, 1)) * 100) },
+                    mobile: null,
+                },
+            })),
+        };
+
+        const taken = new Set(chosen.map((element) => element.id));
+
+        canvas.elements = [...canvas.elements.filter((element) => !taken.has(element.id)), box];
+        state.selection = { kind: 'elements', canvas: canvas.id, ids: [box.id], active: box.id };
+        commit();
+    }
+
+    /** Puts what a box holds back on the canvas, one under the other. */
+    function ungroupBox() {
+        const selection = state.selection;
+        const canvas = selection.kind === 'elements' ? findCanvas(state.draft, selection.canvas) : undefined;
+        const box = canvas?.elements.find((element) => selection.kind === 'elements' && element.id === selection.active && element.type === 'box');
+
+        if (!canvas || !box || !box.children || box.children.length === 0) {
+            return;
+        }
+
+        const place = box.layout.desktop;
+        const freed = box.children.map((child, index) => ({
+            ...child,
+            z: box.z + index,
+            layout: {
+                desktop: { x: place.x, y: place.y + index * 80, w: Math.min(100 - place.x, place.w), h: child.layout.desktop.h },
+                mobile: null,
+            },
+        }));
+
+        canvas.elements = [...canvas.elements.filter((element) => element.id !== box.id), ...freed];
+        const first = freed[0];
+
+        if (first) {
+            state.selection = { kind: 'elements', canvas: canvas.id, ids: freed.map((element) => element.id), active: first.id };
+        }
         commit();
     }
 
@@ -542,7 +653,11 @@ export function createEditor({ client, i18n }: EditorDeps) {
         const canvas = findCanvas(state.draft, selection.canvas);
 
         if (canvas) {
-            canvas.elements = canvas.elements.filter((element) => !selection.ids.includes(element.id) || element.locked === true);
+            const keep = (element: Element) => !selection.ids.includes(element.id) || element.locked === true;
+
+            canvas.elements = canvas.elements.filter(keep).map((element) => (element.children
+                ? { ...element, children: element.children.filter(keep) }
+                : element));
             state.selection = { kind: 'canvas', canvas: canvas.id };
             commit();
         }
@@ -737,7 +852,7 @@ export function createEditor({ client, i18n }: EditorDeps) {
         const canvas = currentCanvas.value;
 
         for (const { id, box } of boxes) {
-            const element = canvas?.elements.find((candidate) => candidate.id === id);
+            const element = canvas ? flatten(canvas.elements).find((candidate) => candidate.id === id) : undefined;
 
             if (element) {
                 writeBox(element, state.device, box);
@@ -1169,6 +1284,9 @@ export function createEditor({ client, i18n }: EditorDeps) {
         selectCanvas,
         clearSelection,
         addElement,
+        groupIntoBox,
+        ungroupBox,
+        isInsideBox,
         removeSelected,
         duplicateSelected,
         copySelected,

@@ -92,6 +92,10 @@ export const coreSpecs = {
         label: 'type.slider', group: 'content', styles: ALL, inline: null,
         create: () => ({ box: { x: 6, w: 88, h: 380 }, props: { images: [], arrows: true, dots: true, autoplay: false, interval: 5 }, style: { radius: 8 } }),
     },
+    box: {
+        label: 'type.box', group: 'content', styles: ALL, inline: null,
+        create: () => ({ box: { x: 6, w: 88, h: 240 }, props: { flow: 'column', flow_gap: 16, flow_align: 'start' }, style: { padding: 24, radius: 16 } }),
+    },
     input: { label: 'type.input', group: 'form', styles: ALL, inline: null, create: field('input') },
     textarea: { label: 'type.textarea', group: 'form', styles: ALL, inline: null, create: field('textarea') },
     select: { label: 'type.select', group: 'form', styles: ALL, inline: null, create: field('select') },

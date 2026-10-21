@@ -17,7 +17,7 @@
           "maxItems": 10,
           "type": "array",
           "items": {
-            "$ref": "#/$defs/__schema6"
+            "$ref": "#/$defs/__schema14"
           }
         },
         {
@@ -348,673 +348,39 @@
           "$ref": "#/$defs/__schema1"
         },
         "type": {
-          "type": "string",
-          "pattern": "^[a-z][a-z0-9_-]{0,39}$"
+          "$ref": "#/$defs/__schema5"
         },
         "z": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 999
+          "$ref": "#/$defs/__schema6"
         },
         "locked": {
-          "x-blank-as-null": true,
-          "type": [
-            "boolean",
-            "null"
-          ]
+          "$ref": "#/$defs/__schema7"
         },
         "group": {
+          "$ref": "#/$defs/__schema8"
+        },
+        "layout": {
+          "$ref": "#/$defs/__schema9"
+        },
+        "props": {
+          "$ref": "#/$defs/__schema11"
+        },
+        "style": {
+          "$ref": "#/$defs/__schema12"
+        },
+        "children": {
           "anyOf": [
             {
-              "type": "string",
-              "maxLength": 40
+              "maxItems": 30,
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/__schema13"
+              }
             },
             {
               "type": "null"
             }
           ]
-        },
-        "layout": {
-          "type": "object",
-          "properties": {
-            "desktop": {
-              "$ref": "#/$defs/__schema5"
-            },
-            "mobile": {
-              "anyOf": [
-                {
-                  "$ref": "#/$defs/__schema5"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            }
-          },
-          "required": [
-            "desktop"
-          ],
-          "additionalProperties": false
-        },
-        "props": {
-          "type": "object",
-          "propertyNames": {
-            "type": "string"
-          },
-          "additionalProperties": {}
-        },
-        "style": {
-          "type": "object",
-          "properties": {
-            "color": {
-              "anyOf": [
-                {
-                  "$ref": "#/$defs/__schema2"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "background": {
-              "anyOf": [
-                {
-                  "$ref": "#/$defs/__schema2"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "font": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "heading",
-                    "body"
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "size": {
-              "anyOf": [
-                {
-                  "type": "integer",
-                  "minimum": 8,
-                  "maximum": 160
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "weight": {
-              "anyOf": [
-                {
-                  "type": "number",
-                  "enum": [
-                    300,
-                    400,
-                    500,
-                    600,
-                    700,
-                    800
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "align": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "left",
-                    "center",
-                    "right"
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "line_height": {
-              "anyOf": [
-                {
-                  "type": "number",
-                  "minimum": 0.8,
-                  "maximum": 3
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "radius": {
-              "anyOf": [
-                {
-                  "type": "integer",
-                  "minimum": 0,
-                  "maximum": 999
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "border_width": {
-              "anyOf": [
-                {
-                  "type": "integer",
-                  "minimum": 0,
-                  "maximum": 12
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "border_color": {
-              "anyOf": [
-                {
-                  "$ref": "#/$defs/__schema2"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "padding": {
-              "anyOf": [
-                {
-                  "type": "integer",
-                  "minimum": 0,
-                  "maximum": 80
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "opacity": {
-              "anyOf": [
-                {
-                  "type": "number",
-                  "minimum": 0,
-                  "maximum": 1
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "shadow": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "none",
-                    "sm",
-                    "md",
-                    "lg",
-                    "custom"
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "finish": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "flat",
-                    "glass",
-                    "soft",
-                    "pressed"
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "shadow_custom": {
-              "anyOf": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "x": {
-                      "anyOf": [
-                        {
-                          "type": "integer",
-                          "minimum": -100,
-                          "maximum": 100
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "x-blank-as-null": true
-                    },
-                    "y": {
-                      "anyOf": [
-                        {
-                          "type": "integer",
-                          "minimum": -100,
-                          "maximum": 100
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "x-blank-as-null": true
-                    },
-                    "blur": {
-                      "anyOf": [
-                        {
-                          "type": "integer",
-                          "minimum": 0,
-                          "maximum": 200
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "x-blank-as-null": true
-                    },
-                    "spread": {
-                      "anyOf": [
-                        {
-                          "type": "integer",
-                          "minimum": -50,
-                          "maximum": 100
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "x-blank-as-null": true
-                    },
-                    "color": {
-                      "anyOf": [
-                        {
-                          "$ref": "#/$defs/__schema2"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "x-blank-as-null": true
-                    },
-                    "opacity": {
-                      "anyOf": [
-                        {
-                          "type": "number",
-                          "minimum": 0,
-                          "maximum": 1
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "x-blank-as-null": true
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "object_fit": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "cover",
-                    "contain"
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "gradient": {
-              "anyOf": [
-                {
-                  "$ref": "#/$defs/__schema3"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "background_opacity": {
-              "anyOf": [
-                {
-                  "type": "number",
-                  "minimum": 0,
-                  "maximum": 1
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "blur": {
-              "anyOf": [
-                {
-                  "type": "integer",
-                  "minimum": 0,
-                  "maximum": 40
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "rotate": {
-              "anyOf": [
-                {
-                  "type": "number",
-                  "minimum": -180,
-                  "maximum": 180
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "flip_x": {
-              "x-blank-as-null": true,
-              "type": [
-                "boolean",
-                "null"
-              ]
-            },
-            "flip_y": {
-              "x-blank-as-null": true,
-              "type": [
-                "boolean",
-                "null"
-              ]
-            },
-            "clip": {
-              "x-blank-as-null": true,
-              "type": [
-                "boolean",
-                "null"
-              ]
-            },
-            "pinned": {
-              "x-blank-as-null": true,
-              "type": [
-                "boolean",
-                "null"
-              ]
-            },
-            "overflow": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "visible",
-                    "hidden",
-                    "scroll-x",
-                    "scroll-y"
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "visible_on": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "all",
-                    "desktop",
-                    "mobile"
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "accent_color": {
-              "anyOf": [
-                {
-                  "$ref": "#/$defs/__schema2"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "scroll_background": {
-              "anyOf": [
-                {
-                  "$ref": "#/$defs/__schema2"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "scroll_color": {
-              "anyOf": [
-                {
-                  "$ref": "#/$defs/__schema2"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "size_mobile": {
-              "anyOf": [
-                {
-                  "type": "integer",
-                  "minimum": 8,
-                  "maximum": 240
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "tracking": {
-              "anyOf": [
-                {
-                  "type": "number",
-                  "minimum": -0.05,
-                  "maximum": 0.5
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "text_case": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "none",
-                    "upper",
-                    "lower",
-                    "title"
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "text_style": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "solid",
-                    "outline",
-                    "glow"
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "auto_height": {
-              "x-blank-as-null": true,
-              "type": [
-                "boolean",
-                "null"
-              ]
-            },
-            "hover": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "none",
-                    "lift",
-                    "grow",
-                    "fade",
-                    "tilt",
-                    "glow",
-                    "sink"
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "scroll": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "none",
-                    "rise",
-                    "drift",
-                    "zoom"
-                  ]
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "x-blank-as-null": true
-            },
-            "animation": {
-              "anyOf": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "anyOf": [
-                        {
-                          "type": "string",
-                          "enum": [
-                            "none",
-                            "fade",
-                            "up",
-                            "down",
-                            "left",
-                            "right",
-                            "zoom",
-                            "blur",
-                            "reveal"
-                          ]
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "x-blank-as-null": true
-                    },
-                    "delay": {
-                      "anyOf": [
-                        {
-                          "type": "number",
-                          "minimum": 0,
-                          "maximum": 2
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "x-blank-as-null": true
-                    },
-                    "duration": {
-                      "anyOf": [
-                        {
-                          "type": "number",
-                          "minimum": 0.2,
-                          "maximum": 2
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "x-blank-as-null": true
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            }
-          },
-          "additionalProperties": false
         }
       },
       "required": [
@@ -1028,6 +394,55 @@
       "additionalProperties": false
     },
     "__schema5": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]{0,39}$"
+    },
+    "__schema6": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "__schema7": {
+      "x-blank-as-null": true,
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "__schema8": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 40
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "__schema9": {
+      "type": "object",
+      "properties": {
+        "desktop": {
+          "$ref": "#/$defs/__schema10"
+        },
+        "mobile": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/__schema10"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "desktop"
+      ],
+      "additionalProperties": false
+    },
+    "__schema10": {
       "type": "object",
       "properties": {
         "x": {
@@ -1059,7 +474,665 @@
       ],
       "additionalProperties": false
     },
-    "__schema6": {
+    "__schema11": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {}
+    },
+    "__schema12": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/__schema2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "background": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/__schema2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "font": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "heading",
+                "body"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "size": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 8,
+              "maximum": 160
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "weight": {
+          "anyOf": [
+            {
+              "type": "number",
+              "enum": [
+                300,
+                400,
+                500,
+                600,
+                700,
+                800
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "align": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "line_height": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0.8,
+              "maximum": 3
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "radius": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 999
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "border_width": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 12
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "border_color": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/__schema2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "padding": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 80
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "opacity": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "shadow": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "none",
+                "sm",
+                "md",
+                "lg",
+                "custom"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "finish": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "flat",
+                "glass",
+                "soft",
+                "pressed"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "shadow_custom": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": -100,
+                      "maximum": 100
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "x-blank-as-null": true
+                },
+                "y": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": -100,
+                      "maximum": 100
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "x-blank-as-null": true
+                },
+                "blur": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 200
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "x-blank-as-null": true
+                },
+                "spread": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": -50,
+                      "maximum": 100
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "x-blank-as-null": true
+                },
+                "color": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/__schema2"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "x-blank-as-null": true
+                },
+                "opacity": {
+                  "anyOf": [
+                    {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "x-blank-as-null": true
+                }
+              },
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "object_fit": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "cover",
+                "contain"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "gradient": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/__schema3"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "background_opacity": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "blur": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 40
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "rotate": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "flip_x": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "flip_y": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "clip": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "pinned": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "overflow": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "visible",
+                "hidden",
+                "scroll-x",
+                "scroll-y"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "visible_on": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "all",
+                "desktop",
+                "mobile"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "accent_color": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/__schema2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "scroll_background": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/__schema2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "scroll_color": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/__schema2"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "size_mobile": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 8,
+              "maximum": 240
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "tracking": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": -0.05,
+              "maximum": 0.5
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "text_case": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "none",
+                "upper",
+                "lower",
+                "title"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "text_style": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "solid",
+                "outline",
+                "glow"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "auto_height": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "hover": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "none",
+                "lift",
+                "grow",
+                "fade",
+                "tilt",
+                "glow",
+                "sink"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "scroll": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "none",
+                "rise",
+                "drift",
+                "zoom"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "animation": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "none",
+                        "fade",
+                        "up",
+                        "down",
+                        "left",
+                        "right",
+                        "zoom",
+                        "blur",
+                        "reveal"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "x-blank-as-null": true
+                },
+                "delay": {
+                  "anyOf": [
+                    {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 2
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "x-blank-as-null": true
+                },
+                "duration": {
+                  "anyOf": [
+                    {
+                      "type": "number",
+                      "minimum": 0.2,
+                      "maximum": 2
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "x-blank-as-null": true
+                }
+              },
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "__schema13": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/__schema1"
+        },
+        "type": {
+          "$ref": "#/$defs/__schema5"
+        },
+        "z": {
+          "$ref": "#/$defs/__schema6"
+        },
+        "locked": {
+          "$ref": "#/$defs/__schema7"
+        },
+        "group": {
+          "$ref": "#/$defs/__schema8"
+        },
+        "layout": {
+          "$ref": "#/$defs/__schema9"
+        },
+        "props": {
+          "$ref": "#/$defs/__schema11"
+        },
+        "style": {
+          "$ref": "#/$defs/__schema12"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "z",
+        "layout",
+        "props",
+        "style"
+      ],
+      "additionalProperties": false
+    },
+    "__schema14": {
       "type": "object",
       "properties": {
         "id": {
@@ -1454,6 +1527,51 @@
               "type": "integer",
               "minimum": 1,
               "maximum": 6
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "flow": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "column",
+                "row"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "flow_gap": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 160
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "flow_align": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "start",
+                "center",
+                "end",
+                "between"
+              ]
             },
             {
               "type": "null"

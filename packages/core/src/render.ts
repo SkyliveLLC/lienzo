@@ -407,6 +407,10 @@ async function renderElement(element: Element, order: number | null, context: El
         layout.push(['mx', num(mobile.x)], ['my', num(mobile.y)], ['mw', num(mobile.w)], ['mh', num(mobile.h)]);
     }
 
+    if (element.props.flow_gap !== undefined && element.props.flow_gap !== null && isCoreElement(element)) {
+        layout.push(['fg', num(element.props.flow_gap)]);
+    }
+
     layout.push(['z', num(element.z)]);
     state.rules.push(rule(`#e-${id}`, [...layout, ...vars]));
 
@@ -414,10 +418,15 @@ async function renderElement(element: Element, order: number | null, context: El
         delete attrs['data-anim'];
     }
 
+    // A box draws what it holds; everything else draws its own children, if any.
+    const children = element.children === undefined || element.children === null
+        ? node.children
+        : await inOrder(element.children, (child) => renderElement(child, null, context, state));
+
     return h(node.tag, {
         ...node.attrs,
         ...attrs,
         id: `e-${id}`,
         class: node.class ? `lz-el ${node.class}` : 'lz-el',
-    }, node.children);
+    }, children);
 }

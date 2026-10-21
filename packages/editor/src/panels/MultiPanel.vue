@@ -3,6 +3,7 @@ import type { StyleGroup } from '@skylivellc/lienzo-core';
 import { AlignHorizontalDistributeCenter, AlignVerticalDistributeCenter } from '@lucide/vue';
 import { computed, type Component } from 'vue';
 import { useEditor } from '../state/editor.ts';
+import Button from '../ui/Button.vue';
 import IconButton from '../ui/IconButton.vue';
 import AlignButtons from './AlignButtons.vue';
 import FillStyle from './style/FillStyle.vue';
@@ -48,6 +49,10 @@ const target = computed(() => editor.sharedTarget());
 <template>
     <div class="lze-stack">
         <h2 class="lze-panel-title">{{ t('multi.count', { n: count }) }}</h2>
+        <div class="lze-row">
+            <Button @click="editor.groupIntoBox()">{{ t('el.group') }}</Button>
+        </div>
+        <p class="lze-hint">{{ t('el.groupHint') }}</p>
         <div class="lze-field">
             <span class="lze-label">{{ t('multi.align') }}</span>
             <AlignButtons />

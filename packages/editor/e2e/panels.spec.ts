@@ -360,3 +360,53 @@ test('a finish frosts the glass, and glass opens the fill', async ({ editor, pag
     await expect(heading).toHaveAttribute('data-finish', 'soft');
     await expect(heading).toHaveCSS('backdrop-filter', 'none');
 });
+
+test('a box lays out what it holds, and nothing in it is dragged', async ({ editor, page }) => {
+    const panel = page.locator('.lze-right');
+
+    // Two elements placed by hand become one box that lays them out.
+    await page.locator('.lze-palette-item', { hasText: /^Text$/ }).click();
+    await editor.waitForSave();
+
+    const first = (await editor.draft()).sections[0]!.elements.at(-1)!.id;
+
+    await page.locator('.lze-palette-item', { hasText: /^Button$/ }).click();
+    await editor.waitForSave();
+
+    const second = (await editor.draft()).sections[0]!.elements.at(-1)!.id;
+
+    await editor.canvas.locator(`#e-${first}`).click();
+    await editor.canvas.locator(`#e-${second}`).click({ modifiers: ['Shift'] });
+    await panel.getByRole('button', { name: 'Group into a box' }).click();
+    await editor.waitForSave();
+
+    const box = (await editor.draft()).sections[0]!.elements.at(-1)!;
+
+    expect(box.type).toBe('box');
+    expect(box.children?.map((child) => child.id)).toEqual([first, second]);
+
+    const rendered = editor.canvas.locator(`#e-${box.id}`);
+
+    await expect(rendered).toHaveClass(/lz-box/);
+    await expect(rendered).toHaveCSS('display', 'flex');
+
+    // What the box holds sits one under the other, with no overlap.
+    const tops = await rendered.locator('> .lz-el').evaluateAll((nodes) => nodes.map((node) => Math.round(node.getBoundingClientRect().top)));
+
+    expect(new Set(tops).size).toBe(2);
+
+    // A child keeps no handles, because the box decides where it goes.
+    await editor.canvas.locator(`#e-${first}`).click();
+    await expect(page.locator('.lze-handle')).toHaveCount(0);
+
+    // And it can be taken apart again, picking the box itself from the layers.
+    await page.locator('.lze-left').getByRole('tab', { name: 'Layers' }).click();
+    await page.locator('.lze-left .lze-layer-name', { hasText: 'Box' }).first().click();
+    await panel.getByRole('button', { name: 'Take out of the box' }).click();
+    await editor.waitForSave();
+
+    const after = (await editor.draft()).sections[0]!.elements;
+
+    expect(after.some((element) => element.type === 'box')).toBe(false);
+    expect(after.map((element) => element.id)).toContain(first);
+});

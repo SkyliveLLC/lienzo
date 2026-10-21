@@ -43,7 +43,8 @@ const single = computed(() => {
     const only = boxes.value.length === 1 ? boxes.value[0] : undefined;
     const selection = editor.state.selection;
 
-    if (!only || only.element.locked || selection.kind !== 'elements' || props.frozen.has(selection.canvas) || editor.kindOf(only.element).kind === 'opaque') {
+    if (!only || only.element.locked || selection.kind !== 'elements' || props.frozen.has(selection.canvas)
+        || editor.kindOf(only.element).kind === 'opaque' || editor.isInsideBox(only.element.id)) {
         return null;
     }
 

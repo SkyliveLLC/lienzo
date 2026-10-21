@@ -324,7 +324,7 @@ function startBoxGesture(event: PointerEvent, node: HTMLElement | SVGElement, ha
     const device = editor.state.device;
     const active = editor.activeElement.value;
 
-    if (!canvas || !metrics || !active || active.locked || editor.kindOf(active).kind === 'opaque') {
+    if (!canvas || !metrics || !active || active.locked || editor.kindOf(active).kind === 'opaque' || editor.isInsideBox(active.id)) {
         return;
     }
 

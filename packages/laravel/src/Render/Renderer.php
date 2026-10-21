@@ -464,6 +464,12 @@ final class Renderer
             array_push($layout, ['mx', Html::num($mobile['x'])], ['my', Html::num($mobile['y'])], ['mw', Html::num($mobile['w'])], ['mh', Html::num($mobile['h'])]);
         }
 
+        $gap = $element['props']['flow_gap'] ?? null;
+
+        if ($gap !== null && $core !== null) {
+            $layout[] = ['fg', Html::num($gap)];
+        }
+
         $layout[] = ['z', Html::num($element['z'])];
         $this->rules[] = self::rule("#e-{$id}", [...$layout, ...$style['vars']]);
 
@@ -473,11 +479,21 @@ final class Renderer
             unset($attrs['data-anim']);
         }
 
+        // A box draws what it holds; everything else draws its own children, if any.
+        $children = $node->children;
+
+        if (array_key_exists('children', $element) && $element['children'] !== null) {
+            $children = array_map(
+                fn (array $child): TrustedHtml => $this->element($child, null, $context),
+                $element['children'],
+            );
+        }
+
         return Html::h($node->tag, [
             ...$node->attrs,
             ...$attrs,
             'id' => "e-{$id}",
             'class' => $node->class !== null ? "lz-el {$node->class}" : 'lz-el',
-        ], $node->children);
+        ], $children);
     }
 }

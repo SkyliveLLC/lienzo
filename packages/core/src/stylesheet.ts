@@ -150,6 +150,19 @@ export const stylesheet = [
     ...[1, 2, 3, 4, 5, 6].map((n) => `.lz-gallery[data-cols="${n}"]{--cols:${n}}`),
 
     /* Pictures one at a time: a track that snaps, with arrows and dots over it. */
+    /* A box lays out what it holds: one under the other, or side by side. */
+    `.lz-box{display:flex;gap:${u('var(--fg,16)')};align-items:flex-start}`,
+    '.lz-box[data-flow=column]{flex-direction:column}',
+    '.lz-box[data-flow=row]{flex-direction:row;flex-wrap:wrap}',
+    '.lz-box[data-flow=column][data-flow-align=center]{align-items:center}',
+    '.lz-box[data-flow=column][data-flow-align=end]{align-items:flex-end}',
+    '.lz-box[data-flow=column][data-flow-align=between]{justify-content:space-between}',
+    '.lz-box[data-flow=row][data-flow-align=center]{justify-content:center}',
+    '.lz-box[data-flow=row][data-flow-align=end]{justify-content:flex-end}',
+    '.lz-box[data-flow=row][data-flow-align=between]{justify-content:space-between}',
+    '.lz-box>.lz-el{position:static;height:auto;max-width:100%}',
+    '.lz-box[data-flow=column]>.lz-el{width:calc(var(--w) * 1%)}',
+    '.lz-box[data-flow=row]>.lz-el{width:calc(var(--w) * 1%);flex:0 1 auto}',
     '.lz-slider{position:relative;overflow:hidden}',
     `.lz-frame[data-flow] .lz-slider{height:${u('380')}}`,
     '.lz-slider-track{display:flex;width:100%;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;'
@@ -278,6 +291,8 @@ export const stylesheet = [
         /* A section that lays itself out keeps doing it on phones, in one column. */
         + `.lz-frame[data-flow]{height:auto;min-height:${u('var(--fmh)')};flex-direction:column;padding:32px 20px}`
         + '.lz-frame[data-flow] .lz-el{position:static;width:auto;height:auto;order:var(--ord)}'
+        + '.lz-box{flex-direction:column}'
+        + '.lz-box>.lz-el{position:static;width:100%;height:auto}'
         + `.lz-el[data-${t.visible_on.attr}=desktop]{display:none}`
         + '.lz-parallax>.lz-bg{position:absolute}'
         /* The phone rule above turns every element absolute; a sticky bar stays fixed, and keeps its own offsets. */

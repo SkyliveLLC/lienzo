@@ -7,7 +7,7 @@ export type ThemeToken = (typeof THEME_TOKENS)[number];
 
 export const CORE_ELEMENT_TYPES = [
     'heading', 'text', 'image', 'button', 'divider', 'video', 'shape', 'icon',
-    'navbar', 'gallery', 'slider', 'input', 'textarea', 'select', 'checkbox',
+    'navbar', 'gallery', 'slider', 'box', 'input', 'textarea', 'select', 'checkbox',
 ] as const;
 export type CoreElementType = (typeof CORE_ELEMENT_TYPES)[number];
 
@@ -147,6 +147,10 @@ export const corePropsSchema = object({
     /** The pictures of a gallery, in the order they are shown. */
     images: list(z.array(image).max(24)).nullish(),
     columns: optional(intBetween(1, 6)),
+    /** How a box lays out what it holds. */
+    flow: optional(z.enum(['column', 'row'])),
+    flow_gap: optional(intBetween(0, 160)),
+    flow_align: optional(z.enum(['start', 'center', 'end', 'between'])),
     /** A slider's own behaviour: it moves by itself, and what it shows to move by hand. */
     autoplay: optional(z.boolean()),
     interval: optional(between(2, 12)),
@@ -172,7 +176,7 @@ export const corePropsSchema = object({
  * Props are checked after the envelope, by type: core props, an app element's
  * fields, or nothing at all for a type nobody registered (kept as-is).
  */
-const elementEnvelope = object({
+const elementShape = {
     id,
     type: z.string().regex(/^[a-z][a-z0-9_-]{0,39}$/),
     z: intBetween(0, 999),
@@ -181,6 +185,18 @@ const elementEnvelope = object({
     layout: object({ desktop: box, mobile: box.nullish() }),
     props: z.preprocess(emptyArrayAsObject, z.record(z.string(), z.unknown())),
     style: styleSchema,
+};
+
+const childEnvelope = object(elementShape);
+
+/**
+ * A box lays out what it holds, the way a hand-written page would. Its own
+ * children keep no boxes: one level is enough, because a section that lays
+ * itself out already gives the row or the column around them.
+ */
+const elementEnvelope = object({
+    ...elementShape,
+    children: list(z.array(childEnvelope).max(30)).nullish(),
 });
 
 const sectionSchema = object({
@@ -232,7 +248,7 @@ export type Action = z.output<typeof action>;
 export type Box = z.output<typeof box>;
 export type Gradient = z.output<typeof gradient>;
 type Envelope = z.output<typeof elementEnvelope>;
-type ElementBase = Omit<Envelope, 'type' | 'props'>;
+type ElementBase = Omit<Envelope, 'type' | 'props' | 'children'> & { children?: Element[] | null };
 
 export type FieldValue = string | number | boolean | string[] | Action | null;
 export type CoreElement = ElementBase & { type: CoreElementType; props: CoreProps };
@@ -314,31 +330,37 @@ function parseProps(
     issues: Issue[],
 ): Element {
     const propsPath = [...path, 'props'];
+    const children = element.children === undefined
+        ? {}
+        : {
+            children: element.children?.map((child: Envelope, index: number) =>
+                parseProps(child, appFields, [...path, 'children', index], issues)) ?? null,
+        };
 
     try {
         const type = element.type;
 
         if (isCoreType(type)) {
-            return { ...element, type, props: check(corePropsSchema, element.props, propsPath) };
+            return { ...element, ...children, type, props: check(corePropsSchema, element.props, propsPath) };
         }
 
         const fields = appFields.get(element.type);
 
         if (fields) {
             // Without a prototype, a field named like an Object member (`constructor`) reads as missing when it is.
-            return { ...element, props: check(fieldsSchema(fields), Object.assign(Object.create(null), element.props), propsPath) };
+            return { ...element, ...children, props: check(fieldsSchema(fields), Object.assign(Object.create(null), element.props), propsPath) };
         }
 
         if (utf8.encode(JSON.stringify(element.props)).length > OPAQUE_PROPS_MAX_BYTES) {
             issues.push({ path: propsPath.join('.'), code: 'size', message: `Too big: at most ${OPAQUE_PROPS_MAX_BYTES} bytes` });
         }
 
-        return element;
+        return { ...element, ...children };
     } catch (error) {
         if (error instanceof DocumentError) {
             issues.push(...error.issues);
 
-            return element;
+            return { ...element, ...children };
         }
 
         throw error;

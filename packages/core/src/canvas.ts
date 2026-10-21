@@ -33,9 +33,13 @@ export const safeId = (id: string): string => id.replace(/[^A-Za-z0-9_-]/g, '') 
 const fieldTypes: ReadonlySet<string> = new Set(FIELD_TYPES);
 export const isField = (element: Element): element is CoreElement => isCoreElement(element) && fieldTypes.has(element.type);
 
+/** Every element of a canvas, boxes included, with what each box holds. */
+export const flatten = (elements: readonly Element[]): Element[] =>
+    elements.flatMap((element) => [element, ...(element.children ?? [])]);
+
 /** A canvas with fields or a submit button is published inside a form. */
 export const isForm = (canvas: Section | Modal): boolean =>
-    canvas.elements.some((element) => isField(element) || (isCoreElement(element) && element.props.action?.type === 'submit'));
+    flatten(canvas.elements).some((element) => isField(element) || (isCoreElement(element) && element.props.action?.type === 'submit'));
 
 /** A steps group is one form across all its steps, so nothing typed in an earlier step is lost. */
 export const isStepsForm = (group: Group): boolean => group.kind === 'stack' && group.type === 'steps' && group.sections.some(isForm);
@@ -66,7 +70,7 @@ export type FormSpec = { source: string; fields: FormField[] };
 export function formFields(document: Document): FormSpec[] {
     const spec = (source: string, canvases: readonly (Section | Modal)[]): FormSpec => ({
         source,
-        fields: canvases.flatMap((canvas) => canvas.elements.filter(isField).map(field)),
+        fields: canvases.flatMap((canvas) => flatten(canvas.elements).filter(isField).map(field)),
     });
 
     return [
