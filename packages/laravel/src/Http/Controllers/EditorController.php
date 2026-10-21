@@ -98,7 +98,7 @@ final class EditorController
                 'theme' => is_array($theme) ? [...$current['theme'], ...$theme] : $theme,
             ]);
             $meta = array_key_exists('meta', $body)
-                ? Schema::check(ParsedDocument::fieldsSchema($this->lienzo->catalog()['siteFields'] ?? []), $body['meta'], ['meta'])
+                ? Schema::check(ParsedDocument::fieldsSchema($this->lienzo->catalog($site)['siteFields'] ?? []), $body['meta'], ['meta'])
                 : [];
         } catch (DocumentError $error) {
             throw ProtocolException::document($error);
@@ -127,7 +127,7 @@ final class EditorController
         $this->validate($body, ['title' => ['required', 'string', 'max:120'], 'slug' => self::SLUG]);
         $this->assertFreeSlug($site, $body['slug']);
 
-        $draft = array_key_exists('draft', $body) ? $this->document($body['draft'], 'draft') : Page::BLANK;
+        $draft = array_key_exists('draft', $body) ? $this->document($body['draft'], 'draft', $site) : Page::BLANK;
         $page = self::claimingSlug(fn (): Page => $site->pages()->create(['title' => $body['title'], 'slug' => $body['slug'], 'draft' => $draft]));
 
         return new JsonResponse($this->state($page), 201);
@@ -154,7 +154,7 @@ final class EditorController
         }
 
         if (array_key_exists('draft', $body)) {
-            $changes['draft'] = $this->document($body['draft'], 'draft');
+            $changes['draft'] = $this->document($body['draft'], 'draft', $site);
         }
 
         $page = $this->writeAt($page, (int) $body['baseRevision'], function (Page $page) use ($changes): void {
@@ -185,9 +185,9 @@ final class EditorController
         $this->validate($body, ['revision' => ['required', 'integer']]);
         $user = $request->user();
 
-        $page = $this->writeAt($page, (int) $body['revision'], function (Page $page) use ($user): void {
+        $page = $this->writeAt($page, (int) $body['revision'], function (Page $page) use ($user, $site): void {
             $live = ['published' => $page->published, 'published_slug' => $page->published_slug, 'published_seo' => $page->published_seo ?? []];
-            $next = ['published' => $this->document($page->draft, 'draft'), 'published_slug' => $page->slug, 'published_seo' => $page->seo ?? []];
+            $next = ['published' => $this->document($page->draft, 'draft', $site), 'published_slug' => $page->slug, 'published_seo' => $page->seo ?? []];
 
             if ($page->published !== null && json_encode($next) === json_encode($live)) {
                 return;
@@ -253,7 +253,7 @@ final class EditorController
             'elements.*.props' => ['present', 'array'],
         ]);
 
-        $specs = array_column($this->lienzo->catalog()['elements'], 'fields', 'type');
+        $specs = array_column($this->lienzo->catalog($site)['elements'], 'fields', 'type');
         $host = $this->host($site, $endpoint, $body['elements']);
         $html = [];
         $issues = [];
@@ -320,7 +320,7 @@ final class EditorController
             'meta' => (object) ($site->meta ?? []),
             'publicUrl' => $this->lienzo->publicUrl($site),
             'pages' => $site->pages()->orderBy('slug')->get()->map($this->summary(...))->all(),
-            'catalog' => $this->lienzo->catalog(),
+            'catalog' => $this->lienzo->catalog($site),
             'assets' => $site->assets()->latest('id')->get()->map(fn (Asset $asset): array => self::asset($endpoint, $asset))->all(),
             'quota' => $this->library->quota($site),
         ];
@@ -412,10 +412,10 @@ final class EditorController
     }
 
     /** @return array<string, mixed> */
-    private function document(mixed $input, string $path): array
+    private function document(mixed $input, string $path, ?Site $site = null): array
     {
         try {
-            $document = ParsedDocument::parse($input, $this->lienzo->catalog());
+            $document = ParsedDocument::parse($input, $this->lienzo->catalog($site));
         } catch (DocumentError $error) {
             throw ProtocolException::document($error, $path);
         }

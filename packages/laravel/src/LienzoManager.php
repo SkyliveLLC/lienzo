@@ -44,6 +44,9 @@ final class LienzoManager
     /** @var (Closure(Request): ?Site)|null */
     private ?Closure $siteResolver = null;
 
+    /** @var ?Closure(array<string, Element>, ?Site): array<string, Element> */
+    private ?Closure $elementFilter = null;
+
     /** @var array<string, Element> by type */
     private array $elements = [];
 
@@ -198,11 +201,29 @@ final class LienzoManager
             : Site::query()->whereNull('owner_type')->oldest('id')->first();
     }
 
-    /** @return Catalog */
-    public function catalog(): array
+    /**
+     * Which of the registered elements a given site may use. A host with
+     * plugins decides per site; without it every site gets all of them.
+     *
+     * @param  Closure(array<string, Element>, ?Site): array<string, Element>  $filter
+     */
+    public function elementsFor(Closure $filter): void
     {
+        $this->elementFilter = $filter;
+    }
+
+    /**
+     * What the editor and the renderer work from. `$site` is what the element
+     * filter decides on, when the app registered one.
+     *
+     * @return Catalog
+     */
+    public function catalog(?Site $site = null): array
+    {
+        $elements = $this->elementFilter !== null ? ($this->elementFilter)($this->elements, $site) : $this->elements;
+
         return [
-            'elements' => array_values(array_map(fn (Element $element): array => $element->toArray(), $this->elements)),
+            'elements' => array_values(array_map(fn (Element $element): array => $element->toArray(), $elements)),
             'actions' => array_values(array_column($this->actions, 'spec')),
             ...($this->siteFields === [] ? [] : ['siteFields' => array_map(fn (Field $field): array => $field->toArray(), $this->siteFields)]),
         ];
@@ -211,7 +232,7 @@ final class LienzoManager
     /** The full public page, the way a visitor gets it. */
     public function render(Request $request, Site $site, Page $page): RenderedPage
     {
-        $catalog = $this->catalog();
+        $catalog = $this->catalog($site);
         $settings = $site->settings();
         $head = $this->head !== null ? ($this->head)($site) : null;
 

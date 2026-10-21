@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.15.0 (2026-10-21)
+
+### Laravel
+
+- `Lienzo::elementsFor()` lets the app say which elements a given site may use, and `catalog()` takes that site. A host with plugins turns each one on or off per site: what is off disappears from the palette, and anything already placed with it is kept in the page but not drawn.
+
 ## 0.14.2 (2026-10-21)
 
 ### Laravel
