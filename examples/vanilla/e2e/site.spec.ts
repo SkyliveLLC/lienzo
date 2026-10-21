@@ -37,7 +37,9 @@ test('an editor builds and publishes a page, and a visitor reads it and writes b
     await dialog.getByRole('button', { name: 'Create page' }).click();
     await expect(canvas.locator('section.lz-section')).toHaveCount(1);
 
+    await editor.getByRole('tab', { name: 'Blocks' }).click();
     await editor.locator('.lze-list-item', { hasText: 'Contact form' }).click();
+    await editor.getByRole('tab', { name: 'Elements' }).click();
     await expect(canvas.locator('section.lz-section')).toHaveCount(2);
 
     const first = canvas.locator('section.lz-section').first();

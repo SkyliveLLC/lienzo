@@ -96,8 +96,10 @@ test('an admin builds and publishes a page, and a guest uses it', async ({ page,
     await editor.locator('.lze-palette-item', { hasText: /^Button$/ }).click();
     await editor.locator('.lze-right').getByLabel('Action').selectOption({ label: 'Call us' });
 
-    // A contact form from the ready-made sections.
+    // A contact form from the block library.
+    await editor.getByRole('tab', { name: 'Blocks' }).click();
     await editor.locator('.lze-list-item', { hasText: 'Contact form' }).click();
+    await editor.getByRole('tab', { name: 'Elements' }).click();
     await expect(canvas.locator('section.lz-section')).toHaveCount(2);
     await waitForSave(page);
 
