@@ -73,7 +73,7 @@ img.lz-el{object-fit:cover}
 .lz-gallery[data-cols="4"]{--cols:4}
 .lz-gallery[data-cols="5"]{--cols:5}
 .lz-gallery[data-cols="6"]{--cols:6}
-.lz-box{display:flex;gap:calc(var(--fg,16) * var(--u));align-items:flex-start}
+.lz-box{display:flex;gap:calc(var(--fg,16) * var(--u));align-items:flex-start;height:auto;min-height:calc(var(--h) * var(--u))}
 .lz-box[data-flow=column]{flex-direction:column}
 .lz-box[data-flow=row]{flex-direction:row;flex-wrap:wrap}
 .lz-box[data-flow=column][data-flow-align=center]{align-items:center}
@@ -82,7 +82,8 @@ img.lz-el{object-fit:cover}
 .lz-box[data-flow=row][data-flow-align=center]{justify-content:center}
 .lz-box[data-flow=row][data-flow-align=end]{justify-content:flex-end}
 .lz-box[data-flow=row][data-flow-align=between]{justify-content:space-between}
-.lz-box>.lz-el{position:static;height:auto;max-width:100%}
+.lz-box>.lz-el{position:static;height:auto;min-height:calc(var(--h) * var(--u));max-width:100%}
+.lz-box>.lz-el[data-auto]{min-height:0}
 .lz-box[data-flow=column]>.lz-el{width:calc(var(--w) * 1%)}
 .lz-box[data-flow=row]>.lz-el{width:calc(var(--w) * 1%);flex:0 1 auto}
 .lz-slider{position:relative;overflow:hidden}
@@ -186,4 +187,4 @@ button.lz-el{cursor:pointer;padding:var(--_p,1px 6px)}
 .lz-modal-close{margin-left:auto;width:calc(34 * var(--u));height:calc(34 * var(--u));display:grid;place-items:center;font:inherit;font-size:calc(20 * var(--u));line-height:1;color:var(--text);background:var(--surface);border:0;border-radius:999px;cursor:pointer}
 .lz-modal-close:hover{opacity:.8}
 .lz-placeholder{display:grid;place-items:center;padding:8px;border:1px dashed currentColor;font:12px/1.3 system-ui,sans-serif;opacity:.6}
-@container lz (max-width:640px){.lz-section>.lz-frame{--u:calc(min(100cqw,390px) / 390)}.lz-frame{height:calc(var(--fmh) * var(--u))}.lz-frame[data-stack]{height:auto;padding:32px 20px;display:flex;flex-direction:column;gap:20px}.lz-frame:not([data-stack]) .lz-el{position:absolute;left:calc(var(--mx) * 1%);top:calc(var(--my) * var(--u));width:calc(var(--mw) * 1%);height:calc(var(--mh) * var(--u))}.lz-el{font-size:calc(var(--fms,var(--fs)) * var(--u))}.lz-frame:not([data-stack]) .lz-el[data-auto]{height:auto}.lz-frame[data-stack] .lz-el{position:static;width:auto;height:auto;order:var(--ord)}.lz-frame[data-flow]{height:auto;min-height:calc(var(--fmh) * var(--u));flex-direction:column;padding:32px 20px}.lz-frame[data-flow] .lz-el{position:static;width:auto;height:auto;order:var(--ord)}.lz-box{flex-direction:column}.lz-box>.lz-el{position:static;width:100%;height:auto}.lz-el[data-visible=desktop]{display:none}.lz-parallax>.lz-bg{position:absolute}.lz-frame:not([data-stack]) .lz-navbar[data-sticky]{position:fixed;left:50%;translate:-50% 0;width:min(100%,var(--max-width))}.lz-navbar-links{display:none}.lz-navbar-menu{display:block}.lz-el{max-width:100%;min-width:0}img.lz-el{height:auto}.lz-icon{width:max-content}.lz-icon svg{width:calc(36 * var(--u));height:calc(36 * var(--u))}}
+@container lz (max-width:640px){.lz-section>.lz-frame{--u:calc(min(100cqw,390px) / 390)}.lz-frame{height:calc(var(--fmh) * var(--u))}.lz-frame[data-stack]{height:auto;padding:32px 20px;display:flex;flex-direction:column;gap:20px}.lz-frame:not([data-stack]) .lz-el{position:absolute;left:calc(var(--mx) * 1%);top:calc(var(--my) * var(--u));width:calc(var(--mw) * 1%);height:calc(var(--mh) * var(--u))}.lz-el{font-size:calc(var(--fms,var(--fs)) * var(--u))}.lz-frame:not([data-stack]) .lz-el[data-auto]{height:auto}.lz-frame[data-stack] .lz-el{position:static;width:auto;height:auto;order:var(--ord)}.lz-frame[data-flow]{height:auto;min-height:calc(var(--fmh) * var(--u));flex-direction:column;padding:32px 20px}.lz-frame[data-flow] .lz-el{position:static;width:auto;height:auto;order:var(--ord)}.lz-box{flex-direction:column;height:auto;min-height:calc(var(--mh,var(--h)) * var(--u))}.lz-box>.lz-el{position:static;width:calc(var(--w) * 1%);height:auto;min-height:calc(var(--h) * var(--u))}.lz-box>.lz-el[data-auto]{min-height:0}.lz-box[data-flow=row]>.lz-el{width:100%}.lz-el[data-visible=desktop]{display:none}.lz-parallax>.lz-bg{position:absolute}.lz-frame:not([data-stack]) .lz-navbar[data-sticky]{position:fixed;left:50%;translate:-50% 0;width:min(100%,var(--max-width))}.lz-navbar-links{display:none}.lz-navbar-menu{display:block}.lz-el{max-width:100%;min-width:0}img.lz-el{height:auto}.lz-icon{width:max-content}.lz-icon svg{width:calc(36 * var(--u));height:calc(36 * var(--u))}}

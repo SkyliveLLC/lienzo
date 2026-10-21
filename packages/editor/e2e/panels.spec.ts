@@ -390,10 +390,16 @@ test('a box lays out what it holds, and nothing in it is dragged', async ({ edit
     await expect(rendered).toHaveClass(/lz-box/);
     await expect(rendered).toHaveCSS('display', 'flex');
 
-    // What the box holds sits one under the other, with no overlap.
-    const tops = await rendered.locator('> .lz-el').evaluateAll((nodes) => nodes.map((node) => Math.round(node.getBoundingClientRect().top)));
+    // What the box holds sits one under the other, with no overlap, and the box grows with it.
+    const inside = await rendered.locator('> .lz-el').evaluateAll(
+        (nodes) => nodes.map((node) => node.getBoundingClientRect()).map((rect) => ({ top: Math.round(rect.top), bottom: Math.round(rect.bottom) })),
+    );
 
-    expect(new Set(tops).size).toBe(2);
+    expect(new Set(inside.map((rect) => rect.top)).size).toBe(2);
+
+    const outer = await rendered.evaluate((node) => Math.round(node.getBoundingClientRect().bottom));
+
+    expect(outer).toBeGreaterThanOrEqual(Math.max(...inside.map((rect) => rect.bottom)));
 
     // A child keeps no handles, because the box decides where it goes.
     await editor.canvas.locator(`#e-${first}`).click();

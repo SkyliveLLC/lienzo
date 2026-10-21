@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.13.1 (2026-10-20)
+
+### Fixed
+
+- A box squashed what it held: a shape or a picture with a height of its own came out flat, and the box never grew with its content. Each element keeps its height unless it was set to grow with its text, and the box follows what is inside it, on phones too.
+
 ## 0.13.0 (2026-10-20)
 
 ### Editor
