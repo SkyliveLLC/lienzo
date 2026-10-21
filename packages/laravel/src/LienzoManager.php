@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Vite;
 use LogicException;
 use Skylive\Lienzo\Document\ParsedDocument;
+use Skylive\Lienzo\Http\Controllers\EditorController;
 use Skylive\Lienzo\Http\PageHost;
 use Skylive\Lienzo\Http\Routes;
 use Skylive\Lienzo\Http\SessionForm;
@@ -26,6 +27,7 @@ use Skylive\Lienzo\Render\RenderedPage;
 use Skylive\Lienzo\Render\Renderer;
 use Skylive\Lienzo\Render\RenderMode;
 use Skylive\Lienzo\Render\TrustedHtml;
+use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 
 /**
  * What the app tells Lienzo, and the public render built from it. Reached
@@ -163,6 +165,19 @@ final class LienzoManager
         }
 
         return new Response($this->render($request, $site, $page)->html, 200, ['Content-Type' => 'text/html; charset=UTF-8']);
+    }
+
+    /**
+     * The editor protocol's answer to this request, for `$site`. `$path` is
+     * the URL below the endpoint the editor was given, '' for the endpoint
+     * itself. `Route::lienzoEditor()` is this behind your middleware and the
+     * `lienzo.manage` gate. Call it from a route of your own when something
+     * else decides who edits which site; Lienzo trusts the site it is given.
+     * Your route must run the `web` middleware group, for the session and CSRF.
+     */
+    public function editor(Request $request, Site $site, string $path = ''): SymfonyResponse
+    {
+        return $this->container->make(EditorController::class)->respond($request, $site, $path);
     }
 
     public function resolveSite(Request $request): ?Site

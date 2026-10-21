@@ -108,6 +108,24 @@ Both route macros also work inside a group with parameters of its own, such as `
 
 `config/lienzo.php` holds the rest: the database connection, the upload disk and limits, how many published versions to keep, the form rate limit, the editor middleware, and a CDN URL for the editor bundle.
 
+### The editor on a route of your own
+
+`Route::lienzoEditor()` puts the site's id in the URL and asks the `lienzo.manage` gate who may edit it. If your app already knows which site a user edits and whether they may, for example an admin panel or a user's own site, answer the editor from your own route with `Lienzo::editor()`:
+
+```php
+use Illuminate\Http\Request;
+use Skylive\Lienzo\Facades\Lienzo;
+use Skylive\Lienzo\Models\Site;
+
+Route::middleware('auth')->group(function () {
+    Route::match(['GET', 'POST', 'PUT', 'DELETE'], 'studio/{path?}', function (Request $request) {
+        return Lienzo::editor($request, Site::forOwner($request->user()), (string) $request->route('path'));
+    })->where('path', '.*')->name('studio');
+});
+```
+
+The editor's endpoint is the route without a path: `<lienzo-editor endpoint="{{ route('studio') }}">`. Lienzo trusts the site you pass and finds every page, version and image through it, so an id from another site gets `404`. Image URLs stay under your route, with any group parameters it has. The route must run the `web` middleware group, which `routes/web.php` does, for the session and CSRF. `Lienzo::editorScriptUrl()` needs `editor_url`, or the bundle route that `Route::lienzoEditor()` adds.
+
 ## Other backends
 
 The editor talks to any backend over the HTTP protocol that [`@skylivellc/lienzo-core/protocol`](packages/core/src/protocol.ts) describes: about a dozen JSON routes for the workspace, pages, publishing, versions, uploads, app element previews and form submissions. To host Lienzo on another stack, do these things:
@@ -184,7 +202,7 @@ Editors are trusted to change content, never to run code. Developers are trusted
 
 - **Documents.** Every save and every render parses the document against one schema: `parseDocument` in TypeScript, and the same JSON Schema walked in PHP. A value of the wrong type or out of range fails the save with the path of the problem, and unknown keys are dropped. Colors must be hex values or theme tokens, fonts must match `^[A-Za-z0-9 ]{1,60}$`, and arrays and strings have size limits.
 - **Rendering.** The renderers escape all text, emit only allowlisted tags and attributes, and accept URLs only with `https:`, `http:`, `mailto:`, `tel:`, `/` or `#`. Element styles are CSS custom properties whose values must be numbers, hex colors or theme tokens. No `style` attribute and no URL ever reaches CSS. The only unescaped HTML is what your code returns: app element markup, app element CSS and `Lienzo::head()`. Escape data in it, for example with Blade's `{{ }}`.
-- **Editor routes.** Every protocol route runs behind your middleware (`auth` by default) and the `lienzo.manage` gate for that site. Writes need Laravel's CSRF token. The editor echoes the `XSRF-TOKEN` cookie as a header, so no setup is needed.
+- **Editor routes.** `Route::lienzoEditor()` runs every protocol request behind your middleware (`auth` by default) and the `lienzo.manage` gate for that site. A route that calls `Lienzo::editor()` runs your own rules instead, and every id in it resolves through the site you pass. Writes need Laravel's CSRF token. The editor echoes the `XSRF-TOKEN` cookie as a header, so no setup is needed.
 - **Uploads.** The Laravel package accepts JPG, PNG, WebP, AVIF and SVG within a size limit and a per-site quota. It decodes raster images and re-encodes them as WebP, and it sanitizes SVG. Files are streamed through Lienzo's routes, so the disk can be private. Visitors can load an image only after a published page, the favicon, the share image or a site field uses it.
 - **Forms.** A submission is checked against the fields of that form on the published page: required fields, email format, choices and lengths. Extra posted fields are dropped. Forms carry a CSRF token and a honeypot field, and the endpoint is rate limited per visitor.
 - **Concurrent edits.** Each save sends the revision it is based on. A stale save gets `409`, and the editor offers to reload, so two tabs never overwrite each other.

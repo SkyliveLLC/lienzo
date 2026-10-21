@@ -15,6 +15,7 @@ use Skylive\Lienzo\Models\Page;
 use Skylive\Lienzo\Models\Site;
 use Skylive\Lienzo\Render\RenderedPage;
 use Skylive\Lienzo\Render\TrustedHtml;
+use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 
 /**
  * @method static void resolveSiteUsing(Closure $resolver)
@@ -25,6 +26,7 @@ use Skylive\Lienzo\Render\TrustedHtml;
  * @method static void messages(string $locale, array<string, string> $messages)
  * @method static void publicUrlUsing(Closure $url)
  * @method static Response|null page(Request $request, ?string $slug = null)
+ * @method static SymfonyResponse editor(Request $request, Site $site, string $path = '')
  * @method static Site|null resolveSite(Request $request)
  * @method static string editorScriptUrl()
  * @method static string|null publicUrl(Site $site)

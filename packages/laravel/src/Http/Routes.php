@@ -46,29 +46,19 @@ final class Routes
 
     /**
      * The editor protocol for `{$prefix}/{site}` (the endpoint the editor is
-     * given), and the editor bundle. Every site route checks `lienzo.manage`.
+     * given), and the editor bundle. One route answers the whole protocol,
+     * behind `lienzo.manage` for that site; EditorRoute lists its requests.
      */
     public static function editor(Router $router, string $prefix): void
     {
         $router->prefix(trim($prefix, '/'))->middleware(config('lienzo.editor_middleware'))->group(function (Router $router): void {
             $router->get('lienzo-editor.js', EditorAssetsController::class)->name('lienzo.editor.bundle');
 
-            $router->prefix('{lienzoSite}')->whereNumber('lienzoSite')->middleware('can:lienzo.manage,lienzoSite')->controller(EditorController::class)->group(function (Router $router): void {
-                $router->get('/', 'workspace')->name('lienzo.editor');
-                $router->put('site', 'updateSite')->name('lienzo.editor.site');
-                $router->post('pages', 'storePage')->name('lienzo.editor.pages.store');
-                $router->get('pages/{lienzoPage}', 'showPage')->whereNumber('lienzoPage')->name('lienzo.editor.pages.show');
-                $router->put('pages/{lienzoPage}', 'updatePage')->whereNumber('lienzoPage')->name('lienzo.editor.pages.update');
-                $router->delete('pages/{lienzoPage}', 'destroyPage')->whereNumber('lienzoPage')->name('lienzo.editor.pages.destroy');
-                $router->post('pages/{lienzoPage}/publish', 'publish')->whereNumber('lienzoPage')->name('lienzo.editor.pages.publish');
-                $router->post('pages/{lienzoPage}/versions/{lienzoVersion}/restore', 'restore')
-                    ->whereNumber(['lienzoPage', 'lienzoVersion'])->name('lienzo.editor.pages.restore');
-                $router->post('assets', 'storeAsset')->name('lienzo.editor.assets.store');
-                $router->delete('assets/{lienzoAsset}', 'destroyAsset')->whereNumber('lienzoAsset')->name('lienzo.editor.assets.destroy');
-                $router->get('media/{lienzoAsset}/{size?}', 'media')->whereNumber('lienzoAsset')->whereIn('size', ['thumb'])->name('lienzo.editor.media');
-                $router->post('preview', 'preview')->name('lienzo.editor.preview');
-                $router->get('submissions', 'submissions')->name('lienzo.editor.submissions');
-            });
+            $router->match(['GET', 'POST', 'PUT', 'DELETE'], '{lienzoSite}/{lienzoPath?}', EditorController::class)
+                ->whereNumber('lienzoSite')
+                ->where('lienzoPath', '.*')
+                ->middleware('can:lienzo.manage,lienzoSite')
+                ->name('lienzo.editor');
         });
     }
 

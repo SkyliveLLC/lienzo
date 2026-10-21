@@ -11,6 +11,9 @@ All notable changes to Lienzo are listed here. The three packages (`skylive/lien
 ### Laravel
 
 - `Route::lienzo()` and `Route::lienzoEditor()` exist before any package boots, so a package that loads its routes while it boots, such as a Filament panel, can call them. They used to fail with "Attribute [lienzoEditor] does not exist".
+- `Lienzo::editor($request, $site, $path)` answers the editor from any route. An app that decides itself who edits which site, such as an admin panel, needs neither the `lienzo.manage` gate nor a site id in the URL.
+- Image URLs in the editor follow the URL the editor was given. Uploads used to fail, and leave the image stored, when the editor routes sat in a group with a name prefix.
+- **Breaking.** `Route::lienzoEditor()` registers one route for the whole protocol. The names `lienzo.editor` and `lienzo.editor.bundle` and every URL stay the same. The twelve per-action route names (`lienzo.editor.site`, `lienzo.editor.pages.*`, `lienzo.editor.assets.*`, `lienzo.editor.media`, `lienzo.editor.preview` and `lienzo.editor.submissions`) and the per-action methods of `EditorController` are gone. Build those URLs from `route('lienzo.editor', ['lienzoSite' => $site])`.
 
 ## 0.12.0 (2026-10-20)
 
