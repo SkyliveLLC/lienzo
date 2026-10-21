@@ -337,3 +337,26 @@ test('a text keeps the line breaks its author typed', async ({ editor, page }) =
     await expect(paragraph).toHaveCSS('white-space', 'pre-line');
     expect((await editor.draft()).sections[0]!.elements.at(-1)!.props.text).toBe('Una\nDos');
 });
+
+test('a finish frosts the glass, and glass opens the fill', async ({ editor, page }) => {
+    const panel = page.locator('.lze-right');
+    const heading = editor.canvas.locator('h1.lz-el');
+
+    await heading.click();
+    await panel.getByLabel('Finish').selectOption({ label: 'Frosted glass' });
+    await editor.waitForSave();
+
+    await expect(heading).toHaveAttribute('data-finish', 'glass');
+    await expect(heading).toHaveCSS('backdrop-filter', /blur/);
+
+    const element = (await editor.draft()).sections[0]!.elements.find((item) => item.type === 'heading');
+
+    expect(element?.style.finish).toBe('glass');
+    expect(element?.style.background_opacity).toBe(0.55);
+
+    await panel.getByLabel('Finish').selectOption({ label: 'Soft relief' });
+    await editor.waitForSave();
+
+    await expect(heading).toHaveAttribute('data-finish', 'soft');
+    await expect(heading).toHaveCSS('backdrop-filter', 'none');
+});

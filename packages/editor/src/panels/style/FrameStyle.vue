@@ -14,9 +14,21 @@ type Shadow = NonNullable<Style['shadow_custom']>;
 const props = defineProps<{ element: Element }>();
 const editor = useEditor();
 const t = editor.t;
-const id = useId();
+const ids = { shadow: useId(), finish: useId() };
 
 const shadows = (['none', 'sm', 'md', 'lg', 'custom'] as const).map((shadow) => ({ value: shadow, label: t(`style.shadow.${shadow}`) }));
+const finishes = (['flat', 'glass', 'soft', 'pressed'] as const).map((finish) => ({ value: finish, label: t(`style.finish.${finish}`) }));
+
+/** Glass only shows through if the fill lets it, so picking it opens the background. */
+function setFinish(finish: Style['finish']) {
+    props.element.style.finish = finish;
+
+    if (finish === 'glass' && (props.element.style.background_opacity ?? 1) > 0.8) {
+        props.element.style.background_opacity = 0.55;
+    }
+
+    editor.commit();
+}
 
 /** What a custom shadow starts as the first time it is edited. */
 const DEFAULT_SHADOW: Shadow = { x: 0, y: 12, blur: 32, spread: 0, color: 'secondary', opacity: 0.2 };
@@ -43,9 +55,13 @@ function setShadow<K extends keyof Shadow>(key: K, value: Shadow[K]) {
             />
         </div>
         <ColorPicker v-if="element.style.border_width" v-model="element.style.border_color" :label="t('style.borderColor')" @commit="editor.commit()" />
-        <Field :id="id" :label="t('style.shadow')">
-            <SelectInput :id="id" :model-value="element.style.shadow ?? 'none'" :options="shadows" @update:model-value="element.style.shadow = $event" @commit="editor.commit()" />
+        <Field :id="ids.shadow" :label="t('style.shadow')">
+            <SelectInput :id="ids.shadow" :model-value="element.style.shadow ?? 'none'" :options="shadows" @update:model-value="element.style.shadow = $event" @commit="editor.commit()" />
         </Field>
+        <Field :id="ids.finish" :label="t('style.finish')">
+            <SelectInput :id="ids.finish" :model-value="element.style.finish ?? 'flat'" :options="finishes" @update:model-value="setFinish($event)" />
+        </Field>
+        <p v-if="element.style.finish === 'glass'" class="lze-hint">{{ t('style.finish.glassHint') }}</p>
     </PanelSection>
     <PanelSection v-if="element.style.shadow === 'custom'" :title="t('style.customShadow')">
         <div class="lze-grid-2">

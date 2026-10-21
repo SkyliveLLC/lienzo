@@ -1,5 +1,5 @@
 .lz-page{--primary:#2563eb;--secondary:#0f172a;--background:#ffffff;--surface:#f8fafc;--text:#0f172a;--muted:#64748b;--radius:12px;--max-width:1200px;--ref:1200;--font-heading:'Inter', system-ui, sans-serif;--font-body:'Inter', system-ui, sans-serif}
-#s-variantes{--fh:2136;--fmh:560;--sbg:var(--background)}
+#s-variantes{--fh:2336;--fmh:560;--sbg:var(--background)}
 #e-image-a52tvur{--x:4;--y:40;--w:26.667;--h:260;--ord:1;--z:1;--r:16}
 #e-image-m5a5vu7{--x:34.667;--y:40;--w:26.667;--h:260;--ord:2;--z:2;--r:16}
 #e-image-veh3jux{--x:65.333;--y:40;--w:26.667;--h:260;--ord:3;--z:3;--r:16}
@@ -14,6 +14,9 @@
 #e-galeria-strip{--x:6;--y:1496;--w:88;--h:240;--ord:12;--z:1;--r:10}
 #e-deslizador{--x:6;--y:1776;--w:52;--h:320;--ord:13;--z:11;--r:12}
 #e-deslizador-pelado{--x:62;--y:1776;--w:32;--h:320;--ord:14;--z:12;--r:0}
+#e-acabado-glass{--x:6;--y:2136;--w:26;--h:160;--ord:15;--z:13;--bg:var(--surface);--r:24;--ba:0.55}
+#e-acabado-soft{--x:36;--y:2136;--w:26;--h:160;--ord:16;--z:14;--bg:var(--surface);--r:24}
+#e-acabado-pressed{--x:66;--y:2136;--w:26;--h:160;--ord:17;--z:15;--bg:var(--surface);--r:24}
 #s-relleno{--fh:2416;--fmh:560;--sbg:var(--surface)}
 #e-image-hhazqlw{--x:4;--y:40;--w:26.667;--h:260;--ord:1;--z:1;--r:16;--g1:var(--primary);--g2:var(--secondary);--ga:135}
 #e-image-myqiuep{--x:34.667;--y:40;--w:26.667;--h:260;--ord:2;--z:2;--r:16;--g1:#f97316;--g2:var(--background);--ga:0;--ba:0.6}

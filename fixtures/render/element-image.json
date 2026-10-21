@@ -4,7 +4,7 @@
             {
                 "id": "variantes",
                 "height": {
-                    "desktop": 2136,
+                    "desktop": 2336,
                     "mobile": 560
                 },
                 "background": {
@@ -338,6 +338,73 @@
                         },
                         "style": {
                             "radius": 0
+                        }
+                    },
+                    {
+                        "id": "acabado-glass",
+                        "type": "shape",
+                        "z": 13,
+                        "layout": {
+                            "desktop": {
+                                "x": 6,
+                                "y": 2136,
+                                "w": 26,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "surface",
+                            "radius": 24,
+                            "finish": "glass",
+                            "background_opacity": 0.55
+                        }
+                    },
+                    {
+                        "id": "acabado-soft",
+                        "type": "shape",
+                        "z": 14,
+                        "layout": {
+                            "desktop": {
+                                "x": 36,
+                                "y": 2136,
+                                "w": 26,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "surface",
+                            "radius": 24,
+                            "finish": "soft"
+                        }
+                    },
+                    {
+                        "id": "acabado-pressed",
+                        "type": "shape",
+                        "z": 15,
+                        "layout": {
+                            "desktop": {
+                                "x": 66,
+                                "y": 2136,
+                                "w": 26,
+                                "h": 160
+                            },
+                            "mobile": null
+                        },
+                        "props": {
+                            "shape": "rectangle"
+                        },
+                        "style": {
+                            "background": "surface",
+                            "radius": 24,
+                            "finish": "pressed"
                         }
                     }
                 ]

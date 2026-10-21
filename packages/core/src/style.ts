@@ -35,6 +35,7 @@ export const styleTable = {
     padding: { var: 'p', kind: 'num' },
     opacity: { var: 'op', kind: 'num' },
     shadow: { attr: 'shadow', kind: 'enum', skip: 'none' },
+    finish: { attr: 'finish', kind: 'enum', skip: 'flat' },
     shadow_custom: {
         group: {
             x: { var: 'shx', kind: 'num' },

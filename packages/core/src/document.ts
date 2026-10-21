@@ -82,6 +82,8 @@ export const styleSchema = object({
     padding: optional(intBetween(0, 80)),
     opacity: optional(between(0, 1)),
     shadow: optional(z.enum(['none', 'sm', 'md', 'lg', 'custom'])),
+    /** Surface treatment: frosted glass over what is behind, or soft relief. */
+    finish: optional(z.enum(['flat', 'glass', 'soft', 'pressed'])),
     shadow_custom: object({
         x: optional(intBetween(-100, 100)),
         y: optional(intBetween(-100, 100)),

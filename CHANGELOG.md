@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.12.0 (2026-10-20)
+
+### Editor
+
+- A finish for any element: frosted glass, which blurs whatever is behind it; soft relief, raised off the page; or pressed in. Picking glass opens the fill so there is something to see through.
+
 ## 0.11.3 (2026-10-20)
 
 ### Fixed

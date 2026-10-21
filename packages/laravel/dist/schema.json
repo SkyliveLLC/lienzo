@@ -585,6 +585,23 @@
               ],
               "x-blank-as-null": true
             },
+            "finish": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "flat",
+                    "glass",
+                    "soft",
+                    "pressed"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "x-blank-as-null": true
+            },
             "shadow_custom": {
               "anyOf": [
                 {
@@ -1901,6 +1918,23 @@
                 "md",
                 "lg",
                 "custom"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "x-blank-as-null": true
+        },
+        "finish": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "flat",
+                "glass",
+                "soft",
+                "pressed"
               ]
             },
             {

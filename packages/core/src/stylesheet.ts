@@ -87,6 +87,14 @@ export const stylesheet = [
     `.lz-el[data-${t.shadow.attr}=sm]{box-shadow:0 1px 2px rgba(15,23,42,.08)}`,
     `.lz-el[data-${t.shadow.attr}=md]{box-shadow:0 8px 24px rgba(15,23,42,.12)}`,
     `.lz-el[data-${t.shadow.attr}=lg]{box-shadow:0 24px 48px rgba(15,23,42,.18)}`,
+    /* Frosted glass over whatever is behind, and soft relief, both after the plain shadows. */
+    `.lz-el[data-${t.finish.attr}=glass]{backdrop-filter:blur(${u('18')}) saturate(150%);`
+        + `-webkit-backdrop-filter:blur(${u('18')}) saturate(150%);`
+        + `border:${u('1')} solid rgb(255 255 255 / .35);box-shadow:0 ${u('14')} ${u('40')} rgb(15 23 42 / .14)}`,
+    `.lz-el[data-${t.finish.attr}=soft]{box-shadow:${u('-8')} ${u('-8')} ${u('18')} rgb(255 255 255 / .75),`
+        + `${u('10')} ${u('12')} ${u('26')} rgb(15 23 42 / .13)}`,
+    `.lz-el[data-${t.finish.attr}=pressed]{box-shadow:inset ${u('6')} ${u('6')} ${u('14')} rgb(15 23 42 / .14),`
+        + `inset ${u('-6')} ${u('-6')} ${u('14')} rgb(255 255 255 / .8)}`,
     `.lz-el[data-${t.shadow.attr}=custom]{box-shadow:${u(`var(${v(sh.x)},0)`)} ${u(`var(${v(sh.y)},12)`)} ${u(`var(${v(sh.blur)},32)`)} ${u(`var(${v(sh.spread)},0)`)} `
         + `color-mix(in srgb,var(${v(sh.color)},var(--secondary)) calc(var(${v(sh.opacity)},.2) * 100%),transparent)}`,
     `.lz-el[data-${t.clip.attr}]:not([data-${t.overflow.attr}]),.lz-el[data-${t.overflow.attr}=hidden]{overflow:hidden}`,

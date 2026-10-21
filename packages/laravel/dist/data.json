@@ -120,6 +120,11 @@
       "kind": "enum",
       "skip": "none"
     },
+    "finish": {
+      "attr": "finish",
+      "kind": "enum",
+      "skip": "flat"
+    },
     "shadow_custom": {
       "group": {
         "x": {
