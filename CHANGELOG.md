@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## Unreleased
+
+### Laravel
+
+- `Route::lienzo()` and `Route::lienzoEditor()` exist before any package boots, so a package that loads its routes while it boots, such as a Filament panel, can call them. They used to fail with "Attribute [lienzoEditor] does not exist".
+
 ## 0.12.0 (2026-10-20)
 
 ### Editor
