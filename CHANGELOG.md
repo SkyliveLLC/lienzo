@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.14.1 (2026-10-21)
+
+### Fixed
+
+- In a section that lays itself out, an element on a phone shrank to whatever it could, and a box that way came out with no width at all. Everything takes the full width there, which is what a phone wants.
+
 ## 0.14.0 (2026-10-21)
 
 ### Editor
@@ -19,6 +25,7 @@ All notable changes to Lienzo are listed here. The three packages (`skylive/lien
 
 - On phones everything a box held landed on the same spot, piled on top of each other: the phone rules placed them by hand over the box's own layout. A box lays them out there too, in one column.
 - A slider set to fit the whole picture in still cropped it.
+- In a section that lays itself out, an element on a phone shrank to whatever it could; a box that way came out with no width at all. Everything takes the full width there, which is what a phone wants.
 
 ## 0.13.1 (2026-10-20)
 

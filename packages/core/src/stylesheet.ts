@@ -292,7 +292,7 @@ export const stylesheet = [
         + '.lz-frame[data-stack] .lz-el{position:static;width:auto;height:auto;order:var(--ord)}'
         /* A section that lays itself out keeps doing it on phones, in one column. */
         + `.lz-frame[data-flow]{height:auto;min-height:${u('var(--fmh)')};flex-direction:column;padding:32px 20px}`
-        + '.lz-frame[data-flow] .lz-el{position:static;width:auto;height:auto;order:var(--ord)}'
+        + '.lz-frame[data-flow] .lz-el{position:static;width:100%;height:auto;order:var(--ord)}'
         /* The phone rule above turns every element absolute; what a box holds keeps flowing. */
         + `.lz-frame .lz-box{flex-direction:column;height:auto;min-height:${u('var(--mh,var(--h))')}}`
         + `.lz-frame:not([data-stack]) .lz-box>.lz-el{position:static;width:calc(var(--w) * 1%);height:auto;min-height:${u('var(--h)')}}`
