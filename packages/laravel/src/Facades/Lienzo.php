@@ -20,6 +20,7 @@ use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 /**
  * @method static void resolveSiteUsing(Closure $resolver)
  * @method static void element(class-string<Element>|Element $element)
+ * @method static array<string, Element> elements()
  * @method static void action(string $type, string|array<string, string> $label, Closure $href, ?Field $value = null)
  * @method static void siteFields(Field ...$fields)
  * @method static void head(Closure $head)

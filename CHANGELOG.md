@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.14.2 (2026-10-21)
+
+### Laravel
+
+- `Lienzo::elements()` hands back the elements the app registered, so an admin screen can tell which package each one came from.
+
 ## 0.14.1 (2026-10-21)
 
 ### Fixed

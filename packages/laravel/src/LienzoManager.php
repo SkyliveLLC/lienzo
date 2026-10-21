@@ -95,6 +95,17 @@ final class LienzoManager
     }
 
     /**
+     * The elements the app registered, by type. An admin screen uses it to
+     * tell which package an element came from.
+     *
+     * @return array<string, Element>
+     */
+    public function elements(): array
+    {
+        return $this->elements;
+    }
+
+    /**
      * An app action, e.g. `booking`. `$href` turns the stored value into a link, or null to render it inert.
      *
      * @param  string|Localized  $label
