@@ -204,6 +204,34 @@ Lienzo::siteFields(Field::text('phone', 'Phone number', max: 30));
 
 `Lienzo::head()` adds trusted markup to every page's `<head>`, and `Lienzo::messages()` overrides the public page strings per locale, including the form replies `sent` and `formUnavailable`.
 
+### Ship it as a plugin
+
+The same classes become a plugin anyone can install: a Composer package whose
+`composer.json` says `"type": "lienzo-plugin"` and whose service provider
+registers the elements, actions or site fields it brings.
+
+```json
+{
+    "name": "acme/lienzo-reviews",
+    "description": "Customer reviews, as an element of the canvas",
+    "type": "lienzo-plugin",
+    "require": { "skylive/lienzo": "^0.14" },
+    "extra": { "laravel": { "providers": ["Acme\\Reviews\\ReviewsServiceProvider"] } }
+}
+```
+
+```php
+public function boot(): void
+{
+    Lienzo::element(ReviewsElement::class);
+}
+```
+
+The type is what a host uses to find plugins: `Lienzo::elements()` says which
+ones are registered, and Composer's `InstalledVersions::getInstalledPackagesByType('lienzo-plugin')`
+says which packages are installed. A plugin runs on the server because the
+published page is rendered there; an npm package can only reach the editor.
+
 ## Security model
 
 Editors are trusted to change content, never to run code. Developers are trusted to run code. Lienzo enforces that line on the server:
