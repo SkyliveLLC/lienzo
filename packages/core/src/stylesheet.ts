@@ -169,7 +169,8 @@ export const stylesheet = [
     '.lz-slider-track{display:flex;width:100%;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;'
         + 'scrollbar-width:none;border-radius:inherit}',
     '.lz-slider-track::-webkit-scrollbar{display:none}',
-    '.lz-slide{flex:0 0 100%;width:100%;height:100%;object-fit:var(--_fit,cover);scroll-snap-align:center;border-radius:inherit}',
+    '.lz-slide{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:center;border-radius:inherit}',
+    `.lz-slider[data-${t.object_fit.attr}=contain] .lz-slide{object-fit:contain}`,
     `.lz-slider-arrow{position:absolute;top:50%;translate:0 -50%;display:grid;place-items:center;width:${u('44')};height:${u('44')};`
         + 'padding:0;border:0;border-radius:999px;background:rgb(255 255 255 / .86);color:#0f172a;cursor:pointer;opacity:0;transition:opacity .2s}',
     '.lz-slider:hover .lz-slider-arrow,.lz-slider-arrow:focus-visible{opacity:1}',
@@ -292,10 +293,12 @@ export const stylesheet = [
         /* A section that lays itself out keeps doing it on phones, in one column. */
         + `.lz-frame[data-flow]{height:auto;min-height:${u('var(--fmh)')};flex-direction:column;padding:32px 20px}`
         + '.lz-frame[data-flow] .lz-el{position:static;width:auto;height:auto;order:var(--ord)}'
-        + `.lz-box{flex-direction:column;height:auto;min-height:${u('var(--mh,var(--h))')}}`
-        + `.lz-box>.lz-el{position:static;width:calc(var(--w) * 1%);height:auto;min-height:${u('var(--h)')}}`
-        + `.lz-box>.lz-el[data-${t.auto_height.attr}]{min-height:0}`
-        + '.lz-box[data-flow=row]>.lz-el{width:100%}'
+        /* The phone rule above turns every element absolute; what a box holds keeps flowing. */
+        + `.lz-frame .lz-box{flex-direction:column;height:auto;min-height:${u('var(--mh,var(--h))')}}`
+        + `.lz-frame:not([data-stack]) .lz-box>.lz-el{position:static;width:calc(var(--w) * 1%);height:auto;min-height:${u('var(--h)')}}`
+        + `.lz-frame:not([data-stack]) .lz-box>.lz-el[data-${t.auto_height.attr}]{min-height:0}`
+        + '.lz-frame:not([data-stack]) .lz-box[data-flow=row]>.lz-el{width:100%}'
+        + '.lz-frame[data-stack] .lz-box>.lz-el{position:static;width:100%;height:auto}'
         + `.lz-el[data-${t.visible_on.attr}=desktop]{display:none}`
         + '.lz-parallax>.lz-bg{position:absolute}'
         /* The phone rule above turns every element absolute; a sticky bar stays fixed, and keeps its own offsets. */

@@ -405,6 +405,18 @@ test('a box lays out what it holds, and nothing in it is dragged', async ({ edit
     await editor.canvas.locator(`#e-${first}`).click();
     await expect(page.locator('.lze-handle')).toHaveCount(0);
 
+    // On a phone it still flows: one column, nothing piled up at the same spot.
+    await page.getByRole('button', { name: 'Phone', exact: true }).click();
+    await page.waitForTimeout(300);
+
+    const onPhone = await rendered.locator('> .lz-el').evaluateAll(
+        (nodes) => nodes.map((node) => [getComputedStyle(node).position, Math.round(node.getBoundingClientRect().top)] as const),
+    );
+
+    expect(onPhone.every(([position]) => position === 'static')).toBe(true);
+    expect(new Set(onPhone.map(([, top]) => top)).size).toBe(onPhone.length);
+    await page.getByRole('button', { name: 'Desktop', exact: true }).click();
+
     // And it can be taken apart again, picking the box itself from the layers.
     await page.locator('.lze-left').getByRole('tab', { name: 'Layers' }).click();
     await page.locator('.lze-left .lze-layer-name', { hasText: 'Box' }).first().click();
