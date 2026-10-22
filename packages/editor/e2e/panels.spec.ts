@@ -483,9 +483,10 @@ test('a table takes rows and columns, and the first row names them', async ({ ed
     await expect(table.locator('tbody tr').first()).toHaveText(/Inicio/);
 
     const element = (await editor.draft()).sections[0]!.elements.find((item) => item.type === 'table');
+    const { rows, header } = (element?.props ?? {}) as { rows?: string[][]; header?: boolean };
 
-    expect(element?.props.rows?.[1]?.[0]).toBe('Inicio');
-    expect(element?.props.header).toBe(true);
+    expect(rows?.[1]?.[0]).toBe('Inicio');
+    expect(header).toBe(true);
 
     // With the header off, that first row becomes an ordinary one.
     await panel.getByLabel('First row names the columns').uncheck();
