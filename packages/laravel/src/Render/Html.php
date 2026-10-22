@@ -21,7 +21,8 @@ final class Html
     private const array TAGS = [
         'a', 'button', 'circle', 'details', 'dialog', 'div', 'em', 'form', 'h1', 'h2', 'h3', 'h4', 'hr', 'i',
         'iframe', 'img', 'input', 'label', 'line', 'link', 'meta', 'nav', 'option', 'p', 'path', 'rect',
-        'section', 'select', 'span', 'summary', 'svg', 'textarea', 'video',
+        'section', 'select', 'span', 'summary', 'svg', 'table', 'tbody', 'td', 'textarea', 'th', 'thead',
+        'tr', 'video',
     ];
 
     private const array VOID = ['hr', 'img', 'input', 'link', 'meta'];

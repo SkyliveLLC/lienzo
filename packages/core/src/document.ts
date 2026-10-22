@@ -7,7 +7,7 @@ export type ThemeToken = (typeof THEME_TOKENS)[number];
 
 export const CORE_ELEMENT_TYPES = [
     'heading', 'text', 'image', 'button', 'divider', 'video', 'shape', 'icon',
-    'navbar', 'gallery', 'slider', 'box', 'input', 'textarea', 'select', 'checkbox',
+    'navbar', 'gallery', 'slider', 'box', 'accordion', 'table', 'input', 'textarea', 'select', 'checkbox',
 ] as const;
 export type CoreElementType = (typeof CORE_ELEMENT_TYPES)[number];
 
@@ -165,6 +165,14 @@ export const corePropsSchema = object({
     ])),
     /** Where a sticky bar lives: the top of the screen, or the bottom. */
     position: optional(z.enum(['top', 'bottom'])),
+    /** Questions that open one at a time, or whatever else folds. */
+    items: list(z.array(object({
+        title: z.string().min(1).max(160),
+        text: z.string().max(2000).nullish(),
+    })).max(20)).nullish(),
+    /** A table: the first row names the columns when `header` is on. */
+    rows: list(z.array(list(z.array(z.string().max(300)).max(8))).max(40)).nullish(),
+    header: optional(z.boolean()),
     links: list(z.array(object({
         label: z.string().min(1).max(40),
         action: object({ type: actionType, value: z.string().max(300).nullish() }),

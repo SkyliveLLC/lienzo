@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.16.0 (2026-10-22)
+
+### Editor
+
+- Two elements every small site asks for: **Questions**, which fold one by one, and a **Table** of plain cells whose first row can name the columns. The questions are built on `details`, so one opens with no script, the browser finds the text when someone searches the page, and a reader that cannot see hears what is folded.
+
 ## 0.15.0 (2026-10-21)
 
 ### Laravel

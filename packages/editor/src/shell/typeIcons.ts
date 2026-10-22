@@ -1,6 +1,7 @@
 import type { CoreElementType } from '@skylivellc/lienzo-core';
 import {
     AlignLeft,
+    ChevronsUpDown,
     Columns3,
     GalleryHorizontalEnd,
     Image,
@@ -13,6 +14,7 @@ import {
     Sparkles,
     Square,
     SquareCheck,
+    Table,
     TextCursorInput,
     Type,
     Video,
@@ -30,7 +32,9 @@ export const typeIcons: Record<CoreElementType, Component> = {
     shape: Square,
     icon: Sparkles,
     navbar: Menu,
+    accordion: ChevronsUpDown,
     box: Columns3,
+    table: Table,
     gallery: Images,
     slider: GalleryHorizontalEnd,
     input: TextCursorInput,

@@ -96,6 +96,22 @@ export const coreSpecs = {
         label: 'type.box', group: 'content', styles: ALL, inline: null,
         create: () => ({ box: { x: 6, w: 88, h: 240 }, props: { flow: 'column', flow_gap: 16, flow_align: 'start' }, style: { padding: 24, radius: 16 } }),
     },
+    accordion: {
+        label: 'type.accordion', group: 'content', styles: ALL, inline: null,
+        create: (t) => ({
+            box: { x: 6, w: 60, h: 260 },
+            props: { items: [1, 2, 3].map((n) => ({ title: t('el.foldTitle', { n }), text: t('el.foldTextNew') })) },
+            style: { size: 16 },
+        }),
+    },
+    table: {
+        label: 'type.table', group: 'content', styles: ALL, inline: null,
+        create: (t) => ({
+            box: { x: 6, w: 60, h: 220 },
+            props: { header: true, rows: [[t('el.tableColumn', { n: 1 }), t('el.tableColumn', { n: 2 })], ['', ''], ['', '']] },
+            style: { size: 15 },
+        }),
+    },
     input: { label: 'type.input', group: 'form', styles: ALL, inline: null, create: field('input') },
     textarea: { label: 'type.textarea', group: 'form', styles: ALL, inline: null, create: field('textarea') },
     select: { label: 'type.select', group: 'form', styles: ALL, inline: null, create: field('select') },

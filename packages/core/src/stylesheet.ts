@@ -150,6 +150,22 @@ export const stylesheet = [
     ...[1, 2, 3, 4, 5, 6].map((n) => `.lz-gallery[data-cols="${n}"]{--cols:${n}}`),
 
     /* Pictures one at a time: a track that snaps, with arrows and dots over it. */
+    /* Questions that fold, and a table of plain cells. */
+    `.lz-accordion{display:grid;gap:${u('2')};height:100%;overflow:auto}`,
+    `.lz-fold{border-bottom:${u('1')} solid color-mix(in srgb,currentColor 18%,transparent)}`,
+    `.lz-fold summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:${u('12')};`
+        + `padding:${u('14')} 0;font-family:var(--font-heading);font-weight:600}`,
+    '.lz-fold summary::-webkit-details-marker{display:none}',
+    `.lz-fold summary::after{content:"";margin-left:auto;width:${u('9')};height:${u('9')};`
+        + 'border-right:2px solid currentColor;border-bottom:2px solid currentColor;rotate:45deg;transition:rotate .2s}',
+    '.lz-fold[open] summary::after{rotate:-135deg}',
+    `.lz-fold p{margin:0;padding:0 0 ${u('16')};opacity:.75}`,
+    '.lz-table{width:100%;height:100%;overflow:auto;display:block;border-collapse:collapse}',
+    `.lz-table th,.lz-table td{padding:${u('12')} ${u('14')};text-align:left;`
+        + `border-bottom:${u('1')} solid color-mix(in srgb,currentColor 15%,transparent)}`,
+    '.lz-table th{font-family:var(--font-heading);font-weight:700}',
+    '.lz-table tbody tr:last-child td{border-bottom:0}',
+
     /* A box lays out what it holds: one under the other, or side by side. */
     `.lz-box{display:flex;gap:${u('var(--fg,16)')};align-items:flex-start;height:auto;min-height:${u('var(--h)')}}`,
     '.lz-box[data-flow=column]{flex-direction:column}',

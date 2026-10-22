@@ -9,7 +9,7 @@ test('renders the page through core, with the same markup as the public page', a
 
 test('adds every core element type to the selected section', async ({ editor, page }) => {
     const before = (await editor.draft()).sections[0]!.elements.length;
-    const labels = ['Heading', 'Text', 'Image', 'Button', 'Divider', 'Video', 'Shape', 'Icon', 'Navigation bar', 'Gallery', 'Slider', 'Text field', 'Long text field', 'Dropdown', 'Checkbox'];
+    const labels = ['Heading', 'Text', 'Image', 'Button', 'Divider', 'Video', 'Shape', 'Icon', 'Navigation bar', 'Gallery', 'Slider', 'Questions', 'Table', 'Text field', 'Long text field', 'Dropdown', 'Checkbox'];
 
     for (const label of labels) {
         await page.locator('.lze-palette-item', { hasText: new RegExp(`^${label}$`) }).click();
@@ -17,13 +17,13 @@ test('adds every core element type to the selected section', async ({ editor, pa
 
     const first = editor.canvas.locator('section.lz-section').first();
     await expect(first.locator('.lz-el')).toHaveCount(before + labels.length);
-    for (const selector of ['hr.lz-divider', 'div.lz-video', 'div[data-shape=rectangle]', 'span.lz-icon svg', 'nav.lz-navbar', 'div.lz-gallery', 'div.lz-slider', 'label.lz-field input[type=text]', 'label.lz-field textarea', 'label.lz-field select', 'input[type=checkbox]']) {
+    for (const selector of ['hr.lz-divider', 'div.lz-video', 'div[data-shape=rectangle]', 'span.lz-icon svg', 'nav.lz-navbar', 'div.lz-gallery', 'div.lz-slider', 'div.lz-accordion', 'table.lz-table', 'label.lz-field input[type=text]', 'label.lz-field textarea', 'label.lz-field select', 'input[type=checkbox]']) {
         await expect(first.locator(selector).first()).toBeAttached();
     }
 
     await editor.waitForSave();
     const types = (await editor.draft()).sections[0]!.elements.slice(before).map((element) => element.type);
-    expect(types).toEqual(['heading', 'text', 'image', 'button', 'divider', 'video', 'shape', 'icon', 'navbar', 'gallery', 'slider', 'input', 'textarea', 'select', 'checkbox']);
+    expect(types).toEqual(['heading', 'text', 'image', 'button', 'divider', 'video', 'shape', 'icon', 'navbar', 'gallery', 'slider', 'accordion', 'table', 'input', 'textarea', 'select', 'checkbox']);
 });
 
 test('drags an element and snaps it to the edge of another', async ({ editor, page }) => {

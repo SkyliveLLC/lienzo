@@ -1691,6 +1691,68 @@
           ],
           "x-blank-as-null": true
         },
+        "items": {
+          "anyOf": [
+            {
+              "maxItems": 20,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 160
+                  },
+                  "text": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 2000
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "title"
+                ],
+                "additionalProperties": false
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rows": {
+          "anyOf": [
+            {
+              "maxItems": 40,
+              "type": "array",
+              "items": {
+                "maxItems": 8,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 300
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "header": {
+          "x-blank-as-null": true,
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
         "links": {
           "anyOf": [
             {

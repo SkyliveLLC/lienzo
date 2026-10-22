@@ -428,3 +428,69 @@ test('a box lays out what it holds, and nothing in it is dragged', async ({ edit
     expect(after.some((element) => element.type === 'box')).toBe(false);
     expect(after.map((element) => element.id)).toContain(first);
 });
+
+test('questions fold, and keep folding once published', async ({ editor, page }) => {
+    const panel = page.locator('.lze-right');
+
+    await page.locator('.lze-palette-item', { hasText: /^Questions$/ }).click();
+    await editor.waitForSave();
+
+    const folds = editor.canvas.locator('div.lz-accordion .lz-fold');
+
+    await expect(folds).toHaveCount(3);
+    await panel.getByLabel('Question 1').fill('¿Cuánto tarda?');
+    await panel.getByLabel('Question 1').blur();
+    await panel.getByRole('button', { name: 'Add a question' }).click();
+    await editor.waitForSave();
+
+    await expect(folds).toHaveCount(4);
+    await expect(folds.first()).toHaveText(/¿Cuánto tarda\?/);
+
+    // Published, it opens with no script of ours: it is a real details element.
+    await page.getByRole('button', { name: 'Publish' }).click();
+    await expect(page.locator('.lze-badge-status')).toHaveText('Published');
+    await page.goto('/site/');
+
+    const fold = page.locator('.lz-fold').first();
+
+    expect(await fold.evaluate((node) => (node as HTMLDetailsElement).open)).toBe(false);
+    await fold.locator('summary').click();
+    expect(await fold.evaluate((node) => (node as HTMLDetailsElement).open)).toBe(true);
+});
+
+test('a table takes rows and columns, and the first row names them', async ({ editor, page }) => {
+    const panel = page.locator('.lze-right');
+
+    await page.locator('.lze-palette-item', { hasText: /^Table$/ }).click();
+    await editor.waitForSave();
+
+    const table = editor.canvas.locator('table.lz-table');
+
+    await expect(table.locator('thead th')).toHaveCount(2);
+    await expect(table.locator('tbody tr')).toHaveCount(2);
+
+    await panel.getByRole('button', { name: 'Add a column' }).click();
+    await panel.getByRole('button', { name: 'Add a row' }).click();
+    await editor.waitForSave();
+
+    await expect(table.locator('thead th')).toHaveCount(3);
+    await expect(table.locator('tbody tr')).toHaveCount(3);
+
+    await panel.getByLabel('Row 2, column 1').fill('Inicio');
+    await panel.getByLabel('Row 2, column 1').blur();
+    await editor.waitForSave();
+
+    await expect(table.locator('tbody tr').first()).toHaveText(/Inicio/);
+
+    const element = (await editor.draft()).sections[0]!.elements.find((item) => item.type === 'table');
+
+    expect(element?.props.rows?.[1]?.[0]).toBe('Inicio');
+    expect(element?.props.header).toBe(true);
+
+    // With the header off, that first row becomes an ordinary one.
+    await panel.getByLabel('First row names the columns').uncheck();
+    await editor.waitForSave();
+
+    await expect(table.locator('thead')).toHaveCount(0);
+    await expect(table.locator('tbody tr')).toHaveCount(4);
+});

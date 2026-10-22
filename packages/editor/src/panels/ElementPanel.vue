@@ -8,8 +8,10 @@ import ButtonContent from './content/ButtonContent.vue';
 import FormFieldContent from './content/FormFieldContent.vue';
 import IconContent from './content/IconContent.vue';
 import ImageContent from './content/ImageContent.vue';
+import AccordionContent from './content/AccordionContent.vue';
 import BoxContent from './content/BoxContent.vue';
 import GalleryContent from './content/GalleryContent.vue';
+import TableContent from './content/TableContent.vue';
 import SliderContent from './content/SliderContent.vue';
 import NavbarContent from './content/NavbarContent.vue';
 import ShapeContent from './content/ShapeContent.vue';
@@ -38,9 +40,11 @@ const coreContent = {
     shape: ShapeContent,
     icon: IconContent,
     navbar: NavbarContent,
+    accordion: AccordionContent,
     box: BoxContent,
     gallery: GalleryContent,
     slider: SliderContent,
+    table: TableContent,
     input: FormFieldContent,
     textarea: FormFieldContent,
     select: FormFieldContent,
