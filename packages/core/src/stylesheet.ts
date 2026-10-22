@@ -151,7 +151,7 @@ export const stylesheet = [
 
     /* Pictures one at a time: a track that snaps, with arrows and dots over it. */
     /* Questions that fold, and a table of plain cells. */
-    `.lz-accordion{display:grid;gap:${u('2')};height:100%;overflow:auto}`,
+    `.lz-accordion{display:grid;gap:${u('2')};align-content:start;grid-auto-rows:max-content;height:100%;overflow:auto}`,
     `.lz-fold{border-bottom:${u('1')} solid color-mix(in srgb,currentColor 18%,transparent)}`,
     `.lz-fold summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:${u('12')};`
         + `padding:${u('14')} 0;font-family:var(--font-heading);font-weight:600}`,

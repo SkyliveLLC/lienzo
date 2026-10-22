@@ -2,6 +2,12 @@
 
 All notable changes to Lienzo are listed here. The three packages (`skylive/lienzo`, `@skylivellc/lienzo-core` and `@skylivellc/lienzo-editor`) share one version number. Lienzo follows [Semantic Versioning](https://semver.org). Before 1.0, a minor version can break compatibility.
 
+## 0.16.2 (2026-10-22)
+
+### Fixed
+
+- The questions element spread its folds to fill its height, leaving a gap under each one. They sit one after the other now.
+
 ## 0.16.1 (2026-10-22)
 
 ### Editor
