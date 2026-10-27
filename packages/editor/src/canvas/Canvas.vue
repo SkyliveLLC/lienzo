@@ -621,19 +621,53 @@ const inert = (event: Event) => {
     }
 };
 
-/**
- * Where a drop from the palette lands: the canvas under the pointer and the
- * position inside it, in design units. Null outside every canvas.
- */
-function dropPoint(clientX: number, clientY: number): { canvas: string; x: number; y: number } | null {
+/** A point in the page's own pixels, from one in the editor's window. */
+function framePoint(clientX: number, clientY: number): { x: number; y: number } | null {
     const box = iframe.value?.getBoundingClientRect();
 
-    if (!frame || !box || clientX < box.left || clientX > box.right || clientY < box.top || clientY > box.bottom) {
+    if (!box || clientX < box.left || clientX > box.right || clientY < box.top || clientY > box.bottom) {
         return null;
     }
 
-    const x = (clientX - box.left) / scale.value;
-    const y = (clientY - box.top) / scale.value;
+    return { x: (clientX - box.left) / scale.value, y: (clientY - box.top) / scale.value };
+}
+
+/**
+ * The box under a point, if there is one, and where in it the pointer sits:
+ * the place a dropped element would take among what the box already holds.
+ */
+function boxAt(node: globalThis.Element | null, x: number, y: number): { box: string; index: number } | null {
+    const boxNode = node?.closest<HTMLElement>('.lz-box');
+    const id = boxNode ? frame?.hit(boxNode)?.element : undefined;
+
+    if (!boxNode || !id) {
+        return null;
+    }
+
+    const row = boxNode.dataset.flow === 'row';
+    const children = [...boxNode.children].filter((child) => child.classList.contains('lz-el'));
+    const before = children.filter((child) => {
+        const rect = child.getBoundingClientRect();
+
+        return row ? x > rect.left + rect.width / 2 : y > rect.top + rect.height / 2;
+    });
+
+    return { box: id, index: before.length };
+}
+
+/**
+ * Where a drop from the palette lands: the canvas under the pointer and the
+ * position inside it, in design units, or the box it falls into. Null outside
+ * every canvas.
+ */
+function dropPoint(clientX: number, clientY: number): { canvas: string; x: number; y: number; box?: string; index?: number } | null {
+    const point = framePoint(clientX, clientY);
+
+    if (!frame || !point) {
+        return null;
+    }
+
+    const { x, y } = point;
     const hit = frame.hit(frame.doc.elementFromPoint(x, y));
     const metrics = hit ? layout.value.canvases.get(hit.canvas) : undefined;
 
@@ -645,6 +679,7 @@ function dropPoint(clientX: number, clientY: number): { canvas: string; x: numbe
         canvas: hit.canvas,
         x: clamp(((x - metrics.frame.x) / metrics.frame.w) * 100, 0, 90),
         y: clamp((y - metrics.frame.y) / metrics.unit, 0, 3000),
+        ...(boxAt(frame.doc.elementFromPoint(x, y), x, y) ?? {}),
     };
 }
 

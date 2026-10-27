@@ -533,8 +533,19 @@ export function createEditor({ client, i18n }: EditorDeps) {
         return active?.type === 'box' ? active : boxHolding(canvas, selection.active);
     }
 
+    /** Puts an element among what a box holds, at a place of its own. */
+    function putInBox(box: Element, element: Element, index: number | null) {
+        const children = [...(box.children ?? [])];
+        const at = index === null || index < 0 || index > children.length ? children.length : index;
+
+        element.layout.desktop = { ...element.layout.desktop, x: 0, y: 0, w: box.props.flow === 'row' ? 48 : 100 };
+        element.layout.mobile = null;
+        children.splice(at, 0, element);
+        box.children = children.map((child, position) => ({ ...child, z: position + 1 }));
+    }
+
     /** Adds an element to the current canvas, or at a drop point in a given canvas. */
-    function addElement(insertable: Insertable, at?: { canvas: string; x: number; y: number }, src?: string) {
+    function addElement(insertable: Insertable, at?: { canvas: string; x: number; y: number; box?: string; index?: number }, src?: string) {
         const target = at ? findCanvas(state.draft, at.canvas) : currentCanvas.value;
 
         if (!target) {
@@ -547,12 +558,12 @@ export function createEditor({ client, i18n }: EditorDeps) {
             element.props = { ...element.props, src };
         }
 
-        const box = at ? undefined : openBox(target);
+        // Un drop sobre una caja entra en ella; sin drop, entra en la caja seleccionada.
+        const dropped = at?.box ? target.elements.find((candidate) => candidate.id === at.box) : undefined;
+        const box = dropped ?? (at ? undefined : openBox(target));
 
         if (box && element.type !== 'box') {
-            element.layout.desktop = { ...element.layout.desktop, x: 0, y: 0, w: box.props.flow === 'row' ? 48 : 100 };
-            element.z = (box.children?.length ?? 0) + 1;
-            box.children = [...(box.children ?? []), element];
+            putInBox(box, element, at?.index ?? null);
             state.selection = { kind: 'elements', canvas: target.id, ids: [element.id], active: element.id };
             commit();
 

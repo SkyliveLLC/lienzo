@@ -11,7 +11,7 @@ import ElementIcon from './ElementIcon.vue';
 import { typeIcons } from './typeIcons.ts';
 
 /** Left sidebar: what to add, the layer tree, the modals, and the media library. */
-const props = defineProps<{ dropPoint: (clientX: number, clientY: number) => { canvas: string; x: number; y: number } | null }>();
+const props = defineProps<{ dropPoint: (clientX: number, clientY: number) => { canvas: string; x: number; y: number; box?: string; index?: number } | null }>();
 const editor = useEditor();
 const t = editor.t;
 
