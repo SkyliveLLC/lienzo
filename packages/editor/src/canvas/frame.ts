@@ -1,5 +1,5 @@
 import lienzoCss from '@skylivellc/lienzo-core/lienzo.css?raw';
-import type { Box, Document as Draft } from '@skylivellc/lienzo-core';
+import type { Box, Document as Draft, Element } from '@skylivellc/lienzo-core';
 import { canvasesOf, type Device } from '../model/document.ts';
 import { frameCss } from './frameCss.ts';
 import { domId } from './render.ts';
@@ -143,9 +143,15 @@ export function mountFrame(iframe: HTMLIFrameElement) {
         for (const canvas of canvasesOf(document)) {
             next.canvases.set(domId(canvas.id), canvas.id);
 
-            for (const element of canvas.elements) {
-                next.elements.set(domId(element.id), { canvas: canvas.id, element: element.id });
-            }
+            // What a box holds counts too, so a click picks the child, not the box.
+            const walk = (elements: readonly Element[]): void => {
+                for (const element of elements) {
+                    next.elements.set(domId(element.id), { canvas: canvas.id, element: element.id });
+                    walk(element.children ?? []);
+                }
+            };
+
+            walk(canvas.elements);
         }
 
         return next;

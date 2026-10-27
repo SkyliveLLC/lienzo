@@ -8,7 +8,7 @@ html,body{margin:0}
 body{overflow:hidden}
 .lz-el{cursor:default;user-select:none;-webkit-user-select:none}
 .lz-el[contenteditable]{cursor:text;user-select:text;-webkit-user-select:text;outline:none}
-.lz-el iframe,.lz-el input,.lz-el select,.lz-el textarea,.lz-el summary,.lz-el a,.lz-el button{pointer-events:none}
+.lz-el :is(iframe,input,select,textarea,summary,a,button):not(.lz-el){pointer-events:none}
 .lz-navbar[data-sticky]{position:absolute;translate:none;left:calc(var(--x) * 1%);top:calc(var(--y) * var(--u));width:calc(var(--w) * 1%)}
 @container lz (max-width:640px){
 .lz-frame:not([data-stack]) .lz-navbar[data-sticky]{left:calc(var(--mx) * 1%);top:calc(var(--my) * var(--u));width:calc(var(--mw) * 1%)}
