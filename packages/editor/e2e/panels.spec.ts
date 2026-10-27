@@ -1,3 +1,4 @@
+import type { Locator } from '@playwright/test';
 import { expect, test } from './fixtures.ts';
 
 /** A 1x1 PNG, enough for the backend to accept an upload. */
@@ -494,4 +495,64 @@ test('a table takes rows and columns, and the first row names them', async ({ ed
 
     await expect(table.locator('thead')).toHaveCount(0);
     await expect(table.locator('tbody tr')).toHaveCount(4);
+});
+
+test('an element can be dropped into a box, and moved around inside it', async ({ editor, page }) => {
+    const panel = page.locator('.lze-right');
+
+    // A box with two things in it, grouped from the canvas.
+    await page.locator('.lze-palette-item', { hasText: /^Text$/ }).click();
+    await editor.waitForSave();
+
+    const first = (await editor.draft()).sections[0]!.elements.at(-1)!.id;
+
+    await page.locator('.lze-palette-item', { hasText: /^Button$/ }).click();
+    await editor.waitForSave();
+
+    const second = (await editor.draft()).sections[0]!.elements.at(-1)!.id;
+
+    await editor.canvas.locator(`#e-${first}`).click();
+    await editor.canvas.locator(`#e-${second}`).click({ modifiers: ['Shift'] });
+    await panel.getByRole('button', { name: 'Group into a box' }).click();
+    await editor.waitForSave();
+
+    const box = (await editor.draft()).sections[0]!.elements.at(-1)!;
+
+    // Dropping a heading onto the box puts it inside, not on the canvas.
+    const dragTo = async (from: Locator, to: Locator, lift = 0) => {
+        const start = await editor.center(from);
+        const end = await editor.center(to);
+        const scale = await editor.scale();
+
+        await editor.drag(start, { x: (end.x - start.x) / scale, y: (end.y - start.y) / scale - lift });
+    };
+
+    const onCanvas = (await editor.draft()).sections[0]!.elements.length;
+
+    await dragTo(page.locator('.lze-palette-item', { hasText: /^Heading$/ }), editor.canvas.locator(`#e-${second}`));
+    await editor.waitForSave();
+
+    const after = (await editor.draft()).sections[0]!.elements;
+    const held = after.find((element) => element.id === box.id)?.children ?? [];
+
+    // Nothing new on the canvas: it went inside the box.
+    expect(after).toHaveLength(onCanvas);
+    expect(held.map((child) => child.type)).toContain('heading');
+    expect(held).toHaveLength(3);
+
+    // Dragging what it holds moves it to another place in the same box.
+    const order = held.map((child) => child.id);
+
+    // Picked from the layers, where a box shows what it holds.
+    await page.locator('.lze-left').getByRole('tab', { name: 'Layers' }).click();
+    await page.locator('.lze-left .lze-layer-children .lze-layer-name').last().click();
+    // Dropped above the first one, it takes its place.
+    await dragTo(editor.canvas.locator(`#e-${order[2]}`), editor.canvas.locator(`#e-${order[0]}`), 30);
+    await editor.waitForSave();
+
+    const moved = (await editor.draft()).sections[0]!.elements.find((element) => element.id === box.id)?.children ?? [];
+
+    expect(moved).toHaveLength(3);
+    expect(moved.map((child) => child.id)).toEqual([order[2], order[0], order[1]]);
+    expect(moved.map((child) => child.z)).toEqual([1, 2, 3]);
 });
