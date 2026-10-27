@@ -21,6 +21,8 @@ const props = defineProps<{
     frozen: ReadonlySet<string>;
     /** An angle being dragged, shown before the document has it. */
     rotation: { id: string; value: number } | null;
+    /** Where a drag would drop inside a box. */
+    insertion: Rect | null;
 }>();
 const emit = defineEmits<{
     resize: [event: PointerEvent, handle: Handle];
@@ -167,6 +169,8 @@ const place = (rect: Rect) => ({ left: `${rect.x}px`, top: `${rect.y}px`, width:
                 <Trash2 :size="15" aria-hidden="true" />
             </button>
         </div>
+
+        <div v-if="insertion" class="lze-insertion" :style="place(insertion)" />
 
         <template v-if="guides && guideFrame">
             <div

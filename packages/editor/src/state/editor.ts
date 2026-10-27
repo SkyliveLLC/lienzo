@@ -580,6 +580,25 @@ export function createEditor({ client, i18n }: EditorDeps) {
         commit();
     }
 
+    /** Moves what a box holds to another place in the same box. */
+    function reorderInBox(canvasId: string, boxId: string, id: string, index: number) {
+        const canvas = findCanvas(state.draft, canvasId);
+        const box = canvas?.elements.find((element) => element.id === boxId);
+        const children = box?.children ?? [];
+        const moving = children.find((child) => child.id === id);
+
+        if (!box || !moving) {
+            return;
+        }
+
+        const rest = children.filter((child) => child.id !== id);
+        const at = Math.max(0, Math.min(index > children.indexOf(moving) ? index - 1 : index, rest.length));
+
+        rest.splice(at, 0, moving);
+        box.children = rest.map((child, position) => ({ ...child, z: position + 1 }));
+        commit();
+    }
+
     /** Wraps the selected elements in a box that lays them out from then on. */
     function groupIntoBox() {
         const selection = state.selection;
@@ -1302,6 +1321,8 @@ export function createEditor({ client, i18n }: EditorDeps) {
         groupIntoBox,
         ungroupBox,
         isInsideBox,
+        reorderInBox,
+        boxHolding: (canvasId: string, id: string) => boxHolding(findCanvas(state.draft, canvasId), id),
         removeSelected,
         duplicateSelected,
         copySelected,

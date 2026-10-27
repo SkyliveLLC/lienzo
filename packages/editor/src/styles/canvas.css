@@ -140,3 +140,6 @@
 }
 .lze-element-bar[data-below='true'] { transform: scale(var(--inv)) translateY(14px); }
 .lze-divider { width: 1px; height: 20px; margin: 0 2px; background: var(--lze-border); }
+
+/* Where a dragged element would land inside a box. */
+.lze-insertion { position: absolute; background: var(--lze-select); border-radius: 2px; pointer-events: none; z-index: 5; }

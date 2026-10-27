@@ -31,6 +31,8 @@ const guides = shallowRef<{ canvas: string; lines: Guides } | null>(null);
 const live = shallowRef<ReadonlyMap<string, Rect>>(new Map());
 /** The angle a rotate gesture shows before it is written. */
 const rotation = shallowRef<{ id: string; value: number } | null>(null);
+/** Where a dragged element would land inside a box, drawn as a line. */
+const insertion = shallowRef<Rect | null>(null);
 const hint = ref<string | null>(null);
 let frame: CanvasFrame | null = null;
 
@@ -292,6 +294,7 @@ type Gesture =
         others: Item[];
         boxes: Map<string, Box>;
     }
+    | { kind: 'reorder'; canvas: string; box: string; id: string; index: number | null; inFrame: boolean }
     | { kind: 'rotate'; id: string; center: { x: number; y: number }; startAngle: number; from: number; value: number }
     | { kind: 'radius'; id: string; origin: number; factor: number; unit: number; from: number; value: number };
 
@@ -312,6 +315,33 @@ function capture(node: HTMLElement | SVGElement, event: PointerEvent) {
     };
 }
 
+/** The line between what a box holds, at the place a drop would take. */
+function insertionLine(boxId: string, index: number): Rect | null {
+    const boxRect = layout.value.elements.get(boxId);
+    const node = frame?.doc.getElementById(`e-${boxId}`);
+    const page = frame?.doc.documentElement;
+
+    if (!boxRect || !node || !page) {
+        return null;
+    }
+
+    const children = [...node.children].filter((child) => child.classList.contains('lz-el'));
+    const edge = children[Math.min(index, children.length - 1)]?.getBoundingClientRect();
+
+    if (!edge) {
+        return boxRect;
+    }
+
+    // Same space the overlay draws in: the frame's own pixels, scrolling included.
+    const x = edge.left + page.scrollLeft;
+    const y = edge.top + page.scrollTop;
+    const after = index >= children.length;
+
+    return node.dataset.flow === 'row'
+        ? { x: (after ? x + edge.width : x) - 1, y, w: 2, h: edge.height }
+        : { x, y: (after ? y + edge.height : y) - 1, w: edge.width, h: 2 };
+}
+
 function startBoxGesture(event: PointerEvent, node: HTMLElement | SVGElement, handle: Handle | null, factor: number) {
     const selection = editor.state.selection;
 
@@ -324,7 +354,20 @@ function startBoxGesture(event: PointerEvent, node: HTMLElement | SVGElement, ha
     const device = editor.state.device;
     const active = editor.activeElement.value;
 
-    if (!canvas || !metrics || !active || active.locked || editor.kindOf(active).kind === 'opaque' || editor.isInsideBox(active.id)) {
+    if (!canvas || !metrics || !active || active.locked || editor.kindOf(active).kind === 'opaque') {
+        return;
+    }
+
+    const holder = editor.boxHolding(canvas.id, active.id);
+
+    if (holder) {
+        if (handle) {
+            return;
+        }
+
+        gesture = { kind: 'reorder', canvas: canvas.id, box: holder.id, id: active.id, index: null, inFrame: factor === 1 };
+        capture(node, event);
+
         return;
     }
 
@@ -350,6 +393,17 @@ function onGestureMove(event: PointerEvent) {
     const current = gesture;
 
     if (!current || !frame) {
+        return;
+    }
+
+    if (current.kind === 'reorder') {
+        // Events from inside the frame already speak its pixels; the overlay's do not.
+        const point = current.inFrame ? { x: event.clientX, y: event.clientY } : framePoint(event.clientX, event.clientY);
+        const spot = point && frame ? boxAt(frame.doc.elementFromPoint(point.x, point.y), point.x, point.y) : null;
+
+        current.index = spot?.box === current.box ? spot.index : null;
+        insertion.value = current.index === null ? null : insertionLine(current.box, current.index);
+
         return;
     }
 
@@ -411,6 +465,16 @@ function finishGesture() {
     release = null;
     hint.value = null;
     guides.value = null;
+
+    insertion.value = null;
+
+    if (finished?.kind === 'reorder') {
+        if (finished.index !== null) {
+            editor.reorderInBox(finished.canvas, finished.box, finished.id, finished.index);
+        }
+
+        return;
+    }
 
     if (finished?.kind === 'box' && finished.boxes.size > 0) {
         editor.placeElements([...finished.boxes].map(([id, box]) => ({ id, box })));
@@ -781,6 +845,7 @@ const deviceName = (device: Device) => (device === 'desktop' ? t('toolbar.deskto
                     :guides="guides"
                     :live="live"
                     :rotation="rotation"
+                    :insertion="insertion"
                     :frozen="frozen"
                     @resize="onResize"
                     @rotate="onRotate"
