@@ -1,12 +1,33 @@
 # Lienzo
 
-Lienzo is an open-source landing page builder you add to your own web app. Your admins get a visual editor where they place headings, images, forms and your app's own elements on a free-form canvas, with a separate phone layout. Visitors get fast static HTML with one stylesheet and a small script. Pages are stored as a validated JSON document. A TypeScript renderer and a native PHP renderer turn that document into byte-identical HTML, so a Laravel app needs no Node at runtime. Any other backend can implement the same small HTTP protocol and render with the TypeScript package.
+Lienzo is an open-source landing page builder you add to your own web app. Your admins place headings, images, forms and your app's own elements on a free-form canvas, and visitors get static HTML. It installs into a Laravel app in five steps, and any other backend can host it over a small HTTP protocol.
 
 ![The Lienzo editor inside the Laravel example app](docs/editor.png)
 
 ![The page it published](docs/page.png)
 
-Lienzo has three packages:
+## What your admins get
+
+- A free-form canvas: drag, resize, rotate and snap elements against guides, with multi-select, alignment, undo and redo, and the usual keyboard shortcuts.
+- Headings, text, images, galleries, sliders, video, buttons, icons, shapes, dividers, questions, tables, a navigation bar, and the text, long text, dropdown and checkbox form fields.
+- Boxes that lay out what they hold in a row or a column, modals, and groups of sections shown as tabs or as steps.
+- A separate phone layout, generated from the desktop one and then edited on its own.
+- A media library, a site theme, site and page settings for search engines, an inbox for what the forms receive, and every published version ready to restore.
+- Autosave that detects a conflict, so two open tabs never overwrite each other. The interface speaks English and Spanish, and any string can be overridden.
+
+## What visitors get
+
+Static HTML with one stylesheet and a small script, plus `sitemap.xml` and `robots.txt`. A page carries no framework and no layout engine: it declares a design pixel, `--u`, and container queries shrink everything in the same proportion when the screen is narrower than the design. What the editor shows is what the page renders.
+
+## How it works
+
+A page is a JSON document, validated against one schema that both sides of the project share: `parseDocument` in TypeScript, and the same JSON Schema walked in PHP. Nothing else is stored, so a page is data you can read, diff and move.
+
+Two renderers turn that document into HTML and produce the same bytes, which golden files in `fixtures/render` enforce. A Laravel app renders with the PHP one and needs no Node at runtime. Any other backend renders with the TypeScript one and implements the same small HTTP protocol, about a dozen JSON routes for pages, publishing, versions, uploads and form submissions.
+
+Your own app joins the canvas through a catalog it declares on the backend: elements that render live data, actions a button can run, and site-wide fields. The editor builds its controls from that declaration, so an app element needs no editor code.
+
+## The packages
 
 | Package | What it is |
 | --- | --- |
